@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@2007777950:1627226982436" name="English" version="6.0.1">
+<config>
+<settings>
+<setting name="maintainer">Bank Mandiri</setting>
+<setting name="language">English</setting>
+<setting name="voice_name"/>
+<setting name="encoding"/>
+<setting name="default_audio_path">http://{Data.Session.Session_ID}/mcc/english/</setting>
+<setting name="remove_session_data"/>
+</settings>
+</config>
+</action_element>

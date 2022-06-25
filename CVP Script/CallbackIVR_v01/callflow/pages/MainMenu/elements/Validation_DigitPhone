@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1342272195:1627969751025" name="Validation_DigitPhone" version="6.0.1">
+<config>
+<settings>
+<setting name="DigitPhoneNumeric">var phone = {Data.Element.Digits_Phone.phoneNumber};
+
+phone.indexOf("*")</setting>
+</settings>
+</config>
+</action_element>
