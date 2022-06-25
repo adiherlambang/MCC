@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1278042570:1627969772177" name="Decision_ValidationPhone" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Decision_ValidationPhone" default_exit_state="NotValid">
+        <exit_state name="Valid" conjugate="and">
+            <number operator="less">
+                <local_variable name="DigitPhoneNumeric" />
+                <constant_string value="0" />
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

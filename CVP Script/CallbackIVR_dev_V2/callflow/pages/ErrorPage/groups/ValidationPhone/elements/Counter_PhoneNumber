@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1059172603:1627971918560" name="Counter_PhoneNumber" version="6.0.1">
+<config>
+<settings>
+<setting name="initial">0</setting>
+<setting name="type">increment</setting>
+<setting name="step">1</setting>
+</settings>
+</config>
+</action_element>

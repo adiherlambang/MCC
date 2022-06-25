@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision_element id="Element@1404949156:1627227144808" name="FTP_Client" version="6.0.1">
+<config>
+<settings>
+<setting name="filename">C:\LCMCallback\CVPCallback.{Data.Element.GenerateFile_Customer.profileLCM}.txt</setting>
+<setting name="remote_filename"/>
+<setting name="ftp_hosts">RVLCMAP1ABC20WD.supporting.devmandiri.co.id</setting>
+<setting name="ftp_user">mccadmin</setting>
+<setting name="ftp_password">mdrCC2020!</setting>
+<setting name="ftp_path"/>
+<setting name="delete_file_on_success">false</setting>
+</settings>
+</config>
+</decision_element>
