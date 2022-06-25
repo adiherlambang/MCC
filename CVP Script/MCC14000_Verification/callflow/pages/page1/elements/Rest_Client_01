@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@405629654:1653029177338" name="Rest_Client_01" version="6.0.1">
+<config>
+<log>
+<data create_when="After" name="ResponBody">{Data.Element.Rest_Client_01.response_body}</data>
+<data create_when="After" name="ResponStatus">{Data.Element.Rest_Client_01.status_code}</data>
+</log>
+<settings>
+<setting name="EndpointURL">https://finesse1.dcloud.cisco.com:8445/finesse/api/Dialog/{Data.Session.dialogID}</setting>
+<setting name="HTTPMethod">PUT</setting>
+<setting name="Parameters"/>
+<setting name="ignoreCertificateValidation">true</setting>
+<setting name="requireHttpAuthentication">true</setting>
+<setting name="userName">{LocalVar.loginId}</setting>
+<setting name="password">{LocalVar.loginPass}</setting>
+<setting name="headers">'Content-Type':'application/xml'</setting>
+<setting name="body">&lt;Dialog&gt;
+    &lt;requestedAction&gt;UPDATE_CALL_DATA&lt;/requestedAction&gt;
+    &lt;mediaProperties&gt;
+        &lt;callvariables&gt;
+            &lt;CallVariable&gt;
+                &lt;name&gt;callVariable2&lt;/name&gt;
+                &lt;value&gt;Testing from CVP&lt;/value&gt;
+            &lt;/CallVariable&gt;
+            &lt;CallVariable&gt;
+                &lt;name&gt;callVariable3&lt;/name&gt;
+                &lt;value&gt;8675343&lt;/value&gt;
+            &lt;/CallVariable&gt;
+		&lt;CallVariable&gt;
+                &lt;name&gt;callVariable4&lt;/name&gt;
+                &lt;value&gt;Bapak&lt;/value&gt;
+            &lt;/CallVariable&gt;
+		&lt;CallVariable&gt;
+                &lt;name&gt;callVariable5&lt;/name&gt;
+                &lt;value&gt;Banking&lt;/value&gt;
+            &lt;/CallVariable&gt;
+		&lt;CallVariable&gt;
+                &lt;name&gt;callVariable6&lt;/name&gt;
+                &lt;value&gt;Surabaya/05 Oktober 1985&lt;/value&gt;
+            &lt;/CallVariable&gt;
+		&lt;CallVariable&gt;
+                &lt;name&gt;callVariable7&lt;/name&gt;
+                &lt;value&gt;Rp. 10.000.000&lt;/value&gt;
+            &lt;/CallVariable&gt;
+        &lt;/callvariables&gt;
+    &lt;/mediaProperties&gt;
+&lt;/Dialog&gt;</setting>
+<setting name="useProxy">false</setting>
+<setting name="connectTimeout">3000</setting>
+<setting name="readTimeout">5000</setting>
+</settings>
+</config>
+</action_element>

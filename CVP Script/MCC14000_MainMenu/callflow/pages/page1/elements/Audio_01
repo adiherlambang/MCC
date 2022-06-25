@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@790405938:1652817579282" name="Audio_01" version="6.0.1">
+<config>
+<log>
+<data create_when="After" name="DigitInput">{Data.Element.Digits_01.value}</data>
+</log>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="audio item 1" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="number" output_format="digits" type="digits">{Data.Element.Digits_01.value}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+</config>
+</voice_element>

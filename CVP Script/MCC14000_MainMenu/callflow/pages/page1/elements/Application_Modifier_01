@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@121062886:1652861625277" name="Application_Modifier_01" version="6.0.1">
+<config>
+<settings>
+<setting name="maintainer"/>
+<setting name="language"/>
+<setting name="voice_name"/>
+<setting name="encoding"/>
+<setting name="default_audio_path">http://10.243.227.205/mcc/bahasa/</setting>
+<setting name="remove_session_data"/>
+</settings>
+</config>
+</action_element>
