@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+    <ModulePrefs title="AgentID"
+            description="AgentID">
+
+        <Require feature="settitle" />
+        <Require feature="dynamic-height" />
+        <Require feature="pubsub-2" />
+        <Require feature="setprefs" />
+        <Require feature="loadingindicator">
+            <Param name="manual-dismiss">false</Param>
+            <Param name="loading-timeout">10</Param>
+        </Require>
+    </ModulePrefs>
+
+    <Content type="html">
+        <![CDATA[
+            <!DOCTYPE html>
+            <!-- Styling -->
+            <link rel="stylesheet" href="AgentID-v2.6.css" type="text/css" />
+            <link rel="stylesheet" href="bootstrap.min.css" type="text/css" />
+            <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+            <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+
+            <!-- jQuery -->
+            <script type="text/javascript" src="/desktop/assets/js/jquery.min.js"></script>
+            
+
+            <!-- Finesse Library -->
+            <script type="text/javascript" src="/desktop/assets/js/finesse.js"></script>
+
+            <!-- Gadget Business Logic -->
+            <script type="text/javascript" src="AgentID-v2.6.js"></script>
+            <script type="text/javascript" src="bootstrap.min.js"></script>
+            <script type="text/javascript" src="js/bootstrap.js"></script>
+            <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+            <body class="claro">
+            <!-- AgentID Gadget -->
+                <div>
+                    <div class="d-flex justify-content-center">
+                        <fieldset id="userfieldset" class="outline">
+                            <div>
+                            <h3 id="dataAgent"></h3>
+                            <br>
+                            <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                          <th>Variable</th>
+                                          <th>Value</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td>Agent-ID</td>
+                                          <td id="agentID">null</td>
+                                        </tr>
+                                        <tr>
+                                          <td>Skill Target-ID</td>
+                                          <td id="skillTargetID">null</td>
+                                        </tr>
+                                        <tr>
+                                          <td>Skill-ID</td>
+                                          <td id="skillID">null</td>
+                                        </tr>
+                                      </tbody>    
+                                </table>
+                            </div>
+                        </fieldset>
+                        <br>
+                </div>
+            </body>
+
+            <script type="text/javascript">
+                // initialize the gadget running the init handler defined in AgentID.js
+                gadgets.HubSettings.onConnect = function () {
+                    finesse.modules.SampleGadget.init();
+                };
+            </script>
+        ]]>
+    </Content>
+</Module>
