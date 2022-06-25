@@ -1,0 +1,1 @@
+move file .jar to path C:\Cisco\CallStudio\eclipse\plugins\com.audiumcorp.studio.library.common\lib
