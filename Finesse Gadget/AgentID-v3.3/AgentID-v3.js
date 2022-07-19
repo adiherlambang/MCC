@@ -8,7 +8,7 @@ finesse.modules = finesse.modules || {};
 finesse.modules.SampleGadget = (function ($) {
     var user, states, dialogs, teamID, queueData, clientlogs, currentDialog ,queueNumber, queueName, agentID, callType;
     var callvars = new Array();
-    defaultHtml="--- PLease Wait for a Call ---",
+    defaultHtml="--- Please wait for a Call ---",
     
     render = function () {
         // Examples of getting data from the User object (GET)
