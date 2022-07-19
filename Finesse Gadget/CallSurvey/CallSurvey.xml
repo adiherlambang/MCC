@@ -17,7 +17,7 @@
         <![CDATA[
             <!DOCTYPE html>
             <!-- Styling -->
-            <link rel="stylesheet" href="AgentID-v3.css" type="text/css" />
+            <link rel="stylesheet" href="CallSurvey.css" type="text/css" />
             <link rel="stylesheet" href="bootstrap.min.css" type="text/css" />
             <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
             <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
@@ -30,7 +30,7 @@
             <script type="text/javascript" src="/desktop/assets/js/finesse.js"></script>
 
             <!-- Gadget Business Logic -->
-            <script type="text/javascript" src="AgentID-v3.js"></script>
+            <script type="text/javascript" src="CallSurvey.js"></script>
             <script type="text/javascript" src="bootstrap.min.js"></script>
             <script type="text/javascript" src="js/bootstrap.js"></script>
             <script type="text/javascript" src="js/bootstrap.min.js"></script>
