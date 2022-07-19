@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1050813362:1655782173988" name="CallbackValue" version="6.0.1">
+<config>
+<settings>
+<setting name="lang_set">var option_lang = {Data.Session.lang}+" ";
+var option;
+
+if(option_lang==="ina "){
+	option="bahasa";
+}else if (option_lang==="eng "){
+	option="english";
+}else{
+	option="bahasa";
+}
+
+option</setting>
+<setting name="cb_set">var flag_cb = {Data.Session.flag};
+var cb;
+
+if(flag_cb==="1")
+{
+	cb="CBEntry";
+}else{
+	cb="CBPreemptive";
+}
+
+cb</setting>
+<setting name="cb_menu">var flag_cb = {Data.Session.flag};
+var cb_digit;
+
+if(flag_cb==="1")
+{
+	cb_digit="*";
+}else{
+	cb_digit="2";
+}
+
+cb_digit</setting>
+</settings>
+</config>
+</action_element>

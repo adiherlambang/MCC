@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<subdialog_return id="Element@102724857:1627227230065" name="Yes" version="6.0.1">
+<config>
+<settings>
+<setting name="caller_input">Callback</setting>
+<setting name="FromExtVXML0">status=callback</setting>
+<setting name="FromExtVXML1"/>
+<setting name="FromExtVXML2"/>
+<setting name="FromExtVXML3"/>
+</settings>
+</config>
+</subdialog_return>
