@@ -6,17 +6,19 @@ clientLogs = finesse.cslogger.ClientLogger || {};  // for logging
 /** @namespace */
 finesse.modules = finesse.modules || {};
 finesse.modules.SampleGadget = (function ($) {
-    var user, states, dialogs, skillTargetID, queueData, clientlogs, currentDialog ,queueNumber, queueName, agentID, callType;
+    var user, states, dialogs, teamID, queueData, clientlogs, currentDialog ,queueNumber, queueName, agentID, callType;
     var callvars = new Array();
-    defaultHtml="Gadget for getting AgentID,Skill Group and Team",
+    defaultHtml="--- PLease Wait for a Call ---",
     
     render = function () {
         // Examples of getting data from the User object (GET)
         userData = user.getData();
         agentID = userData['loginId'];
-        skillTargetID = userData['skillTargetId'];
+        teamID =  userData['teamId']
+        agentID = userData['loginId'];
+        teamID =  userData['teamId']
         clientLogs.log("get agentID from user.loginId()=" + agentID);
-        clientLogs.log("get agentID from user.skillTargetId()=" + skillTargetID);
+        clientLogs.log("get teamID from user.teamID()=" + teamID);
     },
 
     displayDefaultHtml = function(){
@@ -26,7 +28,7 @@ finesse.modules.SampleGadget = (function ($) {
         $("#dataAgent").html(defaultHtml);
         $("#agentID").html("null");
         $("#skillID").html("null");
-        $("#skillTargetID").html("null");
+        $("#teamID").html("null");
         $('#dataAgent').show();
     },
 
@@ -55,8 +57,8 @@ finesse.modules.SampleGadget = (function ($) {
     },
 
     displayCall = function (dialog) {
-       finesse.modules.SampleGadget.updateCallVariable("user.value",skillTargetID);
-       clientLogs.log("update CallVariable user.value =" + skillTargetID);
+       finesse.modules.SampleGadget.updateCallVariable("user.value",agentID);
+       clientLogs.log("update CallVariable user.value =" + agentID);
         
        queueNumber = dialog.getMediaProperties().queueNumber;
        clientLogs.log("QueueID(): " + dialog.getMediaProperties().queueNumber);
@@ -169,7 +171,7 @@ finesse.modules.SampleGadget = (function ($) {
         $("#dataAgent").html(html);
         $("#agentID").html(agentID);
         $("#skillID").html(queueNumber);
-        $("#skillTargetID").html(skillTargetID);
+        $("#teamID").html(teamID);
         gadget.window.adjustHeight(250);
     },
     /**

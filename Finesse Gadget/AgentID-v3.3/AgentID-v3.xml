@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
-    <ModulePrefs title="AgentID"
-            description="AgentID">
+    <ModulePrefs title="PostCall Survey"
+            description="PostCall Survey">
 
         <Require feature="settitle" />
         <Require feature="dynamic-height" />
@@ -54,10 +54,6 @@
                                         <tr>
                                           <td>Agent-ID</td>
                                           <td id="agentID">null</td>
-                                        </tr>
-                                        <tr>
-                                          <td>Skill Target-ID</td>
-                                          <td id="skillTargetID">null</td>
                                         </tr>
                                         <tr>
                                           <td>Skill-ID</td>
