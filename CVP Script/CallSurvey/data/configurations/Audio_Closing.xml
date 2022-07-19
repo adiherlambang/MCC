@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE configuration SYSTEM "../../../../dtds/VoiceElementConfiguration.dtd">
+<configuration class="com.audium.server.voiceElement.audio.MAudio" serial="0000">
+<audio_group bargein="true" count="1" name="initial_audio_group">
+<audio name="audio item 1" src="Closing.wav" use_default_path="true"/>
+</audio_group>
+</configuration>

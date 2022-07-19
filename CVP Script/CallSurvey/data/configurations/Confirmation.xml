@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE configuration SYSTEM "../../../../dtds/VoiceElementConfiguration.dtd">
+<configuration class="com.audium.server.voiceElement.menu.MFoundation2OptionMenu" serial="0000">
+<setting name="noinput_timeout">5s</setting>
+<setting name="max_noinput_count">3</setting>
+<setting name="max_nomatch_count">3</setting>
+<setting name="confidence_level">0.40</setting>
+<setting name="modal">false</setting>
+<setting name="option1_dtmf">1</setting>
+<setting name="option1_value">Yes</setting>
+<setting name="option2_dtmf">2</setting>
+<setting name="option2_value">No</setting>
+<substitute index="0">
+<local_variable name="PhoneNumber"/>
+</substitute>
+<substitute index="1">
+<local_variable name="mediaIP"/>
+</substitute>
+<audio_group bargein="true" count="1" name="initial_audio_group">
+<audio name="audio item 1" src="ConfirmANI.wav" use_default_path="true"/>
+<say_it_smart class="com.audium.sayitsmart.plugins.AudiumSayItSmartDigit" format="digits" name="audio item 2">
+<value format="number">
+<static>{0}</static>
+</value>
+<recorded_audio audio_fileset="standard" audio_type="wav" path="http://{1}/mcc/bahasa/sys" use_default_path="false"/>
+</say_it_smart>
+<audio name="audio item 3" src="Confirm.wav" use_default_path="true"/>
+</audio_group>
+</configuration>

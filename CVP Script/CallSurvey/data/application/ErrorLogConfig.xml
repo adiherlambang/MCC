@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration SYSTEM "../../../../dtds/ApplicationErrorLoggerConfig.dtd">
+<configuration version="1.0" name="ErrorLog">
+<format delimiter="," remove_delimiter_from_content="true" date_format="standard" date_granularity="milliseconds" print_stack_traces="true"/>
+<purge>
+<file_count greater_than="100"/>
+</purge>
+</configuration>

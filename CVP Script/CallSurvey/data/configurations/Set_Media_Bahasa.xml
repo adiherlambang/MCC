@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE configuration SYSTEM "../../../../dtds/ActionElementConfiguration.dtd">
+<configuration class="com.audium.server.action.context.ApplicationModifier" serial="0000">
+<setting name="default_audio_path">http://{0}/mcc/bahasa/pcs/</setting>
+<substitute index="0">
+<local_variable name="mediaIP"/>
+</substitute>
+</configuration>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration SYSTEM "../../../../dtds/ActivityLoggerConfig.dtd">
+<configuration version="1.0" name="ActivityLog">
+<format delimiter="," remove_delimiter_from_content="true" date_format="standard" date_granularity="milliseconds"/>
+<scope logging_level="Complete">
+<definitions>
+<level name="Complete">
+<event id="start"/>
+<event id="end"/>
+<event id="elementEnter"/>
+<event id="elementExit"/>
+<event id="elementFlag"/>
+<event id="defaultInteraction"/>
+<event id="elementData"/>
+<event id="custom"/>
+<event id="hotlink"/>
+<event id="hotevent"/>
+<event id="warning"/>
+<event id="systemError"/>
+<event id="javaApiError"/>
+<event id="xmlApiError"/>
+<event id="vxmlError"/>
+<event id="catch"/>
+</level>
+</definitions>
+</scope>
+<rotation>
+<by_size mb_limit="100"/>
+</rotation>
+<cache>
+<per_call kb_limit="50" allocate="once"/>
+</cache>
+<purge>
+<file_count greater_than="100"/>
+</purge>
+<last_modified_update frequency="1"/>
+</configuration>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE configuration SYSTEM "../../../../dtds/VoiceElementConfiguration.dtd">
+<configuration class="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" serial="0000">
+<setting name="caller_input">user_psc</setting>
+</configuration>

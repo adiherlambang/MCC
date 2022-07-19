@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE application SYSTEM "../../../../dtds/Settings_1-2.dtd">
+<application key="3a6cbf41f9f83c9efb7be0afaae821" serial="0000" subdialog="false" version="1.2">
+<maintainer>MSI</maintainer>
+<language>en-US</language>
+<encoding>UTF-8</encoding>
+<audio>
+<error src="/CVP/audio/error.wav">Sorry. There has been an error.</error>
+<suspended src="/CVP/audio/suspend_audio.wav">Sorry, this voice application has been taken down for maintenance.</suspended>
+<initial_on_hold src="/CVP/audio/onhold_initial.wav"/>
+<main_on_hold src="/CVP/audio/onhold_continue.wav"/>
+<default_path>http://198.18.133.13/mcc/bahasa/pcs/</default_path>
+</audio>
+<session_timeout>900</session_timeout>
+<voice_browser>cisco_dtmf_02</voice_browser>
+<loggers>
+<logger_instance class="com.audium.logger.application.error.ApplicationErrorLogger" configuration="ErrorLogConfig.xml" enforce_call_event_order="false" name="ErrorLog"/>
+<logger_instance class="com.audium.logger.application.admin.ApplicationAdminLogger" enforce_call_event_order="false" name="AdminLog"/>
+<logger_instance class="com.audium.logger.application.activity.ActivityLogger" configuration="ActivityLogConfig.xml" enforce_call_event_order="true" name="ActivityLog"/>
+<logger_instance class="com.cisco.cvp.vxml.datafeed.DatafeedLogger" configuration="CVPDatafeedLoggerConfig.properties" enforce_call_event_order="true" name="CVPDatafeedLog"/>
+<logger_instance class="com.cisco.cvp.vxml.snmp.CVPSNMPLogger" configuration="CVPSNMPLoggerConfig.properties" enforce_call_event_order="true" name="CVPSNMPLog"/>
+</loggers>
+</application>

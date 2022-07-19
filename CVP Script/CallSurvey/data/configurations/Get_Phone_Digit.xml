@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE configuration SYSTEM "../../../../dtds/VoiceElementConfiguration.dtd">
+<configuration class="com.audium.server.voiceElement.phone.MBasicPhone" serial="0000">
+<setting name="inputmode">dtmf</setting>
+<setting name="noinput_timeout">5s</setting>
+<setting name="collect_max_noinput_count">3</setting>
+<setting name="collect_max_nomatch_count">3</setting>
+<setting name="modal">false</setting>
+<setting name="secure_logging">false</setting>
+<audio_group bargein="true" count="1" name="collect_initial_audio_group">
+<audio name="audio item 1" src="NoHP.wav" use_default_path="true"/>
+</audio_group>
+</configuration>

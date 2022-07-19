@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE configuration SYSTEM "../../../../dtds/VoiceElementConfiguration.dtd">
+<configuration class="com.audium.server.voiceElement.internal.CiscoSubdialogStartElement" serial="0000">
+<setting name="Where">Session Data</setting>
+<setting name="enable_digits_bypass">false</setting>
+</configuration>
