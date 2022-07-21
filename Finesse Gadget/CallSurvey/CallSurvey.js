@@ -67,6 +67,9 @@ finesse.modules.SampleGadget = (function ($) {
        
        finesse.modules.SampleGadget.updateCallVariable("user.skill",queueNumber);
        clientLogs.log("update CallVariable user.skill =" + queueNumber);
+
+       finesse.modules.SampleGadget.updateCallVariable("callVariable10",teamID);
+       clientLogs.log("update CallVariable callvariable10 =" + teamID);
     },
 
     /**
