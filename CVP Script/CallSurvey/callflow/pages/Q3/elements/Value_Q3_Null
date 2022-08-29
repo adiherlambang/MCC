@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@390594503:1657002381089" name="Value_Q3_Null" version="6.0.1">
+<config>
+<settings>
+<setting name="Q3">var val_q3 = null;
+
+val_q3</setting>
+</settings>
+</config>
+</action_element>

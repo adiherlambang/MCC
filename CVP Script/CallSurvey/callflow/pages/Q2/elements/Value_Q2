@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1425152258:1656996471835" name="Value_Q2" version="6.0.1">
+<config>
+<settings>
+<setting name="Q2">var val_q2 = {Data.Element.Q2.value};
+
+val_q2</setting>
+</settings>
+</config>
+</action_element>

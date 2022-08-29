@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@365554923:1656994684511" name="Lang_Select" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Lang_Select">
+        <exit_state name="Bahasa" conjugate="and">
+            <string operator="equal">
+                <local_variable name="lang" />
+                <constant_string value="ina" />
+            </string>
+        </exit_state>
+        <exit_state name="English" conjugate="and">
+            <string operator="equal">
+                <local_variable name="lang" />
+                <constant_string value="eng" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

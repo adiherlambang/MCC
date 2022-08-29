@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@210083902:1658376147626" name="PhoneValidation" version="6.0.1">
+<element height="50" id="Element@1758152798:1658376147626" name="Validation_Entry" type="Page Entry" width="156" x="366" y="65">
+<exit_states>
+<exit_state name="next" target="Element@1985136401:1658376222262"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1985136401:1658376222262" name="Audio_NotValid" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="154" x="365" y="194">
+<exit_states>
+<exit_state name="done" target="Element@407056399:1658376251200"/>
+</exit_states>
+</element>
+<element height="50" id="Element@407056399:1658376251200" name="Counter_Validation" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="175" x="356" y="333">
+<exit_states>
+<exit_state name="done" target="Element@238090860:1658376265306"/>
+</exit_states>
+</element>
+<element height="50" id="Element@238090860:1658376265306" name="Decision_Validation" type="Decision" width="180" x="356" y="465">
+<exit_states>
+<exit_state name="Retry" target="Element@222003940:1658376420247"/>
+<exit_state name="DefaultANI" target="Element@883891602:1658376461656"/>
+</exit_states>
+</element>
+<element height="50" id="Element@222003940:1658376420247" name="Retry_Entry" type="Page Connector" width="123" x="118" y="468">
+<page_connector target="Element@146378176:1658376405434">Retry_Entry<config/>
+</page_connector>
+</element>
+<element height="50" id="Element@883891602:1658376461656" name="Default_Entry" type="Page Connector" width="138" x="722" y="462">
+<page_connector target="Element@1156439581:1658376435733">Default_Entry<config/>
+</page_connector>
+</element>
+</page>

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE configuration SYSTEM "../../../../dtds/ActionElementConfiguration.dtd">
-<configuration class="com.audium.server.action.setvalue.SetValueAction" serial="0000">
-<setting name="Q1"><![CDATA[var val_q1 = null;
-
-val_q1]]></setting>
-</configuration>

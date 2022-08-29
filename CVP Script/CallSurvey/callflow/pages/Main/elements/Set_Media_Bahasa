@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1420589322:1656994773301" name="Set_Media_Bahasa" version="6.0.1">
+<config>
+<settings>
+<setting name="maintainer"/>
+<setting name="language"/>
+<setting name="voice_name"/>
+<setting name="encoding"/>
+<setting name="default_audio_path">http://{LocalVar.mediaIP}/mcc/bahasa/pcs/</setting>
+<setting name="remove_session_data"/>
+</settings>
+</config>
+</action_element>

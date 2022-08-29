@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1666402703:1656993927906" name="Value_Set" version="6.0.1">
+<config>
+<log>
+<data create_when="After" name="Media">{LocalVar.mediaIP}</data>
+</log>
+<settings>
+<setting name="mediaIP">var cvp = {Data.Session.cvp};
+var cvp_ip;
+
+if(cvp==="a")
+{
+	cvp_ip = "10.254.173.5";
+}else if(cvp==="b")
+{
+	cvp_ip = "10.204.173.5";
+}else if(cvp==="c")
+{
+	cvp_ip = "10.243.227.205";
+}else if(cvp==="d")
+{
+	cvp_ip = "198.18.133.13";
+}
+
+cvp_ip
+</setting>
+<setting name="AgentID">var agentID = {Data.Session.Aid};
+
+
+if(agentID == null){
+	agentID = null;
+}
+
+agentID</setting>
+<setting name="SkillID">var skillID = {Data.Session.SID};
+
+if(skillID == null){
+	skillID = null;
+}
+
+skillID</setting>
+<setting name="TeamID">var teamID = {Data.Session.TID};
+
+if(teamID == null){
+	teamID = null;
+}
+
+teamID</setting>
+<setting name="lang">var lang_select = {Data.Session.lang};
+var lang;
+
+if(lang_select=="" || lang_select==null){
+	lang = "ina";
+}
+
+lang
+
+</setting>
+</settings>
+</config>
+</action_element>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@507284721:1656993002104" name="Main" version="6.0.1">
+<element height="50" id="Element@1640511092:1656993002104" name="Start Of Call" start_of_call="true" type="Page Entry" width="130" x="522" y="30">
+<exit_states>
+<exit_state name="next" target="Element@155339422:1656993911405"/>
+</exit_states>
+</element>
+<element height="50" id="Element@155339422:1656993911405" name="Session Start" src="com.audium.server.voiceElement.internal.CiscoSubdialogStartElement" type="Subdialog Start" width="134" x="281" y="29">
+<exit_states>
+<exit_state name="done" target="Element@1666402703:1656993927906"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1666402703:1656993927906" name="Value_Set" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="133" x="289" y="150">
+<exit_states>
+<exit_state name="done" target="Element@365554923:1656994684511"/>
+</exit_states>
+</element>
+<element height="50" id="Element@365554923:1656994684511" name="Lang_Select" type="Decision" width="129" x="525" y="153">
+<exit_states>
+<exit_state name="Bahasa" target="Element@1420589322:1656994773301"/>
+<exit_state name="English" target="Element@2105942672:1656994796391"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1420589322:1656994773301" name="Set_Media_Bahasa" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="172" x="644" y="270">
+<exit_states>
+<exit_state name="done" target="Element@2016179281:1657002991795"/>
+</exit_states>
+</element>
+<element height="50" id="Element@2105942672:1656994796391" name="Set_Media_English" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="172" x="382" y="274">
+<exit_states>
+<exit_state name="done" target="Element@2016179281:1657002991795"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1930208288:1656994849841" name="Q1_Entry" type="Page Connector" width="108" x="549" y="515">
+<page_connector target="Element@1271791003:1656994861181">Q1_Entry<config/>
+</page_connector>
+</element>
+<element height="50" id="Element@2016179281:1657002991795" name="Audio_Greetings" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="159" x="521" y="400">
+<exit_states>
+<exit_state name="done" target="Element@1930208288:1656994849841"/>
+</exit_states>
+</element>
+</page>

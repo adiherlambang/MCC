@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1377471131:1657002845910" name="DB_PSC" version="6.0.1">
+<config>
+<settings>
+<setting name="type">insert</setting>
+<setting name="jndiName">cvp_pcs</setting>
+<setting name="query">INSERT INTO postcallsurvey 
+(DateTime,
+ANI,
+Q1,
+Q2,
+Q3,
+Telp,
+AgentID,
+SkillID,
+TeamID)
+VALUES 
+('{GeneralDateTime.Year.CURRENT}-{GeneralDateTime.Month.CURRENT}-{GeneralDateTime.DayOfMonth.CURRENT} {GeneralDateTime.HourOfDay.CURRENT}:{GeneralDateTime.Minute.CURRENT}:00',
+'{CallData.ANI}',
+'{LocalVar.Q1}',
+'{LocalVar.Q2}',
+'{LocalVar.Q3}',
+'{LocalVar.PhoneNumber}',
+'{LocalVar.AgentID}',
+'{LocalVar.SkillID}',
+'{LocalVar.TeamID}')</setting>
+<setting name="enableXmlResultSet">true</setting>
+<setting name="maxRowsInXML">1</setting>
+</settings>
+</config>
+</action_element>

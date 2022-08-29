@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@966781626:1657002350134" name="PhoneConfirmation" version="6.0.1">
+<element height="50" id="Element@1633132016:1657002350134" name="Phone_Entry" type="Page Entry" width="130" x="272" y="29">
+<exit_states>
+<exit_state name="next" target="Element@1100669693:1657002611355"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1100669693:1657002611355" name="Get_Phone_Digit" src="com.audium.server.voiceElement.phone.MBasicPhone" type="Voice Element" width="159" x="258" y="159">
+<exit_states>
+<exit_state name="done" target="Element@1263306657:1657003180032"/>
+<exit_state name="max_nomatch" target="Element@1730861713:1657003196587"/>
+<exit_state name="max_noinput" target="Element@1730861713:1657003196587">
+<bendpoint>
+<dim1 x="322" y="-4"/>
+<dim2 x="0" y="-125"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="50" id="Element@50202201:1657002760795" name="Confirmation" src="com.audium.server.voiceElement.menu.MFoundation2OptionMenu" type="Voice Element" width="137" x="270" y="510">
+<exit_states>
+<exit_state name="option1" target="Element@768432633:1657002796113"/>
+<exit_state name="option2" target="Element@1100669693:1657002611355">
+<bendpoint>
+<dim1 x="-202" y="-104"/>
+<dim2 x="-200" y="111"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_nomatch" target="Element@1730861713:1657003196587">
+<bendpoint>
+<dim1 x="322" y="-1"/>
+<dim2 x="2" y="93"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_noinput" target="Element@1730861713:1657003196587"/>
+</exit_states>
+</element>
+<element height="50" id="Element@768432633:1657002796113" name="DB_Entry" type="Page Connector" width="109" x="827" y="502">
+<page_connector target="Element@1254589106:1657002658119">DB_Entry<config/>
+</page_connector>
+</element>
+<element height="50" id="Element@1263306657:1657003180032" name="Value_Phone" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="133" x="275" y="263">
+<exit_states>
+<exit_state name="done" target="Element@502942439:1658375898185"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1730861713:1657003196587" name="Value_Phone_Null" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="166" x="563" y="280">
+<exit_states>
+<exit_state name="done" target="Element@768432633:1657002796113">
+<bendpoint>
+<dim1 x="160" y="-3"/>
+<dim2 x="156" y="-233"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="50" id="Element@502942439:1658375898185" name="validation_phone" type="Decision" width="164" x="262" y="365">
+<exit_states>
+<exit_state name="NotValid" target="Element@234092780:1658376170619"/>
+<exit_state name="Valid" target="Element@50202201:1657002760795"/>
+</exit_states>
+</element>
+<element height="50" id="Element@234092780:1658376170619" name="Validation_Entry" type="Page Connector" width="156" x="31" y="161">
+<page_connector target="Element@1758152798:1658376147626">Validation_Entry<config/>
+</page_connector>
+</element>
+<element height="50" id="Element@146378176:1658376405434" name="Retry_Entry" type="Page Entry" width="123" x="526" y="20">
+<exit_states>
+<exit_state name="next" target="Element@1100669693:1657002611355"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1156439581:1658376435733" name="Default_Entry" type="Page Entry" width="138" x="782" y="156">
+<exit_states>
+<exit_state name="next" target="Element@1730861713:1657003196587"/>
+</exit_states>
+</element>
+</page>

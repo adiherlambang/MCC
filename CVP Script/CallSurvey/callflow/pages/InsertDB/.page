@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@449456213:1657002658119" name="InsertDB" version="6.0.1">
+<element height="50" id="Element@1254589106:1657002658119" name="DB_Entry" type="Page Entry" width="109" x="409" y="47">
+<exit_states>
+<exit_state name="next" target="Element@1377471131:1657002845910"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1377471131:1657002845910" name="DB_PSC" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="135" x="230" y="249">
+<exit_states>
+<exit_state name="done" target="Element@295066002:1657002941537"/>
+</exit_states>
+</element>
+<element height="50" id="Element@295066002:1657002941537" name="Audio_Closing" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="145" x="561" y="249">
+<exit_states>
+<exit_state name="done" target="Element@197345038:1657003017697"/>
+</exit_states>
+</element>
+<element height="50" id="Element@197345038:1657003017697" name="Session_End" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="130" x="386" y="462">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+</page>
