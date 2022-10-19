@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@2036142881:1603298933215" name="Last5_USD1" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Last5_USD1" default_exit_state="False">
+        <exit_state name="True" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <element name="Last5CurrencyCheckData" variable="US Dollar" />
+                </data>
+                <constant_string value="True" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

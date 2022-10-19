@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@255814034:1605471328288" name="Copy_of_2_AccTypeC4" version="6.0.1">
+<config>
+<settings>
+<setting name="TransCurrency1">var result = "USD";
+result</setting>
+<setting name="TransCurrency2">var result = "SGD";
+result</setting>
+<setting name="soundCurrency1">var result = "USD";
+result</setting>
+<setting name="soundCurrency2">var result = "SGD";
+result</setting>
+</settings>
+</config>
+</action_element>

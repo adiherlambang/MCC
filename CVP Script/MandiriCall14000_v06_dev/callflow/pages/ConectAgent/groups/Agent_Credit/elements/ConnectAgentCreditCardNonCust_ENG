@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<subdialog_return id="Element@2119979401:1612341593652" name="ConnectAgentCreditCardNonCust_ENG" version="6.0.1">
+<config>
+<settings>
+<setting name="caller_input">1</setting>
+<setting name="FromExtVXML0">CC,9=---,1=---</setting>
+<setting name="FromExtVXML1">eng,reg,2=---,10=---</setting>
+<setting name="FromExtVXML2">4=---,7=---,3=---,6=---</setting>
+<setting name="FromExtVXML3">8={LocalVar.lang_select}_NonCust_CC,5=---</setting>
+</settings>
+</config>
+</subdialog_return>

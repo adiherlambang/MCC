@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@611611384:1605888568462" name="IVRChangesRC2_3xError" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="IVRChangesRC2_3xError" default_exit_state="No Error">
+        <exit_state name="Success" conjugate="and">
+            <string operator="equal">
+                <local_variable name="IVRPinChangesRC2" />
+                <constant_string value="75" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

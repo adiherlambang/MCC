@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@513436064:1610288993611" name="log_GetEmailDB" version="6.0.1">
+<config>
+<settings>
+<setting name="type">insert</setting>
+<setting name="jndiName">cvp_reporting</setting>
+<setting name="query">INSERT INTO dbo.CVP_REPORT ([ani],[date],[time],[response_code],[service_id],[session_id],[traceNum],[terimnalID],[numbercard],[unit])
+VALUES 
+(
+'{CallData.ANI}'
+,'{GeneralDateTime.Year.CURRENT}-{GeneralDateTime.Month.CURRENT}-{GeneralDateTime.DayOfMonth.CURRENT}'
+,'{GeneralDateTime.HourOfDay.CURRENT}:{GeneralDateTime.Minute.CURRENT}:00'
+,'408'
+,'26'
+,'{LocalVar.Session_Name}'
+,''
+,''
+,'{LocalVar.CardInput}'
+,'{Data.Element.DB_CheckCard.name}')
+</setting>
+<setting name="enableXmlResultSet">true</setting>
+<setting name="maxRowsInXML">1</setting>
+</settings>
+<local_events>
+<local_event>
+<name>Error_InsertLogGetEmailPersonal</name>
+<eventlist>com.audium.server.*</eventlist>
+<type>Java Exception</type>
+</local_event>
+</local_events>
+</config>
+</action_element>

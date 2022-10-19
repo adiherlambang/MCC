@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@162615473:1611118478233" name="Validation_LengthCCpayment" version="6.0.1">
+<element height="46" id="Element@151599046:1611118589667" name="Audio_3xErrorInputCCpayment" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="215" x="395" y="239">
+<exit_states>
+<exit_state name="done" target="Element@574897541:1611118636386"/>
+</exit_states>
+</element>
+<element height="46" id="Element@273316964:1611118259845" name="Audio_ErrorInputCCpayment" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="203" x="521" y="109">
+<exit_states>
+<exit_state name="done" target="Element@1225310796:1611118447437"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1156344395:1611118470635" name="Check_3xErrorInputCCPayment" type="Decision" width="216" x="140" y="149">
+<exit_states>
+<exit_state name="True" target="Element@151599046:1611118589667"/>
+<exit_state name="False" target="Element@1220146994:1611118639061"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1225310796:1611118447437" name="Counter_InputDigitCCPayment" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="214" x="136" y="29">
+<exit_states>
+<exit_state name="done" target="Element@1156344395:1611118470635"/>
+</exit_states>
+</element>
+<element height="46" id="Element@360746389:1611118478233" name="Group Start" type="Element Group Start" width="110" x="587" y="-20">
+<exit_states>
+<exit_state name="Length_DigitCC:NotValid" target="Element@273316964:1611118259845"/>
+</exit_states>
+</element>
+</page>

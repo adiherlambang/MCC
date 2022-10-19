@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@685876983:1608107123820" name="PaymentPhone" version="6.0.1">
+<element height="46" id="Element@1242078438:1608107123820" name="Group Start" type="Element Group Start" width="110" x="56" y="69">
+<exit_states>
+<exit_state name="REST_PaymentPhone:done" target="Element@1654885593:1608107192001"/>
+</exit_states>
+</element>
+<element height="46" id="Element@268035275:1608107354980" name="Log_PaymentPhone_Respon" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="200" x="245" y="223">
+<exit_states>
+<exit_state name="done" target="Element@1669098454:1605801138260"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@1669098454:1605801138260">
+<bendpoint>
+<dim1 x="-40" y="-74"/>
+<dim2 x="236" y="-15"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1654885593:1608107192001" name="Log_PaymentPhone_Status" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="193" x="241" y="1">
+<exit_states>
+<exit_state name="done" target="Element@676657033:1605790099326"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@676657033:1605790099326">
+<bendpoint>
+<dim1 x="86" y="80"/>
+<dim2 x="-198" y="18"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1108072096:1605800547273" name="PaymentPhoneRespon" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="170" x="519" y="166">
+<exit_states>
+<exit_state name="done" target="Element@268035275:1608107354980"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1669098454:1605801138260" name="PaymentPhoneResponCode1" type="Decision" width="204" x="-33" y="164">
+<exit_states>
+<exit_state name="Success" target="Element@2114004573:1605801169044"/>
+<exit_state name="Fail" target="Element@860802860:1605801127227"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2114004573:1605801169044" name="PaymentPhoneResponCode2" type="Decision" width="204" x="-30" y="282">
+<exit_states>
+<exit_state name="Success" target="Element@429112065:1605801763907"/>
+<exit_state name="Fail" target="Element@2084958242:1610364413144"/>
+<exit_state name="Invalid Amount" target="Element@211979109:1612255277100"/>
+<exit_state name="Invalid Transaction" target="Element@1280098354:1612760613808"/>
+<exit_state name="Invalid Balance" target="Element@1721322583:1612760639829"/>
+</exit_states>
+</element>
+<element height="46" id="Element@676657033:1605790099326" name="PaymentPhoneStatusCode" type="Decision" width="191" x="526" y="63">
+<exit_states>
+<exit_state name="Success" target="Element@1108072096:1605800547273"/>
+<exit_state name="Fail" target="Element@860802860:1605801127227"/>
+</exit_states>
+</element>
+</page>

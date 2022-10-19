@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@157654167:1609689738033" name="GetEmailCorp_Value" version="6.0.1">
+<config>
+<settings>
+<setting name="GetEmailCorpRC1">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_GetEmail_Corp.response_body};
+
+var path= "$payload.responseCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+eval(result)</setting>
+<setting name="traceNum_CorpGetEmail">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_GetEmail_Corp.response_body};
+
+var path= "$hubHeader.traceNumber";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="terminalId_CorpGetEmail">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_GetEmail_Corp.response_body};
+
+var path= "$hubHeader.terminalId";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+</settings>
+<element_data>
+<data create_when="After" name="RC_CorpGetEmail" storable="true" type="String">{LocalVar.GetEmailCorpRC1}</data>
+<data create_when="After" name="TraceNum" storable="true" type="String">{LocalVar.traceNum_CorpGetEmail}</data>
+<data create_when="After" name="TerminalID" storable="true" type="String">{LocalVar.terminalId_CorpGetEmail}</data>
+</element_data>
+</config>
+</action_element>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@426194857:1611302861302" name="Decision_TypeRek" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Decision_TypeRek">
+        <exit_state name="StatusRekError" conjugate="or">
+            <string operator="equal">
+                <local_variable name="pick" />
+                <constant_string value="S" />
+            </string>
+            <string operator="equal">
+                <local_variable name="pick" />
+                <constant_string value="D" />
+            </string>
+        </exit_state>
+        <exit_state name="FiturNotAvail" conjugate="or">
+            <string operator="equal">
+                <local_variable name="pick" />
+                <constant_string value="T" />
+            </string>
+            <string operator="equal">
+                <local_variable name="pick" />
+                <constant_string value="L" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@219837896:1610894792212" name="Valid_PINCC_Confirm" version="6.0.1">
+<config>
+<settings>
+<setting name="validation_inputPINCCConfirm">var input = {Data.Element.Input_PINCC_Confirm.value};
+
+input.indexOf("*")</setting>
+</settings>
+</config>
+</action_element>

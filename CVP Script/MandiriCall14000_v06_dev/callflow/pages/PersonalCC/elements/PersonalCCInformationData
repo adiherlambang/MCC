@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@135742835:1605619019575" name="PersonalCCInformationData" version="6.0.1">
+<config>
+<settings>
+<setting name="currentBalanceCC">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[0].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(0,15)</setting>
+<setting name="currentBillCC">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[1].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(0,15)</setting>
+<setting name="minPaymentCC">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[2].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(0,15)</setting>
+<setting name="dueDateCC_dd">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[3].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(0,2)</setting>
+<setting name="dateOfBillCC_dd">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[4].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(0,2)</setting>
+<setting name="lastPaymentDateCC_dd">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[5].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(0,2)</setting>
+<setting name="lastPaymentAmntCC">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[6].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(0,15)</setting>
+<setting name="RemainLimitCC">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[7].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(0,15)</setting>
+<setting name="PlafondLimitCC">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[8].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(0,15)</setting>
+<setting name="expDateCC_yymm">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[9].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(2,6)</setting>
+<setting name="NamaNasabahCC">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[10].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="dueDateCC_mmyy">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[3].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(2,6)</setting>
+<setting name="dateOfBillCC_mmyy">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[4].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(2,6)</setting>
+<setting name="lastPaymentDateCC_mmyy">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[5].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(2,6)</setting>
+<setting name="CardInput">{Data.Element.MainMenuInput16DIgit.value}</setting>
+<setting name="expDateCC_dd">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[9].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(0,2)</setting>
+<setting name="expDateCC_mmyy">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[9].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+var yy = 20+result.substring(2,4);
+var mm = result.substring(4,6);
+
+mm+"/"+yy</setting>
+<setting name="DOBInput">var data = {Data.Element.PersonalCCPin.value};
+var code;
+var number = parseInt(data.substring(4,6));
+
+if(number&lt;=20){
+	code='1';
+}else if(number&gt;20)
+{
+	code='0';
+}
+
+code+{LocalVar.inputDOB}</setting>
+<setting name="STMT_BALANCE_CC">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[1].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+var balance = result.substring(0,15).replace(/^0+/, '');
+
+balance</setting>
+<setting name="MIN_DUE_CC">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[2].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+var balance = result.substring(0,15).replace(/^0+/, '');
+
+balance</setting>
+<setting name="STMT_DATE_CC">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[4].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+var dd = result.substring(0,2);
+
+var mm = result.substring(2,4);
+
+var yy = result.substring(4,6);
+
+var date = dd+"/"+mm+"/"+20+yy;
+
+date</setting>
+<setting name="DUE_DATE_CC">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[3].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+dd = result.substring(0,2);
+
+var mm = result.substring(2,4);
+
+var yy = result.substring(4,6);
+
+var date = dd+"/"+mm+"/"+20+yy;
+
+date</setting>
+<setting name="DOB_CC">var dob = {Data.Element.PersonalCCPin.value};
+
+var tgl;
+
+var dd = dob.substring(0,2);
+
+var mm = dob.substring(2,4);
+
+var y1 = dob.substring(4,5);
+
+var y2 = dob.substring(5,6);
+
+if (y1==0 || y1==1){
+	tgl = dd+"/"+mm+"/"+20+y1+y2;
+}else{
+	tgl = dd+"/"+mm+"/"+19+y1+y2;
+}
+
+tgl</setting>
+<setting name="REST_expData">var data = {LocalVar.expDateCC_yymm};
+var code;
+var number = parseInt(data.substring(0,2));
+
+if(number&lt;20){
+	code='0';
+}else if(number&gt;=20)
+{
+	code='1';
+}
+
+code</setting>
+<setting name="flagMenu">var menu="credit";
+
+menu</setting>
+</settings>
+</config>
+</action_element>

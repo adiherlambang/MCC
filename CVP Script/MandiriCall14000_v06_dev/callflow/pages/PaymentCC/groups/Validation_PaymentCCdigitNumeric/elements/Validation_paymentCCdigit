@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@188366785:1610891331527" name="Validation_paymentCCdigit" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Validation_paymentCCdigit" default_exit_state="NotValid">
+        <exit_state name="Valid" conjugate="and">
+            <number operator="less">
+                <local_variable name="validation_paymentCCdigit" />
+                <constant_number value="0" />
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1544734142:1605789516295" name="PhonePayment5" version="6.0.1">
+<config>
+<settings>
+<setting name="pickRekPhone">{Data.Element.OptionRek5.value}</setting>
+</settings>
+</config>
+</action_element>

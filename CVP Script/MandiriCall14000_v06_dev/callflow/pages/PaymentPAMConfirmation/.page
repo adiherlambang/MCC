@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1740025478:1603195547883" name="PaymentPAMConfirmation" version="6.0.1">
+<element height="62" id="Element@1317501653:1603201510293" name="Aetra_Check" type="Decision" width="181" x="117" y="384">
+<exit_states>
+<exit_state name="Success" target="Element@930604994:1603205614711"/>
+<exit_state name="Fail" target="Element@1491608979:1603202787171"/>
+</exit_states>
+</element>
+<element height="62" id="Element@930604994:1603205614711" name="Konfirmasi" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="162" x="308" y="295">
+<exit_states>
+<exit_state name="done" target="Element@1305110820:1603203145146"/>
+<exit_state name="max_nomatch" target="Element@1694636429:1603202509135"/>
+<exit_state name="max_noinput" target="Element@998359270:1603205961791"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1305110820:1603203145146" name="Konfirmasi2" type="Decision" width="175" x="400" y="200">
+<exit_states>
+<exit_state name="True" target="Element@1790511742:1603206600041"/>
+<exit_state name="False" target="Element@1264532354:1603206071028"/>
+</exit_states>
+</element>
+<element height="62" id="Element@298190836:1603201978797" name="NmrPelanggan" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="208" x="111" y="157">
+<exit_states>
+<exit_state name="done" target="Element@1062822717:1603201510293"/>
+<exit_state name="max_nomatch" target="Element@1694636429:1603202509135"/>
+<exit_state name="max_noinput" target="Element@544375998:1603202512707"/>
+</exit_states>
+</element>
+<element height="62" id="Element@544375998:1603202512707" name="NoInput" type="Page Connector" width="138" x="-16" y="24">
+<page_connector target="Element@372874912:1601898931749">NoInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@998359270:1603205961791" name="NoInput" type="Page Connector" width="138" x="365" y="373">
+<page_connector target="Element@372874912:1601898931749">NoInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1694636429:1603202509135" name="NoMatchInput" type="Page Connector" width="205" x="280" y="30">
+<page_connector target="Element@982309222:1601898944005">NoMatchInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1790511742:1603206600041" name="PAMConfirmation" type="Page Connector" width="238" x="600" y="220">
+<page_connector target="Element@1375638903:1603206523016">PAMConfirmation<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1062822717:1603201510293" name="Palyja_Check" type="Decision" width="185" x="112" y="237">
+<exit_states>
+<exit_state name="Success" target="Element@930604994:1603205614711"/>
+<exit_state name="False" target="Element@682114136:1603201510293"/>
+</exit_states>
+</element>
+<element height="62" id="Element@682114136:1603201510293" name="PamBDG_Check" type="Decision" width="217" x="110" y="311">
+<exit_states>
+<exit_state name="Success" target="Element@930604994:1603205614711"/>
+<exit_state name="False" target="Element@1317501653:1603201510293"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1491608979:1603202787171" name="PaymentPAM" type="Page Connector" width="190" x="-25" y="289">
+<page_connector target="Element@2100862887:1603192048928">PaymentPAM<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1635501075:1603195547883" name="PaymentPAMConfirmation" type="Page Entry" width="330" x="77" y="77">
+<exit_states>
+<exit_state name="next" target="Element@298190836:1603201978797"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1264532354:1603206071028" name="PaymentPAMConfirmation" type="Page Connector" width="330" x="448" y="12">
+<page_connector target="Element@1635501075:1603195547883">PaymentPAMConfirmation<config/>
+</page_connector>
+</element>
+</page>

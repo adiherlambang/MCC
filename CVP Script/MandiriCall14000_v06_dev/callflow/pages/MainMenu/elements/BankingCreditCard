@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1444116897:1601965250631" name="BankingCreditCard" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="BankingCreditCard">
+        <exit_state name="InputPIN" conjugate="and">
+            <number operator="equal">
+                <local_variable name="inputcard_length" />
+                <constant_number value="16" />
+            </number>
+        </exit_state>
+        <exit_state name="False/NoMatch" conjugate="and">
+            <number operator="greater">
+                <local_variable name="inputcard_length" />
+                <constant_number value="1" />
+            </number>
+            <number operator="less">
+                <local_variable name="inputcard_length" />
+                <constant_number value="16" />
+            </number>
+        </exit_state>
+        <exit_state name="False/NoMatch" conjugate="and">
+            <number operator="greater">
+                <local_variable name="inputcard_length" />
+                <constant_number value="16" />
+            </number>
+        </exit_state>
+        <exit_state name="NoOptionMatch" conjugate="or">
+            <string operator="not_equal">
+                <data>
+                    <element name="MainMenuInput16DIgit" variable="value" />
+                </data>
+                <constant_string value="1" />
+            </string>
+            <string operator="not_equal">
+                <data>
+                    <element name="MainMenuInput16DIgit" variable="value" />
+                </data>
+                <constant_string value="4" />
+            </string>
+            <string operator="not_equal">
+                <data>
+                    <element name="MainMenuInput16DIgit" variable="value" />
+                </data>
+                <constant_string value="9" />
+            </string>
+            <string operator="not_equal">
+                <data>
+                    <element name="MainMenuInput16DIgit" variable="value" />
+                </data>
+                <constant_string value="8" />
+            </string>
+            <string operator="not_equal">
+                <data>
+                    <element name="MainMenuInput16DIgit" variable="value" />
+                </data>
+                <constant_string value="#" />
+            </string>
+            <string operator="not_equal">
+                <data>
+                    <element name="MainMenuInput16DIgit" variable="value" />
+                </data>
+                <constant_string value="*" />
+            </string>
+            <string operator="not_equal">
+                <data>
+                    <element name="MainMenuInput16DIgit" variable="value" />
+                </data>
+                <constant_string value="0" />
+            </string>
+            <string operator="not_equal">
+                <data>
+                    <element name="MainMenuInput16DIgit" variable="value" />
+                </data>
+                <constant_string value="5" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

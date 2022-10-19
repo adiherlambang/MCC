@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1163754449:1605061221774" name="NmbrCardValue" version="6.0.1">
+<config>
+<settings>
+<setting name="PrefixCard">importPackage(com.audium.server.cvpUtil);
+var nmbr={Data.Element.MainMenuInput16DIgit.value};
+eval(nmbr.substring(0,6))</setting>
+</settings>
+</config>
+</action_element>

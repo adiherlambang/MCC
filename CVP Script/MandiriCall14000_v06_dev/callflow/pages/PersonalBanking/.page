@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@704329380:1602039229515" name="PersonalBanking" version="6.0.1">
+<element height="62" id="Element@389421101:1605190431458" name="BankingValue" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="194" x="741" y="-707">
+<exit_states>
+<exit_state name="done" target="Element@1205569160:1605582829211"/>
+</exit_states>
+</element>
+<element height="62" id="Element@706771517:1602046587130" name="ConnectAgentBanking" type="Page Connector" width="289" x="-237" y="236">
+<page_connector target="Element@1497709728:1601902705927">ConnectAgentBanking<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1753156897:1604981345326" name="CurrencyDBCheck" type="Element Group" width="241" x="358" y="-1024"/>
+<element height="62" id="Element@1791860614:1609925311730" name="DBReplaceInq_Personal" type="Element Group" width="296" x="489" y="-139"/>
+<element height="62" id="Element@124023208:1609925327778" name="DBReplaceInq_Personal" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="296" x="247" y="-51">
+<exit_states>
+<exit_state name="done" target="Element@1799146899:1608286376303"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1240519057:1610958376938" name="DBReplaceInq_Personal_Fail" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="341" x="419" y="69">
+<exit_states>
+<exit_state name="done" target="Element@1799146899:1608286376303"/>
+</exit_states>
+</element>
+<element height="62" id="Element@707630017:1602046614263" name="EndCall" type="Page Connector" width="129" x="73" y="112">
+<page_connector target="Element@89933654:1601904832032">EndCall<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@349072941:1610301232105" name="Error_NoInput" type="Page Connector" width="198" x="-90" y="158">
+<page_connector target="Element@270910828:1610085311655">Error_NoInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1735975643:1610301238811" name="Error_NoMatchInput" type="Page Connector" width="265" x="-93" y="319">
+<page_connector target="Element@1250119072:1610085949630">Error_NoMatchInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@2047761995:1609244448534" name="GetEmailDBRespon" type="Element Group" width="253" x="524" y="-319"/>
+<element height="62" id="Element@1530924173:1609244973948" name="GetEmailDataDB" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="224" x="530" y="-215">
+<exit_states>
+<exit_state name="done" target="Element@797643952:1609924619291"/>
+</exit_states>
+</element>
+<element height="62" id="Element@255354188:1610958332167" name="GetEmailDataDB_Fail" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="269" x="901" y="-288">
+<exit_states>
+<exit_state name="done" target="Element@797643952:1609924619291"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1694699991:1602139118325" name="IVRPINChange" type="Page Connector" width="204" x="336" y="365">
+<page_connector target="Element@73167256:1604932807279">IVRPINChange<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1235829037:1602046568954" name="MainMenu" type="Page Connector" width="167" x="123" y="331">
+<page_connector target="Element@1865813345:1601897428297">MainMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1663568585:1602046580430" name="MainMenu" type="Page Connector" width="167" x="181" y="402">
+<page_connector target="Element@1865813345:1601897428297">MainMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1566819678:1602039229515" name="PersonalBanking" type="Page Entry" width="225" x="228" y="-1262">
+<exit_states>
+<exit_state name="next" target="Element@1050490094:1612339083890"/>
+</exit_states>
+</element>
+<element height="62" id="Element@567822509:1602046630781" name="PersonalBanking" type="Page Connector" width="226" x="22" y="31">
+<page_connector target="Element@1566819678:1602039229515">PersonalBanking<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1532934346:1602046348554" name="PersonalBankingAccInfo" type="Page Connector" width="304" x="644" y="111">
+<page_connector target="Element@1117826334:1602046296646">PersonalBankingAccInfo<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@830860191:1602136176402" name="PersonalBankingFiestaPoint" type="Page Connector" width="340" x="482" y="406">
+<page_connector target="Element@1035103575:1602136144056">PersonalBankingFiestaPoint<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1802638417:1602120728975" name="PersonalBankingPayment" type="Page Connector" width="317" x="577" y="311">
+<page_connector target="Element@1464437885:1602120686730">PersonalBankingPayment<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1301525222:1605600926122" name="PersonalInfoData" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="230" x="161" y="-508">
+<exit_states>
+<exit_state name="done" target="Element@555388237:1609240728867"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1050130498:1610958251359" name="PersonalInfoData_Fail" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="275" x="406" y="-509">
+<exit_states>
+<exit_state name="done" target="Element@555388237:1609240728867"/>
+</exit_states>
+</element>
+<element height="62" id="Element@372798268:1605583446421" name="PersonalInfoStatusResponCode" type="Element Group" width="379" x="140" y="-710"/>
+<element height="62" id="Element@1799146899:1608286376303" name="PersonalMenu" src="com.audium.server.voiceElement.menu.MFoundation10OptionMenu" type="Voice Element" width="202" x="322" y="220">
+<exit_states>
+<exit_state name="option1" target="Element@1532934346:1602046348554"/>
+<exit_state name="option2" target="Element@2015274533:1602118868963"/>
+<exit_state name="option3" target="Element@1802638417:1602120728975"/>
+<exit_state name="option4" target="Element@830860191:1602136176402"/>
+<exit_state name="option5" target="Element@1694699991:1602139118325"/>
+<exit_state name="option6" target="Element@707630017:1602046614263"/>
+<exit_state name="option7" target="Element@567822509:1602046630781"/>
+<exit_state name="option8" target="Element@1235829037:1602046568954"/>
+<exit_state name="option9" target="Element@1663568585:1602046580430"/>
+<exit_state name="option10" target="Element@706771517:1602046587130"/>
+<exit_state name="max_nomatch" target="Element@1735975643:1610301238811"/>
+<exit_state name="max_noinput" target="Element@349072941:1610301232105"/>
+</exit_states>
+</element>
+<element height="62" id="Element@797643952:1609924619291" name="REST_DBReplaceInq_Personal" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="358" x="858" y="-181">
+<exit_states>
+<exit_state name="done" target="Element@1791860614:1609925311730"/>
+<exit_state name="Java Exception-REST_DBReplaceInqPersonalError" target="Element@1240519057:1610958376938">
+<bendpoint>
+<dim1 x="-107" y="242"/>
+<dim2 x="341" y="-37"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@555388237:1609240728867" name="REST_GetEmailDB" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="237" x="538" y="-416">
+<exit_states>
+<exit_state name="done" target="Element@2047761995:1609244448534"/>
+<exit_state name="Java Exception-REST_GetEmailError" target="Element@513436064:1610288993611"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1205569160:1605582829211" name="REST_PersonalInfo" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="243" x="494" y="-711">
+<exit_states>
+<exit_state name="done" target="Element@372798268:1605583446421"/>
+<exit_state name="Java Exception-REST_CifInquiryError" target="Element@2096506856:1610287940433">
+<bendpoint>
+<dim1 x="102" y="85"/>
+<dim2 x="37" y="-48"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@723629579:1604978258147" name="REST_SaldoDB" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="202" x="193" y="-892">
+<exit_states>
+<exit_state name="done" target="Element@670789515:1604978382899"/>
+<exit_state name="Java Exception-REST_BalanceInquiryError" target="Element@389421101:1605190431458"/>
+</exit_states>
+</element>
+<element height="62" id="Element@670789515:1604978382899" name="StatusResponCodeSaldoDB" type="Element Group" width="338" x="551" y="-950"/>
+<element height="62" id="Element@2015274533:1602118868963" name="Trans_Inquiry" type="Page Connector" width="240" x="637" y="208">
+<page_connector target="Element@239805318:1603536635014">Trans_Inquiry<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@513436064:1610288993611" name="log_GetEmailDB" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="219" x="917" y="-414">
+<exit_states>
+<exit_state name="done" target="Element@255354188:1610958332167"/>
+<exit_state name="Java Exception-Error_InsertLogGetEmailPersonal" target="Element@255354188:1610958332167">
+<bendpoint>
+<dim1 x="139" y="62"/>
+<dim2 x="143" y="-64"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@2096506856:1610287940433" name="log_PersonalInfo" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="225" x="563" y="-578">
+<exit_states>
+<exit_state name="done" target="Element@1050130498:1610958251359"/>
+<exit_state name="Java Exception-Error_InsertLogDebitSignOnStatus" target="Element@1050130498:1610958251359">
+<bendpoint>
+<dim1 x="152" y="70"/>
+<dim2 x="297" y="1"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@1907209901:1611565596573" name="Personal_Balance" type="Element Group" width="231" x="991" y="-905"/>
+<element height="62" id="Element@1050490094:1612339083890" name="Menu_Services" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="209" x="296" y="-1133">
+<exit_states>
+<exit_state name="done" target="Element@1753156897:1604981345326"/>
+</exit_states>
+</element>
+</page>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1767192623:1609244063079" name="GetEmailDBResponCode" version="6.0.1">
+<config>
+<settings>
+<setting name="dbGetEmailRC1">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_GetEmailDB.response_body};
+
+var path= "$payload.responseCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="traceNum_getEmailPersonal">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_GetEmailDB.response_body};
+
+var path= "$hubHeader.traceNumber";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="terminalID_getEmailPersonal">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_GetEmailDB.response_body};
+
+var path= "$hubHeader.terminalId";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+</settings>
+<element_data>
+<data create_when="After" name="REST_email-by-cif_RC1" storable="true" type="String">{LocalVar.dbGetEmailRC1}</data>
+</element_data>
+</config>
+</action_element>

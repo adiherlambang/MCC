@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@2130922794:1609926536227" name="CheckExpDateCard" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="CheckExpDateCard" default_exit_state="Failed">
+        <exit_state name="Success" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <element name="DigitFiestaPoint" variable="value" />
+                </data>
+                <local_variable name="expDateDebitCard" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1447754785:1611304602668" name="REST_CifAccInq_Corp" version="6.0.1">
+<config>
+<settings>
+<setting name="EndpointURL">{LocalVar.hubAddress}/cif-account-inquiry</setting>
+<setting name="HTTPMethod">POST</setting>
+<setting name="Parameters"/>
+<setting name="ignoreCertificateValidation">true</setting>
+<setting name="requireHttpAuthentication">false</setting>
+<setting name="headers">'Content-Type':'application/json'</setting>
+<setting name="body">{
+    "transaction_code":"1565",
+    "customer_number":"{LocalVar.cifNumber}",
+    "channel_id":"32",
+    "account_number":"",
+    
+    "account_relationship":"",
+    
+    "account_type":"",
+    
+     "short_name":""
+}</setting>
+<setting name="useProxy">false</setting>
+<setting name="connectTimeout">3000</setting>
+<setting name="readTimeout">5000</setting>
+</settings>
+<local_events>
+<local_event>
+<name>REST_CifAccInqCorpError</name>
+<eventlist>com.sun.jersey.api.client.ClientHandlerException</eventlist>
+<type>Java Exception</type>
+</local_event>
+</local_events>
+</config>
+</action_element>

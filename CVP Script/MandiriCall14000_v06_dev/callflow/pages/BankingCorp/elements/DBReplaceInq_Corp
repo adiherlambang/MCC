@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@980218033:1609684324876" name="DBReplaceInq_Corp" version="6.0.1">
+<config>
+<settings>
+<setting name="CardStatus_Corp"> importPackage(com.audium.server.cvpUtil);
+
+var data ={Data.Element.REST_DBReplaceInq_Corp.response_body};
+
+var path= "$payload.debitCardReplacementInquiryinfo.cardStatus";
+
+var result = JSONPathUtil.eval(data,path);
+
+var card_status;
+
+if (result == "A"){
+	card_status = "Active";
+}else if (result == "P"){
+	card_status = "Blocking Permanent";
+}else if (result == "T"){
+	card_status = "Blocking Temporary";
+}else{
+	card_status = "Not Active";
+}
+
+card_status</setting>
+</settings>
+</config>
+</action_element>

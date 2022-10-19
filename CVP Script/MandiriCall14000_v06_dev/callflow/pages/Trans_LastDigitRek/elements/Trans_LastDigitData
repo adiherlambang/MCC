@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1877000822:1605497041539" name="Trans_LastDigitData" version="6.0.1">
+<config>
+<log>
+<data create_when="After" name="index_rekTrans">{LocalVar.jmlNmrRekeningTrans}</data>
+<data create_when="After" name="pickCurr">{LocalVar.pickCurrencyEditTrans}</data>
+<data create_when="After" name="pickType">{LocalVar.transPickAccountType}</data>
+</log>
+<settings>
+<setting name="jmlNmrRekeningTrans">importPackage(com.audium.server.cvpUtil);
+
+var index_trans = new Array();
+var data = {Data.Element.REST_RegisteredAccount.response_body};
+var parse = JSON.parse(data);
+var len = parse.payload.ftBeneficiaryListInfo.accounts.length;
+
+for (var i=0; i&lt;len; i++)
+{
+	var path1 = "$payload.ftBeneficiaryListInfo.accounts["+i+"].accountType";
+	var result1 = JSONPathUtil.eval(data,path1);
+	if( result1 == {LocalVar.pickTypeAccountTrans})
+	{
+		var path2 = "$payload.ftBeneficiaryListInfo.accounts["+i+"].accountCurrency";
+		var result2 = JSONPathUtil.eval(data,path2);
+		if( result2 == {LocalVar.pickTypeCurrencyTrans})
+		{
+			var path3 = "$payload.ftBeneficiaryListInfo.accounts["+i+"].accountNumber";
+			var result3 = JSONPathUtil.eval(data,path3);
+			index_trans.push(result3);
+		}
+	}	
+}
+
+index_trans.length</setting>
+<setting name="NmbrCardDebit">{LocalVar.CardInput}</setting>
+<setting name="PINDB">{Data.Element.CustomerIdentificationPersonalBankingPin.value}</setting>
+<setting name="pickCurrencyEditTrans">var hasil;
+
+if ({LocalVar.pickTypeCurrencyTrans}=="IDR"){
+	hasil = "001";
+}else if ({LocalVar.pickTypeCurrencyTrans} =="USD"){
+	hasil = "002";
+}else if ({LocalVar.pickTypeCurrencyTrans} =="SGD"){
+	hasil = "003";
+}else if ({LocalVar.pickTypeCurrencyTrans} =="HKD"){
+	hasil = "004";
+}
+
+hasil</setting>
+<setting name="IndexRekTrans">importPackage(com.audium.server.cvpUtil);
+
+var index_trans = new Array();
+var data = {Data.Element.REST_RegisteredAccount.response_body};
+var parse = JSON.parse(data);
+var len = parse.payload.ftBeneficiaryListInfo.accounts.length;
+
+for (var i=0; i&lt;len; i++)
+{
+	var path1 = "$payload.ftBeneficiaryListInfo.accounts["+i+"].accountType";
+	var result1 = JSONPathUtil.eval(data,path1);
+	if( result1 == {LocalVar.pickTypeAccountTrans})
+	{
+		var path2 = "$payload.ftBeneficiaryListInfo.accounts["+i+"].accountCurrency";
+		var result2 = JSONPathUtil.eval(data,path2);
+		if( result2 == {LocalVar.pickTypeCurrencyTrans})
+		{
+			var path3 = "$payload.ftBeneficiaryListInfo.accounts["+i+"].accountNumber";
+			var result3 = JSONPathUtil.eval(data,path3);
+			index_trans.push(result3);
+		}
+	}	
+}
+
+index_trans</setting>
+</settings>
+</config>
+</action_element>

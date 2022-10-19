@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1837675352:1603298660607" name="Loan_flag4" version="6.0.1">
+<config>
+<settings>
+<setting name="value">var str ="";</setting>
+</settings>
+<element_data>
+<data create_when="Before" name="value" storable="false" type="String">/P.01.01.03.1/MenuSaldoPinjaman.wav</data>
+</element_data>
+</config>
+</action_element>

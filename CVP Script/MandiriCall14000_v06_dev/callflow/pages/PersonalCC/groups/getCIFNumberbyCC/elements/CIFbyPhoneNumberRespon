@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@2043910985:1609211267071" name="CIFbyPhoneNumberRespon" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="CIFbyPhoneNumberRespon" default_exit_state="Failed">
+        <exit_state name="Success" conjugate="and">
+            <string operator="equal">
+                <local_variable name="cifByPhoneNumberRC2" />
+                <constant_string value="00" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

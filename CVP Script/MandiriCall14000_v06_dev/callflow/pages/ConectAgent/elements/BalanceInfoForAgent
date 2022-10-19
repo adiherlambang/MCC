@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1769323630:1605612477898" name="BalanceInfoForAgent" version="6.0.1">
+<config>
+<settings>
+<setting name="SaldoForAgent">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_BalanceToAgent.response_body};
+
+var path= "$balanceInquiryInfo.balanceDetail.amount1";
+
+var result = JSONPathUtil.eval(data,path);
+
+var balance,beforecomma,frontliner,dividableby3;
+
+if (result == "00000000000000000"){
+	var formatted_number = "0";
+}else {
+	balance = result.replace(/^0+/, '');
+	beforecomma=balance.substring(0,balance.length-2);
+	frontliner = balance.substring(0,beforecomma.length%3);
+	var formatted_number="";
+	dividableby3 = beforecomma.substring(frontliner.length,beforecomma.length);
+	var i=(dividableby3.length/3);
+	while (i&gt;0){
+    		formatted_number=(dividableby3.substring((i-1)*3,i*3))+"."+formatted_number;
+    		i=i-1;
+	}
+	if (frontliner.length &gt; 0){
+   		 formatted_number=frontliner+"."+formatted_number.substring(0,formatted_number.length-1)+","+balance.substr(balance.length-2,balance.length);
+	} else {
+   		 formatted_number=formatted_number.substring(0,formatted_number.length-1)+","+balance.substr(balance.length-2,balance.length);
+	}
+}
+
+formatted_number</setting>
+<setting name="CurrencyForAgent">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_BalanceToAgent.response_body};
+
+var path= "$balanceInquiryInfo.accountDetail.accountCurrencyCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+</settings>
+</config>
+</action_element>

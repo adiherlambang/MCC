@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@723629579:1604978258147" name="REST_SaldoDB" version="6.0.1">
+<config>
+<settings>
+<setting name="EndpointURL">{LocalVar.hubAddress}/balance-inquiry</setting>
+<setting name="HTTPMethod">POST</setting>
+<setting name="Parameters"/>
+<setting name="ignoreCertificateValidation">true</setting>
+<setting name="requireHttpAuthentication">false</setting>
+<setting name="headers">'Content-Type':'application/json'</setting>
+<setting name="body">{
+    "card_number":"{LocalVar.CardInput}",
+    "pin":"{LocalVar.PINDB}",
+    "account_number":"{LocalVar.AccNmbrDB}",
+    "currency":"{LocalVar.CurrencyCodeDB}",
+    "account_type":"{LocalVar.AccTypeDB}"
+}</setting>
+<setting name="useProxy">false</setting>
+<setting name="connectTimeout">3000</setting>
+<setting name="readTimeout">5000</setting>
+</settings>
+<element_data>
+<data create_when="After" name="Status_REST_SaldoDebit" storable="true" type="String">{Data.Element.REST_SaldoDB.status_code}</data>
+</element_data>
+<local_events>
+<local_event>
+<name>REST_BalanceInquiryError</name>
+<eventlist>com.sun.jersey.api.client.ClientHandlerException</eventlist>
+<type>Java Exception</type>
+</local_event>
+</local_events>
+</config>
+</action_element>

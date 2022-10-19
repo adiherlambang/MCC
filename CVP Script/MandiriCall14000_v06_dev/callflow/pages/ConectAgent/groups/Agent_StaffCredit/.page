@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1824580500:1603443328633" name="Agent_StaffCredit" version="6.0.1">
+<element height="46" id="Element@746423623:1603437692211" name="ConnectAgentStaffCredit_ENG" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="225" x="357" y="269">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@955318845:1601902779108" name="ConnectAgentStaffCredit_INA" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="222" x="-5" y="245">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1635487288:1603443328633" name="Group Start" type="Element Group Start" width="110" x="230" y="30">
+<exit_states>
+<exit_state name="ConnectAgentStaffCreditAudio:done" target="Element@1244709143:1603437519932"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1244709143:1603437519932" name="language_check" type="Decision" width="135" x="219" y="147">
+<exit_states>
+<exit_state name="Bahasa" target="Element@955318845:1601902779108"/>
+<exit_state name="English" target="Element@746423623:1603437692211"/>
+</exit_states>
+</element>
+</page>

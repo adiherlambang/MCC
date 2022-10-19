@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1844754152:1605002643810" name="PrefixDBCheck" version="6.0.1">
+<element height="46" id="Element@362994501:1604382491799" name="Error_inputcard" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="148" x="246" y="-63">
+<exit_states>
+<exit_state name="done" target="Element@891089759:1604380782416"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1759520232:1604382546746" name="Error_inputcard3x" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="160" x="555" y="-54">
+<exit_states>
+<exit_state name="done" target="Element@453234582:1604380785178">
+<bendpoint>
+<dim1 x="193" y="-163"/>
+<dim2 x="-71" y="134"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1658342139:1604675802888" name="FailCheck" type="Decision" width="112" x="42" y="160">
+<exit_states>
+<exit_state name="Active" target="Element@1976813691:1601965599370">
+<bendpoint>
+<dim1 x="-107" y="158"/>
+<dim2 x="-138" y="-142"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NotActive" target="Element@1662160396:1604380604730"/>
+</exit_states>
+</element>
+<element height="46" id="Element@622057753:1604380716080" name="FailCheck3x" type="Decision" width="130" x="387" y="83">
+<exit_states>
+<exit_state name="True" target="Element@1759520232:1604382546746"/>
+<exit_state name="False" target="Element@362994501:1604382491799"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1662160396:1604380604730" name="FailDBCheck" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="133" x="384" y="224">
+<exit_states>
+<exit_state name="done" target="Element@622057753:1604380716080"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1924494011:1605002643810" name="Group Start" type="Element Group Start" width="110" x="32" y="-97">
+<exit_states>
+<exit_state name="DB_CheckCard:done" target="Element@1658342139:1604675802888"/>
+<exit_state name="NoMatchCard:next" target="Element@1662160396:1604380604730"/>
+</exit_states>
+</element>
+</page>

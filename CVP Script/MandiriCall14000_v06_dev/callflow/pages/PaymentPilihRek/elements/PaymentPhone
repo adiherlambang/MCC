@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@513904246:1605788816029" name="PaymentPhone" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="PaymentPhone" default_exit_state="Payment CC">
+        <exit_state name="Payment Phone" conjugate="and">
+            <string operator="equal">
+                <local_variable name="FlagPayment" />
+                <constant_string value="phone" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

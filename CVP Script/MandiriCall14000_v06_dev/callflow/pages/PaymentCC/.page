@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1079398065:1602127533385" name="PaymentCC" version="6.0.1">
+<element height="62" id="Element@1446782010:1610709150234" name="Audio_Error3xDOBPaymentCC" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="367" x="1114" y="636">
+<exit_states>
+<exit_state name="done" target="Element@1184094435:1610709214745"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1787311990:1610708822335" name="Audio_ErrorDOBPaymentCC" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="343" x="1020" y="838">
+<exit_states>
+<exit_state name="done" target="Element@1357840226:1610708912073"/>
+</exit_states>
+</element>
+<element height="62" id="Element@900800377:1605892395279" name="CCInfoBilling" src="com.audium.server.voiceElement.menu.MFoundation3OptionMenu" type="Voice Element" width="187" x="551" y="323">
+<exit_states>
+<exit_state name="option1" target="Element@750153274:1602132530239"/>
+<exit_state name="option2" target="Element@101498455:1605892439129"/>
+<exit_state name="option3" target="Element@900800377:1605892395279">
+<bendpoint>
+<dim1 x="-120" y="37"/>
+<dim2 x="-120" y="37"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="-153" y="35"/>
+<dim2 x="-153" y="35"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="-156" y="22"/>
+<dim2 x="-156" y="22"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="-156" y="0"/>
+<dim2 x="-156" y="0"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="-136" y="-1"/>
+<dim2 x="-136" y="-1"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_nomatch" target="Element@706598779:1610394133500"/>
+<exit_state name="max_noinput" target="Element@1366789269:1605894510473">
+<bendpoint>
+<dim1 x="180" y="14"/>
+<dim2 x="-86" y="-18"/>
+</bendpoint>
+</exit_state>
+<exit_state name="VXML Event-error_badfetch" target="Element@1440540033:1608204382110">
+<bendpoint>
+<dim1 x="108" y="-46"/>
+<dim2 x="-73" y="42"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@911614072:1605892573055" name="CCInfoData" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="170" x="578" y="412">
+<exit_states>
+<exit_state name="done" target="Element@900800377:1605892395279"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1184152427:1610389910572" name="Check16DigitCC" type="Element Group" width="221" x="78" y="477"/>
+<element height="62" id="Element@1928492986:1610396876523" name="ConfirmationCCPayment" src="com.audium.server.voiceElement.menu.MFoundation3OptionMenu" type="Voice Element" width="311" x="837" y="-327">
+<exit_states>
+<exit_state name="option1" target="Element@847396502:1605894449922"/>
+<exit_state name="option2" target="Element@750153274:1602132530239">
+<bendpoint>
+<dim1 x="-247" y="161"/>
+<dim2 x="59" y="-270"/>
+</bendpoint>
+</exit_state>
+<exit_state name="option3" target="Element@1928492986:1610396876523">
+<bendpoint>
+<dim1 x="0" y="48"/>
+<dim2 x="0" y="48"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="117" y="48"/>
+<dim2 x="117" y="48"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="117" y="0"/>
+<dim2 x="117" y="0"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_nomatch" target="Element@1500727367:1610397005037"/>
+<exit_state name="max_noinput" target="Element@15577862:1610397013489"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1688155011:1602132554907" name="ConnectAgentBanking" type="Page Connector" width="289" x="-242" y="-305">
+<page_connector target="Element@1497709728:1601902705927">ConnectAgentBanking<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@2092402794:1602132597027" name="ConnectAgentBanking" type="Page Connector" width="289" x="434" y="-146">
+<page_connector target="Element@1497709728:1601902705927">ConnectAgentBanking<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1653392818:1602132952734" name="ConnectAgentBanking" type="Page Connector" width="289" x="1483" y="280">
+<page_connector target="Element@1497709728:1601902705927">ConnectAgentBanking<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1820643707:1605883792655" name="ConnectAgentBanking" type="Page Connector" width="289" x="-211" y="737">
+<page_connector target="Element@1497709728:1601902705927">ConnectAgentBanking<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@634326338:1610389772811" name="ConnectAgentBanking" type="Page Connector" width="289" x="-141" y="329">
+<page_connector target="Element@1497709728:1601902705927">ConnectAgentBanking<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1199905556:1610452871511" name="ExitOptionMenu" type="Page Connector" width="224" x="1169" y="-373">
+<page_connector target="Element@2112944412:1610627035755">ExitOptionMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@428634044:1605882888814" name="DB_CheckCC" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="185" x="76" y="326">
+<exit_states>
+<exit_state name="done" target="Element@1334688218:1602132448594"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1146576252:1610892363938" name="DOB_PaymentCC" type="Page Connector" width="230" x="-168" y="952">
+<page_connector target="Element@1632039044:1610892381101">DOB_PaymentCC<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1632039044:1610892381101" name="DOB_PaymentCC" type="Page Entry" width="230" x="-227" y="544">
+<exit_states>
+<exit_state name="next" target="Element@551380720:1605883687992"/>
+</exit_states>
+</element>
+<element height="62" id="Element@227832879:1602132391334" name="DigitCC" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="130" x="101" y="-204">
+<exit_states>
+<exit_state name="done" target="Element@881343881:1605882949780"/>
+<exit_state name="max_nomatch" target="Element@1688155011:1602132554907"/>
+<exit_state name="max_noinput" target="Element@1688155011:1602132554907">
+<bendpoint>
+<dim1 x="-151" y="-78"/>
+<dim2 x="165" y="-75"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@1334688218:1602132448594" name="DigitCheckCC" type="Decision" width="195" x="333" y="426">
+<exit_states>
+<exit_state name="False" target="Element@1184152427:1610389910572"/>
+<exit_state name="Mandiri" target="Element@551380720:1605883687992"/>
+</exit_states>
+</element>
+<element height="62" id="Element@10472655:1602132960656" name="EndCall" type="Page Connector" width="226" x="1453" y="358">
+<page_connector target="Element@89933654:1601904832032">EndCall<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@495655441:1602132848541" name="Error_NoInput" type="Page Connector" width="198" x="1503" y="208">
+<page_connector target="Element@270910828:1610085311655">Error_NoInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1366789269:1605894510473" name="Error_NoInput" type="Page Connector" width="198" x="910" y="340">
+<page_connector target="Element@270910828:1610085311655">Error_NoInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@15577862:1610397013489" name="Error_NoInput" type="Page Connector" width="198" x="559" y="-437">
+<page_connector target="Element@270910828:1610085311655">Error_NoInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1595343557:1602132848541" name="Error_NoMatchInput" type="Page Connector" width="265" x="1527" y="120">
+<page_connector target="Element@1250119072:1610085949630">Error_NoMatchInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@706598779:1610394133500" name="Error_NoMatchInput" type="Page Connector" width="265" x="816" y="418">
+<page_connector target="Element@1250119072:1610085949630">Error_NoMatchInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1500727367:1610397005037" name="Error_NoMatchInput" type="Page Connector" width="265" x="747" y="-496">
+<page_connector target="Element@1250119072:1610085949630">Error_NoMatchInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1057484321:1605892120185" name="Error_ServiceSOA" type="Page Connector" width="231" x="247" y="582">
+<page_connector target="Element@623071406:1607697419497">Error_ServiceSOA<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@417843381:1608202947876" name="Error_ServiceSOA" type="Page Connector" width="231" x="1059" y="78">
+<page_connector target="Element@623071406:1607697419497">Error_ServiceSOA<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1440540033:1608204382110" name="Error_ServiceSOA" type="Page Connector" width="231" x="771" y="168">
+<page_connector target="Element@623071406:1607697419497">Error_ServiceSOA<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@343585774:1610708028193" name="ExitOptionMenu" type="Page Connector" width="224" x="813" y="957">
+<page_connector target="Element@2112944412:1610627035755">ExitOptionMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1184094435:1610709214745" name="ExitOptionMenu" type="Page Connector" width="224" x="1328" y="722">
+<page_connector target="Element@2112944412:1610627035755">ExitOptionMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@557995221:1610891731406" name="ExitOptionMenu" type="Page Connector" width="224" x="-206" y="259">
+<page_connector target="Element@2112944412:1610627035755">ExitOptionMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@165286789:1610892365594" name="ExitOptionMenu" type="Page Connector" width="224" x="311" y="948">
+<page_connector target="Element@2112944412:1610627035755">ExitOptionMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@574897541:1611118636386" name="ExitOptionMenu" type="Page Connector" width="224" x="-147" y="-191">
+<page_connector target="Element@2112944412:1610627035755">ExitOptionMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1136988048:1605894009089" name="FilterPayment" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="195" x="876" y="102">
+<exit_states>
+<exit_state name="done" target="Element@1911339886:1610452383532"/>
+</exit_states>
+</element>
+<element height="62" id="Element@551380720:1605883687992" name="InputDigitDOB" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="206" x="66" y="611">
+<exit_states>
+<exit_state name="done" target="Element@1909632298:1610707409376"/>
+<exit_state name="max_nomatch" target="Element@1820643707:1605883792655"/>
+<exit_state name="max_noinput" target="Element@1820643707:1605883792655">
+<bendpoint>
+<dim1 x="-188" y="34"/>
+<dim2 x="15" y="-86"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@750153274:1602132530239" name="InputDigitPaymentCC" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="278" x="540" y="104">
+<exit_states>
+<exit_state name="done" target="Element@1136988048:1605894009089"/>
+<exit_state name="max_nomatch" target="Element@2092402794:1602132597027"/>
+<exit_state name="max_noinput" target="Element@2092402794:1602132597027">
+<bendpoint>
+<dim1 x="89" y="-123"/>
+<dim2 x="79" y="76"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@914071822:1611118097142" name="Length_DigitCC" type="Decision" width="214" x="56" y="12">
+<exit_states>
+<exit_state name="Valid" target="Element@275835653:1610891572801"/>
+<exit_state name="NotValid" target="Element@1269996809:1611118478233"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1502981281:1602133067758" name="MainMenu" type="Page Connector" width="226" x="1232" y="552">
+<page_connector target="Element@1865813345:1601897428297">MainMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1513502910:1602127533385" name="PaymentCC" type="Page Entry" width="171" x="69" y="-347">
+<exit_states>
+<exit_state name="next" target="Element@227832879:1602132391334"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1012428844:1602133095087" name="PaymentCC" type="Page Connector" width="238" x="1447" y="49">
+<page_connector target="Element@1513502910:1602127533385">PaymentCC<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@56251909:1605883521678" name="PaymentCC" type="Page Connector" width="171" x="-254" y="449">
+<page_connector target="Element@1513502910:1602127533385">PaymentCC<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@101498455:1605892439129" name="PaymentCC" type="Page Connector" width="171" x="357" y="224">
+<page_connector target="Element@1513502910:1602127533385">PaymentCC<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@680841298:1610708095991" name="PaymentCC" type="Page Connector" width="171" x="494" y="895">
+<page_connector target="Element@1513502910:1602127533385">PaymentCC<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1357840226:1610708912073" name="PaymentCC" type="Page Connector" width="171" x="1052" y="959">
+<page_connector target="Element@1513502910:1602127533385">PaymentCC<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1698077372:1610891733105" name="PaymentCC" type="Page Connector" width="171" x="-339" y="98">
+<page_connector target="Element@1513502910:1602127533385">PaymentCC<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1220146994:1611118639061" name="PaymentCC" type="Page Connector" width="171" x="-432" y="-137">
+<page_connector target="Element@1513502910:1602127533385">PaymentCC<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@760714893:1602133018293" name="PaymentCCConfimation" type="Page Entry" width="302" x="1224" y="-112">
+<exit_states>
+<exit_state name="next" target="Element@522403871:1605896234049"/>
+</exit_states>
+</element>
+<element height="62" id="Element@374100890:1602133043365" name="PaymentCCConfimation" type="Page Connector" width="302" x="1451" y="492">
+<page_connector target="Element@760714893:1602133018293">PaymentCCConfimation<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@255364342:1602132786783" name="PaymentCCConfirmation" src="com.audium.server.voiceElement.menu.MFoundation7OptionMenu" type="Voice Element" width="310" x="1173" y="219">
+<exit_states>
+<exit_state name="option1" target="Element@1012428844:1602133095087"/>
+<exit_state name="option2" target="Element@1735136804:1602133165208"/>
+<exit_state name="option3" target="Element@1653392818:1602132952734"/>
+<exit_state name="option4" target="Element@10472655:1602132960656"/>
+<exit_state name="option5" target="Element@1290632704:1602132970709"/>
+<exit_state name="option6" target="Element@374100890:1602133043365"/>
+<exit_state name="option7" target="Element@1502981281:1602133067758"/>
+<exit_state name="max_nomatch" target="Element@1595343557:1602132848541"/>
+<exit_state name="max_noinput" target="Element@495655441:1602132848541"/>
+<exit_state name="Java Exception-Error_Element" target="Element@417843381:1608202947876"/>
+<exit_state name="Java Exception-Error_SayItSmart" target="Element@417843381:1608202947876"/>
+<exit_state name="VXML Event-Error_BadFetch" target="Element@417843381:1608202947876"/>
+</exit_states>
+</element>
+<element height="62" id="Element@522403871:1605896234049" name="PaymentCCData" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="220" x="1246" y="17">
+<exit_states>
+<exit_state name="done" target="Element@255364342:1602132786783"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1909632298:1610707409376" name="PaymentCCInputDOB" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="276" x="51" y="737">
+<exit_states>
+<exit_state name="done" target="Element@11177655:1610892230275"/>
+</exit_states>
+</element>
+<element height="62" id="Element@170767844:1605892099517" name="PaymentCCStatusRespon" type="Element Group" width="313" x="601" y="511"/>
+<element height="62" id="Element@847396502:1605894449922" name="PaymentPilihRek" type="Page Connector" width="225" x="960" y="-469">
+<page_connector target="Element@948949990:1605775977559">PaymentPilihRek<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1290632704:1602132970709" name="PersonalBanking" type="Page Connector" width="226" x="1435" y="430">
+<page_connector target="Element@1566819678:1602039229515">PersonalBanking<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1735136804:1602133165208" name="PersonalBanking" type="Page Connector" width="226" x="1069" y="408">
+<page_connector target="Element@1566819678:1602039229515">PersonalBanking<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@881343881:1605882949780" name="PrefixCC" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="138" x="68" y="-93">
+<exit_states>
+<exit_state name="done" target="Element@914071822:1611118097142"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1659948222:1605883762889" name="REST_CreditCardPayment" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="317" x="458" y="765">
+<exit_states>
+<exit_state name="done" target="Element@170767844:1605892099517"/>
+<exit_state name="Java Exception-Error_RESTCCPayment" target="Element@1474820093:1611119536747"/>
+</exit_states>
+</element>
+<element height="62" id="Element@2142795713:1610452879758" name="ReEntry_digitPaymentCC" type="Page Entry" width="309" x="299" y="-32">
+<exit_states>
+<exit_state name="next" target="Element@750153274:1602132530239"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1944076329:1610452913195" name="ReEntry_digitPaymentCC" type="Page Connector" width="309" x="1479" y="-226">
+<page_connector target="Element@2142795713:1610452879758">ReEntry_digitPaymentCC<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1269996809:1611118478233" name="Validation_LengthCCpayment" type="Element Group" width="362" x="-279" y="-56"/>
+<element height="62" id="Element@1725129857:1610452602278" name="Validation_PaymentCC" type="Element Group" width="286" x="1086" y="-223"/>
+<element height="62" id="Element@11177655:1610892230275" name="Validation_PaymentCCDOBNumeric" type="Element Group" width="426" x="19" y="854"/>
+<element height="62" id="Element@275835653:1610891572801" name="Validation_PaymentCCdigitNumeric" type="Element Group" width="425" x="7" y="154"/>
+<element height="62" id="Element@1474820093:1611119536747" name="log_REST_PaymentCC" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="277" x="320" y="675">
+<exit_states>
+<exit_state name="done" target="Element@1057484321:1605892120185"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@1057484321:1605892120185"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1911339886:1610452383532" name="validation_paymentCC" type="Decision" width="287" x="849" y="-33">
+<exit_states>
+<exit_state name="Valid" target="Element@1928492986:1610396876523"/>
+<exit_state name="NotValid" target="Element@1725129857:1610452602278"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1255821773:1611566256452" name="Input_PaymentCC_error" type="Element Group" width="298" x="736" y="736"/>
+<element height="62" id="Element@1125218920:1614229902771" name="Audio_ErrorCommunication2" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="356" x="1061" y="737">
+<exit_states>
+<exit_state name="done" target="Element@1184094435:1610709214745"/>
+</exit_states>
+</element>
+</page>

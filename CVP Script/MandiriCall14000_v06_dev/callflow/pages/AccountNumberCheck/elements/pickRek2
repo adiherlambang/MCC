@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1492993457:1605189141226" name="pickRek2" version="6.0.1">
+<config>
+<settings>
+<setting name="pickRek">{Data.Element.Option2Rek.value}</setting>
+</settings>
+</config>
+</action_element>

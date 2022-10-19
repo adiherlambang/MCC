@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1664970377:1609929310269" name="FilterDigitFiestaPoint" version="6.0.1">
+<config>
+<settings>
+<setting name="InputDigitExpDate">var digit_input = {Data.Element.DigitFiestaPoint.value};
+var digit_mm,digit_yy,digit;
+
+
+if(digit_input.length==4){
+	digit_mm = digit_input.substring(0,2);
+	digit_yy = 	digit_input.substring(2,4);
+
+	digit = digit_yy+digit_mm;
+}
+
+digit</setting>
+</settings>
+</config>
+</action_element>

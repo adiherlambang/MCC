@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@619619586:1602121009613" name="Payment" version="6.0.1">
+<element height="62" id="Element@990895421:1610286874824" name="ConnectAgentBanking" type="Page Connector" width="289" x="791" y="821">
+<page_connector target="Element@1497709728:1601902705927">ConnectAgentBanking<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1543649800:1610286725307" name="Error_noMatchPayment_Audio" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="370" x="318" y="612">
+<exit_states>
+<exit_state name="done" target="Element@1976652636:1610286770562"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1976652636:1610286770562" name="Error_noMatchPayment_Counter" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="393" x="492" y="699">
+<exit_states>
+<exit_state name="done" target="Element@222206572:1610286817660"/>
+</exit_states>
+</element>
+<element height="62" id="Element@471747952:1602127035212" name="PaymenCheckTelkom" type="Decision" width="276" x="163" y="164">
+<exit_states>
+<exit_state name="True" target="Element@720574022:1602127392715"/>
+<exit_state name="False" target="Element@911369272:1602127483141"/>
+</exit_states>
+</element>
+<element height="62" id="Element@655441296:1602121009613" name="Payment" type="Page Entry" width="142" x="95" y="21">
+<exit_states>
+<exit_state name="next" target="Element@471747952:1602127035212"/>
+</exit_states>
+</element>
+<element height="62" id="Element@550236967:1602127549938" name="PaymentCC" type="Page Connector" width="198" x="465" y="273">
+<page_connector target="Element@1513502910:1602127533385">PaymentCC<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@911369272:1602127483141" name="PaymentCheckCC" type="Decision" width="236" x="150" y="275">
+<exit_states>
+<exit_state name="True" target="Element@550236967:1602127549938"/>
+<exit_state name="False" target="Element@814437308:1602127567583"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1101202510:1602127621009" name="PaymentCheckPAM" skipped="true" type="Decision" width="269" x="141" y="504">
+<exit_states>
+<exit_state name="True" target="Element@1503993029:1602127640897"/>
+<exit_state name="False" target="Element@1543649800:1610286725307"/>
+</exit_states>
+</element>
+<element height="62" id="Element@814437308:1602127567583" name="PaymentCheckPLN" skipped="true" type="Decision" width="260" x="136" y="386">
+<exit_states>
+<exit_state name="True" target="Element@605252634:1602127611542"/>
+<exit_state name="False" target="Element@1101202510:1602127621009"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1503993029:1602127640897" name="PaymentPAM" type="Page Connector" width="198" x="475" y="502">
+<page_connector target="Element@2100862887:1603192048928">PaymentPAM<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@605252634:1602127611542" name="PaymentPLN" type="Page Connector" width="198" x="478" y="383">
+<page_connector target="Element@841972952:1602127594590">PaymentPLN<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@720574022:1602127392715" name="PaymentTelkom" type="Page Connector" width="219" x="453" y="168">
+<page_connector target="Element@2090544384:1602127382099">PaymentTelkom<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@222206572:1610286817660" name="Payment_Error_Check" type="Decision" width="277" x="519" y="788">
+<exit_states>
+<exit_state name="True" target="Element@990895421:1610286874824"/>
+<exit_state name="False" target="Element@1197951497:1602127649036"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1197951497:1602127649036" name="PersonalBankingPayment" type="Page Connector" width="317" x="216" y="863">
+<page_connector target="Element@1464437885:1602120686730">PersonalBankingPayment<config/>
+</page_connector>
+</element>
+</page>

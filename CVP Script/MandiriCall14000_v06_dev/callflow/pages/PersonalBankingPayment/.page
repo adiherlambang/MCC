@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1922854166:1602120686730" name="PersonalBankingPayment" version="6.0.1">
+<element height="62" id="Element@2099786968:1602121067900" name="ConnectAgentBanking" type="Page Connector" width="289" x="691" y="429">
+<page_connector target="Element@1497709728:1601902705927">ConnectAgentBanking<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@546114430:1602120964422" name="EndCall" type="Page Connector" width="247" x="44" y="382">
+<page_connector target="Element@89933654:1601904832032">EndCall<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1388090317:1602120929867" name="MainMenu" type="Page Connector" width="167" x="139" y="136">
+<page_connector target="Element@1865813345:1601897428297">MainMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1867492927:1602121020111" name="Payment" type="Page Connector" width="247" x="746" y="254">
+<page_connector target="Element@655441296:1602121009613">Payment<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@748575334:1602121084765" name="PersonalBanking" type="Page Connector" width="247" x="341" y="460">
+<page_connector target="Element@1566819678:1602039229515">PersonalBanking<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1556467437:1602120801761" name="PersonalBankingPaymenFlag" skipped="true" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="353" x="390" y="127">
+<exit_states>
+<exit_state name="done" target="Element@215849566:1602120755199"/>
+</exit_states>
+</element>
+<element height="62" id="Element@215849566:1602120755199" name="PersonalBankingPaymenMenu" src="com.audium.server.voiceElement.menu.MFoundation9OptionMenu" type="Voice Element" width="372" x="355" y="259">
+<exit_states>
+<exit_state name="option1" target="Element@1867492927:1602121020111"/>
+<exit_state name="option2" target="Element@1867492927:1602121020111"/>
+<exit_state name="option3" target="Element@1867492927:1602121020111"/>
+<exit_state name="option4" target="Element@1867492927:1602121020111"/>
+<exit_state name="option5" target="Element@748575334:1602121084765"/>
+<exit_state name="option6" target="Element@2099786968:1602121067900"/>
+<exit_state name="option7" target="Element@546114430:1602120964422"/>
+<exit_state name="option8" target="Element@48290095:1602120941516"/>
+<exit_state name="option9" target="Element@1388090317:1602120929867"/>
+<exit_state name="max_nomatch" target="Element@2099786968:1602121067900">
+<bendpoint>
+<dim1 x="131" y="125"/>
+<dim2 x="-185" y="-45"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_noinput" target="Element@2099786968:1602121067900">
+<bendpoint>
+<dim1 x="247" y="69"/>
+<dim2 x="-69" y="-101"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@1464437885:1602120686730" name="PersonalBankingPayment" type="Page Entry" width="317" x="394" y="37">
+<exit_states>
+<exit_state name="next" target="Element@1556467437:1602120801761"/>
+</exit_states>
+</element>
+<element height="62" id="Element@48290095:1602120941516" name="PersonalBankingPayment" type="Page Connector" width="317" x="-2" y="259">
+<page_connector target="Element@1464437885:1602120686730">PersonalBankingPayment<config/>
+</page_connector>
+</element>
+</page>

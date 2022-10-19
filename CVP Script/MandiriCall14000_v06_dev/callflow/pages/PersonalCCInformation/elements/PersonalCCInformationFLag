@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1302832610:1602148031815" name="PersonalCCInformationFLag" version="6.0.1">
+<config>
+<settings>
+<setting name="currentBalanceCC">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[0].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+var len = result.length;
+
+var hasil = parseInt(result.substring(0,len-3),10).toString();
+
+hasil</setting>
+<setting name="currentBillCC">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[1].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+var len = result.length;
+
+var hasil = parseInt(result.substring(0,len-3),10).toString();
+
+hasil</setting>
+<setting name="minPaymentCC">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[2].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+var len = result.length;
+
+var hasil = parseInt(result.substring(0,len-2),10).toString();
+
+hasil</setting>
+<setting name="dueDateCC_dd">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[3].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(4,6)</setting>
+<setting name="dateOfBillCC_dd">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[4].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(4,6)</setting>
+<setting name="lastPaymentDateCC_dd">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[5].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(4,6)</setting>
+<setting name="lastPaymentAmntCC">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[6].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+var len = result.length;
+
+var hasil = parseInt(result.substring(0,len-3),10).toString();
+
+hasil</setting>
+<setting name="RemainLimitCC">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[7].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+var len = result.length;
+
+var hasil = parseInt(result.substring(0,len-3),10).toString();
+
+hasil</setting>
+<setting name="PlafondLimitCC">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[8].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+var len = result.length;
+
+var hasil = parseInt(result.substring(0,len-2),10).toString();
+
+hasil</setting>
+<setting name="expDateCC">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[9].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(2,6)</setting>
+<setting name="NamaNasabahCC">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[10].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="dueDateCC_yymm">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[3].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+var mm = result.substring(2,4);
+
+var yy =   result.substring(0,2);
+
+mm+yy</setting>
+<setting name="dateOfBillCC_yymm">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[4].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+var mm = result.substring(2,4);
+
+var yy =   result.substring(0,2);
+
+mm+yy</setting>
+<setting name="lastPaymentDateCC_yymm">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[5].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+var mm = result.substring(2,4);
+
+var yy =   result.substring(0,2);
+
+mm+yy</setting>
+<setting name="expDateCC_dd">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[9].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(4,6)</setting>
+<setting name="expDateCC_yymm">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[9].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+var yy = result.substring(0,4);
+
+var mm = result.substring(4,6);
+
+mm+yy</setting>
+<setting name="currentBalanceCC_koma">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[0].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+var len = result.length;
+
+var hasil = result.substring(len-3,len-1); 
+
+hasil</setting>
+<setting name="RemainLimitCC_koma">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[7].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+var len = result.length;
+
+var hasil = result.substring(len-3,len-1); 
+
+hasil</setting>
+<setting name="currentBillCC_koma">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[1].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+var len = result.length;
+
+var hasil = result.substring(len-3,len-1); 
+
+hasil</setting>
+<setting name="minPaymentCC_koma">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[2].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+var len = result.length;
+
+var hasil = result.substring(len-2,len); 
+
+hasil</setting>
+<setting name="lastPaymentAmtCC_koma">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.details[6].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+var len = result.length;
+
+var hasil = result.substring(len-3,len-1);
+
+hasil</setting>
+</settings>
+</config>
+</action_element>

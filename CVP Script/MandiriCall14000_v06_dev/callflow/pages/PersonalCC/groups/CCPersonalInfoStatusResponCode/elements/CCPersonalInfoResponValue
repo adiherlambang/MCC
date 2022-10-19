@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1031400452:1609211267071" name="CCPersonalInfoResponValue" version="6.0.1">
+<config>
+<settings>
+<setting name="CCPersonalRC1">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_CCPersonalInfo.response_body};
+
+var path= "$responseCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+eval(result)</setting>
+<setting name="traceNum_CCPersonal">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_CCPersonalInfo.response_body};
+
+var path= "$hubHeader.traceNumber";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="terminalId_CCPersonal">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_CCPersonalInfo.response_body};
+
+var path= "$hubHeader.terminalId";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+</settings>
+<element_data>
+<data create_when="After" name="Personal_CClRC1" storable="true" type="String">{LocalVar.CCPersonalRC1}</data>
+<data create_when="After" name="traceNum" storable="true" type="String">{LocalVar.traceNum_CCPersonal}</data>
+<data create_when="After" name="terminalID" storable="true" type="String">{LocalVar.terminalId_CCPersonal}</data>
+</element_data>
+</config>
+</action_element>

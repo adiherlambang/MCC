@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1207573152:1609690574667" name="TaxNumberCorp" version="6.0.1">
+<element height="46" id="Element@182668643:1609690574667" name="Group Start" type="Element Group Start" width="110" x="94" y="52">
+<exit_states>
+<exit_state name="REST_TaxNumberCorp:done" target="Element@309216388:1610956783464"/>
+</exit_states>
+</element>
+<element height="46" id="Element@355293078:1610956879731" name="Log_REST_TaxNumber_respon" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="207" x="323" y="141">
+<exit_states>
+<exit_state name="done" target="Element@759588610:1609690538963"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@759588610:1609690538963">
+<bendpoint>
+<dim1 x="8" y="94"/>
+<dim2 x="301" y="-2"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@309216388:1610956783464" name="Log_REST_TaxNumber_status" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="202" x="319" y="-27">
+<exit_states>
+<exit_state name="done" target="Element@721614400:1609690441586"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@721614400:1609690441586">
+<bendpoint>
+<dim1 x="295" y="-12"/>
+<dim2 x="5" y="-87"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1131389732:1609690519274" name="TaxNumberCorpValue" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="165" x="633" y="203">
+<exit_states>
+<exit_state name="done" target="Element@355293078:1610956879731"/>
+</exit_states>
+</element>
+<element height="46" id="Element@759588610:1609690538963" name="TaxNumberCorp_Respon" type="Decision" width="181" x="43" y="237">
+<exit_states>
+<exit_state name="Success" target="Element@1648026586:1609690594768">
+<bendpoint>
+<dim1 x="-109" y="81"/>
+<dim2 x="-36" y="-126"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Failed" target="Element@2025872828:1610957275443"/>
+</exit_states>
+</element>
+<element height="46" id="Element@721614400:1609690441586" name="TaxNumberCorp_Status" type="Decision" width="174" x="623" y="48">
+<exit_states>
+<exit_state name="Success" target="Element@1131389732:1609690519274"/>
+<exit_state name="Failed" target="Element@2025872828:1610957275443">
+<bendpoint>
+<dim1 x="203" y="66"/>
+<dim2 x="99" y="-93"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+</page>

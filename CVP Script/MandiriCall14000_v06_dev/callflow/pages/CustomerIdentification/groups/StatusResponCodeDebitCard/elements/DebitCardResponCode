@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@231834415:1605582048935" name="DebitCardResponCode" version="6.0.1">
+<config>
+<settings>
+<setting name="DebitCardRC1">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_DebitCard.response_body};
+
+var path= "$responseCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+eval(result)</setting>
+<setting name="DebitCardRC2">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_DebitCard.response_body};
+
+var path= "$signOnInfo.responseCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="traceNum_DebitSignOn">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_DebitCard.response_body};
+
+var path= "$hubHeader.traceNumber";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="terminalId_DebitSignOn">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_DebitCard.response_body};
+
+var path= "$hubHeader.terminalId";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+</settings>
+<element_data>
+<data create_when="After" name="DebitSignOnRC1" storable="true" type="String">{LocalVar.DebitCardRC1}</data>
+<data create_when="After" name="DebitSignOnRC2" storable="true" type="String">{LocalVar.DebitCardRC2}</data>
+<data create_when="After" name="traceNumber_DebitSignOn" storable="true" type="String">{LocalVar.traceNum_DebitSignOn}</data>
+<data create_when="After" name="terminalID_DebitSignOn" storable="true" type="String">{LocalVar.terminalId_DebitSignOn}</data>
+</element_data>
+</config>
+</action_element>

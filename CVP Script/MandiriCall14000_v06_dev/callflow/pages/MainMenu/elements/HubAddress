@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@41316789:1604657646506" name="HubAddress" version="6.0.1">
+<config>
+<settings>
+<setting name="hubAddress">"http://10.243.229.23:8080/soa-mandiri/soa"</setting>
+<setting name="AudioPath">var str = "http://10.243.227.205/mcc/";
+
+var option = {Data.Element.LanguageSelectionOption.value}+" ";
+
+var audio;
+
+if (option=="bahasa "){
+	audio = str+"bahasa";
+}else if (option=="english "){
+	audio = str+"english";
+}else {
+	audio = str+"bahasa";
+}
+
+audio</setting>
+<setting name="Session_Name">var CVPname;
+
+if ({Data.Session.Session_ID}=="10.243.227.205"){
+	CVPname = "RVCVP1ABC20WD."+{Data.Session.callid};	
+}else{
+	CVPname = "";
+}
+
+CVPname</setting>
+<setting name="lang_select">var option = {Data.Element.LanguageSelectionOption.value}+" ";
+var hasil;
+
+if (option=="bahasa "){
+	hasil = "Indonesia";
+}else if (option=="english "){
+	hasil = "English";
+}else {
+	hasil = "Indonesia";
+}
+
+hasil</setting>
+</settings>
+<session_data>
+<data create_when="Before" name="lang">{Data.Element.LanguageSelectionOption.value}</data>
+</session_data>
+</config>
+</action_element>

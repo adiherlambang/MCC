@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1795936028:1609211267071" name="GetEmailDataCC" version="6.0.1">
+<config>
+<settings>
+<setting name="EmailNasabah">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_GetEmailCC.response_body};
+var parse = JSON.parse(data);
+var len = parse.payload.getEmailByCIFInfo.accountList.length;
+var path2,result2;
+
+for(var i=0; i&lt;len; i++){
+	var path= "$payload.getEmailByCIFInfo.accountList["+i+"].electronicAddressCode";
+	var result = JSONPathUtil.eval(data,path);
+	if(result == "EM"){
+		path2= "$payload.getEmailByCIFInfo.accountList["+i+"].electronicAddressDescription";
+		result2 = JSONPathUtil.eval(data,path2);
+		i=len+1;
+	}else{
+		result2 = "---";
+	}
+}
+
+result2</setting>
+</settings>
+</config>
+</action_element>

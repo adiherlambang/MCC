@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@452197985:1604908540400" name="DepositRateValue" version="6.0.1">
+<config>
+<settings>
+<setting name="DepositRC1">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_DepositRate.response_body} ;
+
+var path= "$responseCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+eval(result)</setting>
+<setting name="DepositRC2">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_DepositRate.response_body} ;
+
+var path= "$interestRateInfo.responseCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="De1Month_1">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_DepositRate.response_body} ;
+
+var path= "$interestRateInfo.rates[0].rate";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(0,3)</setting>
+<setting name="De1Month_2">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_DepositRate.response_body} ;
+
+var path= "$interestRateInfo.rates[0].rate";
+
+result.substring(3,5)</setting>
+<setting name="De3Month_1">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_DepositRate.response_body} ;
+
+var path= "$interestRateInfo.rates[1].rate";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(0,3)</setting>
+<setting name="De3Month_2">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_DepositRate.response_body} ;
+
+var path= "$interestRateInfo.rates[1].rate";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(3,5)</setting>
+<setting name="De6Month_1">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_DepositRate.response_body} ;
+
+var path= "$interestRateInfo.rates[2].rate";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(0,3)</setting>
+<setting name="De6Month_2">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_DepositRate.response_body} ;
+
+var path= "$interestRateInfo.rates[2].rate";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(3,5)</setting>
+<setting name="De12Month_1">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_DepositRate.response_body} ;
+
+var path= "$interestRateInfo.rates[3].rate";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(0,3)</setting>
+<setting name="De12Month_2">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_DepositRate.response_body} ;
+
+var path= "$interestRateInfo.rates[3].rate";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(3,5)</setting>
+<setting name="De24Month_1">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_DepositRate.response_body} ;
+
+var path= "$interestRateInfo.rates[4].rate";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(0,3)</setting>
+<setting name="De24Month_2">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_DepositRate.response_body} ;
+
+var path= "$interestRateInfo.rates[4].rate";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(3,5)</setting>
+<setting name="traceNum_DepositRate">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_DepositRate.response_body} ;
+
+var path= "$hubHeader.traceNumber";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="terminalId_DepositRate">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_DepositRate.response_body} ;
+
+var path= "$hubHeader.terminalId";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+</settings>
+<element_data>
+<data create_when="After" name="1m" storable="true" type="String">{LocalVar.De1Month_1},{LocalVar.De1Month_2}</data>
+</element_data>
+</config>
+</action_element>

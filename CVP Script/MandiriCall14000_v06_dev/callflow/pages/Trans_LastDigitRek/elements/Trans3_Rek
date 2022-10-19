@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@414896048:1605497041537" name="Trans3_Rek" version="6.0.1">
+<config>
+<settings>
+<setting name="TransRek_1">var list = {LocalVar.IndexRekTrans};
+
+list[0]</setting>
+<setting name="TransRek_2">var list = {LocalVar.IndexRekTrans};
+
+list[1]</setting>
+<setting name="TransRek_3">var list = {LocalVar.IndexRekTrans};
+
+list[2]</setting>
+<setting name="TransLastRek1">var list = {LocalVar.IndexRekTrans};
+var n = list[0].indexOf(" ");
+var lastdigit=list[0].substring(n-3,n);
+
+lastdigit</setting>
+<setting name="TransLastRek2">var list = {LocalVar.IndexRekTrans};
+var n = list[1].indexOf(" ");
+var lastdigit=list[1].substring(n-3,n);
+
+lastdigit</setting>
+<setting name="TransLastRek3">var list = {LocalVar.IndexRekTrans};
+var n = list[2].indexOf(" ");
+var lastdigit=list[2].substring(n-3,n);
+
+lastdigit</setting>
+</settings>
+</config>
+</action_element>

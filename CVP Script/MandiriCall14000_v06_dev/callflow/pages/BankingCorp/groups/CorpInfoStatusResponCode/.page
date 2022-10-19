@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1688204325:1606059779044" name="CorpInfoStatusResponCode" version="6.0.1">
+<element height="46" id="Element@902988229:1606059623661" name="CorpInfoResponCode" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="164" x="649" y="130">
+<exit_states>
+<exit_state name="done" target="Element@1628034022:1610954544450"/>
+</exit_states>
+</element>
+<element height="46" id="Element@777630830:1606059635483" name="CorpInfoResponCode1" type="Decision" width="170" x="13" y="254">
+<exit_states>
+<exit_state name="Success" target="Element@369095898:1606059865548"/>
+<exit_state name="Fail" target="Element@1415413772:1610957609648">
+<bendpoint>
+<dim1 x="320" y="-12"/>
+<dim2 x="-5" y="-83"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@777727523:1606059608815" name="CorpInfoStatusCode" type="Decision" width="157" x="643" y="16">
+<exit_states>
+<exit_state name="Success" target="Element@902988229:1606059623661"/>
+<exit_state name="Fail" target="Element@1415413772:1610957609648"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1100785809:1606059779044" name="Group Start" type="Element Group Start" width="110" x="39" y="18">
+<exit_states>
+<exit_state name="REST_CorpInfo:done" target="Element@2092048256:1608094536865"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1628034022:1610954544450" name="Log_CorpInfo_Respon" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="207" x="297" y="172">
+<exit_states>
+<exit_state name="done" target="Element@777630830:1606059635483"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@777630830:1606059635483">
+<bendpoint>
+<dim1 x="3" y="93"/>
+<dim2 x="305" y="11"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@2092048256:1608094536865" name="Log_CorpInfo_status" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="158" x="317" y="-21">
+<exit_states>
+<exit_state name="done" target="Element@777727523:1606059608815"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@777727523:1606059608815">
+<bendpoint>
+<dim1 x="144" y="72"/>
+<dim2 x="-181" y="35"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+</page>

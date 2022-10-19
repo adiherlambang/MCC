@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@2102522118:1605444952939" name="REST_Transfer" version="6.0.1">
+<config>
+<settings>
+<setting name="EndpointURL">{LocalVar.hubAddress}/fund-transfer</setting>
+<setting name="HTTPMethod">POST</setting>
+<setting name="Parameters"/>
+<setting name="ignoreCertificateValidation">true</setting>
+<setting name="requireHttpAuthentication">false</setting>
+<setting name="headers">'Content-Type':'application/json'</setting>
+<setting name="body">{
+    "card_number":"{LocalVar.fromNmbrCard}",
+    "pin":"{LocalVar.PINDB}",
+    "currency":"{LocalVar.fromCurrencyTransfer}",
+    "source_account":"{LocalVar.fromAccountTransfer}",
+    "destination_account":"{LocalVar.toAccountTransfer}",
+    "amount":"{LocalVar.amountTransfer}",
+    "processing_code":"{LocalVar.procCode}0000"
+}</setting>
+<setting name="useProxy">false</setting>
+<setting name="connectTimeout">3000</setting>
+<setting name="readTimeout">5000</setting>
+</settings>
+<local_events>
+<local_event>
+<name>Error_RESTTransfer</name>
+<eventlist>com.sun.jersey.api.client.ClientHandlerException</eventlist>
+<type>Java Exception</type>
+</local_event>
+</local_events>
+</config>
+</action_element>

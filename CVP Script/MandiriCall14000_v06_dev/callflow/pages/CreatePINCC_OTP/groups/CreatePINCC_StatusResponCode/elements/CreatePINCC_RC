@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@729534859:1606033763917" name="CreatePINCC_RC" version="6.0.1">
+<config>
+<settings>
+<setting name="createPINCCRC1">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_CreatePINCC.response_body};
+
+var path= "payload.responseCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+eval(result)</setting>
+<setting name="createPINCCRC2">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_CreatePINCC.response_body};
+
+var path= "$payload.pinCreationInfo.responseCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="traceNum_CreatePINCC">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_CreatePINCC.response_body};
+
+var path= "$hubHeader.traceNumber";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="terminalId_CreatePINCC">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_CreatePINCC.response_body};
+
+var path= "$hubHeader.terminalId";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+</settings>
+<element_data>
+<data create_when="After" name="CreatePINCC-OTP-RC1" storable="true" type="String">{LocalVar.createPINCCRC1}</data>
+<data create_when="After" name="CreatePINCC-OTP-RC2" storable="true" type="String">{LocalVar.createPINCCRC2}</data>
+<data create_when="After" name="CreatePINCC-OTP-TraceNum" storable="true" type="String">{LocalVar.traceNum_CreatePINCC}</data>
+<data create_when="After" name="CreatePINCC-OTP-TerminalID" storable="true" type="String">{LocalVar.terminalId_CreatePINCC}</data>
+</element_data>
+</config>
+</action_element>

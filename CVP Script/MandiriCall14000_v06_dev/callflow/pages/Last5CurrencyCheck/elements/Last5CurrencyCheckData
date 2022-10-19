@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@206237225:1603298953374" name="Last5CurrencyCheckData" version="6.0.1">
+<config>
+<settings>
+<setting name="value">var str ="";</setting>
+</settings>
+<element_data>
+<data create_when="Before" name="Rupiah" storable="false" type="String">True</data>
+<data create_when="Before" name="US Dollar" storable="false" type="String">True</data>
+<data create_when="Before" name="Dollar Singapore" storable="false" type="String">True</data>
+<data create_when="Before" name="Dollar Hongkong" storable="false" type="String">True</data>
+</element_data>
+</config>
+</action_element>

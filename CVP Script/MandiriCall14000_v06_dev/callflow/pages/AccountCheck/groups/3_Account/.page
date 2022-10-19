@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1022264337:1605102986231" name="3_Account" version="6.0.1">
+<element height="46" id="Element@680487994:1605102406230" name="3_AccTypeA" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="114" x="325" y="120">
+<exit_states>
+<exit_state name="done" target="Element@2035871290:1605092715018"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1949436440:1605102467227" name="3_AccTypeB" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="112" x="322" y="208">
+<exit_states>
+<exit_state name="done" target="Element@2035871290:1605092715018"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1193668509:1605102477143" name="3_AccTypeC" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="113" x="326" y="301">
+<exit_states>
+<exit_state name="done" target="Element@2035871290:1605092715018"/>
+</exit_states>
+</element>
+<element height="46" id="Element@710823703:1605102491080" name="3_AccTypeD" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="113" x="323" y="394">
+<exit_states>
+<exit_state name="done" target="Element@2035871290:1605092715018"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1254486357:1605099865665" name="AccBankTypeA" type="Decision" width="128" x="80" y="165">
+<exit_states>
+<exit_state name="False" target="Element@424674467:1605100189996"/>
+<exit_state name="b1" target="Element@680487994:1605102406230"/>
+</exit_states>
+</element>
+<element height="46" id="Element@424674467:1605100189996" name="AccBankTypeB" type="Decision" width="127" x="81" y="254">
+<exit_states>
+<exit_state name="False" target="Element@799921442:1605100256537"/>
+<exit_state name="b2" target="Element@1949436440:1605102467227"/>
+</exit_states>
+</element>
+<element height="46" id="Element@799921442:1605100256537" name="AccBankTypeC" type="Decision" width="128" x="79" y="345">
+<exit_states>
+<exit_state name="b3" target="Element@1193668509:1605102477143"/>
+<exit_state name="b4" target="Element@710823703:1605102491080"/>
+</exit_states>
+</element>
+<element height="46" id="Element@292114054:1605102986231" name="Group Start" type="Element Group Start" width="110" x="230" y="30">
+<exit_states>
+<exit_state name="3:True" target="Element@1254486357:1605099865665"/>
+</exit_states>
+</element>
+</page>

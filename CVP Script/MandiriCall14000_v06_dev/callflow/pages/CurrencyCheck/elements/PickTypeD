@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@2124300969:1605175160438" name="PickTypeD" version="6.0.1">
+<config>
+<settings>
+<setting name="pickCurrency">{LocalVar.codeType1}</setting>
+</settings>
+</config>
+</action_element>

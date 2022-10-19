@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@820277546:1605896157845" name="PaymentCCResponCode2" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="PaymentCCResponCode2" default_exit_state="Fail">
+        <exit_state name="Success" conjugate="and">
+            <string operator="equal">
+                <local_variable name="PayCCRC2" />
+                <constant_string value="00" />
+            </string>
+        </exit_state>
+        <exit_state name="ErrorLimitPayment" conjugate="and">
+            <string operator="equal">
+                <local_variable name="PayCCRC2" />
+                <constant_string value="61" />
+            </string>
+        </exit_state>
+        <exit_state name="GeneralFail" conjugate="and">
+            <string operator="equal">
+                <local_variable name="PayCCRC2" />
+                <constant_string value="89" />
+            </string>
+        </exit_state>
+        <exit_state name="RecordNotFound" conjugate="and">
+            <string operator="equal">
+                <local_variable name="PayCCRC2" />
+                <constant_string value="56" />
+            </string>
+        </exit_state>
+        <exit_state name="InvalidFinancialTrans" conjugate="and">
+            <string operator="equal">
+                <local_variable name="PayCCRC2" />
+                <constant_string value="92" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

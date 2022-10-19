@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@986681496:1609853938693" name="TransferLooping" version="6.0.1">
+<config>
+<settings>
+<setting name="type">Element</setting>
+<setting name="name">loopingVal</setting>
+<setting name="expression">{LocalVar.TransferLooping} +1</setting>
+</settings>
+<element_data>
+<data create_when="After" name="TransferLoopingValue" storable="true" type="String">{Data.Element.TransferLooping.loopingVal}</data>
+</element_data>
+</config>
+</action_element>

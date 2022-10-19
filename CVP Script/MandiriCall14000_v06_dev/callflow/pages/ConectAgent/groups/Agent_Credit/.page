@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1722090474:1603443344676" name="Agent_Credit" version="6.0.1">
+<element height="46" id="Element@819897499:1607019037677" name="CheckCC" type="Decision" width="112" x="-158" y="-268">
+<exit_states>
+<exit_state name="Registered" target="Element@173246617:1605005991894"/>
+<exit_state name="Not Registered" target="Element@1962942367:1603443115228"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1855308037:1607012230267" name="ConnectAgentCreditCardBlokir_ENG" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="242" x="-711" y="207">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@357208150:1607012230267" name="ConnectAgentCreditCardBlokir_INA" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="239" x="-903" y="58">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@663134741:1605007005736" name="ConnectAgentCreditCardPlatinum_ENG" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="261" x="525" y="364">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1706111674:1605006972007" name="ConnectAgentCreditCardPlatinum_INA" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="258" x="765" y="215">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@992624223:1607012402012" name="ConnectAgentCreditCardVisa_ENG" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="233" x="1030" y="101">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@860692197:1607012402012" name="ConnectAgentCreditCardVisa_INA" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="230" x="1015" y="-75">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1187031356:1607012536327" name="ConnectAgentCreditCardWorld_ENG" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="244" x="1268" y="-161">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@633313565:1607012536326" name="ConnectAgentCreditCardWorld_INA" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="241" x="1294" y="-336">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@928618111:1603442736439" name="ConnectAgentCreditCard_ENG" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="212" x="248" y="304">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1290047496:1601902781453" name="ConnectAgentCreditCard_INA" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="226" x="-82" y="224">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1745367270:1603443344676" name="Group Start" type="Element Group Start" width="110" x="-276" y="-122">
+<exit_states>
+<exit_state name="ConnectAgentCreditCardBlocking:done" target="Element@138474621:1607012230267"/>
+<exit_state name="DB_CheckCCType:done" target="Element@819897499:1607019037677"/>
+<exit_state name="Log_CheckCCType:done" target="Element@1962942367:1603443115228">
+<bendpoint>
+<dim1 x="202" y="77"/>
+<dim2 x="-135" y="-49"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Log_CheckCCType:Java Exception-Error_InsertLog" target="Element@1962942367:1603443115228">
+<bendpoint>
+<dim1 x="21" y="192"/>
+<dim2 x="-316" y="66"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="31" y="197"/>
+<dim2 x="-306" y="71"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ConnectAgentCreditCardNonCust:done" target="Element@332299305:1612341593652">
+<bendpoint>
+<dim1 x="-12" y="297"/>
+<dim2 x="11" y="-70"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@214903747:1605062400501" name="TypeCCCardPlat" type="Decision" width="135" x="270" y="-201">
+<exit_states>
+<exit_state name="False" target="Element@729051711:1605062597856"/>
+<exit_state name="PLATINUM" target="Element@353369016:1605006940163"/>
+</exit_states>
+</element>
+<element height="46" id="Element@173246617:1605005991894" name="TypeCCCardReg" type="Decision" width="135" x="65" y="-197">
+<exit_states>
+<exit_state name="REGULAR" target="Element@1962942367:1603443115228"/>
+<exit_state name="False" target="Element@214903747:1605062400501"/>
+</exit_states>
+</element>
+<element height="46" id="Element@729051711:1605062597856" name="TypeCCCardVisa" type="Decision" width="136" x="461" y="-200">
+<exit_states>
+<exit_state name="False" target="Element@968342511:1607012536327"/>
+<exit_state name="VISA" target="Element@1322267186:1607012402012"/>
+</exit_states>
+</element>
+<element height="46" id="Element@138474621:1607012230267" name="language_checkBlockir" type="Decision" width="171" x="-561" y="-45">
+<exit_states>
+<exit_state name="Bahasa" target="Element@1520980666:1623328675181"/>
+<exit_state name="English" target="Element@2092441038:1623328793804"/>
+</exit_states>
+</element>
+<element height="46" id="Element@353369016:1605006940163" name="language_checkPlatinum" type="Decision" width="183" x="314" y="14">
+<exit_states>
+<exit_state name="Bahasa" target="Element@449025708:1623329370285"/>
+<exit_state name="English" target="Element@2026114323:1623329304785"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1962942367:1603443115228" name="language_checkRegular" type="Decision" width="175" x="29" y="4">
+<exit_states>
+<exit_state name="Bahasa" target="Element@1775446677:1623329136016"/>
+<exit_state name="English" target="Element@1975968895:1623329203972"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1322267186:1607012402012" name="language_checkVisa" type="Decision" width="156" x="532" y="-80">
+<exit_states>
+<exit_state name="Bahasa" target="Element@1235601935:1623329536339"/>
+<exit_state name="English" target="Element@2015017280:1623329461638"/>
+</exit_states>
+</element>
+<element height="46" id="Element@968342511:1607012536327" name="language_checkWorld" type="Decision" width="205" x="633" y="-283">
+<exit_states>
+<exit_state name="Bahasa" target="Element@1108449043:1623331078488"/>
+<exit_state name="English" target="Element@794489945:1623331007846"/>
+</exit_states>
+</element>
+<element height="46" id="Element@832186867:1612341593652" name="ConnectAgentCreditCardNonCust_INA" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="256" x="-609" y="457">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@332299305:1612341593652" name="language_checkNonCust" type="Decision" width="224" x="-356" y="245">
+<exit_states>
+<exit_state name="Bahasa" target="Element@1360780119:1623328876458"/>
+<exit_state name="English" target="Element@1043769389:1623328935787"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2119979401:1612341593652" name="ConnectAgentCreditCardNonCust_ENG" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="261" x="-200" y="460">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1520980666:1623328675181" name="Log_ConnectAgentCCBlokIna" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="207" x="-798" y="-137">
+<exit_states>
+<exit_state name="done" target="Element@357208150:1607012230267"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@357208150:1607012230267">
+<bendpoint>
+<dim1 x="61" y="120"/>
+<dim2 x="61" y="-81"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@2092441038:1623328793804" name="Log_ConnectAgentCCBlokEng" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="211" x="-611" y="79">
+<exit_states>
+<exit_state name="done" target="Element@1855308037:1607012230267"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@1855308037:1607012230267">
+<bendpoint>
+<dim1 x="106" y="81"/>
+<dim2 x="190" y="-47"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1360780119:1623328876458" name="Log_ConnectAgentCCNonCustIna" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="231" x="-599" y="347">
+<exit_states>
+<exit_state name="done" target="Element@832186867:1612341593652"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@832186867:1612341593652">
+<bendpoint>
+<dim1 x="-180" y="66"/>
+<dim2 x="-183" y="-44"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1043769389:1623328935787" name="Log_ConnectAgentCCNonCustEng" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="235" x="-189" y="349">
+<exit_states>
+<exit_state name="done" target="Element@2119979401:1612341593652"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@2119979401:1612341593652">
+<bendpoint>
+<dim1 x="169" y="77"/>
+<dim2 x="167" y="-34"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1775446677:1623329136016" name="Log_ConnectAgentCCRegIna" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="204" x="-69" y="135">
+<exit_states>
+<exit_state name="done" target="Element@1290047496:1601902781453"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@1290047496:1601902781453">
+<bendpoint>
+<dim1 x="-158" y="54"/>
+<dim2 x="-156" y="-35"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1975968895:1623329203972" name="Log_ConnectAgentCCRegEng" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="208" x="191" y="152">
+<exit_states>
+<exit_state name="done" target="Element@928618111:1603442736439"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@928618111:1603442736439">
+<bendpoint>
+<dim1 x="-37" y="88"/>
+<dim2 x="-96" y="-64"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@2026114323:1623329304785" name="Log_ConnectAgentCCPlatEng" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="208" x="460" y="224">
+<exit_states>
+<exit_state name="done" target="Element@663134741:1605007005736"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@663134741:1605007005736">
+<bendpoint>
+<dim1 x="166" y="80"/>
+<dim2 x="75" y="-60"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@449025708:1623329370285" name="Log_ConnectAgentCCPlatIna" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="204" x="555" y="105">
+<exit_states>
+<exit_state name="done" target="Element@1706111674:1605006972007"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@1706111674:1605006972007">
+<bendpoint>
+<dim1 x="350" y="59"/>
+<dim2 x="113" y="-51"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@2015017280:1623329461638" name="Log_ConnectAgentCCVisaEng" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="209" x="740" y="17">
+<exit_states>
+<exit_state name="done" target="Element@992624223:1607012402012"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@992624223:1607012402012">
+<bendpoint>
+<dim1 x="21" y="79"/>
+<dim2 x="-281" y="-5"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1235601935:1623329536339" name="Log_ConnectAgentCCVisaIna" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="205" x="753" y="-148">
+<exit_states>
+<exit_state name="done" target="Element@860692197:1607012402012"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@860692197:1607012402012">
+<bendpoint>
+<dim1 x="8" y="80"/>
+<dim2 x="-267" y="7"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@794489945:1623331007846" name="Log_ConnectAgentCCWorldEng" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="220" x="975" y="-219">
+<exit_states>
+<exit_state name="done" target="Element@1187031356:1607012536327"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@1187031356:1607012536327">
+<bendpoint>
+<dim1 x="1" y="67"/>
+<dim2 x="-304" y="9"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1108449043:1623331078488" name="Log_ConnectAgentCCWorldIna" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="216" x="975" y="-322">
+<exit_states>
+<exit_state name="done" target="Element@633313565:1607012536326"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@633313565:1607012536326">
+<bendpoint>
+<dim1 x="194" y="63"/>
+<dim2 x="-137" y="77"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+</page>

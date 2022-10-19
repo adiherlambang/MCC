@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@755162535:1605173889740" name="CurrTypeB4" version="6.0.1">
+<config>
+<settings>
+<setting name="soundType1">"USD.wav"</setting>
+<setting name="soundType2">"HKD.wav"</setting>
+<setting name="soundType3">"SGD.wav"</setting>
+<setting name="codeType1">"USD"</setting>
+<setting name="codeType2">"HKD"</setting>
+<setting name="codeType3">"SGD"</setting>
+</settings>
+</config>
+</action_element>

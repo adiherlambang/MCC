@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@9509065:1605466638426" name="Trans_CurrencyValue" version="6.0.1">
+<config>
+<settings>
+<setting name="transPickAccountType">var type = {LocalVar.pickTypeAccountTrans};
+type</setting>
+<setting name="transCurrencyIDR">importPackage(com.audium.server.cvpUtil);
+var index = new Array();
+var data = {Data.Element.REST_RegisteredAccount.response_body};
+var i,path,result,path2,result2;
+
+for(i=0; i&lt; {LocalVar.RegisteredAccount}; i++){
+	path= "$payload.ftBeneficiaryListInfo.accounts["+i+"].accountType";
+	result = JSONPathUtil.eval(data,path);
+
+	if(result == {LocalVar.transPickAccountType}) {
+		path2= "$payload.ftBeneficiaryListInfo.accounts["+i+"].accountCurrency";
+		result2 = JSONPathUtil.eval(data,path2);
+		if(result2=="IDR"){
+			index.push(result2);
+		}
+	}
+}
+
+index.indexOf("IDR")</setting>
+<setting name="transCurrencyUSD">importPackage(com.audium.server.cvpUtil);
+var index = new Array();
+var data = {Data.Element.REST_RegisteredAccount.response_body};
+var i,path,result,path2,result2;
+
+for(i=0; i&lt; {LocalVar.RegisteredAccount}; i++){
+	path= "$payload.ftBeneficiaryListInfo.accounts["+i+"].accountType";
+	result = JSONPathUtil.eval(data,path);
+
+	if(result == {LocalVar.transPickAccountType}) {
+		path2= "$payload.ftBeneficiaryListInfo.accounts["+i+"].accountCurrency";
+		result2 = JSONPathUtil.eval(data,path2);
+		if(result2=="USD"){
+			index.push(result2);
+		}
+	}
+}
+
+index.indexOf("USD")</setting>
+<setting name="transCurrencyHKD">importPackage(com.audium.server.cvpUtil);
+var index = new Array();
+var data = {Data.Element.REST_RegisteredAccount.response_body};
+var i,path,result,path2,result2;
+
+for(i=0; i&lt; {LocalVar.RegisteredAccount}; i++){
+	path= "$payload.ftBeneficiaryListInfo.accounts["+i+"].accountType";
+	result = JSONPathUtil.eval(data,path);
+
+	if(result == {LocalVar.transPickAccountType}) {
+		path2= "$payload.ftBeneficiaryListInfo.accounts["+i+"].accountCurrency";
+		result2 = JSONPathUtil.eval(data,path2);
+		if(result2=="HKD"){
+			index.push(result);
+		}
+	}
+}
+
+index.indexOf("HKD")</setting>
+<setting name="transCurrencySGD">importPackage(com.audium.server.cvpUtil);
+var index = new Array();
+var data = {Data.Element.REST_RegisteredAccount.response_body};
+var i,path,result,path2,result2;
+
+for(i=0; i&lt; {LocalVar.RegisteredAccount}; i++){
+	path= "$payload.ftBeneficiaryListInfo.accounts["+i+"].accountType";
+	result = JSONPathUtil.eval(data,path);
+
+	if(result == {LocalVar.transPickAccountType}) {
+		path2= "$payload.ftBeneficiaryListInfo.accounts["+i+"].accountCurrency";
+		result2 = JSONPathUtil.eval(data,path2);
+		if(result2=="SGD"){
+			index.push(result);
+		}
+	}
+}
+
+index.indexOf("SGD")</setting>
+<setting name="transCurrencyAccount">var result;
+
+var s = {LocalVar.transCurrencyIDR};
+var l ={LocalVar.transCurrencyUSD};
+var d ={LocalVar.transCurrencyHKD};
+var t ={LocalVar.transCurrencySGD};
+
+if( s&gt;=0 &amp; d&gt;=0 &amp; l&gt;=0 &amp; t&gt;=0)
+{
+	result = "a";	
+}else if( s&gt;=0 &amp; d&gt;=0 &amp; l&gt;=0 &amp; t&lt;0)
+{
+	result = "b1";	
+}else if( s&gt;=0 &amp; d&gt;=0 &amp; l&lt;0 &amp; t&gt;=0)
+{
+	result = "b2";	
+}else if( s&gt;=0 &amp; d&lt;0 &amp; l&gt;=0 &amp; t&gt;=0)
+{
+	result = "b3";	
+}else if( s&lt;0 &amp; d&gt;=0 &amp; l&gt;=0 &amp; t&gt;=0)
+{
+	result = "b4";	
+}else if( s&gt;=0 &amp; d&gt;=0 &amp; l&lt;0 &amp; t&lt;0)
+{
+	result = "c1";	
+}else if( s&gt;=0 &amp; d&lt;0 &amp; l&gt;=0 &amp; t&lt;0)
+{
+	result = "c2";	
+}else if( s&gt;=0 &amp; d&lt;0 &amp; l&lt;0 &amp; t&gt;=0)
+{
+	result = "c3";	
+}else if( s&lt;0 &amp; d&gt;=0 &amp; l&lt;0 &amp; t&gt;=0)
+{
+	result = "c4";	
+}else if( s&lt;0 &amp; d&lt;0 &amp; l&gt;=0 &amp; t&gt;=0)
+{
+	result = "c5";	
+}else if( s&gt;=0 &amp; d&lt;0 &amp; l&lt;0 &amp; t&lt;0)
+{
+	result = "d1";	
+}else if( s&lt;0 &amp; d&gt;=0 &amp; l&lt;0 &amp; t&lt;0)
+{
+	result = "d2";	
+}else if( s&lt;0 &amp; d&lt;0 &amp; l&gt;=0 &amp; t&lt;0)
+{
+	result = "d3";	
+}else if( s&lt;0 &amp; d&lt;0 &amp; l&lt;0 &amp; t&gt;=0)
+{
+	result = "d4";	
+}
+
+result</setting>
+</settings>
+<element_data>
+<data create_when="After" name="currencyacc" storable="true" type="String">{LocalVar.transCurrencyAccount}</data>
+<data create_when="After" name="pickaccount" storable="true" type="String">{LocalVar.transPickAccountType}</data>
+<data create_when="After" name="account" storable="true" type="String">{LocalVar.pickTypeAccountTrans}</data>
+</element_data>
+</config>
+</action_element>

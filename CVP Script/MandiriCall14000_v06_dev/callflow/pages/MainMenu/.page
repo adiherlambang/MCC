@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1405161700:1601897428297" name="MainMenu" version="6.0.1">
+<element height="62" id="Element@1444116897:1601965250631" name="BankingCreditCard" type="Decision" width="280" x="228" y="1062">
+<exit_states>
+<exit_state name="InputPIN" target="Element@946748071:1601965473768"/>
+<exit_state name="False/NoMatch" target="Element@732115144:1601899758157"/>
+<exit_state name="NoOptionMatch" target="Element@1734613557:1610130560571"/>
+</exit_states>
+</element>
+<element height="62" id="Element@221954683:1601899003776" name="BlockingCard" type="Decision" width="235" x="815" y="63">
+<exit_states>
+<exit_state name="BlockingCard" target="Element@155706298:1601899091854"/>
+<exit_state name="else" target="Element@197675630:1601899262940"/>
+</exit_states>
+</element>
+<element height="62" id="Element@155706298:1601899091854" name="BlockingCardMenu" type="Page Connector" width="308" x="1408" y="54">
+<page_connector target="Element@598296268:1601899073285">BlockingCardMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1414067580:1610129924870" name="ConnectAgentStaff" type="Page Connector" width="251" x="937" y="-240">
+<page_connector target="Element@1100459976:1601902754803">ConnectAgentStaff<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1536710935:1610130529982" name="ConnectAgentStaff" type="Page Connector" width="251" x="-414" y="831">
+<page_connector target="Element@1100459976:1601902754803">ConnectAgentStaff<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@946748071:1601965473768" name="CustomerIdentification" type="Page Connector" width="293" x="219" y="1331">
+<page_connector target="Element@1352699972:1601965439841">CustomerIdentification<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@2122108965:1601899392442" name="EndCall" type="Decision" width="239" x="780" y="416">
+<exit_states>
+<exit_state name="else" target="Element@645820910:1601899417774"/>
+<exit_state name="EndCall" target="Element@187569650:1601899484186"/>
+</exit_states>
+</element>
+<element height="62" id="Element@89933654:1601904832032" name="EndCall" type="Page Entry" width="207" x="1608" y="343">
+<exit_states>
+<exit_state name="next" target="Element@187569650:1601899484186"/>
+</exit_states>
+</element>
+<element height="62" id="Element@187569650:1601899484186" name="EndCallAudio" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="192" x="1310" y="420">
+<exit_states>
+<exit_state name="done" target="Element@1957747079:1601899582119"/>
+</exit_states>
+</element>
+<element height="62" id="Element@41316789:1604657646506" name="HubAddress" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="179" x="299" y="-178">
+<exit_states>
+<exit_state name="done" target="Element@1375584865:1601898848660"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1715140762:1610290505037" name="Main" type="Page Connector" width="150" x="1370" y="893">
+<page_connector target="Element@2107649334:1601893639537">Main<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@23431669:1610128595615" name="LengthInputCard" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="229" x="-32" y="113">
+<exit_states>
+<exit_state name="done" target="Element@626774763:1610876627009"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1501536847:1601899636860" name="MainMenu" type="Page Connector" width="167" x="1322" y="566">
+<page_connector target="Element@1865813345:1601897428297">MainMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1865813345:1601897428297" name="MainMenu" type="Page Entry" width="167" x="470" y="-338">
+<exit_states>
+<exit_state name="next" target="Element@41316789:1604657646506"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1784581055:1601899807847" name="MainMenu" type="Page Connector" width="167" x="1365" y="741">
+<page_connector target="Element@1865813345:1601897428297">MainMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1778364208:1610130514223" name="MainMenu" type="Page Connector" width="167" x="-415" y="334">
+<page_connector target="Element@1865813345:1601897428297">MainMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1375584865:1601898848660" name="MainMenuInput16DIgit" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="300" x="277" y="4">
+<exit_states>
+<exit_state name="done" target="Element@23431669:1610128595615"/>
+<exit_state name="max_nomatch" target="Element@1414067580:1610129924870"/>
+<exit_state name="max_noinput" target="Element@1414067580:1610129924870"/>
+</exit_states>
+</element>
+<element height="62" id="Element@645820910:1601899417774" name="MenuUtama" type="Decision" width="239" x="773" y="575">
+<exit_states>
+<exit_state name="else" target="Element@354628826:1601899434990"/>
+<exit_state name="MenuUtama" target="Element@1501536847:1601899636860"/>
+</exit_states>
+</element>
+<element height="62" id="Element@732115144:1601899758157" name="NoMatchCard" type="Page Connector" width="198" x="-279" y="1234">
+<page_connector target="Element@2092006656:1610123555603">NoMatchCard<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1734613557:1610130560571" name="NoOptionMatch_check" type="Element Group" width="294" x="-192" y="582"/>
+<element height="62" id="Element@1957747079:1601899582119" name="NoReturn" type="Page Connector" width="152" x="1673" y="546">
+<page_connector target="Element@246900491:1601899563078">NoReturn<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@197675630:1601899262940" name="NonCustomer" type="Decision" width="229" x="808" y="231">
+<exit_states>
+<exit_state name="else" target="Element@2122108965:1601899392442"/>
+<exit_state name="NonCustomer" target="Element@1626403997:1601899294673"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1626403997:1601899294673" name="NonCustomer" type="Page Connector" width="228" x="1419" y="232">
+<page_connector target="Element@1487953701:1601899300896">NonCustomer<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1845531157:1610290463010" name="PreviousMenu" type="Decision" width="235" x="779" y="903">
+<exit_states>
+<exit_state name="PreviousMenu" target="Element@1715140762:1610290505037"/>
+<exit_state name="else" target="Element@875136897:1666151956219"/>
+</exit_states>
+</element>
+<element height="62" id="Element@354628826:1601899434990" name="RepeateInformation" type="Decision" width="261" x="771" y="738">
+<exit_states>
+<exit_state name="else" target="Element@1845531157:1610290463010"/>
+<exit_state name="RepeatInfo" target="Element@1784581055:1601899807847"/>
+</exit_states>
+</element>
+<element height="62" id="Element@626774763:1610876627009" name="Validation_Input16card" type="Decision" width="292" x="-48" y="236">
+<exit_states>
+<exit_state name="Valid" target="Element@221954683:1601899003776"/>
+<exit_state name="NotValid" target="Element@1734613557:1610130560571"/>
+</exit_states>
+</element>
+<element height="62" id="Element@875136897:1666151956219" name="CommercialBisnis" type="Decision" width="237" x="783" y="1062">
+<exit_states>
+<exit_state name="CommercialBisnisAgent" target="Element@1534673810:1666152146799"/>
+<exit_state name="else" target="Element@470744728:1666156881194"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1534673810:1666152146799" name="Entry_CommercialBisnis" type="Page Connector" width="301" x="1446" y="1053">
+<page_connector target="Element@1089835541:1666152113171">Entry_CommercialBisnis<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@470744728:1666156881194" name="MerchantAgen" type="Decision" width="208" x="794" y="1247">
+<exit_states>
+<exit_state name="MerchantsAgen" target="Element@1725663531:1666157073282"/>
+<exit_state name="else" target="Element@1444116897:1601965250631"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1725663531:1666157073282" name="Entry_MerchantAgen" type="Page Connector" width="272" x="1430" y="1245">
+<page_connector target="Element@1021135856:1666157040374">Entry_MerchantAgen<config/>
+</page_connector>
+</element>
+</page>

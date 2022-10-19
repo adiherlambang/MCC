@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1182250254:1609211267071" name="CCPersonalInfoData" version="6.0.1">
+<config>
+<settings>
+<setting name="NamaNasabah">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_CCPersonalInfo.response_body};
+
+var path= "$customer.cifName1";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="GenderNasabah">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_CCPersonalInfo.response_body};
+
+var path= "$customer.sexCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+if (result == "M"){
+	result = "Bapak";
+}else {
+	result = "Ibu";
+}
+
+result</setting>
+<setting name="TempatTglLahirNasabah">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_CCPersonalInfo.response_body};
+
+var path= "$customer.birthIncorporationPlace";
+
+var result = JSONPathUtil.eval(data,path);
+
+var path2 = "$customer.dayOfBirth";
+
+var result2 = JSONPathUtil.eval(data,path2);
+
+result+"/"+result2</setting>
+<setting name="AlamatNasabah">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_CCPersonalInfo.response_body};
+
+var path= "$customer.address[0].address1";
+
+var result1 = JSONPathUtil.eval(data,path);
+
+var path2= "$customer.address[0].address2";
+
+var result2 = JSONPathUtil.eval(data,path2);
+
+var path3= "$customer.address[0].address3";
+
+var result3 = JSONPathUtil.eval(data,path3);
+
+var path4= "$customer.address[0].address4";
+
+var result4 = JSONPathUtil.eval(data,path4);
+
+var alamat = result1+result2+result3+result4;
+
+alamat.substring(0,39)</setting>
+</settings>
+</config>
+</action_element>

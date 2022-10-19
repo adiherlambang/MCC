@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@829163913:1605005301236" name="DB_CheckCCType" version="6.0.1">
+<config>
+<settings>
+<setting name="type">single</setting>
+<setting name="jndiName">cvp_mdr</setting>
+<setting name="query">SELECT * 
+FROM 
+bincreditcard
+WHERE bincard = {LocalVar.PrefixCard}</setting>
+<setting name="enableXmlResultSet">true</setting>
+<setting name="maxRowsInXML">50</setting>
+</settings>
+<element_data>
+<data create_when="After" name="type" storable="true" type="String">{Data.Element.DB_CheckCCType.type}</data>
+</element_data>
+<local_events>
+<local_event>
+<name>Error_CheckCCType</name>
+<eventlist>com.audium.server.*</eventlist>
+<type>Java Exception</type>
+</local_event>
+</local_events>
+</config>
+</action_element>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1805180861:1605781082426" name="Rek1" version="6.0.1">
+<config>
+<log>
+<data create_when="After" name="lastDigitRek1">{LocalVar.PaymentRek1_last}</data>
+</log>
+<settings>
+<setting name="PaymentRek1">var list = {LocalVar.ListRek};
+
+list[0]</setting>
+<setting name="PaymentRek1_last">var list = {LocalVar.ListLastDigitRek};
+
+list[0]</setting>
+</settings>
+</config>
+</action_element>

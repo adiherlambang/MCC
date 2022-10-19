@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@730987527:1605497041539" name="Trans1_Rek" version="6.0.1">
+<config>
+<log>
+<data create_when="After" name="last Rek">{LocalVar.TransLastRek1}</data>
+</log>
+<settings>
+<setting name="TransRek_1">var list = {LocalVar.IndexRekTrans};
+
+list[0]</setting>
+<setting name="TransLastRek1">var list = {LocalVar.IndexRekTrans};
+var n = list[0].indexOf(" ");
+var lastdigit=list[0].substring(n-3,n);
+
+lastdigit</setting>
+</settings>
+</config>
+</action_element>

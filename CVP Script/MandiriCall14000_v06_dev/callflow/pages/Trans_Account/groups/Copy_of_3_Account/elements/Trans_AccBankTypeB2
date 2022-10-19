@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@2093928824:1605463631986" name="Trans_AccBankTypeB2" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Trans_AccBankTypeB2" default_exit_state="False">
+        <exit_state name="b2" conjugate="and">
+            <string operator="equal">
+                <local_variable name="RegAccount" />
+                <constant_string value="b2" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

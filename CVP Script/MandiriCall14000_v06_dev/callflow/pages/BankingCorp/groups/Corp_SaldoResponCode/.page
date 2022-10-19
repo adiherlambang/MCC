@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@171040167:1606059178219" name="Corp_SaldoResponCode" version="6.0.1">
+<element height="46" id="Element@1569354238:1606058958840" name="Corp_SaldoResponCode" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="177" x="402" y="115">
+<exit_states>
+<exit_state name="done" target="Element@1196384757:1606059102162"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1196384757:1606059102162" name="Corp_SaldoResponCode1" type="Decision" width="183" x="76" y="118">
+<exit_states>
+<exit_state name="Success" target="Element@1606976663:1606059121578"/>
+<exit_state name="Fail" target="Element@331795079:1606059267083">
+<bendpoint>
+<dim1 x="-81" y="168"/>
+<dim2 x="143" y="20"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1606976663:1606059121578" name="Corp_SaldoResponCode2" type="Decision" width="183" x="70" y="236">
+<exit_states>
+<exit_state name="Success" target="Element@1487186396:1606061040993">
+<bendpoint>
+<dim1 x="121" y="71"/>
+<dim2 x="-76" y="-132"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Fail" target="Element@331795079:1606059267083"/>
+</exit_states>
+</element>
+<element height="46" id="Element@499462613:1606058879202" name="Corp_SaldoStatusCode" type="Decision" width="170" x="411" y="-5">
+<exit_states>
+<exit_state name="Success" target="Element@1569354238:1606058958840"/>
+<exit_state name="Fail" target="Element@331795079:1606059267083">
+<bendpoint>
+<dim1 x="-237" y="60"/>
+<dim2 x="-13" y="-88"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1998887538:1606059178219" name="Group Start" type="Element Group Start" width="110" x="91" y="-9">
+<exit_states>
+<exit_state name="REST_Corp_SaldoDB:done" target="Element@499462613:1606058879202"/>
+</exit_states>
+</element>
+</page>

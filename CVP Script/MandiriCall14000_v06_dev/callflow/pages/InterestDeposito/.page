@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@906185711:1601964787035" name="InterestDeposito" version="6.0.1">
+<element height="62" id="Element@1185465116:1601964806583" name="ConnectAgentStaff" type="Page Connector" width="251" x="64" y="515">
+<page_connector target="Element@1100459976:1601902754803">ConnectAgentStaff<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@653077825:1610272114158" name="EndCall" type="Page Connector" width="129" x="620" y="462">
+<page_connector target="Element@89933654:1601904832032">EndCall<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@510810808:1610297525569" name="Error_NoInput" type="Page Connector" width="198" x="70" y="389">
+<page_connector target="Element@270910828:1610085311655">Error_NoInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@217900321:1610297529730" name="Error_NoMatchInput" type="Page Connector" width="265" x="358" y="464">
+<page_connector target="Element@1250119072:1610085949630">Error_NoMatchInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@598100866:1608120578222" name="Error_ServiceSOA" type="Page Connector" width="231" x="588" y="30">
+<page_connector target="Element@623071406:1607697419497">Error_ServiceSOA<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@816136301:1601964806583" name="InterestDeposito" type="Page Entry" width="226" x="69" y="-96">
+<exit_states>
+<exit_state name="next" target="Element@1942634114:1604908478858"/>
+</exit_states>
+</element>
+<element height="62" id="Element@333745413:1601964806583" name="InterestDeposito" type="Page Connector" width="226" x="602" y="236">
+<page_connector target="Element@816136301:1601964806583">InterestDeposito<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1308044775:1610272105415" name="InterestDepositoMenu" src="com.audium.server.voiceElement.menu.MFoundation5OptionMenu" type="Voice Element" width="289" x="315" y="314">
+<exit_states>
+<exit_state name="option1" target="Element@1185465116:1601964806583"/>
+<exit_state name="option2" target="Element@456631518:1601964806583"/>
+<exit_state name="option3" target="Element@1192072859:1601964806583"/>
+<exit_state name="option4" target="Element@653077825:1610272114158"/>
+<exit_state name="option5" target="Element@333745413:1601964806583"/>
+<exit_state name="max_nomatch" target="Element@217900321:1610297529730"/>
+<exit_state name="max_noinput" target="Element@510810808:1610297525569"/>
+</exit_states>
+</element>
+<element height="62" id="Element@456631518:1601964806583" name="InterestRateMenu" type="Page Connector" width="240" x="616" y="334">
+<page_connector target="Element@1732654770:1601963903054">InterestRateMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1978358654:1604908948697" name="InterestRateMenu" type="Page Connector" width="240" x="-69" y="261">
+<page_connector target="Element@1732654770:1601963903054">InterestRateMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@104850465:1608120437380" name="Log_DepositRate" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="228" x="381" y="-60">
+<exit_states>
+<exit_state name="done" target="Element@598100866:1608120578222"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@598100866:1608120578222"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1192072859:1601964806583" name="MainMenu" type="Page Connector" width="167" x="499" y="141">
+<page_connector target="Element@1865813345:1601897428297">MainMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1942634114:1604908478858" name="REST_DepositRate" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="241" x="94" y="21">
+<exit_states>
+<exit_state name="done" target="Element@1313645427:1604908563174"/>
+<exit_state name="Java Exception-Error_RESTDepositRate" target="Element@104850465:1608120437380"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1313645427:1604908563174" name="StatusResponCodeDepositRate" type="Element Group" width="377" x="195" y="145"/>
+</page>

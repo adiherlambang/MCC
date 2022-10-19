@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@905140581:1605788876044" name="REST_PaymentPhone" version="6.0.1">
+<config>
+<settings>
+<setting name="EndpointURL">{LocalVar.hubAddress}/bill-payment-reversal</setting>
+<setting name="HTTPMethod">POST</setting>
+<setting name="Parameters"/>
+<setting name="ignoreCertificateValidation">true</setting>
+<setting name="requireHttpAuthentication">false</setting>
+<setting name="headers">'Content-Type':'application/json'</setting>
+<setting name="body">{
+     "processing_code":"32{LocalVar.proCodexx}{LocalVar.proCodeyy}",
+     "card_number":"{LocalVar.NmbrCardDebit}",
+     "amount":"{LocalVar.AmountBillPhone}",
+     "pin":"{LocalVar.PINDB}",
+     "source_account":"{LocalVar.pickRekPhone}",
+     "biller_reference_number":"{LocalVar.billReferenceNumber}",
+     "area_code":"{LocalVar.areaCode}",
+     "dest_account":"{LocalVar.pickRekPhone}",
+     "rrno":"{LocalVar.rrno}",
+     "phone_number":"{LocalVar.PhoneNumber}",
+     "province_code":"{LocalVar.provinceCode}",
+     "filler":"{LocalVar.filler}",
+     "customer_name":"{LocalVar.customerName}",
+     "npwp":"{LocalVar.npwp}",
+     "tax_office_phone_area_code":"{LocalVar.taxOfficePhoneAreaCode}",
+     "biller_code":"{LocalVar.billerCode}",
+     "bill_status":"{LocalVar.billStatus}",
+     "bill_reference_number1":"{LocalVar.billReferenceNumber1}",
+     "bill_reference_number2":"{LocalVar.billReferenceNumber2}",
+     "bill_reference_number3":"{LocalVar.billReferenceNumber3}",
+     "bill_amount1":"{LocalVar.billAmount1}",
+     "bill_amount2":"{LocalVar.billAmount2}",
+     "bill_amount3":"{LocalVar.billAmount3}",
+     "customer_id":"{LocalVar.customerId}",
+     "user_id":"{LocalVar.userId}",
+     "invoice_number":"{LocalVar.invoiceNumber}",
+     "address1":"{LocalVar.address1}",
+     "address2":"{LocalVar.address2}",
+     "city":"{LocalVar.city}",
+     "postal_code":"{LocalVar.postalCode}",
+     "area_code2":"{LocalVar.areaCodeAdditional}",
+     "token_header":"{LocalVar.tokenHeader}",
+     "utility_code":"{LocalVar.utilityCode}",
+     "customer_number":"{LocalVar.customerNumber}"
+}</setting>
+<setting name="useProxy">false</setting>
+<setting name="connectTimeout">3000</setting>
+<setting name="readTimeout">5000</setting>
+</settings>
+<local_events>
+<local_event>
+<name>Error_RESTPaymentPhone</name>
+<eventlist>com.sun.jersey.api.client.ClientHandlerException</eventlist>
+<type>Java Exception</type>
+</local_event>
+</local_events>
+</config>
+</action_element>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@154480472:1605776169768" name="Rekening" version="6.0.1">
+<config>
+<log>
+<data create_when="After" name="list rek">{LocalVar.ListRek}</data>
+<data create_when="After" name="list last digit">{LocalVar.ListLastDigitRek}</data>
+</log>
+<settings>
+<setting name="ListNomorRekening">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_DebitCard.response_body};
+var parse = JSON.parse(data);
+var len = parse.signOnInfo.customerDetail.accounts.length;
+var index = new Array();
+
+for (var i=0; i&lt;len; i++){
+	var path3 = "$signOnInfo.customerDetail.accounts["+i+"].accountType";
+	var result3 = JSONPathUtil.eval(data,path3);
+	if(result3 == "S" || result3 == "D"){
+		var path = "$signOnInfo.customerDetail.accounts["+i+"].currency";
+		var result = JSONPathUtil.eval(data,path);
+		if(result == "IDR"){
+			var path2= "$signOnInfo.customerDetail.accounts["+i+"].accountNumber";
+			var result2 = JSONPathUtil.eval(data,path2);
+			index.push(result2);
+		}
+	}
+}
+
+index.length</setting>
+<setting name="ListRek">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_DebitCard.response_body};
+var parse = JSON.parse(data);
+var len = parse.signOnInfo.customerDetail.accounts.length;
+var index = new Array();
+
+for (var i=0; i&lt;len; i++){
+	var path3 = "$signOnInfo.customerDetail.accounts["+i+"].accountType";
+	var result3 = JSONPathUtil.eval(data,path3);
+	if(result3 == "S" || result3 == "D"){
+		var path = "$signOnInfo.customerDetail.accounts["+i+"].currency";
+		var result = JSONPathUtil.eval(data,path);
+		if(result == "IDR"){
+			var path2= "$signOnInfo.customerDetail.accounts["+i+"].accountNumber";
+			var result2 = JSONPathUtil.eval(data,path2);
+			index.push(result2);
+		}
+	}
+}
+
+index
+
+</setting>
+<setting name="ListLastDigitRek">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_DebitCard.response_body};
+var parse = JSON.parse(data);
+var len = parse.signOnInfo.customerDetail.accounts.length;
+var index = new Array();
+
+for (var i=0; i&lt;len; i++){
+	var path3 = "$signOnInfo.customerDetail.accounts["+i+"].accountType";
+	var result3 = JSONPathUtil.eval(data,path3);
+	if(result3 == "S" || result3 == "D"){
+		var path = "$signOnInfo.customerDetail.accounts["+i+"].currency";
+		var result = JSONPathUtil.eval(data,path);
+		if(result == "IDR"){
+			var path2= "$signOnInfo.customerDetail.accounts["+i+"].lastDigit";
+			var result2 = JSONPathUtil.eval(data,path2);
+			index.push(result2);
+		}
+	}
+}
+
+index
+
+</setting>
+</settings>
+</config>
+</action_element>

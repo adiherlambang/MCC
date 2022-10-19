@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@239282124:1606058694533" name="Corp_setIDR" version="6.0.1">
+<config>
+<settings>
+<setting name="CurrencyCodeDB">"001"</setting>
+<setting name="CurrencySpelling">"Rupiah"</setting>
+</settings>
+</config>
+</action_element>

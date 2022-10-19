@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@470744728:1666156881194" name="MerchantAgen" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Decision_01" default_exit_state="else">
+        <exit_state name="MerchantsAgen" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <element name="MainMenuInput16DIgit" variable="value" />
+                </data>
+                <constant_string value="5" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

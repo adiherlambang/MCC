@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1876200456:1611566102852" name="CheckError_LimitPayment" version="6.0.1">
+<element height="46" id="Element@323714739:1611566102852" name="Group Start" type="Element Group Start" width="110" x="230" y="30">
+<exit_states>
+<exit_state name="PaymentCCResponCode2:ErrorLimitPayment" target="Element@1619282218:1610716875870"/>
+</exit_states>
+</element>
+<element height="46" id="Element@966053226:1610717209752" name="Decision_LimitPayment" type="Decision" width="191" x="588" y="167">
+<exit_states>
+<exit_state name="True" target="Element@163155230:1610717304716"/>
+<exit_state name="False" target="Element@4716058:1610717157701"/>
+</exit_states>
+</element>
+<element height="46" id="Element@163155230:1610717304716" name="Audio_3xErrorLimitPayment" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="215" x="276" y="272">
+<exit_states>
+<exit_state name="done" target="Element@1343079426:1610717318490"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1619282218:1610716875870" name="Audio_ErrorLimitPayment" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="203" x="633" y="14">
+<exit_states>
+<exit_state name="done" target="Element@1984882164:1610717184907"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1984882164:1610717184907" name="Counter_ErrorLimitPayment" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="214" x="215" y="120">
+<exit_states>
+<exit_state name="done" target="Element@966053226:1610717209752"/>
+</exit_states>
+</element>
+</page>

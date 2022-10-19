@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@2085811279:1609854071502" name="MenuFlagTransfer" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="MenuFlagTransfer">
+        <exit_state name="SameCard" conjugate="and">
+            <string operator="equal">
+                <local_variable name="transferFlag" />
+                <constant_string value="transferSame" />
+            </string>
+        </exit_state>
+        <exit_state name="OtherCard" conjugate="and">
+            <string operator="equal">
+                <local_variable name="transferFlag" />
+                <constant_string value="transferOther" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

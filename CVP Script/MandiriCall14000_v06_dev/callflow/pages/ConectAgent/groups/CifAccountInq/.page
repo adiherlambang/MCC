@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1315819787:1611559644138" name="CifAccountInq" version="6.0.1">
+<element height="46" id="Element@517764390:1611304602668" name="CifAccInq_Corp_Status" type="Decision" width="187" x="1107" y="-145">
+<exit_states>
+<exit_state name="Success" target="Element@1713970768:1611304602668"/>
+<exit_state name="Failed" target="Element@1496845040:1611304602668"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1705227736:1611304602668" name="CiffAccInq_Corp_Respon" type="Decision" width="198" x="561" y="128">
+<exit_states>
+<exit_state name="Success" target="Element@1517210733:1611304602668"/>
+<exit_state name="Failed" target="Element@1496845040:1611304602668"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1713970768:1611304602668" name="CiffAccInq_Corp_Value" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="187" x="1112" y="81">
+<exit_states>
+<exit_state name="done" target="Element@1847163182:1611304602668"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1687842350:1611559644138" name="Group Start" type="Element Group Start" width="110" x="168" y="-237">
+<exit_states>
+<exit_state name="BalanceInfoForAgent:done" target="Element@1447754785:1611304602668"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1402981703:1611304602668" name="Log_REST_CorpCifAccinq" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="200" x="390" y="-134">
+<exit_states>
+<exit_state name="done" target="Element@1496845040:1611304602668">
+<bendpoint>
+<dim1 x="168" y="46"/>
+<dim2 x="92" y="-54"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@1496845040:1611304602668">
+<bendpoint>
+<dim1 x="-1" y="52"/>
+<dim2 x="-226" y="20"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1847163182:1611304602668" name="Log_REST_CorpCifAccinq_respon" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="241" x="791" y="21">
+<exit_states>
+<exit_state name="done" target="Element@1705227736:1611304602668"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@1705227736:1611304602668">
+<bendpoint>
+<dim1 x="9" y="100"/>
+<dim2 x="261" y="-7"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@137763759:1611304602668" name="Log_REST_CorpCifAccinq_status" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="236" x="885" y="-244">
+<exit_states>
+<exit_state name="done" target="Element@517764390:1611304602668"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@517764390:1611304602668">
+<bendpoint>
+<dim1 x="2" y="93"/>
+<dim2 x="-292" y="35"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1447754785:1611304602668" name="REST_CifAccInq_Corp" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="180" x="518" y="-239">
+<exit_states>
+<exit_state name="done" target="Element@137763759:1611304602668"/>
+<exit_state name="Java Exception-REST_CifAccInqCorpError" target="Element@1402981703:1611304602668">
+<bendpoint>
+<dim1 x="-201" y="101"/>
+<dim2 x="2" y="-75"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1517210733:1611304602668" name="StatusAccount_Corp" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="158" x="189" y="126">
+<exit_states>
+<exit_state name="done" target="Element@2097765816:1605612543429"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1496845040:1611304602668" name="StatusAccount_Corp_Fail" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="198" x="467" y="-34">
+<exit_states>
+<exit_state name="done" target="Element@2097765816:1605612543429"/>
+</exit_states>
+</element>
+</page>

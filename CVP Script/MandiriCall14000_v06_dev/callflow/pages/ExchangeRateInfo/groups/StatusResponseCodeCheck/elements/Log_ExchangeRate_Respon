@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@786522501:1608118077177" name="Log_ExchangeRate_Respon" version="6.0.1">
+<config>
+<settings>
+<setting name="type">insert</setting>
+<setting name="jndiName">cvp_reporting</setting>
+<setting name="query">INSERT INTO dbo.CVP_REPORT ([ani],[date],[time],[response_code],[service_id],[session_id],[traceNum],[terimnalID],[numbercard],[unit])
+VALUES 
+(
+'{CallData.ANI}'
+,'{GeneralDateTime.Year.CURRENT}-{GeneralDateTime.Month.CURRENT}-{GeneralDateTime.DayOfMonth.CURRENT}'
+,'{GeneralDateTime.HourOfDay.CURRENT}:{GeneralDateTime.Minute.CURRENT}:00'
+,'{LocalVar.responseCode2}'
+,'18'
+,'{LocalVar.Session_Name}'
+,'{LocalVar.traceNum_ExchangeRate}'
+,'{LocalVar.terminalId_ExchangeRate}'
+,''
+,'')</setting>
+<setting name="enableXmlResultSet">true</setting>
+<setting name="maxRowsInXML">1</setting>
+</settings>
+</config>
+</action_element>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1513160882:1605471328288" name="Copy_of_Copy_of_pick1Account" version="6.0.1">
+<config>
+<settings>
+<setting name="pickTypeCurrencyTrans">{LocalVar.TransCurrency1}</setting>
+</settings>
+</config>
+</action_element>

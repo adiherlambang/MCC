@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1048999601:1606745120223" name="CorpCheck3" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="CorpCheck1" default_exit_state="Personal">
+        <exit_state name="Corporate" conjugate="and">
+            <string operator="equal">
+                <local_variable name="flagMenu" />
+                <constant_string value="corp" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

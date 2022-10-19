@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1063498900:1609211267071" name="getCIFNumberbyCC" version="6.0.1">
+<element height="46" id="Element@2043910985:1609211267071" name="CIFbyPhoneNumberRespon" type="Decision" width="197" x="884" y="375">
+<exit_states>
+<exit_state name="Success" target="Element@1639636431:1609211267071">
+<bendpoint>
+<dim1 x="358" y="-1"/>
+<dim2 x="3" y="-64"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Failed" target="Element@615762846:1609211267070">
+<bendpoint>
+<dim1 x="190" y="116"/>
+<dim2 x="76" y="-170"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1966450633:1609211267071" name="CIFbyPhoneNumberStatus" type="Decision" width="190" x="93" y="144">
+<exit_states>
+<exit_state name="Success" target="Element@73794120:1610021300871"/>
+<exit_state name="Failed" target="Element@615762846:1609211267070">
+<bendpoint>
+<dim1 x="354" y="151"/>
+<dim2 x="240" y="-135"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@838342525:1609211267071" name="CIFbyPhoneNumberValue" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="186" x="79" y="384">
+<exit_states>
+<exit_state name="done" target="Element@918117340:1610022456367"/>
+<exit_state name="Java Exception-Error_PathNotFound" target="Element@918117340:1610022456367">
+<bendpoint>
+<dim1 x="142" y="76"/>
+<dim2 x="-176" y="73"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@67570635:1609211267071" name="Group Start" type="Element Group Start" width="110" x="14" y="9">
+<exit_states>
+<exit_state name="PersonalCCInformationData:done" target="Element@832801519:1609211267071"/>
+</exit_states>
+</element>
+<element height="46" id="Element@384470769:1610015117921" name="Log_REST_cifPhoneNumbyCC" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="208" x="459" y="122">
+<exit_states>
+<exit_state name="done" target="Element@615762846:1609211267070"/>
+<exit_state name="Java Exception-Error_InsertLogCIFPhoneNumByCC" target="Element@615762846:1609211267070">
+<bendpoint>
+<dim1 x="-184" y="178"/>
+<dim2 x="-298" y="-108"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@918117340:1610022456367" name="Log_REST_cifPhoneNumbyCC_respon" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="249" x="426" y="390">
+<exit_states>
+<exit_state name="done" target="Element@2043910985:1609211267071"/>
+<exit_state name="Java Exception-Error_InsertLogCIFPhoneNumByCC" target="Element@2043910985:1609211267071">
+<bendpoint>
+<dim1 x="212" y="-103"/>
+<dim2 x="-170" y="-104"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@73794120:1610021300871" name="Log_REST_cifPhoneNumbyCC_status" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="244" x="68" y="260">
+<exit_states>
+<exit_state name="done" target="Element@838342525:1609211267071"/>
+<exit_state name="Java Exception-Error_InsertLogCIFPhoneNumByCC" target="Element@838342525:1609211267071">
+<bendpoint>
+<dim1 x="-259" y="72"/>
+<dim2 x="-241" y="-52"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@832801519:1609211267071" name="REST_CIFPhoneNumberByCC" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="204" x="495" y="6">
+<exit_states>
+<exit_state name="done" target="Element@1966450633:1609211267071"/>
+<exit_state name="Java Exception-Error_RESTCIFbyPhoneNumber" target="Element@384470769:1610015117921">
+<bendpoint>
+<dim1 x="226" y="112"/>
+<dim2 x="214" y="-46"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+</page>

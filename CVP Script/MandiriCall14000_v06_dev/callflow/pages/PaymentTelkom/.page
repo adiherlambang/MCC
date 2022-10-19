@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@783992558:1602127382099" name="PaymentTelkom" version="6.0.1">
+<element height="62" id="Element@196955832:1605773874585" name="BillPayData" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="167" x="-197" y="368">
+<exit_states>
+<exit_state name="done" target="Element@875930674:1605788751789"/>
+</exit_states>
+</element>
+<element height="62" id="Element@878280782:1605773855100" name="BillPayStatusResponCode" type="Element Group" width="316" x="95" y="138"/>
+<element height="62" id="Element@1659831966:1605858536677" name="BillerCodeCheck" type="Decision" width="224" x="-298" y="90">
+<exit_states>
+<exit_state name="True" target="Element@750546618:1605858710111"/>
+<exit_state name="False" target="Element@1519524802:1605771395774"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1142931487:1605795925861" name="CheckPayPhone" type="Page Entry" width="219" x="1019" y="520">
+<exit_states>
+<exit_state name="next" target="Element@668964597:1605799174211"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1748783941:1605858693297" name="CheckPhone" type="Page Entry" width="183" x="1188" y="-7">
+<exit_states>
+<exit_state name="next" target="Element@1130482102:1610895497188"/>
+</exit_states>
+</element>
+<element height="62" id="Element@750546618:1605858710111" name="CheckPhone" type="Page Connector" width="183" x="-297" y="-28">
+<page_connector target="Element@1748783941:1605858693297">CheckPhone<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@668964597:1605799174211" name="CheckTypeRek" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="204" x="1038" y="621">
+<exit_states>
+<exit_state name="done" target="Element@1439970260:1605799822066"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1130482102:1610895497188" name="Check_RegisteredPhoneNumber" type="Element Group" width="393" x="793" y="-30"/>
+<element height="62" id="Element@770446599:1605799925235" name="ConfirmationPayment" type="Page Connector" width="282" x="1255" y="817">
+<page_connector target="Element@2100303674:1605788370412">ConfirmationPayment<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@2033816789:1602127743635" name="ConnectAgentBanking" type="Page Connector" width="289" x="-18" y="-357">
+<page_connector target="Element@1497709728:1601902705927">ConnectAgentBanking<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@363386381:1602128665370" name="ConnectAgentBanking" type="Page Connector" width="289" x="57" y="943">
+<page_connector target="Element@1497709728:1601902705927">ConnectAgentBanking<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@2046580402:1602129111183" name="ConnectAgentBanking" type="Page Connector" width="289" x="1688" y="196">
+<page_connector target="Element@1497709728:1601902705927">ConnectAgentBanking<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1877330078:1605770026647" name="ConnectAgentBanking" type="Page Connector" width="289" x="1051" y="-140">
+<page_connector target="Element@1497709728:1601902705927">ConnectAgentBanking<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@716034548:1605764714163" name="DB_CheckPhone" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="224" x="557" y="-22">
+<exit_states>
+<exit_state name="done" target="Element@1130482102:1610895497188"/>
+<exit_state name="Java Exception-Error_DBCheckCard" target="Element@1376398022:1608098606217"/>
+</exit_states>
+</element>
+<element height="62" id="Element@45508505:1602127706684" name="DigitPhone" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="169" x="317" y="-355">
+<exit_states>
+<exit_state name="done" target="Element@418623258:1605764581470"/>
+<exit_state name="max_nomatch" target="Element@2033816789:1602127743635">
+<bendpoint>
+<dim1 x="-159" y="-56"/>
+<dim2 x="160" y="-54"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_noinput" target="Element@2033816789:1602127743635"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1631454269:1602128622421" name="EndCall" type="Page Connector" width="129" x="-207" y="841">
+<page_connector target="Element@89933654:1601904832032">EndCall<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1394136030:1602129144125" name="EndCall" type="Page Connector" width="129" x="1425" y="115">
+<page_connector target="Element@89933654:1601904832032">EndCall<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@662976463:1602128864472" name="Error_NoInput" type="Page Connector" width="198" x="417" y="606">
+<page_connector target="Element@270910828:1610085311655">Error_NoInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@52264162:1602129350526" name="Error_NoInput" type="Page Connector" width="198" x="1191" y="424">
+<page_connector target="Element@270910828:1610085311655">Error_NoInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1216944018:1602128864472" name="Error_NoMatchInput" type="Page Connector" width="265" x="497" y="680">
+<page_connector target="Element@1250119072:1610085949630">Error_NoMatchInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1649187619:1602129350526" name="Error_NoMatchInput" type="Page Connector" width="265" x="1182" y="168">
+<page_connector target="Element@1250119072:1610085949630">Error_NoMatchInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@370128574:1610358194844" name="Error_ServicePersonalBanking" type="Page Connector" width="361" x="431" y="400">
+<page_connector target="Element@498803718:1606206566215">Error_ServicePersonalBanking<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1727270369:1605770672830" name="Error_ServiceSOA" type="Page Connector" width="231" x="434" y="208">
+<page_connector target="Element@623071406:1607697419497">Error_ServiceSOA<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@2091358494:1605799947676" name="Error_ServiceSOA" type="Page Connector" width="231" x="788" y="829">
+<page_connector target="Element@623071406:1607697419497">Error_ServiceSOA<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@2023077528:1608098785155" name="Error_ServiceSOA" type="Page Connector" width="231" x="553" y="-256">
+<page_connector target="Element@623071406:1607697419497">Error_ServiceSOA<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@304232765:1608103186970" name="Error_ServiceSOA" type="Page Connector" width="231" x="728" y="273">
+<page_connector target="Element@623071406:1607697419497">Error_ServiceSOA<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@355878939:1608105451512" name="Error_ServiceSOA" type="Page Connector" width="231" x="-426" y="291">
+<page_connector target="Element@623071406:1607697419497">Error_ServiceSOA<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@875930674:1605788751789" name="FlagPayment" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="186" x="-192" y="547">
+<exit_states>
+<exit_state name="done" target="Element@785585351:1602127847756"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1147743948:1608105374468" name="Log_BillPay" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="167" x="-329" y="203">
+<exit_states>
+<exit_state name="done" target="Element@355878939:1608105451512"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@355878939:1608105451512"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1994066308:1608103124676" name="Log_RESTPaylist" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="217" x="578" y="162">
+<exit_states>
+<exit_state name="done" target="Element@304232765:1608103186970"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@304232765:1608103186970"/>
+</exit_states>
+</element>
+<element height="62" id="Element@481396608:1602128361638" name="MainMenu" type="Page Connector" width="167" x="259" y="884">
+<page_connector target="Element@1865813345:1601897428297">MainMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1567974463:1602129192015" name="MainMenu" type="Page Connector" width="167" x="1405" y="463">
+<page_connector target="Element@1865813345:1601897428297">MainMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1877193459:1605769934888" name="OperatorValue" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="203" x="843" y="63">
+<exit_states>
+<exit_state name="done" target="Element@1092659673:1605770052744"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1858701616:1605770352872" name="PayListData" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="170" x="-101" y="56">
+<exit_states>
+<exit_state name="done" target="Element@1659831966:1605858536677"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1796559543:1605770356376" name="PayListStatusRespon" type="Element Group" width="263" x="365" y="55"/>
+<element height="62" id="Element@895651245:1605801772844" name="PaymentPhoneConfirmation" type="Page Entry" width="350" x="983" y="318">
+<exit_states>
+<exit_state name="next" target="Element@916776162:1602128698775"/>
+</exit_states>
+</element>
+<element height="62" id="Element@413779823:1605775921458" name="PaymentPilihRek" type="Page Connector" width="225" x="498" y="758">
+<page_connector target="Element@948949990:1605775977559">PaymentPilihRek<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@2090544384:1602127382099" name="PaymentTelkom" type="Page Entry" width="219" x="300" y="-478">
+<exit_states>
+<exit_state name="next" target="Element@45508505:1602127706684"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1385824461:1602129017722" name="PaymentTelkom" type="Page Connector" width="219" x="1626" y="115">
+<page_connector target="Element@2090544384:1602127382099">PaymentTelkom<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@883821999:1602129065054" name="PaymentTelkom" type="Page Connector" width="219" x="442" y="848">
+<page_connector target="Element@2090544384:1602127382099">PaymentTelkom<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@2136168586:1605766263141" name="PaymentTelkom" type="Page Connector" width="219" x="809" y="-179">
+<page_connector target="Element@2090544384:1602127382099">PaymentTelkom<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1252767918:1610449097746" name="PaymentTelkom" type="Page Connector" width="219" x="-30" y="-102">
+<page_connector target="Element@2090544384:1602127382099">PaymentTelkom<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@785585351:1602127847756" name="PaymentTelkomConfirmation" src="com.audium.server.voiceElement.menu.MFoundation7OptionMenu" type="Voice Element" width="359" x="66" y="762">
+<exit_states>
+<exit_state name="option1" target="Element@413779823:1605775921458"/>
+<exit_state name="option2" target="Element@883821999:1602129065054"/>
+<exit_state name="option3" target="Element@363386381:1602128665370"/>
+<exit_state name="option4" target="Element@194460093:1602128637585"/>
+<exit_state name="option5" target="Element@1631454269:1602128622421"/>
+<exit_state name="option6" target="Element@2121601069:1602128594186"/>
+<exit_state name="option7" target="Element@481396608:1602128361638"/>
+<exit_state name="max_nomatch" target="Element@1216944018:1602128864472"/>
+<exit_state name="max_noinput" target="Element@662976463:1602128864472"/>
+</exit_states>
+</element>
+<element height="62" id="Element@408057929:1602128573225" name="PaymentTelkomConfirmation" type="Page Entry" width="359" x="117" y="580">
+<exit_states>
+<exit_state name="next" target="Element@785585351:1602127847756"/>
+</exit_states>
+</element>
+<element height="62" id="Element@2121601069:1602128594186" name="PaymentTelkomConfirmation" type="Page Connector" width="359" x="-248" y="747">
+<page_connector target="Element@408057929:1602128573225">PaymentTelkomConfirmation<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@827489144:1602129181627" name="PaymentTelkomConfirmation" type="Page Connector" width="359" x="1613" y="399">
+<page_connector target="Element@408057929:1602128573225">PaymentTelkomConfirmation<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@916776162:1602128698775" name="PaymentTelkomConfirmationOthers" src="com.audium.server.voiceElement.menu.MFoundation7OptionMenu" type="Voice Element" width="430" x="1330" y="321">
+<exit_states>
+<exit_state name="option1" target="Element@1385824461:1602129017722"/>
+<exit_state name="option2" target="Element@1385824461:1602129017722"/>
+<exit_state name="option3" target="Element@2046580402:1602129111183"/>
+<exit_state name="option4" target="Element@692527372:1602129124098"/>
+<exit_state name="option5" target="Element@1394136030:1602129144125"/>
+<exit_state name="option6" target="Element@827489144:1602129181627"/>
+<exit_state name="option7" target="Element@1567974463:1602129192015"/>
+<exit_state name="max_nomatch" target="Element@1649187619:1602129350526"/>
+<exit_state name="max_noinput" target="Element@52264162:1602129350526"/>
+</exit_states>
+</element>
+<element height="62" id="Element@194460093:1602128637585" name="PersonalBanking" type="Page Connector" width="225" x="-148" y="922">
+<page_connector target="Element@1566819678:1602039229515">PersonalBanking<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@692527372:1602129124098" name="PersonalBanking" type="Page Connector" width="226" x="1733" y="298">
+<page_connector target="Element@1566819678:1602039229515">PersonalBanking<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@418623258:1605764581470" name="PrefixPhone" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="177" x="331" y="-183">
+<exit_states>
+<exit_state name="done" target="Element@1446247548:1610895325261"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1519524802:1605771395774" name="REST_BillPay" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="180" x="-103" y="139">
+<exit_states>
+<exit_state name="done" target="Element@878280782:1605773855100"/>
+<exit_state name="Java Exception-Error_RESTBillPay" target="Element@1147743948:1608105374468"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1092659673:1605770052744" name="REST_PayList" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="183" x="606" y="58">
+<exit_states>
+<exit_state name="done" target="Element@1796559543:1605770356376"/>
+<exit_state name="Java Exception-Error_RESTbillpayeelist" target="Element@1994066308:1608103124676"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1439970260:1605799822066" name="TypePayPhone" type="Decision" width="205" x="1043" y="729">
+<exit_states>
+<exit_state name="Success" target="Element@770446599:1605799925235"/>
+<exit_state name="Fail" target="Element@2091358494:1605799947676"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1446247548:1610895325261" name="Validation_phoneNumber" type="Element Group" width="322" x="273" y="-43"/>
+<element height="62" id="Element@1376398022:1608098606217" name="log_checkPhoneDB" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="254" x="549" y="-152">
+<exit_states>
+<exit_state name="done" target="Element@2023077528:1608098785155"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@2023077528:1608098785155"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1421499790:1612760121730" name="Audio_ErrorBillPayNotFound" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="349" x="5" y="331">
+<exit_states>
+<exit_state name="done" target="Element@1335622712:1612760223637"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1868691011:1612760203206" name="Audio_ErrorBillPayDBError" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="322" x="223" y="375">
+<exit_states>
+<exit_state name="done" target="Element@1335622712:1612760223637"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1335622712:1612760223637" name="ExitOptionMenu" type="Page Connector" width="224" x="79" y="452">
+<page_connector target="Element@2112944412:1610627035755">ExitOptionMenu<config/>
+</page_connector>
+</element>
+</page>

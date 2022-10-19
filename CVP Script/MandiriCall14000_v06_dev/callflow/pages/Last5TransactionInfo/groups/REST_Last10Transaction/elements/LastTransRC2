@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1669049729:1605241995464" name="LastTransRC2" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="LastTransRC2">
+        <exit_state name="Success" conjugate="and">
+            <string operator="equal">
+                <local_variable name="last5RC2" />
+                <constant_string value="00" />
+            </string>
+        </exit_state>
+        <exit_state name="NoLastTrans" conjugate="or">
+            <string operator="equal">
+                <local_variable name="last5RC2" />
+                <constant_string value="56" />
+            </string>
+        </exit_state>
+        <exit_state name="ErrorRC50" conjugate="and">
+            <string operator="equal">
+                <local_variable name="last5RC2" />
+                <constant_string value="50" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

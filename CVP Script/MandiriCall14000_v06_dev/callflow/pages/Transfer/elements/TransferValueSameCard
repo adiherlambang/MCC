@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@2087886472:1609854085993" name="TransferValueSameCard" version="6.0.1">
+<config>
+<settings>
+<setting name="fromAccountTransfer">{LocalVar.fromAccount}</setting>
+<setting name="fromCurrencyTransfer">{LocalVar.fromCurrency}</setting>
+<setting name="fromNmbrCard">{LocalVar.NmbrCardDebit}</setting>
+<setting name="PINDB">{Data.Element.CustomerIdentificationPersonalBankingPin.value}</setting>
+<setting name="toCurrencyTrans">{LocalVar.toCurrency}</setting>
+<setting name="toAccountTransfer">{LocalVar.toAccount}</setting>
+<setting name="procCode">var code="21";
+code</setting>
+</settings>
+<element_data>
+<data create_when="After" name="DB" storable="true" type="String">{LocalVar.fromNmbrCard}</data>
+<data create_when="After" name="fromAcc" storable="true" type="String">{LocalVar.fromAccountTransfer}</data>
+<data create_when="After" name="pin" storable="true" type="String">{LocalVar.PINDB}</data>
+<data create_when="After" name="fromCurr" storable="true" type="String">{LocalVar.fromCurrencyTransfer}</data>
+<data create_when="After" name="toAcc" storable="true" type="String">{LocalVar.toAccountTransfer}</data>
+<data create_when="After" name="toCurr" storable="true" type="String">{LocalVar.toCurrencyTrans}</data>
+</element_data>
+</config>
+</action_element>

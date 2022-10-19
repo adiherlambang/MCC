@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@487278587:1604908563174" name="StatusResponCodeDepositRate" version="6.0.1">
+<element height="46" id="Element@124841249:1604908550266" name="DepositRC1" type="Decision" width="112" x="18" y="139">
+<exit_states>
+<exit_state name="Success" target="Element@1676113305:1604908551626"/>
+<exit_state name="Fail" target="Element@1978358654:1604908948697"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1676113305:1604908551626" name="DepositRC2" type="Decision" width="112" x="22" y="248">
+<exit_states>
+<exit_state name="Success" target="Element@1308044775:1610272105415"/>
+<exit_state name="Fail" target="Element@1978358654:1604908948697"/>
+</exit_states>
+</element>
+<element height="46" id="Element@452197985:1604908540400" name="DepositRateValue" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="141" x="483" y="134">
+<exit_states>
+<exit_state name="done" target="Element@850073607:1608120927856"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2058987683:1604908563174" name="Group Start" type="Element Group Start" width="110" x="25" y="8">
+<exit_states>
+<exit_state name="REST_DepositRate:done" target="Element@133152745:1608120736205"/>
+</exit_states>
+</element>
+<element height="46" id="Element@850073607:1608120927856" name="Log_DepositRate_respon" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="179" x="224" y="181">
+<exit_states>
+<exit_state name="done" target="Element@124841249:1604908550266"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@124841249:1604908550266"/>
+</exit_states>
+</element>
+<element height="46" id="Element@133152745:1608120736205" name="Log_DepositRate_status" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="174" x="218" y="-84">
+<exit_states>
+<exit_state name="done" target="Element@2002297267:1604908511966"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@2002297267:1604908511966"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2002297267:1604908511966" name="StatusCodeDepositRate" type="Decision" width="173" x="465" y="8">
+<exit_states>
+<exit_state name="Success" target="Element@452197985:1604908540400"/>
+<exit_state name="Fail" target="Element@1978358654:1604908948697"/>
+</exit_states>
+</element>
+</page>

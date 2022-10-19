@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@589255243:1604389875106" name="TypeCard" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="TypeCard">
+        <exit_state name="SAVING" conjugate="and">
+            <string operator="equal">
+                <local_variable name="AccTypeDB" />
+                <constant_string value="S" />
+            </string>
+        </exit_state>
+        <exit_state name="LOAN" conjugate="and">
+            <string operator="equal">
+                <local_variable name="AccTypeDB" />
+                <constant_string value="L" />
+            </string>
+        </exit_state>
+        <exit_state name="GIRO" conjugate="and">
+            <string operator="equal">
+                <local_variable name="AccTypeDB" />
+                <constant_string value="D" />
+            </string>
+        </exit_state>
+        <exit_state name="DEPOSITO" conjugate="and">
+            <string operator="equal">
+                <local_variable name="AccTypeDB" />
+                <constant_string value="T" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

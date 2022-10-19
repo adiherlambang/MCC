@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@543434701:1605273106355" name="Option6Rek" version="6.0.1">
+<config>
+<settings>
+<setting name="noinput_timeout">5s</setting>
+<setting name="max_noinput_count">2</setting>
+<setting name="max_nomatch_count">2</setting>
+<setting name="confidence_level">0.40</setting>
+<setting name="modal">false</setting>
+<setting name="option1_dtmf">1</setting>
+<setting name="option1_voice"/>
+<setting name="option1_value">{LocalVar.Rek_1}</setting>
+<setting name="option2_dtmf">2</setting>
+<setting name="option2_voice"/>
+<setting name="option2_value">{LocalVar.Rek_2}</setting>
+<setting name="option3_dtmf">3</setting>
+<setting name="option3_voice"/>
+<setting name="option3_value">{LocalVar.Rek_3}</setting>
+<setting name="option4_dtmf">4</setting>
+<setting name="option4_voice"/>
+<setting name="option4_value">{LocalVar.Rek_4}</setting>
+<setting name="option5_dtmf">5</setting>
+<setting name="option5_voice"/>
+<setting name="option5_value">{LocalVar.Rek_5}</setting>
+<setting name="option6_dtmf">6</setting>
+<setting name="option6_voice"/>
+<setting name="option6_value">{LocalVar.Rek_6}</setting>
+<setting name="option7_dtmf">*</setting>
+<setting name="option7_voice"/>
+<setting name="option7_value">Repeat</setting>
+</settings>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="Intro1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{LocalVar.sourceOrDestAccAudio}"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Intro" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/RekeningDiakhiriNomor.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 1" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="number" output_format="digits" type="digits">{LocalVar.lastRek1}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/Tekan1.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy of Intro" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/RekeningDiakhiriNomor.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 3" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="number" output_format="digits" type="digits">{LocalVar.lastRek2}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 4" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/Tekan2.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy 2 of Intro" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/RekeningDiakhiriNomor.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 5" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="number" output_format="digits" type="digits">{LocalVar.lastRek3}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 6" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/Tekan3.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy 3 of Intro" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/RekeningDiakhiriNomor.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 7" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="number" output_format="digits" type="digits">{LocalVar.lastRek4}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 8" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/Tekan4.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy 4 of Intro" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/RekeningDiakhiriNomor.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 9" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="number" output_format="digits" type="digits">{LocalVar.lastRek5}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 10" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/Tekan5.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy 5 of Intro" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/RekeningDiakhiriNomor.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 11" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="number" output_format="digits" type="digits">{LocalVar.lastRek6}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 12" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/Tekan6.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 13" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/general/MengulangInformasi.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 14" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/general/TekanBintang.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="1" name="nomatch_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/NoMatchInput.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Intro1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{LocalVar.sourceOrDestAccAudio}"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Intro" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/RekeningDiakhiriNomor.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy of audio item 1" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="number" output_format="digits" type="digits">{LocalVar.lastRek1}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/Tekan1.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy of Intro" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/RekeningDiakhiriNomor.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 3" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="number" output_format="digits" type="digits">{LocalVar.lastRek2}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 4" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/Tekan2.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy 2 of Intro" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/RekeningDiakhiriNomor.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 5" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="number" output_format="digits" type="digits">{LocalVar.lastRek3}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 6" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/Tekan3.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy 3 of Intro" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/RekeningDiakhiriNomor.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 7" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="number" output_format="digits" type="digits">{LocalVar.lastRek4}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 8" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/Tekan4.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy 4 of Intro" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/RekeningDiakhiriNomor.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 9" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="number" output_format="digits" type="digits">{LocalVar.lastRek5}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 10" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/Tekan5.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy 5 of Intro" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/RekeningDiakhiriNomor.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 11" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="number" output_format="digits" type="digits">{LocalVar.lastRek6}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 12" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/Tekan6.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 13" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/general/MengulangInformasi.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 14" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/general/TekanBintang.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="2" name="nomatch_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/NoMatchInput.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Intro1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{LocalVar.sourceOrDestAccAudio}"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Intro" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/RekeningDiakhiriNomor.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy of audio item 1" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="number" output_format="digits" type="digits">{LocalVar.lastRek1}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/Tekan1.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy of Intro" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/RekeningDiakhiriNomor.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 3" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="number" output_format="digits" type="digits">{LocalVar.lastRek2}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 4" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/Tekan2.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy 2 of Intro" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/RekeningDiakhiriNomor.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 5" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="number" output_format="digits" type="digits">{LocalVar.lastRek3}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 6" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/Tekan3.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy 3 of Intro" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/RekeningDiakhiriNomor.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 7" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="number" output_format="digits" type="digits">{LocalVar.lastRek4}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 8" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/Tekan4.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy 4 of Intro" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/RekeningDiakhiriNomor.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 9" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="number" output_format="digits" type="digits">{LocalVar.lastRek5}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 10" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/Tekan5.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy 5 of Intro" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/RekeningDiakhiriNomor.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 11" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="number" output_format="digits" type="digits">{LocalVar.lastRek6}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 12" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/Tekan6.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 13" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/general/MengulangInformasi.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 14" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/general/TekanBintang.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="3" name="nomatch_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/NoMatchInput.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/Error_3x.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="1" name="noinput_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/NoInput.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Intro1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{LocalVar.sourceOrDestAccAudio}"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Intro" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/RekeningDiakhiriNomor.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy of audio item 1" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="number" output_format="digits" type="digits">{LocalVar.lastRek1}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/Tekan1.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy of Intro" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/RekeningDiakhiriNomor.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 3" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="number" output_format="digits" type="digits">{LocalVar.lastRek2}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 4" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/Tekan2.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy 2 of Intro" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/RekeningDiakhiriNomor.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 5" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="number" output_format="digits" type="digits">{LocalVar.lastRek3}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 6" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/Tekan3.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy 3 of Intro" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/RekeningDiakhiriNomor.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 7" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="number" output_format="digits" type="digits">{LocalVar.lastRek4}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 8" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/Tekan4.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy 4 of Intro" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/RekeningDiakhiriNomor.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 9" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="number" output_format="digits" type="digits">{LocalVar.lastRek5}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 10" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/Tekan5.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy 5 of Intro" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/RekeningDiakhiriNomor.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 11" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="number" output_format="digits" type="digits">{LocalVar.lastRek6}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 12" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/Tekan6.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 13" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/general/MengulangInformasi.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 14" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/general/TekanBintang.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="2" name="noinput_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/NoInput.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Intro1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{LocalVar.sourceOrDestAccAudio}"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Intro" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/RekeningDiakhiriNomor.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy of audio item 1" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="number" output_format="digits" type="digits">{LocalVar.lastRek1}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/Tekan1.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy of Intro" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/RekeningDiakhiriNomor.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 3" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="number" output_format="digits" type="digits">{LocalVar.lastRek2}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 4" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/Tekan2.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy 2 of Intro" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/RekeningDiakhiriNomor.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 5" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="number" output_format="digits" type="digits">{LocalVar.lastRek3}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 6" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/Tekan3.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy 3 of Intro" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/RekeningDiakhiriNomor.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 7" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="number" output_format="digits" type="digits">{LocalVar.lastRek4}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 8" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/Tekan4.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy 4 of Intro" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/RekeningDiakhiriNomor.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 9" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="number" output_format="digits" type="digits">{LocalVar.lastRek5}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 10" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/Tekan5.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy 5 of Intro" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/RekeningDiakhiriNomor.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 11" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="number" output_format="digits" type="digits">{LocalVar.lastRek6}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 12" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.01.1/Tekan6.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 13" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/general/MengulangInformasi.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 14" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/general/TekanBintang.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="3" name="noinput_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/NoInput.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/Error_3x.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+</config>
+</voice_element>

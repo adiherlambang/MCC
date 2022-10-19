@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@850010497:1605449295807" name="ListAccountValue" version="6.0.1">
+<config>
+<settings>
+<setting name="RegisteredAccount">importPackage(com.audium.server.cvpUtil);
+
+var data ={Data.Element.REST_RegisteredAccount.response_body};
+
+var parse = JSON.parse(data);
+
+parse.payload.ftBeneficiaryListInfo.accounts.length</setting>
+<setting name="RegAccSaving">importPackage(com.audium.server.cvpUtil);
+var index = new Array();
+var data = {Data.Element.REST_RegisteredAccount.response_body};
+var i,path,result;
+
+for(i=0; i&lt; {LocalVar.RegisteredAccount}; i++){
+	
+	path= "$payload.ftBeneficiaryListInfo.accounts["+i+"].accountType";
+	result = JSONPathUtil.eval(data,path);
+	if(result=="S"){
+		index.push(result);
+	}
+}
+
+index.indexOf("S")
+
+</setting>
+<setting name="RegAccLoan">importPackage(com.audium.server.cvpUtil);
+var index = new Array();
+var data = {Data.Element.REST_RegisteredAccount.response_body};
+var i,path,result;
+
+for(i=0; i&lt; {LocalVar.RegisteredAccount}; i++){
+	
+	path= "$payload.ftBeneficiaryListInfo.accounts["+i+"].accountType";
+	result = JSONPathUtil.eval(data,path);
+	if(result=="L"){
+		index.push(result);
+	}
+}
+
+index.indexOf("L")
+
+</setting>
+<setting name="RegAccGiro">importPackage(com.audium.server.cvpUtil);
+var index = new Array();
+var data = {Data.Element.REST_RegisteredAccount.response_body};
+var i,path,result;
+
+for(i=0; i&lt; {LocalVar.RegisteredAccount}; i++){
+	
+	path= "$payload.ftBeneficiaryListInfo.accounts["+i+"].accountType";
+	result = JSONPathUtil.eval(data,path);
+	if(result=="D"){
+		index.push(result);
+	}
+}
+
+index.indexOf("D")
+
+</setting>
+<setting name="RegAccDeposit">importPackage(com.audium.server.cvpUtil);
+var index = new Array();
+var data = {Data.Element.REST_RegisteredAccount.response_body};
+var i,path,result;
+
+for(i=0; i&lt; {LocalVar.RegisteredAccount}; i++){
+	
+	path= "$payload.ftBeneficiaryListInfo.accounts["+i+"].accountType";
+	result = JSONPathUtil.eval(data,path);
+	if(result=="T"){
+		index.push(result);
+	}
+}
+
+index.indexOf("T")</setting>
+<setting name="RegAccount">var tipeAkun;
+
+var s = {LocalVar.RegAccSaving};
+var l = {LocalVar.RegAccLoan};
+var d ={LocalVar.RegAccGiro};
+var t = {LocalVar.RegAccDeposit};
+
+if( s&gt;=0 &amp; d&gt;=0 &amp; l&gt;=0 &amp; t&gt;=0)
+{
+	tipeAkun= "a";	
+}else if( s&gt;=0 &amp; d&gt;=0 &amp; l&gt;=0 &amp; t&lt;0)
+{
+	tipeAkun= "b1";	
+}else if( s&gt;=0 &amp; d&gt;=0 &amp; l&lt;0 &amp; t&gt;=0)
+{
+	tipeAkun= "b2";	
+}else if( s&gt;=0 &amp; d&lt;0 &amp; l&gt;=0 &amp; t&gt;=0)
+{
+	tipeAkun= "b3";	
+}else if( s&lt;0 &amp; d&gt;=0 &amp; l&gt;=0 &amp; t&gt;=0)
+{
+	tipeAkun= "b4";	
+}else if( s&gt;=0 &amp; d&gt;=0 &amp; l&lt;0 &amp; t&lt;0)
+{
+	tipeAkun= "c1";	
+}else if( s&gt;=0 &amp; d&lt;0 &amp; l&gt;=0 &amp; t&lt;0)
+{
+	tipeAkun= "c2";	
+}else if( s&gt;=0 &amp; d&lt;0 &amp; l&lt;0 &amp; t&gt;=0)
+{
+	tipeAkun= "c3";	
+}else if( s&lt;0 &amp; d&gt;=0 &amp; l&lt;0 &amp; t&gt;=0)
+{
+	tipeAkun= "c4";	
+}else if( s&lt;0 &amp; d&lt;0 &amp; l&gt;=0 &amp; t&gt;=0)
+{
+	tipeAkun= "c5";	
+}else if( s&gt;=0 &amp; d&lt;0 &amp; l&lt;0 &amp; t&lt;0)
+{
+	tipeAkun= "d1";	
+}else if( s&lt;0 &amp; d&gt;=0 &amp; l&lt;0 &amp; t&lt;0)
+{
+	tipeAkun= "d2";	
+}else if( s&lt;0 &amp; d&lt;0 &amp; l&gt;=0 &amp; t&lt;0)
+{
+	tipeAkun= "d3";	
+}else if( s&lt;0 &amp; d&lt;0 &amp; l&lt;0 &amp; t&gt;=0)
+{
+	tipeAkun= "d4";	
+}
+
+tipeAkun</setting>
+</settings>
+<element_data>
+<data create_when="After" name="Account" storable="true" type="String">{LocalVar.RegAccount}</data>
+<data create_when="After" name="index_RegAccount" storable="true" type="String">{LocalVar.RegisteredAccount}</data>
+</element_data>
+</config>
+</action_element>

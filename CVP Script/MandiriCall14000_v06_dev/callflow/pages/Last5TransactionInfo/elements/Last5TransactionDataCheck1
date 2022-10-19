@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@612272418:1602117035977" name="Last5TransactionDataCheck1" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Last5TransactionDataCheck1" default_exit_state="false">
+        <exit_state name="true" conjugate="and">
+            <number operator="equal">
+                <local_variable name="TotalLastTrans" />
+                <constant_number value="1" />
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

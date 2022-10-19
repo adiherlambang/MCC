@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@738092320:1605507139786" name="TransPickRek3" version="6.0.1">
+<config>
+<settings>
+<setting name="pickRekTransOther">{Data.Element.Trans_Option3Rek.value}</setting>
+</settings>
+</config>
+</action_element>

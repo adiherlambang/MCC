@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@84313678:1605515470671" name="1AccBankTypeD2" version="6.0.1">
+<config>
+<settings>
+<setting name="sound1">"MenuSaldoGiro.wav"</setting>
+</settings>
+</config>
+</action_element>

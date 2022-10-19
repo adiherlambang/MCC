@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1639636431:1609211267071" name="CIFNumberData" version="6.0.1">
+<config>
+<settings>
+<setting name="CifNumberCC">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_CIFPhoneNumberByCC.response_body};
+
+var path= "$payload.cifPhoneNumberByCreditCardNumberDetails.cifNumber";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="PhoneNumberCC">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_CIFPhoneNumberByCC.response_body};
+
+var path= "$payload.cifPhoneNumberByCreditCardNumberDetails.phoneNumber";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+</settings>
+</config>
+</action_element>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1994938846:1605471328288" name="Copy_of_Copy_of_pick2Account" version="6.0.1">
+<config>
+<settings>
+<setting name="pickTypeCurrencyTrans">{Data.Element.Trans_of_2_CurrencyBanking.value}</setting>
+</settings>
+</config>
+</action_element>

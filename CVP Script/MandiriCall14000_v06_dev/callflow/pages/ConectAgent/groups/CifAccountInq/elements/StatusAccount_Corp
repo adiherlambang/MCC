@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1517210733:1611304602668" name="StatusAccount_Corp" version="6.0.1">
+<config>
+<settings>
+<setting name="statusAcc_Corp">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_CifAccInq_Corp.response_body};
+var parse = JSON.parse(data);
+var len = parse.payload.customerAccount.accountList.length;
+
+for (var i=0; i&lt;len; i++){
+	var path = "$payload.customerAccount.accountList["+i+"].accountNumber";
+	var result = JSONPathUtil.eval(data,path);
+	if(result == {LocalVar.pickRek}.trim()){
+		var path2 = "$payload.customerAccount.accountList["+i+"].status";
+		var result2 = JSONPathUtil.eval(data,path2);
+	}
+}
+
+var status;
+
+if(result2=="1"){
+	status="Aktif";
+}else if(result2=="2"){
+	status="Close";
+}else if(result2=="9"){
+	status="Dormant";
+}else{
+	status="---";
+}
+
+status</setting>
+</settings>
+</config>
+</action_element>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@63363779:1605103131873" name="2_AccTypeA" version="6.0.1">
+<config>
+<settings>
+<setting name="sound1">"MenuSaldoTabungan.wav"</setting>
+<setting name="sound2">"MenuSaldoGiro.wav"</setting>
+</settings>
+</config>
+</action_element>

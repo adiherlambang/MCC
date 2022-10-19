@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1811199677:1605189498498" name="BalanceResponCodeValue" version="6.0.1">
+<config>
+<settings>
+<setting name="BalanceRC1">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_BalanceInfo.response_body};
+
+var path= "$responseCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+eval(result)</setting>
+<setting name="BalanceRC2">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_BalanceInfo.response_body};
+
+var path= "$balanceInquiryInfo.responseCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="traceNum_BalanceInfo">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_BalanceInfo.response_body};
+
+var path= "$hubHeader.traceNumber";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="terminalId_BalanceInfo">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_BalanceInfo.response_body};
+
+var path= "$hubHeader.terminalId";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+</settings>
+<element_data>
+<data create_when="Before" name="AccountPick" storable="true" type="String">{LocalVar.pickRek}</data>
+<data create_when="Before" name="CurrencyPick" storable="true" type="String">{LocalVar.pickCurrencyEdit}</data>
+<data create_when="Before" name="TypePick" storable="true" type="String">{LocalVar.pick}</data>
+<data create_when="After" name="BalanceInquiry_RC1" storable="true" type="String">{LocalVar.BalanceRC1}</data>
+<data create_when="After" name="BalanceInquiry_RC2" storable="true" type="String">{LocalVar.BalanceRC2}</data>
+<data create_when="After" name="traceNum_balanceInq" storable="true" type="String">{LocalVar.traceNum_BalanceInfo}</data>
+<data create_when="After" name="terminalId_balanceInq" storable="true" type="String">{LocalVar.terminalId_BalanceInfo}</data>
+</element_data>
+</config>
+</action_element>

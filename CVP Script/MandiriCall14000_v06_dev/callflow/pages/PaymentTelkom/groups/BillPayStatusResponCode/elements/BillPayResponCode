@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@756497786:1605773685095" name="BillPayResponCode" version="6.0.1">
+<config>
+<settings>
+<setting name="BillPayRC1">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_BillPay.response_body};
+
+var path= "$responseCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+eval(result)</setting>
+<setting name="BillPayRC2">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_BillPay.response_body};
+
+var path= "$billPaymentInquiryInfo.responseCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="traceNum_BillPay">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_BillPay.response_body};
+
+var path= "$hubHeader.traceNumber";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="terminalId_Billpay">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_BillPay.response_body};
+
+var path= "$hubHeader.terminalId";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+</settings>
+<element_data>
+<data create_when="After" name="RC1" storable="true" type="String">{LocalVar.BillPayRC1}</data>
+<data create_when="After" name="RC2" storable="true" type="String">{LocalVar.BillPayRC2}</data>
+</element_data>
+</config>
+</action_element>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@668964597:1605799174211" name="CheckTypeRek" version="6.0.1">
+<config>
+<settings>
+<setting name="proCodexx">importPackage(com.audium.server.cvpUtil);
+var type_rek;
+var pick_acc = {LocalVar.pickRekPhone};
+var pro_code;
+
+var data = {Data.Element.REST_DebitCard.response_body};
+
+var parse = JSON.parse(data);
+var len = parse.signOnInfo.customerDetail.accounts.length;
+
+for (var i=0; i&lt;len; i++){
+	var path= "$signOnInfo.customerDetail.accounts["+i+"].accountNumber";
+	var result = JSONPathUtil.eval(data,path);
+	if(result == pick_acc){
+		var path2= "$signOnInfo.customerDetail.accounts["+i+"].accountType";
+		var result2 = JSONPathUtil.eval(data,path2);
+	}
+}
+
+if(result2=="S"){
+	pro_code="00";
+}else if(result2=="D"){
+	pro_code="00";
+}else{
+	pro_code="03";
+}
+
+pro_code</setting>
+<setting name="proCodeyy">var code_op;
+
+if( {LocalVar.Operator}=="TELKOM"){
+	code_op ="03";
+}else if( {LocalVar.Operator}=="TELKOMSEL"){
+	code_op ="02";
+}else if( {LocalVar.Operator}=="SATELINDO"){
+	code_op ="01";
+}else if( {LocalVar.Operator}=="GSM-XL"){
+	code_op ="05";
+}else if( {LocalVar.Operator}=="MOBILE8"){
+	code_op ="07";
+}else if( {LocalVar.Operator}=="HUTCHISONE"){
+	code_op ="21";
+}
+
+code_op</setting>
+<setting name="lastRekPhonePay">importPackage(com.audium.server.cvpUtil);
+var data = {Data.Element.REST_DebitCard.response_body};
+
+for (var i=0; i&lt;{LocalVar.ListNomorRekening}; i++){
+	var path= "$signOnInfo.customerDetail.accounts["+i+"].accountNumber";
+	var result = JSONPathUtil.eval(data,path);
+	if(result == {LocalVar.pickRekPhone}){
+		var path2= "$signOnInfo.customerDetail.accounts["+i+"].lastDigit";
+		var result2 = JSONPathUtil.eval(data,path);
+	}
+}
+
+result2</setting>
+</settings>
+</config>
+</action_element>

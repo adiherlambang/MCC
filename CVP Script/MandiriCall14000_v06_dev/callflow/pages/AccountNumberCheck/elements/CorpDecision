@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@288511867:1606065728563" name="CorpDecision" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="CorpDecision">
+        <exit_state name="Corp" conjugate="and">
+            <string operator="equal">
+                <local_variable name="fromMenu" />
+                <constant_string value="corp" />
+            </string>
+        </exit_state>
+        <exit_state name="Agent" conjugate="and">
+            <string operator="equal">
+                <local_variable name="fromMenu" />
+                <constant_string value="agent" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@331795079:1606059267083" name="CorpValue" version="6.0.1">
+<config>
+<settings>
+<setting name="NmbrCardDebit">{LocalVar.CardInput}</setting>
+<setting name="PINDB">{Data.Element.CustomerIdentificationPersonalBankingPin.value}</setting>
+<setting name="flagMenu">var menu="corp";
+
+menu</setting>
+<setting name="agentMenu">var agentMenu="corp";
+
+agentMenu</setting>
+<setting name="flagMenuTransCorp">var transaksi ="balance";
+
+transaksi</setting>
+</settings>
+<element_data>
+<data create_when="After" name="flagMenu" storable="true" type="String">{LocalVar.flagMenu}</data>
+</element_data>
+</config>
+</action_element>

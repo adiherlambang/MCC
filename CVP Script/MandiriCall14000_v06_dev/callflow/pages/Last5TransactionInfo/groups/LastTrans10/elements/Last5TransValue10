@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@566072235:1607938936530" name="Last5TransValue10" version="6.0.1">
+<config>
+<settings>
+<setting name="lastTransData6DateDD">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last5Trans.response_body};
+
+var parse = JSON.parse(data);
+
+parse.lastTxnInquiryInfo.transactions[5].transactionDate.substring(0,2)
+</setting>
+<setting name="lastTransData7DateDD">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last5Trans.response_body};
+
+var parse = JSON.parse(data);
+
+parse.lastTxnInquiryInfo.transactions[6].transactionDate.substring(0,2)
+</setting>
+<setting name="lastTransData8DateDD">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last5Trans.response_body};
+
+var parse = JSON.parse(data);
+
+parse.lastTxnInquiryInfo.transactions[7].transactionDate.substring(0,2)
+</setting>
+<setting name="lastTransData9DateDD">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last5Trans.response_body};
+
+var parse = JSON.parse(data);
+
+parse.lastTxnInquiryInfo.transactions[8].transactionDate.substring(0,2)
+</setting>
+<setting name="lastTransData10DateDD">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last5Trans.response_body};
+
+var parse = JSON.parse(data);
+
+parse.lastTxnInquiryInfo.transactions[9].transactionDate.substring(0,2)
+</setting>
+<setting name="lastTransData6DateMM">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last5Trans.response_body};
+
+var parse = JSON.parse(data);
+
+parse.lastTxnInquiryInfo.transactions[5].transactionDate.substring(2,4)
+</setting>
+<setting name="lastTransData6DateYY">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last5Trans.response_body};
+
+var parse = JSON.parse(data);
+
+var year = 20 + parse.lastTxnInquiryInfo.transactions[5].transactionDate.substring(4,6);
+
+year</setting>
+<setting name="lastTransData6indicator">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last5Trans.response_body};
+
+var parse = JSON.parse(data);
+
+var stat = parse.lastTxnInquiryInfo.transactions[5].debitCreditIndicator;
+
+var result;
+
+if(stat=="D"){
+	result="Debit";
+}else if(stat=="C"){
+	result="Kredit";
+}</setting>
+<setting name="lastTransData6Amount">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last5Trans.response_body};
+
+var parse = JSON.parse(data);
+
+parse.lastTxnInquiryInfo.transactions[5].transactionAmount.substring(0,15)</setting>
+<setting name="lastTransData7DateMM">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last5Trans.response_body};
+
+var parse = JSON.parse(data);
+
+parse.lastTxnInquiryInfo.transactions[6].transactionDate.substring(2,4)
+</setting>
+<setting name="lastTransData7DateYY">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last5Trans.response_body};
+
+var parse = JSON.parse(data);
+
+var year = 20 + parse.lastTxnInquiryInfo.transactions[6].transactionDate.substring(4,6);
+
+year</setting>
+<setting name="lastTransData7indicator">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last5Trans.response_body};
+
+var parse = JSON.parse(data);
+
+var stat = parse.lastTxnInquiryInfo.transactions[6].debitCreditIndicator;
+
+var result;
+
+if(stat=="D"){
+	result="Debit";
+}else if(stat=="C"){
+	result="Kredit";
+}</setting>
+<setting name="lastTransData7Amount">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last5Trans.response_body};
+
+var parse = JSON.parse(data);
+
+parse.lastTxnInquiryInfo.transactions[6].transactionAmount.substring(0,15)</setting>
+<setting name="lastTransData8DateMM">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last5Trans.response_body};
+
+var parse = JSON.parse(data);
+
+parse.lastTxnInquiryInfo.transactions[7].transactionDate.substring(2,4)
+</setting>
+<setting name="lastTransData8DateYY">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last5Trans.response_body};
+
+var parse = JSON.parse(data);
+
+var year = 20 + parse.lastTxnInquiryInfo.transactions[7].transactionDate.substring(4,6);
+
+year</setting>
+<setting name="lastTransData8indicator">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last5Trans.response_body};
+
+var parse = JSON.parse(data);
+
+var stat = parse.lastTxnInquiryInfo.transactions[7].debitCreditIndicator;
+
+var result;
+
+if(stat=="D"){
+	result="Debit";
+}else if(stat=="C"){
+	result="Kredit";
+}</setting>
+<setting name="lastTransData8Amount">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last5Trans.response_body};
+
+var parse = JSON.parse(data);
+
+parse.lastTxnInquiryInfo.transactions[7].transactionAmount.substring(0,15)</setting>
+<setting name="lastTransData9DateMM">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last5Trans.response_body};
+
+var parse = JSON.parse(data);
+
+parse.lastTxnInquiryInfo.transactions[8].transactionDate.substring(2,4)
+</setting>
+<setting name="lastTransData9DateYY">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last5Trans.response_body};
+
+var parse = JSON.parse(data);
+
+var year = 20 + parse.lastTxnInquiryInfo.transactions[8].transactionDate.substring(4,6);
+
+year</setting>
+<setting name="lastTransData9indicator">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last5Trans.response_body};
+
+var parse = JSON.parse(data);
+
+var stat = parse.lastTxnInquiryInfo.transactions[8].debitCreditIndicator;
+
+var result;
+
+if(stat=="D"){
+	result="Debit";
+}else if(stat=="C"){
+	result="Kredit";
+}</setting>
+<setting name="lastTransData9Amount">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last5Trans.response_body};
+
+var parse = JSON.parse(data);
+
+parse.lastTxnInquiryInfo.transactions[8].transactionAmount.substring(0,15)</setting>
+<setting name="lastTransData10DateMM">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last5Trans.response_body};
+
+var parse = JSON.parse(data);
+
+parse.lastTxnInquiryInfo.transactions[9].transactionDate.substring(2,4)
+</setting>
+<setting name="lastTransData10DateYY">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last5Trans.response_body};
+
+var parse = JSON.parse(data);
+
+var year = 20 + parse.lastTxnInquiryInfo.transactions[9].transactionDate.substring(4,6);
+
+year</setting>
+<setting name="lastTransData10indicator">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last5Trans.response_body};
+
+var parse = JSON.parse(data);
+
+var stat = parse.lastTxnInquiryInfo.transactions[9].debitCreditIndicator;
+
+var result;
+
+if(stat=="D"){
+	result="Debit";
+}else if(stat=="C"){
+	result="Kredit";
+}</setting>
+<setting name="lastTransData10Amount">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last5Trans.response_body};
+
+var parse = JSON.parse(data);
+
+parse.lastTxnInquiryInfo.transactions[9].transactionAmount.substring(0,15)</setting>
+</settings>
+</config>
+</action_element>

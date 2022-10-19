@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@838342525:1609211267071" name="CIFbyPhoneNumberValue" version="6.0.1">
+<config>
+<settings>
+<setting name="cifByPhoneNumberRC2">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_CIFPhoneNumberByCC.response_body};
+
+var path= "$payload.responseCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="traceNum_ciPhoneNumbyCC">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_CIFPhoneNumberByCC.response_body};
+
+var path= "$hubHeader.traceNumber";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="terminalId_cifPhoneNumByCC">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_CIFPhoneNumberByCC.response_body};
+
+var path= "$hubHeader.terminalId";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+</settings>
+<element_data>
+<data create_when="After" name="CIFPhoneNumberCCRC2" storable="true" type="String">{LocalVar.cifByPhoneNumberRC2}</data>
+<data create_when="After" name="traceNum" storable="true" type="String">{LocalVar.traceNum_ciPhoneNumbyCC}</data>
+<data create_when="After" name="terminalID" storable="true" type="String">{LocalVar.terminalId_cifPhoneNumByCC}</data>
+</element_data>
+<local_events>
+<local_event>
+<name>Error_PathNotFound</name>
+<eventlist>com.jayway.jsonpath.PathNotFoundException</eventlist>
+<type>Java Exception</type>
+</local_event>
+</local_events>
+</config>
+</action_element>

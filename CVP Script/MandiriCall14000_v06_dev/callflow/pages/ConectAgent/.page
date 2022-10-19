@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@15545454:1601902655218" name="ConectAgent" version="6.0.1">
+<element height="62" id="Element@950895339:1607012327181" name="AgentCreditCardBlocking" type="Page Entry" width="318" x="852" y="501">
+<exit_states>
+<exit_state name="next" target="Element@1948268006:1607012343738"/>
+</exit_states>
+</element>
+<element height="62" id="Element@740462698:1605068208210" name="AgentCreditCardNonCust" type="Page Entry" width="320" x="843" y="65">
+<exit_states>
+<exit_state name="next" target="Element@2026998963:1605068278812"/>
+</exit_states>
+</element>
+<element height="62" id="Element@839126681:1607012775787" name="AgentDebitCardBlocking" type="Page Entry" width="312" x="-175" y="596">
+<exit_states>
+<exit_state name="next" target="Element@1608309663:1607012775787"/>
+</exit_states>
+</element>
+<element height="62" id="Element@788356028:1605585880380" name="AgentDebitCardNonCust" type="Page Entry" width="314" x="394" y="-65">
+<exit_states>
+<exit_state name="next" target="Element@902884442:1605585847197"/>
+</exit_states>
+</element>
+<element height="62" id="Element@63687113:1610627064063" name="AgentOptionMenu" src="com.audium.server.voiceElement.menu.MFoundation2OptionMenu" type="Voice Element" width="251" x="454" y="683">
+<exit_states>
+<exit_state name="option1" target="Element@1080530667:1610627303975"/>
+<exit_state name="option2" target="Element@389500295:1610627382554"/>
+<exit_state name="max_nomatch" target="Element@389500295:1610627382554">
+<bendpoint>
+<dim1 x="168" y="70"/>
+<dim2 x="52" y="-78"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_noinput" target="Element@389500295:1610627382554">
+<bendpoint>
+<dim1 x="-3" y="111"/>
+<dim2 x="-119" y="-37"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@1080530667:1610627303975" name="AgentDecision" type="Decision" width="205" x="273" y="757">
+<exit_states>
+<exit_state name="AgentStaff" target="Element@753529500:1610627360555"/>
+<exit_state name="AgentCredit" target="Element@147138304:1610627362804"/>
+<exit_state name="AgentPerusahaan" target="Element@125155369:1612530502409"/>
+<exit_state name="AgentDebit" target="Element@691802378:1613464989492"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1003067454:1604389063355" name="Agent_Banking" type="Element Group" width="210" x="199" y="364"/>
+<element height="62" id="Element@1651687567:1603443344676" name="Agent_Credit" type="Element Group" width="188" x="642" y="342"/>
+<element height="62" id="Element@1456058858:1603443328633" name="Agent_StaffCredit" type="Element Group" width="236" x="-448" y="237"/>
+<element height="62" id="Element@1079981090:1605611617721" name="BacktoAgent" type="Page Entry" width="185" x="41" y="-471">
+<exit_states>
+<exit_state name="next" target="Element@753079016:1605612305965"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1769323630:1605612477898" name="BalanceInfoForAgent" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="272" x="418" y="-358">
+<exit_states>
+<exit_state name="done" target="Element@1321115995:1611559644138"/>
+</exit_states>
+</element>
+<element height="62" id="Element@753079016:1605612305965" name="BalanceInfoToAgent" type="Element Group" width="263" x="32" y="-360"/>
+<element height="62" id="Element@1321115995:1611559644138" name="CifAccountInq" type="Element Group" width="200" x="451" y="-213"/>
+<element height="62" id="Element@1497709728:1601902705927" name="ConnectAgentBanking" type="Page Entry" width="289" x="-279" y="-536">
+<exit_states>
+<exit_state name="next" target="Element@1772166353:1605607240417"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1320252797:1601905195947" name="ConnectAgentBankingAudio" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="352" x="140" y="178">
+<exit_states>
+<exit_state name="done" target="Element@1003067454:1604389063355"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1608309663:1607012775787" name="ConnectAgentBankingBlocking" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="380" x="-27" y="472">
+<exit_states>
+<exit_state name="done" target="Element@1003067454:1604389063355"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1403138724:1606471494774" name="ConnectAgentBankingCorpAudio" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="403" x="-71" y="274">
+<exit_states>
+<exit_state name="done" target="Element@1003067454:1604389063355"/>
+</exit_states>
+</element>
+<element height="62" id="Element@902884442:1605585847197" name="ConnectAgentBankingNonCust" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="382" x="333" y="89">
+<exit_states>
+<exit_state name="done" target="Element@1003067454:1604389063355"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1538857490:1601902715772" name="ConnectAgentCreditCard" type="Page Entry" width="316" x="637" y="-92">
+<exit_states>
+<exit_state name="next" target="Element@1226263311:1601905331225"/>
+</exit_states>
+</element>
+<element height="62" id="Element@147138304:1610627362804" name="ConnectAgentCreditCard" type="Page Connector" width="316" x="235" y="878">
+<page_connector target="Element@1538857490:1601902715772">ConnectAgentCreditCard<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1226263311:1601905331225" name="ConnectAgentCreditCardAudio" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="379" x="615" y="44">
+<exit_states>
+<exit_state name="done" target="Element@829163913:1605005301236"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1948268006:1607012343738" name="ConnectAgentCreditCardBlocking" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="407" x="839" y="401">
+<exit_states>
+<exit_state name="done" target="Element@1651687567:1603443344676"/>
+</exit_states>
+</element>
+<element height="62" id="Element@2026998963:1605068278812" name="ConnectAgentCreditCardNonCust" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="409" x="807" y="215">
+<exit_states>
+<exit_state name="done" target="Element@1651687567:1603443344676"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1100459976:1601902754803" name="ConnectAgentStaff" type="Page Entry" width="251" x="157" y="614">
+<exit_states>
+<exit_state name="next" target="Element@447182987:1601905395717"/>
+</exit_states>
+</element>
+<element height="62" id="Element@753529500:1610627360555" name="ConnectAgentStaff" type="Page Connector" width="251" x="-7" y="895">
+<page_connector target="Element@1100459976:1601902754803">ConnectAgentStaff<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@447182987:1601905395717" name="ConnectAgentStaffAudio" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="314" x="210" y="498">
+<exit_states>
+<exit_state name="done" target="Element@1003067454:1604389063355"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1924250879:1601902655218" name="ConnectAgentStaffCredit" type="Page Entry" width="315" x="-474" y="6">
+<exit_states>
+<exit_state name="next" target="Element@1502300423:1601905326127"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1502300423:1601905326127" name="ConnectAgentStaffCreditAudio" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="378" x="-433" y="119">
+<exit_states>
+<exit_state name="done" target="Element@1456058858:1603443328633"/>
+</exit_states>
+</element>
+<element height="62" id="Element@829163913:1605005301236" name="DB_CheckCCType" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="236" x="584" y="141">
+<exit_states>
+<exit_state name="done" target="Element@1651687567:1603443344676"/>
+<exit_state name="Java Exception-Error_CheckCCType" target="Element@1156481242:1608141697071">
+<bendpoint>
+<dim1 x="-149" y="74"/>
+<dim2 x="35" y="-74"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@389500295:1610627382554" name="EndCall" type="Page Connector" width="129" x="600" y="831">
+<page_connector target="Element@89933654:1601904832032">EndCall<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@2112944412:1610627035755" name="ExitOptionMenu" type="Page Entry" width="224" x="450" y="576">
+<exit_states>
+<exit_state name="next" target="Element@63687113:1610627064063"/>
+</exit_states>
+</element>
+<element height="62" id="Element@595363975:1605607556785" name="Inquiry_forAgent" type="Page Connector" width="228" x="-234" y="-379">
+<page_connector target="Element@564935375:1611677509307">Inquiry_forAgent<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@854526698:1605612779626" name="LastTransInfoForAgent" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="286" x="205" y="-25">
+<exit_states>
+<exit_state name="done" target="Element@625086498:1606471438373"/>
+<exit_state name="Java Exception-Error_NoData" target="Element@625086498:1606471438373">
+<bendpoint>
+<dim1 x="34" y="71"/>
+<dim2 x="207" y="-23"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@2097765816:1605612543429" name="LastTransInfoToAgent" type="Element Group" width="277" x="20" y="-190"/>
+<element height="62" id="Element@1156481242:1608141697071" name="Log_CheckCCType" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="244" x="397" y="289">
+<exit_states>
+<exit_state name="done" target="Element@1651687567:1603443344676"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@1651687567:1603443344676">
+<bendpoint>
+<dim1 x="98" y="97"/>
+<dim2 x="-146" y="38"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@625086498:1606471438373" name="PersonalorCorp" type="Decision" width="212" x="50" y="69">
+<exit_states>
+<exit_state name="PERSONAL" target="Element@1320252797:1601905195947"/>
+<exit_state name="CORP" target="Element@1403138724:1606471494774"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1772166353:1605607240417" name="setValueConnectAgent" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="292" x="-277" y="-457">
+<exit_states>
+<exit_state name="done" target="Element@595363975:1605607556785"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1936023684:1612355340589" name="ConnectAgentCorp" type="Page Entry" width="254" x="-137" y="343">
+<exit_states>
+<exit_state name="next" target="Element@1003067454:1604389063355"/>
+</exit_states>
+</element>
+<element height="62" id="Element@2132419335:1612436032464" name="LastTransInfoForAgent_Fail" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="331" x="-168" y="-61">
+<exit_states>
+<exit_state name="done" target="Element@625086498:1606471438373"/>
+<exit_state name="Java Exception-Error_NoData" target="Element@625086498:1606471438373"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1082098878:1612530208995" name="ConnectAgentCorp_NonCust" type="Page Entry" width="357" x="-137" y="408">
+<exit_states>
+<exit_state name="next" target="Element@1003067454:1604389063355"/>
+</exit_states>
+</element>
+<element height="62" id="Element@125155369:1612530502409" name="ConnectAgentCorp" type="Page Connector" width="254" x="-118" y="730">
+<page_connector target="Element@1936023684:1612355340589">ConnectAgentCorp<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@691802378:1613464989492" name="ConnectAgentBanking" type="Page Connector" width="289" x="-106" y="815">
+<page_connector target="Element@1497709728:1601902705927">ConnectAgentBanking<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@253316547:1627239303993" name="ExitOptionMenu_NonCust" type="Page Entry" width="327" x="808" y="619">
+<exit_states>
+<exit_state name="next" target="Element@1229841332:1627239377377"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1229841332:1627239377377" name="AgentNonCust_menu" src="com.audium.server.voiceElement.menu.MFoundation2OptionMenu" type="Voice Element" width="279" x="852" y="730">
+<exit_states>
+<exit_state name="option1" target="Element@102791190:1627239443950"/>
+<exit_state name="option2" target="Element@389500295:1610627382554"/>
+<exit_state name="max_nomatch" target="Element@389500295:1610627382554">
+<bendpoint>
+<dim1 x="-179" y="2"/>
+<dim2 x="110" y="-99"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_noinput" target="Element@389500295:1610627382554">
+<bendpoint>
+<dim1 x="-150" y="119"/>
+<dim2 x="139" y="18"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@102791190:1627239443950" name="AgentNonCustDecision" type="Decision" width="298" x="921" y="845">
+<exit_states>
+<exit_state name="Banking" target="Element@206456743:1627239656673"/>
+<exit_state name="Perusahaan" target="Element@1893733596:1627239763367"/>
+<exit_state name="CreditCard" target="Element@773600976:1627239744135"/>
+</exit_states>
+</element>
+<element height="62" id="Element@206456743:1627239656673" name="AgentDebitCardNonCust" type="Page Connector" width="314" x="683" y="924">
+<page_connector target="Element@788356028:1605585880380">AgentDebitCardNonCust<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@773600976:1627239744135" name="AgentCreditCardNonCust" type="Page Connector" width="320" x="886" y="998">
+<page_connector target="Element@740462698:1605068208210">AgentCreditCardNonCust<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1893733596:1627239763367" name="ConnectAgentCorp" type="Page Connector" width="254" x="1127" y="928">
+<page_connector target="Element@1936023684:1612355340589">ConnectAgentCorp<config/>
+</page_connector>
+</element>
+</page>

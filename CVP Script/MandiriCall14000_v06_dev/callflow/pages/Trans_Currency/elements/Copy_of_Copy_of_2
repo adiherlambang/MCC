@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@580672184:1605471328288" name="Copy_of_Copy_of_2" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Copy_of_Copy_of_2">
+        <exit_state name="typec" conjugate="and">
+            <string operator="contains">
+                <local_variable name="transCurrencyAccount" />
+                <constant_string value="c" />
+            </string>
+        </exit_state>
+        <exit_state name="typed" conjugate="and">
+            <string operator="contains">
+                <local_variable name="transCurrencyAccount" />
+                <constant_string value="d" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

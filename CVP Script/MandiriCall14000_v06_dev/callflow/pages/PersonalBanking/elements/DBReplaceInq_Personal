@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@124023208:1609925327778" name="DBReplaceInq_Personal" version="6.0.1">
+<config>
+<settings>
+<setting name="expDateDebitCard">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_DBReplaceInq_Personal.response_body};
+
+var path= "$payload.debitCardReplacementInquiryinfo.expiryDate";
+
+var result = JSONPathUtil.eval(data,path);
+
+var expDate,expDate_mm,expDate_yy;
+
+if(result.length == 3){
+	expDate_mm = "0"+result.substring(0,1);
+	expDate_yy = 	result.substring(1,3);
+
+	expDate = expDate_mm+expDate_yy;
+}else if(result.length == 4){
+	expDate_mm = result.substring(0,2);
+	expDate_yy = 	result.substring(2,4);
+
+	expDate = expDate_mm+expDate_yy;
+}
+
+expDate</setting>
+</settings>
+</config>
+</action_element>

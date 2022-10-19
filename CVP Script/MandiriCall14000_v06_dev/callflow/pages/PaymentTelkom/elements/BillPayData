@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@196955832:1605773874585" name="BillPayData" version="6.0.1">
+<config>
+<settings>
+<setting name="AmountBillPhone">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_BillPay.response_body};
+
+var path= "$billPaymentInquiryInfo.detail.billAmount";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="feeBillPhone">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_BillPay.response_body};
+
+var path= "$billPaymentInquiryInfo.detail.fee";
+
+var result = JSONPathUtil.eval(data,path);
+
+var len = result.length;
+
+if (len==1){
+	result
+}else{
+	result.substring(0,15)
+}</setting>
+<setting name="billReferenceNumber">{LocalVar.ProcessedPhoneNumber}</setting>
+<setting name="areaCode">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_BillPay.response_body};
+
+var path= "$billPaymentInquiryInfo.detail.areaCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="rrno">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_BillPay.response_body};
+
+var path= "$billPaymentInquiryInfo.detail.rrno";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="tokenHeader">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_BillPay.response_body};
+
+var path= "$billPaymentInquiryInfo.additionalData.tokenHeader";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="utilityCode">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_BillPay.response_body};
+
+var path= "$billPaymentInquiryInfo.additionalData.utilityCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="phoneNumber">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_BillPay.response_body};
+
+var path= "$billPaymentInquiryInfo.additionalData.phoneNumber";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="provinceCode">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_BillPay.response_body};
+
+var path= "$billPaymentInquiryInfo.additionalData.provinceCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="filler">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_BillPay.response_body};
+
+var path= "$billPaymentInquiryInfo.additionalData.filler";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="customerNumber">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_BillPay.response_body};
+
+var path= "$billPaymentInquiryInfo.additionalData.customerNumber";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="customerName">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_BillPay.response_body};
+
+var path= "$billPaymentInquiryInfo.additionalData.customerName";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="npwp">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_BillPay.response_body};
+
+var path= "$billPaymentInquiryInfo.additionalData.npwp";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="taxOfficePhoneAreaCode">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_BillPay.response_body};
+
+var path= "$billPaymentInquiryInfo.additionalData.taxOfficePhoneAreaCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="billStatus">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_BillPay.response_body};
+
+var path= "$billPaymentInquiryInfo.additionalData.billStatus";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="billReferenceNumber1">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_BillPay.response_body};
+
+var path= "$billPaymentInquiryInfo.additionalData.billReferenceNumber1";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="billReferenceNumber2">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_BillPay.response_body};
+
+var path= "$billPaymentInquiryInfo.additionalData.billReferenceNumber2";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="billReferenceNumber3">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_BillPay.response_body};
+
+var path= "$billPaymentInquiryInfo.additionalData.billReferenceNumber3";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="billAmount1">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_BillPay.response_body};
+
+var path= "$billPaymentInquiryInfo.additionalData.billAmount1";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="billAmount2">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_BillPay.response_body};
+
+var path= "$billPaymentInquiryInfo.additionalData.billAmount2";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="billAmount3">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_BillPay.response_body};
+
+var path= "$billPaymentInquiryInfo.additionalData.billAmount3";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="customerId">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_BillPay.response_body};
+
+var path= "$billPaymentInquiryInfo.additionalData.customerId";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="userId">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_BillPay.response_body};
+
+var path= "$billPaymentInquiryInfo.additionalData.userId";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="invoiceNumber">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_BillPay.response_body};
+
+var path= "$billPaymentInquiryInfo.additionalData.invoiceNumber";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="address1">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_BillPay.response_body};
+
+var path= "$billPaymentInquiryInfo.additionalData.address1";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="address2">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_BillPay.response_body};
+
+var path= "$billPaymentInquiryInfo.additionalData.address2";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="city">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_BillPay.response_body};
+
+var path= "$billPaymentInquiryInfo.additionalData.city";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="postalCode">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_BillPay.response_body};
+
+var path= "$billPaymentInquiryInfo.additionalData.postalCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="areaCodeAdditional">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_BillPay.response_body};
+
+var path= "$billPaymentInquiryInfo.additionalData.areaCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="BillPhone">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_BillPay.response_body};
+
+var path= "$billPaymentInquiryInfo.detail.billAmount";
+
+var result = JSONPathUtil.eval(data,path);
+
+var bill = result.substring(0,15);
+
+bill.replace(/^0+/, '')</setting>
+</settings>
+</config>
+</action_element>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1533029902:1605103588606" name="2_Account" version="6.0.1">
+<element height="46" id="Element@1110284196:1605100934636" name="2_AccBankTypeA" type="Decision" width="139" x="18" y="132">
+<exit_states>
+<exit_state name="False" target="Element@2036369265:1605101095300"/>
+<exit_state name="c1" target="Element@63363779:1605103131873"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2036369265:1605101095300" name="2_AccBankTypeB" type="Decision" width="138" x="23" y="215">
+<exit_states>
+<exit_state name="False" target="Element@239334242:1605101118715"/>
+<exit_state name="c2" target="Element@1201893446:1605103168166"/>
+</exit_states>
+</element>
+<element height="46" id="Element@239334242:1605101118715" name="2_AccBankTypeC" type="Decision" width="139" x="31" y="298">
+<exit_states>
+<exit_state name="False" target="Element@885654589:1605169303486"/>
+<exit_state name="c3" target="Element@799318856:1605103190092"/>
+</exit_states>
+</element>
+<element height="46" id="Element@885654589:1605169303486" name="2_AccBankTypeD" type="Decision" width="139" x="27" y="380">
+<exit_states>
+<exit_state name="c4" target="Element@615131338:1605103208495"/>
+<exit_state name="c5" target="Element@453503338:1605169412950"/>
+</exit_states>
+</element>
+<element height="46" id="Element@63363779:1605103131873" name="2_AccTypeA" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="113" x="248" y="131">
+<exit_states>
+<exit_state name="done" target="Element@1789243264:1605092001521"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1201893446:1605103168166" name="2_AccTypeB" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="112" x="247" y="217">
+<exit_states>
+<exit_state name="done" target="Element@1789243264:1605092001521"/>
+</exit_states>
+</element>
+<element height="46" id="Element@799318856:1605103190092" name="2_AccTypeC" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="113" x="252" y="296">
+<exit_states>
+<exit_state name="done" target="Element@1789243264:1605092001521"/>
+</exit_states>
+</element>
+<element height="46" id="Element@615131338:1605103208495" name="2_AccTypeD" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="113" x="252" y="376">
+<exit_states>
+<exit_state name="done" target="Element@1789243264:1605092001521"/>
+</exit_states>
+</element>
+<element height="46" id="Element@453503338:1605169412950" name="2_AccTypeE" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="111" x="246" y="471">
+<exit_states>
+<exit_state name="done" target="Element@1789243264:1605092001521"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1178867244:1605103588606" name="Group Start" type="Element Group Start" width="110" x="230" y="30">
+<exit_states>
+<exit_state name="2:True" target="Element@1110284196:1605100934636"/>
+</exit_states>
+</element>
+</page>

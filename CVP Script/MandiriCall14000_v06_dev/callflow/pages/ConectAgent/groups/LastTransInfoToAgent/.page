@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1746953136:1605612543429" name="LastTransInfoToAgent" version="6.0.1">
+<element default_entry="true" height="46" id="Element@1590448272:1605612543429" name="Group Start" type="Element Group Start" width="110" x="185" y="25">
+<exit_states>
+<exit_state name="entry" target="Element@1731051856:1605612399465"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2045555560:1605612539081" name="LastTransRespon1" type="Decision" width="143" x="202" y="259">
+<exit_states>
+<exit_state name="Success" target="Element@1831754171:1605612536826"/>
+<exit_state name="Fail" target="Element@625086498:1606471438373">
+<bendpoint>
+<dim1 x="-94" y="84"/>
+<dim2 x="-109" y="-175"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1831754171:1605612536826" name="LastTransRespon2" type="Decision" width="143" x="444" y="342">
+<exit_states>
+<exit_state name="Success" target="Element@854526698:1605612779626"/>
+<exit_state name="Fail" target="Element@2132419335:1612436032464">
+<bendpoint>
+<dim1 x="-345" y="-24"/>
+<dim2 x="-171" y="-153"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@567163728:1605612522120" name="LastTransResponCode" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="165" x="424" y="204">
+<exit_states>
+<exit_state name="done" target="Element@2045555560:1605612539081"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1320616396:1605612499897" name="LastTransStatusCode" type="Decision" width="158" x="196" y="138">
+<exit_states>
+<exit_state name="Success" target="Element@567163728:1605612522120"/>
+<exit_state name="Fail" target="Element@625086498:1606471438373"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1731051856:1605612399465" name="REST_Last1Trans" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="134" x="642" y="29">
+<exit_states>
+<exit_state name="done" target="Element@1320616396:1605612499897"/>
+<exit_state name="Java Exception-REST_Last1TransError" target="Element@625086498:1606471438373">
+<bendpoint>
+<dim1 x="-370" y="13"/>
+<dim2 x="-382" y="-169"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+</page>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1553706494:1603343160227" name="Last5_typeB2" version="6.0.1">
+<config>
+<settings>
+<setting name="value">var str ="";</setting>
+</settings>
+<element_data>
+<data create_when="Before" name="val" storable="false" type="Integer">111</data>
+</element_data>
+</config>
+</action_element>

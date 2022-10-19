@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1467749358:1605583197710" name="SaldoDBValue" version="6.0.1">
+<config>
+<settings>
+<setting name="ResponCodeSaldoDB1">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_SaldoDB.response_body};
+
+var path= "$responseCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+eval(result)</setting>
+<setting name="ResponCodeSaldoDB2">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_SaldoDB.response_body};
+
+var path= "$balanceInquiryInfo.responseCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+</settings>
+<element_data>
+<data create_when="After" name="REST_balance-inquiry_Personal_RC1" storable="true" type="String">{LocalVar.ResponCodeSaldoDB1}</data>
+<data create_when="After" name="REST_balance-inquiry_Personal_RC2" storable="true" type="String">{LocalVar.ResponCodeSaldoDB2}</data>
+</element_data>
+</config>
+</action_element>

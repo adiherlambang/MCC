@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@390907655:1610448086726" name="Valid_amount" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Valid_amount" default_exit_state="NotValid">
+        <exit_state name="Valid" conjugate="and">
+            <number operator="less">
+                <local_variable name="validation_amount" />
+                <constant_number value="0" />
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@318215611:1601894256244" name="LanguageSelection" version="6.0.1">
+<element height="62" id="Element@2013537800:1601897393005" name="Bahasa" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="241" x="270" y="491">
+<exit_states>
+<exit_state name="done" target="Element@2079724675:1601897442940"/>
+</exit_states>
+</element>
+<element height="62" id="Element@2048360109:1601897395362" name="English" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="314" x="689" y="489">
+<exit_states>
+<exit_state name="done" target="Element@2079724675:1601897442940"/>
+</exit_states>
+</element>
+<element height="62" id="Element@487838175:1601894256244" name="LanguageSelection" type="Page Entry" width="252" x="210" y="313">
+<exit_states>
+<exit_state name="next" target="Element@423335058:1601897227981"/>
+</exit_states>
+</element>
+<element height="62" id="Element@423335058:1601897227981" name="LanguageSelectionOption" src="com.audium.server.voiceElement.menu.MFoundation2OptionMenu" type="Voice Element" width="326" x="494" y="311">
+<exit_states>
+<exit_state name="option1" target="Element@2013537800:1601897393005"/>
+<exit_state name="option2" target="Element@2048360109:1601897395362"/>
+<exit_state name="max_nomatch" target="Element@2013537800:1601897393005">
+<bendpoint>
+<dim1 x="-28" y="134"/>
+<dim2 x="177" y="-46"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_noinput" target="Element@2013537800:1601897393005">
+<bendpoint>
+<dim1 x="-204" y="77"/>
+<dim2 x="1" y="-103"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@2079724675:1601897442940" name="MainMenu" type="Page Connector" width="167" x="525" y="614">
+<page_connector target="Element@1865813345:1601897428297">MainMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@372874912:1601898931749" name="NoInput" type="Page Entry" width="138" x="188" y="81">
+<exit_states>
+<exit_state name="next" target="Element@1066288153:1601897292711"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1066288153:1601897292711" name="NoInputAudio" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="201" x="207" y="200">
+<exit_states>
+<exit_state name="done" target="Element@566180579:1601897332784"/>
+</exit_states>
+</element>
+<element height="62" id="Element@982309222:1601898944005" name="NoMatchInput" type="Page Entry" width="205" x="901" y="164">
+<exit_states>
+<exit_state name="next" target="Element@144586148:1601897306909"/>
+</exit_states>
+</element>
+<element height="62" id="Element@144586148:1601897306909" name="NoMatchInputAudio" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="268" x="782" y="279">
+<exit_states>
+<exit_state name="done" target="Element@566180579:1601897332784"/>
+</exit_states>
+</element>
+<element height="62" id="Element@566180579:1601897332784" name="NoReturn" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="152" x="533" y="85">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="62" id="Element@246900491:1601899563078" name="NoReturn" type="Page Entry" width="152" x="526" y="-48">
+<exit_states>
+<exit_state name="next" target="Element@566180579:1601897332784"/>
+</exit_states>
+</element>
+</page>

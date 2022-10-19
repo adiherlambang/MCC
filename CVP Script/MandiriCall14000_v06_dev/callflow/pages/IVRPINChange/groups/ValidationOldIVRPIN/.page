@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@16354195:1610965424724" name="ValidationOldIVRPIN" version="6.0.1">
+<element height="46" id="Element@1417065533:1605890556625" name="Error3x_PinNotValid" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="191" x="-154" y="347">
+<exit_states>
+<exit_state name="done" target="Element@1453170410:1605890522039"/>
+</exit_states>
+</element>
+<element height="46" id="Element@948551976:1605890469175" name="Error3x_ValidasiIVRPIN" type="Decision" width="167" x="-367" y="394">
+<exit_states>
+<exit_state name="True" target="Element@1417065533:1605890556625"/>
+<exit_state name="False" target="Element@856377636:1605890529841"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1452976490:1605890399402" name="Error_PinNotValid" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="142" x="-219" y="199">
+<exit_states>
+<exit_state name="done" target="Element@626987388:1605890447119"/>
+</exit_states>
+</element>
+<element height="46" id="Element@346137244:1610965424724" name="Group Start" type="Element Group Start" width="110" x="230" y="30">
+<exit_states>
+<exit_state name="ValidOldIVRPin:False" target="Element@1452976490:1605890399402"/>
+</exit_states>
+</element>
+<element height="46" id="Element@626987388:1605890447119" name="ValidasiIVRPIN" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="125" x="-310" y="309">
+<exit_states>
+<exit_state name="done" target="Element@948551976:1605890469175"/>
+</exit_states>
+</element>
+</page>

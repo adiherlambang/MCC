@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1197866485:1605497041537" name="Trans7_Rek" version="6.0.1">
+<config>
+<settings>
+<setting name="TransRek_1">var list = {LocalVar.IndexRekTrans};
+
+list[0]</setting>
+<setting name="TransRek_2">var list = {LocalVar.IndexRekTrans};
+
+list[1]</setting>
+<setting name="TransRek_3">var list = {LocalVar.IndexRekTrans};
+
+list[2]</setting>
+<setting name="TransRek_4">var list = {LocalVar.IndexRekTrans};
+
+list[3]</setting>
+<setting name="TransRek_5">var list = {LocalVar.IndexRekTrans};
+
+list[4]</setting>
+<setting name="TransRek_6">var list = {LocalVar.IndexRekTrans};
+
+list[5]</setting>
+<setting name="TransRek_7">var list = {LocalVar.IndexRekTrans};
+
+list[6]</setting>
+<setting name="TransLastRek1">var list = {LocalVar.IndexRekTrans};
+var n = list[0].indexOf(" ");
+var lastdigit=list[0].substring(n-3,n);
+
+lastdigit</setting>
+<setting name="TransLastRek2">var list = {LocalVar.IndexRekTrans};
+var n = list[1].indexOf(" ");
+var lastdigit=list[1].substring(n-3,n);
+
+lastdigit</setting>
+<setting name="TransLastRek3">var list = {LocalVar.IndexRekTrans};
+var n = list[2].indexOf(" ");
+var lastdigit=list[2].substring(n-3,n);
+
+lastdigit</setting>
+<setting name="TransLastRek4">var list = {LocalVar.IndexRekTrans};
+var n = list[3].indexOf(" ");
+var lastdigit=list[3].substring(n-3,n);
+
+lastdigit</setting>
+<setting name="TransLastRek5">var list = {LocalVar.IndexRekTrans};
+var n = list[4].indexOf(" ");
+var lastdigit=list[4].substring(n-3,n);
+
+lastdigit</setting>
+<setting name="TransLastRek6">var list = {LocalVar.IndexRekTrans};
+var n = list[5].indexOf(" ");
+var lastdigit=list[5].substring(n-3,n);
+
+lastdigit</setting>
+<setting name="TransLastRek7">var list = {LocalVar.IndexRekTrans};
+var n = list[6].indexOf(" ");
+var lastdigit=list[6].substring(n-3,n);
+
+lastdigit</setting>
+</settings>
+</config>
+</action_element>

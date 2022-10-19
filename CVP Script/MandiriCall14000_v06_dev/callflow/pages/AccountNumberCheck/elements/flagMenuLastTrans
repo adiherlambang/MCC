@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@2072645067:1605194230935" name="flagMenuLastTrans" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="flagMenuLastTrans">
+        <exit_state name="Last5Trans" conjugate="and">
+            <string operator="equal">
+                <local_variable name="flagMenuTrans" />
+                <constant_string value="last5transInfo" />
+            </string>
+        </exit_state>
+        <exit_state name="Transfer" conjugate="and">
+            <string operator="equal">
+                <local_variable name="flagMenuTrans" />
+                <constant_string value="transfer" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

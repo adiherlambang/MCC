@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@2143695802:1602116517800" name="Last5Transaction" version="6.0.1">
+<element height="62" id="Element@1599026416:1606062015361" name="CorpPersonalDec" type="Decision" width="231" x="327" y="58">
+<exit_states>
+<exit_state name="Personal" target="Element@381236200:1602116728976"/>
+<exit_state name="Corp" target="Element@1727276563:1606061930599"/>
+</exit_states>
+</element>
+<element height="62" id="Element@269929102:1602116770504" name="Inquiry" type="Page Connector" width="124" x="339" y="274">
+<page_connector target="Element@1898384436:1602047218567">Inquiry<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1707618586:1602116517800" name="Lasrt5Transaction" type="Page Entry" width="232" x="300" y="-56">
+<exit_states>
+<exit_state name="next" target="Element@1599026416:1606062015361"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1727276563:1606061930599" name="Last5TransactionCorpFlag" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="319" x="461" y="167">
+<exit_states>
+<exit_state name="done" target="Element@269929102:1602116770504"/>
+</exit_states>
+</element>
+<element height="62" id="Element@381236200:1602116728976" name="Last5TransactionFlag" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="268" x="138" y="165">
+<exit_states>
+<exit_state name="done" target="Element@269929102:1602116770504"/>
+</exit_states>
+</element>
+</page>

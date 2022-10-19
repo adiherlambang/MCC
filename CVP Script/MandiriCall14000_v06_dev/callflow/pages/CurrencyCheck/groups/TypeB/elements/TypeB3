@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@661077824:1605173042108" name="TypeB3" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="TypeB3" default_exit_state="TypeB4">
+        <exit_state name="TypeB3" conjugate="and">
+            <string operator="equal">
+                <local_variable name="typeCurrency" />
+                <constant_string value="b3" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

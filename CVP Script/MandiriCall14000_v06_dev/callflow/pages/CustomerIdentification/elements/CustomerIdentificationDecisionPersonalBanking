@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1976813691:1601965599370" name="CustomerIdentificationDecisionPersonalBanking" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="CustomerIdentificationDecisionPersonalBanking" default_exit_state="Personal / Corporate">
+        <exit_state name="Credit Card" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <element name="DB_CheckCard" variable="name" />
+                </data>
+                <constant_string value="CREDIT CARD" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

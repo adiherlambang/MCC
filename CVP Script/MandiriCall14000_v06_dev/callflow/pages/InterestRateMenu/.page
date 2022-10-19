@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@2058831133:1601901941138" name="InterestRateMenu" version="6.0.1">
+<element height="62" id="Element@820863245:1601964103469" name="ConnectAgentStaff" type="Page Connector" width="251" x="-36" y="144">
+<page_connector target="Element@1100459976:1601902754803">ConnectAgentStaff<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1767577810:1610296987937" name="Error_NoInput" type="Page Connector" width="198" x="128" y="245">
+<page_connector target="Element@270910828:1610085311655">Error_NoInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@337604004:1610296909209" name="Error_NoMatchInput" type="Page Connector" width="265" x="161" y="71">
+<page_connector target="Element@1250119072:1610085949630">Error_NoMatchInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1822822761:1601964154144" name="ExchangeInterestMenu" type="Page Connector" width="294" x="727" y="157">
+<page_connector target="Element@470100203:1601899151411">ExchangeInterestMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@421043180:1601964890908" name="InterestDeposito" type="Page Connector" width="257" x="449" y="354">
+<page_connector target="Element@816136301:1601964806583">InterestDeposito<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1732654770:1601963903054" name="InterestRateMenu" type="Page Entry" width="240" x="389" y="-8">
+<exit_states>
+<exit_state name="next" target="Element@1560035790:1601963914347"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1560035790:1601963914347" name="InterestRateMenu" src="com.audium.server.voiceElement.menu.MFoundation6OptionMenu" type="Voice Element" width="240" x="391" y="199">
+<exit_states>
+<exit_state name="option1" target="Element@1674835735:1601964744423"/>
+<exit_state name="option2" target="Element@421043180:1601964890908"/>
+<exit_state name="option3" target="Element@820863245:1601964103469"/>
+<exit_state name="option4" target="Element@1822822761:1601964154144"/>
+<exit_state name="option5" target="Element@546537324:1601964103469"/>
+<exit_state name="option6" target="Element@1642102344:1601964237182"/>
+<exit_state name="max_nomatch" target="Element@337604004:1610296909209"/>
+<exit_state name="max_noinput" target="Element@1767577810:1610296987937"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1642102344:1601964237182" name="InterestRateMenu" type="Page Connector" width="257" x="727" y="319">
+<page_connector target="Element@1732654770:1601963903054">InterestRateMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1674835735:1601964744423" name="InterestSaving" type="Page Connector" width="257" x="161" y="349">
+<page_connector target="Element@833056001:1601964448244">InterestSaving<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@546537324:1601964103469" name="MainMenu" type="Page Connector" width="257" x="719" y="243">
+<page_connector target="Element@1865813345:1601897428297">MainMenu<config/>
+</page_connector>
+</element>
+</page>

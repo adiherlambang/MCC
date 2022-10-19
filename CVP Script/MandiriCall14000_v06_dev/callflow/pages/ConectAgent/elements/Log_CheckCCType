@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1156481242:1608141697071" name="Log_CheckCCType" version="6.0.1">
+<config>
+<settings>
+<setting name="type">insert</setting>
+<setting name="jndiName">cvp_reporting</setting>
+<setting name="query">INSERT INTO dbo.CVP_REPORT
+VALUES
+(
+'{CallData.ANI}'
+,'{GeneralDateTime.Year.CURRENT}-{GeneralDateTime.Month.CURRENT}-{GeneralDateTime.DayOfMonth.CURRENT}'
+,'{GeneralDateTime.HourOfDay.CURRENT}:{GeneralDateTime.Minute.CURRENT}:00'
+,'408'
+,'21')</setting>
+<setting name="enableXmlResultSet">true</setting>
+<setting name="maxRowsInXML">1</setting>
+</settings>
+<local_events>
+<local_event>
+<name>Error_InsertLog</name>
+<eventlist>com.audium.server.*</eventlist>
+<type>Java Exception</type>
+</local_event>
+</local_events>
+</config>
+</action_element>

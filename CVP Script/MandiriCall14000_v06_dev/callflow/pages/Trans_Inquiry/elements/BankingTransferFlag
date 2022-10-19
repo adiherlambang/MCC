@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@734935269:1605279658829" name="BankingTransferFlag" version="6.0.1">
+<config>
+<settings>
+<setting name="NmbrCardDebit">{LocalVar.CardInput}</setting>
+<setting name="PINDB">{Data.Element.CustomerIdentificationPersonalBankingPin.value}</setting>
+<setting name="flagMenuTrans">var menu="transfer";
+
+menu</setting>
+</settings>
+</config>
+</action_element>

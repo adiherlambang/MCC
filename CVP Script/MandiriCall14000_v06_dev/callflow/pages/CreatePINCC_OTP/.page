@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@82974414:1603355984716" name="CreatePINCC_OTP" version="6.0.1">
+<element height="62" id="Element@1997186783:1603357800419" name="CheckStatus_PIN" type="Decision" width="226" x="642" y="-194">
+<exit_states>
+<exit_state name="True" target="Element@1056284174:1606033054917"/>
+<exit_state name="False" target="Element@136255889:1610406322444"/>
+</exit_states>
+</element>
+<element height="62" id="Element@136255889:1610406322444" name="Check_PINSame" type="Element Group" width="221" x="395" y="-39"/>
+<element height="62" id="Element@909289978:1603359876414" name="ConnectAgentCreditCard" type="Page Connector" width="316" x="1553" y="412">
+<page_connector target="Element@1538857490:1601902715772">ConnectAgentCreditCard<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@242059721:1603355984716" name="CreatePINCC" type="Page Entry" width="185" x="178" y="-173">
+<exit_states>
+<exit_state name="next" target="Element@1216642671:1603356273911"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1512378126:1603356447741" name="CreatePINCC" type="Page Connector" width="185" x="-118" y="388">
+<page_connector target="Element@242059721:1603355984716">CreatePINCC<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1315189323:1610683579762" name="CreatePINCC" type="Page Connector" width="185" x="-632" y="-249">
+<page_connector target="Element@242059721:1603355984716">CreatePINCC<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@586845399:1610709695902" name="CreatePINCC" type="Page Connector" width="185" x="580" y="480">
+<page_connector target="Element@242059721:1603355984716">CreatePINCC<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@297642620:1610405950319" name="CreatePINCC_Menu" src="com.audium.server.voiceElement.menu.MFoundation5OptionMenu" type="Voice Element" width="258" x="1242" y="422">
+<exit_states>
+<exit_state name="option1" target="Element@909289978:1603359876414"/>
+<exit_state name="option2" target="Element@107237231:1603359874437"/>
+<exit_state name="option3" target="Element@680321184:1610405997615"/>
+<exit_state name="option4" target="Element@1796885026:1603359878358"/>
+<exit_state name="option5" target="Element@1019838038:1603359589879">
+<bendpoint>
+<dim1 x="-223" y="36"/>
+<dim2 x="-15" y="106"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_nomatch" target="Element@111648756:1603359954958"/>
+<exit_state name="max_noinput" target="Element@111648756:1603359954958"/>
+</exit_states>
+</element>
+<element height="62" id="Element@681111834:1606033816573" name="CreatePINCC_StatusResponCode" type="Element Group" width="393" x="1004" y="194"/>
+<element height="62" id="Element@107237231:1603359874437" name="EndCall" type="Page Connector" width="129" x="1248" y="292">
+<page_connector target="Element@89933654:1601904832032">EndCall<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@201814645:1610683509981" name="Error_3xOTPnotValid" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="264" x="-350" y="-182">
+<exit_states>
+<exit_state name="done" target="Element@413637655:1603356513084"/>
+</exit_states>
+</element>
+<element height="62" id="Element@92999141:1610709996855" name="Error_NoInput" type="Page Connector" width="198" x="-440" y="314">
+<page_connector target="Element@270910828:1610085311655">Error_NoInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@824019285:1610710017211" name="Error_NoInput" type="Page Connector" width="198" x="307" y="426">
+<page_connector target="Element@270910828:1610085311655">Error_NoInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1871499533:1610893303714" name="Error_NoInput" type="Page Connector" width="198" x="759" y="133">
+<page_connector target="Element@270910828:1610085311655">Error_NoInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@337110030:1610405212694" name="Error_NoMatchInput" type="Page Connector" width="265" x="-433" y="155">
+<page_connector target="Element@1250119072:1610085949630">Error_NoMatchInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@581144168:1610710017211" name="Error_NoMatchInput" type="Page Connector" width="265" x="148" y="383">
+<page_connector target="Element@1250119072:1610085949630">Error_NoMatchInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@911577431:1610893303714" name="Error_NoMatchInput" type="Page Connector" width="265" x="867" y="51">
+<page_connector target="Element@1250119072:1610085949630">Error_NoMatchInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1795131443:1610709774761" name="Error_OTPCheck" type="Element Group" width="218" x="800" y="379"/>
+<element height="62" id="Element@703286304:1606035384137" name="Error_ServiceSOA" type="Page Connector" width="231" x="1283" y="-29">
+<page_connector target="Element@623071406:1607697419497">Error_ServiceSOA<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@413637655:1603356513084" name="ExitOptionMenu" type="Page Connector" width="224" x="-151" y="-76">
+<page_connector target="Element@2112944412:1610627035755">ExitOptionMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1741793703:1603358011401" name="ExitOptionMenu" type="Page Connector" width="224" x="857" y="529">
+<page_connector target="Element@2112944412:1610627035755">ExitOptionMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@111648756:1603359954958" name="ExitOptionMenu" type="Page Connector" width="224" x="1451" y="298">
+<page_connector target="Element@2112944412:1610627035755">ExitOptionMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@500659112:1610406275837" name="ExitOptionMenu" type="Page Connector" width="224" x="405" y="-187">
+<page_connector target="Element@2112944412:1610627035755">ExitOptionMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@138850783:1610893254776" name="ExitOptionMenu" type="Page Connector" width="224" x="587" y="301">
+<page_connector target="Element@2112944412:1610627035755">ExitOptionMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1693571544:1610895256240" name="ExitOptionMenu" type="Page Connector" width="224" x="956" y="-25">
+<page_connector target="Element@2112944412:1610627035755">ExitOptionMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@357059784:1610893225239" name="InputPINCC" type="Page Entry" width="172" x="48" y="298">
+<exit_states>
+<exit_state name="next" target="Element@173171733:1603356474270"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1987086027:1610893242052" name="InputPINCC" type="Page Connector" width="172" x="362" y="261">
+<page_connector target="Element@357059784:1610893225239">InputPINCC<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@173171733:1603356474270" name="Input_PINCC" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="182" x="220" y="202">
+<exit_states>
+<exit_state name="done" target="Element@1697147413:1610893061848"/>
+<exit_state name="max_nomatch" target="Element@581144168:1610710017211"/>
+<exit_state name="max_noinput" target="Element@824019285:1610710017211"/>
+</exit_states>
+</element>
+<element height="62" id="Element@194970500:1603357664067" name="Input_PINCC_Confirm" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="278" x="554" y="51">
+<exit_states>
+<exit_state name="done" target="Element@364300341:1610894912769"/>
+<exit_state name="max_nomatch" target="Element@911577431:1610893303714"/>
+<exit_state name="max_noinput" target="Element@1871499533:1610893303714"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1967240516:1608113103214" name="Log_CreatePINCCOTP" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="276" x="1249" y="-305">
+<exit_states>
+<exit_state name="done" target="Element@703286304:1606035384137"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@703286304:1606035384137"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1796885026:1603359878358" name="MainMenu" type="Page Connector" width="167" x="1275" y="558">
+<page_connector target="Element@1865813345:1601897428297">MainMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1198441233:1610682885617" name="OTP Validation Group" type="Element Group" width="278" x="135" y="50"/>
+<element height="62" id="Element@1216642671:1603356273911" name="OTP_Check" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="168" x="177" y="-48">
+<exit_states>
+<exit_state name="done" target="Element@1198441233:1610682885617"/>
+<exit_state name="max_nomatch" target="Element@413637655:1603356513084"/>
+<exit_state name="max_noinput" target="Element@413637655:1603356513084">
+<bendpoint>
+<dim1 x="-116" y="-65"/>
+<dim2 x="173" y="-52"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@188034814:1603356412246" name="OTP_Confirmation" src="com.audium.server.voiceElement.menu.MFoundation2OptionMenu" type="Voice Element" width="243" x="-107" y="218">
+<exit_states>
+<exit_state name="option1" target="Element@173171733:1603356474270"/>
+<exit_state name="option2" target="Element@1512378126:1603356447741"/>
+<exit_state name="max_nomatch" target="Element@337110030:1610405212694"/>
+<exit_state name="max_noinput" target="Element@92999141:1610709996855"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1097035774:1610895209061" name="PINCCConfirm" type="Page Connector" width="201" x="873" y="-130">
+<page_connector target="Element@1741930099:1610895214178">PINCCConfirm<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1741930099:1610895214178" name="PINCCConfirm" type="Page Entry" width="201" x="752" y="220">
+<exit_states>
+<exit_state name="next" target="Element@194970500:1603357664067"/>
+</exit_states>
+</element>
+<element height="62" id="Element@680321184:1610405997615" name="PersonalCC" type="Page Connector" width="168" x="1471" y="520">
+<page_connector target="Element@40213579:1602140235856">PersonalCC<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1056284174:1606033054917" name="REST_CreatePINCC" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="247" x="1030" y="-164">
+<exit_states>
+<exit_state name="done" target="Element@681111834:1606033816573"/>
+<exit_state name="Java Exception-Error_RESTCreatePINCCOTP" target="Element@1967240516:1608113103214"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1019838038:1603359589879" name="Success" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="132" x="1062" y="352">
+<exit_states>
+<exit_state name="done" target="Element@297642620:1610405950319"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1697147413:1610893061848" name="Validation_InputPINCCNumeric" type="Element Group" width="378" x="427" y="150"/>
+<element height="62" id="Element@364300341:1610894912769" name="Validation_PINCCConfirmNumeric" type="Element Group" width="407" x="596" y="-55"/>
+<element height="62" id="Element@621742084:1610683222869" name="Counter_OTPcode" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="240" x="-274" y="52">
+<exit_states>
+<exit_state name="done" target="Element@295051314:1610683285413"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1657286995:1610683252688" name="Decision_OTP" type="Decision" width="194" x="-669" y="-76">
+<exit_states>
+<exit_state name="True" target="Element@201814645:1610683509981"/>
+<exit_state name="False" target="Element@1315189323:1610683579762"/>
+</exit_states>
+</element>
+<element height="62" id="Element@295051314:1610683285413" name="Error_OTPNotMatch" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="260" x="-682" y="36">
+<exit_states>
+<exit_state name="done" target="Element@1657286995:1610683252688"/>
+</exit_states>
+</element>
+</page>

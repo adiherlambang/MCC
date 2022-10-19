@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@102791190:1627239443950" name="AgentNonCustDecision" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="AgentNonCustDecision">
+        <exit_state name="Banking" conjugate="and">
+            <string operator="equal">
+                <local_variable name="MenuLogInIVR" />
+                <constant_string value="BANKING" />
+            </string>
+        </exit_state>
+        <exit_state name="Perusahaan" conjugate="and">
+            <string operator="equal">
+                <local_variable name="MenuLogInIVR" />
+                <constant_string value="PERUSAHAAN" />
+            </string>
+        </exit_state>
+        <exit_state name="CreditCard" conjugate="and">
+            <string operator="equal">
+                <local_variable name="MenuLogInIVR" />
+                <constant_string value="CREDIT CARD" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

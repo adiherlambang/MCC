@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@1262978763:1603298144437" name="Last5_2Account" version="6.0.1">
+<config>
+<settings>
+<setting name="noinput_timeout">5s</setting>
+<setting name="max_noinput_count">3</setting>
+<setting name="max_nomatch_count">3</setting>
+<setting name="confidence_level">0.40</setting>
+<setting name="modal">false</setting>
+<setting name="option1_dtmf">1</setting>
+<setting name="option1_voice"/>
+<setting name="option1_value">1</setting>
+<setting name="option2_dtmf">2</setting>
+<setting name="option2_voice"/>
+<setting name="option2_value">2</setting>
+<setting name="option3_dtmf">*</setting>
+<setting name="option3_voice"/>
+<setting name="option3_value">Repeate Info</setting>
+<setting name="option4_dtmf">*</setting>
+<setting name="option4_voice"/>
+<setting name="option4_value">Repeate Info</setting>
+<setting name="option5_dtmf">*</setting>
+<setting name="option5_voice"/>
+<setting name="option5_value">Repeate Info</setting>
+<setting name="option6_dtmf">*</setting>
+<setting name="option6_voice"/>
+<setting name="option6_value">Repeate Info</setting>
+<setting name="option7_dtmf">*</setting>
+<setting name="option7_voice"/>
+<setting name="option7_value">Repeate Info</setting>
+<setting name="option8_dtmf">*</setting>
+<setting name="option8_voice"/>
+<setting name="option8_value">Repeate Info</setting>
+<setting name="option9_dtmf">*</setting>
+<setting name="option9_voice"/>
+<setting name="option9_value">Repeate Info</setting>
+</settings>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.03.1/PilihJenisRekening.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Element.Dep_flag1.value}"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 3" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.03.1/Tekan1.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 4" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Element.sav_flag1.value}"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 5" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.03.1/Tekan2.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 6" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Element.Gir_flag1.value}"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 7" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.03.1/Tekan3.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 8" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Element.Loan_flag1.value}"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 9" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.03.1/Tekan4.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 10" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/general/MengulangInformasi.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 11" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/general/TekanBintang.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+</config>
+</voice_element>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1070784367:1605705619939" name="ForTransfer4" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="ForTransfer4" default_exit_state="false">
+        <exit_state name="True" conjugate="or">
+            <string operator="equal">
+                <local_variable name="flagMenu" />
+                <constant_string value="bank" />
+            </string>
+            <string operator="equal">
+                <local_variable name="flagMenuTrans" />
+                <constant_string value="last5transInfo" />
+            </string>
+            <string operator="equal">
+                <local_variable name="flagMenu" />
+                <constant_string value="agent" />
+            </string>
+            <string operator="equal">
+                <local_variable name="flagMenu" />
+                <constant_string value="corp" />
+            </string>
+            <string operator="equal">
+                <local_variable name="flagMenuTrans" />
+                <constant_string value="transfer" />
+            </string>
+            <string operator="equal">
+                <local_variable name="flagMenuTrans" />
+                <constant_string value="corp_last5transInfo" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

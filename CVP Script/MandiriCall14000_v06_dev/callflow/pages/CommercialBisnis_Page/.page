@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1402820262:1666152113171" name="CommercialBisnis_Page" version="6.0.1">
+<element height="62" id="Element@1089835541:1666152113171" name="Entry_CommercialBisnis" type="Page Entry" width="301" x="694" y="97">
+<exit_states>
+<exit_state name="next" target="Element@2046407196:1666157386666"/>
+</exit_states>
+</element>
+<element height="62" id="Element@2046407196:1666157386666" name="language_checkCommercialBisnis" type="Decision" width="407" x="649" y="302">
+<exit_states>
+<exit_state name="Bahasa" target="Element@426036898:1666157386666"/>
+<exit_state name="English" target="Element@1363474033:1666157546003"/>
+</exit_states>
+</element>
+<element height="62" id="Element@426036898:1666157386666" name="Log_ConnectAgentCommercialBisnis_Ina" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="481" x="124" y="555">
+<exit_states>
+<exit_state name="done" target="Element@1383842229:1666157600188"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@1383842229:1666157600188">
+<bendpoint>
+<dim1 x="367" y="188"/>
+<dim2 x="377" y="-95"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@1363474033:1666157546003" name="Log_ConnectAgentCommercialBisnis_Eng" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="536" x="1126" y="554">
+<exit_states>
+<exit_state name="done" target="Element@1547391748:1666157611993"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@1547391748:1666157611993">
+<bendpoint>
+<dim1 x="-395" y="180"/>
+<dim2 x="-377" y="-108"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@1383842229:1666157600188" name="ConnectAgentCommercialBisnis_Ina" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="432" x="138" y="838">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1547391748:1666157611993" name="ConnectAgentCommercialBisnis_Eng" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="440" x="1174" y="846">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+</page>

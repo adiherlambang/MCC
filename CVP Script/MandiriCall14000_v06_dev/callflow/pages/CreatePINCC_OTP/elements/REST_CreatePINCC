@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1056284174:1606033054917" name="REST_CreatePINCC" version="6.0.1">
+<config>
+<settings>
+<setting name="EndpointURL">{LocalVar.hubAddress}/cc-pin-creation</setting>
+<setting name="HTTPMethod">POST</setting>
+<setting name="Parameters"/>
+<setting name="ignoreCertificateValidation">true</setting>
+<setting name="requireHttpAuthentication">false</setting>
+<setting name="headers">'Content-Type':'application/json'</setting>
+<setting name="body">{
+    "card_number":"{LocalVar.CardInput}",
+    "pin":"{Data.Element.Input_PINCC_Confirm.value}",
+    "mobile_ivr_tag":"IVR",
+    "mobile_phone_number":"{CallData.ANI}",
+    "agent_login_id":"",
+    "otp_code":"{Data.Element.OTP_Check.value}",
+    "processing_code":"774000"
+}</setting>
+<setting name="useProxy">false</setting>
+<setting name="connectTimeout">3000</setting>
+<setting name="readTimeout">5000</setting>
+</settings>
+<local_events>
+<local_event>
+<name>Error_RESTCreatePINCCOTP</name>
+<eventlist>com.sun.jersey.api.client.ClientHandlerException</eventlist>
+<type>Java Exception</type>
+</local_event>
+</local_events>
+</config>
+</action_element>

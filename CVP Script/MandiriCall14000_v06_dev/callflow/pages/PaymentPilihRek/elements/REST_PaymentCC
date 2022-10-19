@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@231032182:1605788933525" name="REST_PaymentCC" version="6.0.1">
+<config>
+<settings>
+<setting name="EndpointURL">{LocalVar.hubAddress}/cc-payment-reversal</setting>
+<setting name="HTTPMethod">POST</setting>
+<setting name="Parameters"/>
+<setting name="ignoreCertificateValidation">true</setting>
+<setting name="requireHttpAuthentication">false</setting>
+<setting name="headers">'Content-Type':'application/json'</setting>
+<setting name="body">{
+    "card_number":"{LocalVar.NmbrCardDebit}",
+    "amount":"{Data.Element.InputDigitPaymentCC.value}00",
+    "currency":"001",
+    "pin":"{LocalVar.PINDB}",
+    "source_account":"{LocalVar.pickRekPhone}",
+    "credit_card_number":"{Data.Element.DigitCC.value}",
+    "token_header":"&amp;_0000200188!_Q100166_",
+    "utility_code":"0006",
+    "processing_code":"330001"
+}</setting>
+<setting name="useProxy">false</setting>
+<setting name="connectTimeout">3000</setting>
+<setting name="readTimeout">5000</setting>
+</settings>
+<local_events>
+<local_event>
+<name>Error_RESTPaymentCC</name>
+<eventlist>com.sun.jersey.api.client.ClientHandlerException</eventlist>
+<type>Java Exception</type>
+</local_event>
+</local_events>
+</config>
+</action_element>

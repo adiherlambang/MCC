@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@881343881:1605882949780" name="PrefixCC" version="6.0.1">
+<config>
+<settings>
+<setting name="prefixCC">var prefix = {Data.Element.DigitCC.value}.substring(0,6);
+
+prefix</setting>
+<setting name="validation_paymentCCdigit">var input = {Data.Element.DigitCC.value};
+
+input.indexOf("*")</setting>
+<setting name="inputDigitCCpayment_length">var card = {Data.Element.DigitCC.value};
+
+var length = card.length;
+
+length</setting>
+</settings>
+</config>
+</action_element>

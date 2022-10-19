@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@258722912:1603536635014" name="Trans_Inquiry" version="6.0.1">
+<element height="62" id="Element@734935269:1605279658829" name="BankingTransferFlag" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="264" x="333" y="2">
+<exit_states>
+<exit_state name="done" target="Element@1881445922:1605279617916"/>
+</exit_states>
+</element>
+<element height="62" id="Element@168637216:1605280109651" name="ConnectAgentBanking" type="Page Connector" width="289" x="37" y="114">
+<page_connector target="Element@1497709728:1601902705927">ConnectAgentBanking<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@533270339:1605280095844" name="EndCall" type="Page Connector" width="129" x="638" y="23">
+<page_connector target="Element@89933654:1601904832032">EndCall<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1247658953:1610317730911" name="Error_NoInput" type="Page Connector" width="198" x="43" y="22">
+<page_connector target="Element@270910828:1610085311655">Error_NoInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1361820725:1610317758221" name="Error_NoMatchInput" type="Page Connector" width="265" x="101" y="201">
+<page_connector target="Element@1250119072:1610085949630">Error_NoMatchInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@857324297:1605280272923" name="Inquiry" type="Page Connector" width="124" x="594" y="-47">
+<page_connector target="Element@1898384436:1602047218567">Inquiry<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@2065012218:1603537215496" name="MainMenu" type="Page Connector" width="167" x="640" y="113">
+<page_connector target="Element@1865813345:1601897428297">MainMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1881445922:1605279617916" name="MenuBankingTransfer" src="com.audium.server.voiceElement.menu.MFoundation7OptionMenu" type="Voice Element" width="283" x="332" y="116">
+<exit_states>
+<exit_state name="option1" target="Element@857324297:1605280272923"/>
+<exit_state name="option2" target="Element@857324297:1605280272923"/>
+<exit_state name="option3" target="Element@168637216:1605280109651"/>
+<exit_state name="option4" target="Element@533270339:1605280095844"/>
+<exit_state name="option5" target="Element@1964032076:1605280052764"/>
+<exit_state name="option6" target="Element@2065012218:1603537215496"/>
+<exit_state name="option7" target="Element@129529297:1610317794970"/>
+<exit_state name="max_nomatch" target="Element@1361820725:1610317758221"/>
+<exit_state name="max_noinput" target="Element@1247658953:1610317730911"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1964032076:1605280052764" name="PersonalBanking" type="Page Connector" width="225" x="634" y="195">
+<page_connector target="Element@1566819678:1602039229515">PersonalBanking<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@239805318:1603536635014" name="Trans_Inquiry" type="Page Entry" width="189" x="344" y="-92">
+<exit_states>
+<exit_state name="next" target="Element@734935269:1605279658829"/>
+</exit_states>
+</element>
+<element height="62" id="Element@129529297:1610317794970" name="Trans_Inquiry" type="Page Connector" width="189" x="364" y="228">
+<page_connector target="Element@239805318:1603536635014">Trans_Inquiry<config/>
+</page_connector>
+</element>
+</page>

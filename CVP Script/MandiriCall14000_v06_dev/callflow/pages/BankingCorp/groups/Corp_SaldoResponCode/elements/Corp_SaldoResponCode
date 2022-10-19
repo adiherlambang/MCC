@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1569354238:1606058958840" name="Corp_SaldoResponCode" version="6.0.1">
+<config>
+<settings>
+<setting name="CorpSaldoRC1">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Corp_SaldoDB.response_body};
+
+var path= "$responseCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+eval(result)</setting>
+<setting name="CorpSaldoRC2">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Corp_SaldoDB.response_body};
+
+var path= "$balanceInquiryInfo.responseCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+</settings>
+</config>
+</action_element>

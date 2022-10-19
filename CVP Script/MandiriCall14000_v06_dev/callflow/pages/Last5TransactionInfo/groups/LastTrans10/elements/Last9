@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1179342469:1605261402818" name="Last9" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Last9" default_exit_state="false">
+        <exit_state name="9" conjugate="and">
+            <number operator="equal">
+                <local_variable name="TotalLastTrans" />
+                <constant_number value="9" />
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

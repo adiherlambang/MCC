@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1322879827:1666157040374" name="MerchantAgen_Page" version="6.0.1">
+<element height="62" id="Element@1021135856:1666157040374" name="Entry_MerchantAgen" type="Page Entry" width="272" x="737" y="107">
+<exit_states>
+<exit_state name="next" target="Element@301055879:1666158374102"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1195321505:1666158374102" name="Log_ConnectAgentMerchantAgen_Ina" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="452" x="161" y="575">
+<exit_states>
+<exit_state name="done" target="Element@774443539:1666158374102"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@774443539:1666158374102">
+<bendpoint>
+<dim1 x="367" y="188"/>
+<dim2 x="377" y="-95"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@301055879:1666158374102" name="language_checkMerchantAgen" type="Decision" width="378" x="680" y="292">
+<exit_states>
+<exit_state name="Bahasa" target="Element@1195321505:1666158374102"/>
+<exit_state name="English" target="Element@1138088346:1666158374102"/>
+</exit_states>
+</element>
+<element height="62" id="Element@774443539:1666158374102" name="ConnectAgentMerchantAgen_Ina" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="403" x="159" y="857">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1138088346:1666158374102" name="Log_ConnectAgentMerchantAgen_Eng" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="460" x="1126" y="568">
+<exit_states>
+<exit_state name="done" target="Element@842567252:1666158374102"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@842567252:1666158374102">
+<bendpoint>
+<dim1 x="-395" y="180"/>
+<dim2 x="-377" y="-108"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@842567252:1666158374102" name="ConnectAgentMerchantAgen_Eng" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="411" x="1159" y="858">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+</page>

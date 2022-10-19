@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1648026586:1609690594768" name="TaxNumberCorp" version="6.0.1">
+<config>
+<settings>
+<setting name="TaxNumberNasabah">importPackage(com.audium.server.cvpUtil);
+
+var data ={Data.Element.REST_TaxNumberCorp.response_body};
+
+var path= "$payload.getCIFTaxNumberDetail.idNumber";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+</settings>
+</config>
+</action_element>
