@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <page id="Page@1322879827:1666157040374" name="MerchantAgen_Page" version="6.0.1">
-<element height="62" id="Element@1021135856:1666157040374" name="Entry_MerchantAgen" type="Page Entry" width="272" x="737" y="107">
+<element height="62" id="Element@1021135856:1666157040374" name="Entry_MerchantAgen" type="Page Entry" width="272" x="737" y="109">
 <exit_states>
-<exit_state name="next" target="Element@301055879:1666158374102"/>
+<exit_state name="next" target="Element@1369187878:1666161513691"/>
 </exit_states>
 </element>
-<element height="62" id="Element@1195321505:1666158374102" name="Log_ConnectAgentMerchantAgen_Ina" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="452" x="161" y="575">
+<element height="62" id="Element@1195321505:1666158374102" name="Log_ConnectAgentMerchantAgen_Ina" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="452" x="177" y="635">
 <exit_states>
 <exit_state name="done" target="Element@774443539:1666158374102"/>
 <exit_state name="Java Exception-Error_InsertLog" target="Element@774443539:1666158374102">
@@ -16,18 +16,18 @@
 </exit_state>
 </exit_states>
 </element>
-<element height="62" id="Element@301055879:1666158374102" name="language_checkMerchantAgen" type="Decision" width="378" x="680" y="292">
+<element height="62" id="Element@301055879:1666158374102" name="language_checkMerchantAgen" type="Decision" width="378" x="696" y="352">
 <exit_states>
 <exit_state name="Bahasa" target="Element@1195321505:1666158374102"/>
 <exit_state name="English" target="Element@1138088346:1666158374102"/>
 </exit_states>
 </element>
-<element height="62" id="Element@774443539:1666158374102" name="ConnectAgentMerchantAgen_Ina" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="403" x="159" y="857">
+<element height="62" id="Element@774443539:1666158374102" name="ConnectAgentMerchantAgen_Ina" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="403" x="175" y="917">
 <exit_states>
 <exit_state name="done"/>
 </exit_states>
 </element>
-<element height="62" id="Element@1138088346:1666158374102" name="Log_ConnectAgentMerchantAgen_Eng" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="460" x="1126" y="568">
+<element height="62" id="Element@1138088346:1666158374102" name="Log_ConnectAgentMerchantAgen_Eng" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="460" x="1142" y="628">
 <exit_states>
 <exit_state name="done" target="Element@842567252:1666158374102"/>
 <exit_state name="Java Exception-Error_InsertLog" target="Element@842567252:1666158374102">
@@ -38,9 +38,14 @@
 </exit_state>
 </exit_states>
 </element>
-<element height="62" id="Element@842567252:1666158374102" name="ConnectAgentMerchantAgen_Eng" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="411" x="1159" y="858">
+<element height="62" id="Element@842567252:1666158374102" name="ConnectAgentMerchantAgen_Eng" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="411" x="1175" y="918">
 <exit_states>
 <exit_state name="done"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1369187878:1666161513691" name="ConnectAgentMerchantAudio" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="368" x="697" y="232">
+<exit_states>
+<exit_state name="done" target="Element@301055879:1666158374102"/>
 </exit_states>
 </element>
 </page>
