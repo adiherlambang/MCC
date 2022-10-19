@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@807576590:1663131763216" name="Call_Transfer" version="6.0.1">
+<config>
+<log>
+<data create_when="After" name="Result">{Data.Element.Call_Transfer.result}</data>
+</log>
+<settings>
+<setting name="transfer_destination">{Data.Session.phone}</setting>
+<setting name="destination_type">sip</setting>
+<setting name="connect_timeout">60s</setting>
+<setting name="max_transfer_time">60s</setting>
+<setting name="bridge">true</setting>
+<setting name="transfer_audio">http://10.243.227.205/testing/tone.wav</setting>
+<setting name="aai"/>
+<setting name="terminate_on_dtmf">#</setting>
+</settings>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="menu.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="1" name="busy_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="busy.wav"><![CDATA[i'am sorry, phone number your calling still busy]]></static>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="1" name="noanswer_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="notAnswer.wav"><![CDATA[i'am sorry, phone number your calling is not answered]]></static>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="1" name="phone_error_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="error.wav"><![CDATA[i'am sorry, system trouble]]></static>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+</config>
+</voice_element>

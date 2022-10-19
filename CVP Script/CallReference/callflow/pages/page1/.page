@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1997806381:1663131727562" name="page1" version="6.0.1">
+<element height="62" id="Element@837300629:1663131727561" name="Start Of Call" start_of_call="true" type="Page Entry" width="177" x="941" y="298">
+<exit_states>
+<exit_state name="next" target="Element@502556863:1663131733582"/>
+</exit_states>
+</element>
+<element height="62" id="Element@502556863:1663131733582" name="Session_Start" src="com.audium.server.voiceElement.internal.CiscoSubdialogStartElement" type="Subdialog Start" width="188" x="450" y="300">
+<exit_states>
+<exit_state name="done" target="Element@807576590:1663131763216"/>
+</exit_states>
+</element>
+<element height="62" id="Element@807576590:1663131763216" name="Call_Transfer" src="com.audium.server.voiceElement.transfer.MTransfer" type="Voice Element" width="183" x="451" y="494">
+<exit_states>
+<exit_state name="done" target="Element@1752878444:1663145990794">
+<bendpoint>
+<dim1 x="230" y="169"/>
+<dim2 x="-14" y="-227"/>
+</bendpoint>
+</exit_state>
+<exit_state name="busy" target="Element@1752878444:1663145990794">
+<bendpoint>
+<dim1 x="454" y="5"/>
+<dim2 x="209" y="-214"/>
+</bendpoint>
+</exit_state>
+<exit_state name="noanswer" target="Element@1752878444:1663145990794">
+<bendpoint>
+<dim1 x="-46" y="263"/>
+<dim2 x="-290" y="-133"/>
+</bendpoint>
+</exit_state>
+<exit_state name="phone_error" target="Element@1752878444:1663145990794">
+<bendpoint>
+<dim1 x="-296" y="259"/>
+<dim2 x="-540" y="-137"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@1752878444:1663145990794" name="CVP Subdialog Return_01" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="320" x="812" y="890">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+</page>
