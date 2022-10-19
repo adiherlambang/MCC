@@ -1,0 +1,1 @@
+select CONVERT(int,uuid) as VALUE, title as ID from livechat.guest.survey_questionnaires sq
