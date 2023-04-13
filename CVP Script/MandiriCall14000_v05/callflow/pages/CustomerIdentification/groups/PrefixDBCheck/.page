@@ -39,8 +39,8 @@
 </element>
 <element height="46" id="Element@1924494011:1605002643810" name="Group Start" type="Element Group Start" width="110" x="32" y="-97">
 <exit_states>
-<exit_state name="NoMatchCard:next" target="Element@1662160396:1604380604730"/>
 <exit_state name="DB_CheckCard:done" target="Element@1658342139:1604675802888"/>
+<exit_state name="NoMatchCard:next" target="Element@1662160396:1604380604730"/>
 </exit_states>
 </element>
 </page>

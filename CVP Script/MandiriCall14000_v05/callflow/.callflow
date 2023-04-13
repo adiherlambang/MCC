@@ -44,7 +44,7 @@
 <page closed="true" id="Page@35088813:1603537190929">Trans_Account</page>
 <page closed="true" id="Page@606892481:1603647441024">Trans_Currency</page>
 <page closed="true" id="Page@1085039239:1604638143351">BankingCorp</page>
-<page closed="true" id="Page@73809255:1604904638005">PersonalCCFiestaPoint</page>
+<page closed="false" id="Page@73809255:1604904638005">PersonalCCFiestaPoint</page>
 <page closed="true" id="Page@1019825778:1604932807279">IVRPINChange</page>
 <page closed="true" id="Page@1976022857:1605496800455">Trans_LastDigitRek</page>
 <page closed="true" id="Page@1198419043:1605515695419">Error_Service</page>

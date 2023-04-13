@@ -27,32 +27,8 @@ for (var i=0; i&lt;{LocalVar.IndexCCFiestaPoint}; i++){
 	}
 }
 
-result3</setting>
-<setting name="valCCFiesta2">importPackage(com.audium.server.cvpUtil);
-var poin;
-var data = {Data.Element.REST_CCFiestaPoint.response_body};
-var path,path2,path3,result,result2,result3;
-
-for (var i=0; i&lt;{LocalVar.IndexCCFiestaPoint}; i++){
-	path = "$payload.xlsAccountStatusInfo.buckets[0].balances["+i+"].type";
-	result = JSONPathUtil.eval(data,path);
-
-	path2 = "$payload.xlsAccountStatusInfo.buckets[0].balances["+i+"].id";
-	result2 = JSONPathUtil.eval(data,path2);
-	
-	if(result =="PL" &amp;&amp; result2 =="33"){
-		path3= "$payload.xlsAccountStatusInfo.buckets[0].balances["+i+"].quantity";
-		result3 = JSONPathUtil.eval(data,path3);
-	}
-}
-
-poin = result3.split(".");
-
-poin[1]</setting>
+var fiesta = String(result3).split(".")
+fiesta[0]</setting>
 </settings>
-<element_data>
-<data create_when="After" name="1" storable="true" type="String">{LocalVar.valCCFiesta1}</data>
-<data create_when="After" name="2" storable="true" type="String">{LocalVar.valCCFiesta2}</data>
-</element_data>
 </config>
 </action_element>

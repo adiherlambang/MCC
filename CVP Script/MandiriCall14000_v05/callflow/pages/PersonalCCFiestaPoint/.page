@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <page id="Page@73809255:1604904638005" name="PersonalCCFiestaPoint" version="6.0.1">
-<element height="62" id="Element@403286903:1606025262627" name="CCFiestaPointData" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="243" x="322" y="387">
+<element height="62" id="Element@403286903:1606025262627" name="CCFiestaPointData" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="243" x="321" y="349">
 <exit_states>
 <exit_state name="done" target="Element@399534143:1604904889536"/>
 </exit_states>

@@ -27,33 +27,12 @@ for (var i=0; i&lt;{LocalVar.indexDBFiestaPoint} ; i++){
 	}
 }
 
-result3</setting>
-<setting name="valDBFiesta2">importPackage(com.audium.server.cvpUtil);
-var poin;
-var data = {Data.Element.REST_DBFiestaPoint.response_body};
-var path,result,path2,result2,result3,path3;
-
-for (var i=0; i&lt;{LocalVar.indexDBFiestaPoint} ; i++){
-	path= "$payload.xlsAccountStatusInfo.buckets[0].balances["+i+"].type";
-	result = JSONPathUtil.eval(data,path);
-	
-	path2 = "$payload.xlsAccountStatusInfo.buckets[0].balances["+i+"].id";
-	result2 = JSONPathUtil.eval(data,path2);
-	
-	if(result =="PL" &amp;&amp; result2 =="33"){
-		path3= "$payload.xlsAccountStatusInfo.buckets[0].balances["+i+"].quantity";
-		result3 = JSONPathUtil.eval(data,path3);
-	}
-}
-
-poin = result3.split(".");
-
-poin[1]</setting>
+var fiesta = String(result3).split(".")
+fiesta[0]</setting>
 </settings>
 <element_data>
 <data create_when="After" name="indexFiesta" storable="true" type="String">{LocalVar.indexDBFiestaPoint}</data>
 <data create_when="After" name="Fiesta1" storable="true" type="String">{LocalVar.valDBFiesta1}</data>
-<data create_when="After" name="Fiesta2" storable="true" type="String">{LocalVar.valDBFiesta2}</data>
 </element_data>
 </config>
 </action_element>

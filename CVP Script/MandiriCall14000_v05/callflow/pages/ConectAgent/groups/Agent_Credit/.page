@@ -58,6 +58,13 @@
 </element>
 <element height="62" id="Element@1745367270:1603443344676" name="Group Start" type="Element Group Start" width="171" x="-276" y="-122">
 <exit_states>
+<exit_state name="DB_CheckCCType:done" target="Element@819897499:1607019037677"/>
+<exit_state name="ConnectAgentCreditCardNonCust:done" target="Element@332299305:1612341593652">
+<bendpoint>
+<dim1 x="-12" y="297"/>
+<dim2 x="11" y="-70"/>
+</bendpoint>
+</exit_state>
 <exit_state name="ConnectAgentCreditCardBlocking:done" target="Element@138474621:1607012230267"/>
 <exit_state name="Log_CheckCCType:done" target="Element@1962942367:1603443115228">
 <bendpoint>
@@ -75,13 +82,6 @@
 <dim2 x="-306" y="71"/>
 </bendpoint>
 </exit_state>
-<exit_state name="ConnectAgentCreditCardNonCust:done" target="Element@332299305:1612341593652">
-<bendpoint>
-<dim1 x="-12" y="297"/>
-<dim2 x="11" y="-70"/>
-</bendpoint>
-</exit_state>
-<exit_state name="DB_CheckCCType:done" target="Element@819897499:1607019037677"/>
 </exit_states>
 </element>
 <element height="62" id="Element@214903747:1605062400501" name="TypeCCCardPlat" type="Decision" width="217" x="421" y="-709">

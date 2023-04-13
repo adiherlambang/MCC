@@ -47,7 +47,7 @@
 </exit_states>
 </element>
 <element height="62" id="Element@1003067454:1604389063355" name="Agent_Banking" type="Element Group" width="210" x="416" y="135"/>
-<element height="62" id="Element@1651687567:1603443344676" name="Agent_Credit" type="Element Group" width="188" x="1266" y="177"/>
+<element height="62" id="Element@1651687567:1603443344676" name="Agent_Credit" type="Element Group" width="188" x="1337" y="8"/>
 <element height="62" id="Element@1456058858:1603443328633" name="Agent_StaffCredit" type="Element Group" width="236" x="-448" y="237"/>
 <element height="62" id="Element@1079981090:1605611617721" name="BacktoAgent" type="Page Entry" width="185" x="49" y="-924">
 <exit_states>
@@ -86,7 +86,7 @@
 <exit_state name="done" target="Element@1003067454:1604389063355"/>
 </exit_states>
 </element>
-<element height="62" id="Element@1538857490:1601902715772" name="ConnectAgentCreditCard" type="Page Entry" width="316" x="1292" y="-615">
+<element height="62" id="Element@1538857490:1601902715772" name="ConnectAgentCreditCard" type="Page Entry" width="316" x="1249" y="-818">
 <exit_states>
 <exit_state name="next" target="Element@1226263311:1601905331225"/>
 </exit_states>
@@ -95,7 +95,7 @@
 <page_connector target="Element@1538857490:1601902715772">ConnectAgentCreditCard<config/>
 </page_connector>
 </element>
-<element height="62" id="Element@1226263311:1601905331225" name="ConnectAgentCreditCardAudio" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="379" x="1248" y="-462">
+<element height="62" id="Element@1226263311:1601905331225" name="ConnectAgentCreditCardAudio" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="379" x="1230" y="-652">
 <exit_states>
 <exit_state name="done" target="Element@829163913:1605005301236"/>
 </exit_states>
@@ -134,7 +134,7 @@
 <exit_state name="done" target="Element@1456058858:1603443328633"/>
 </exit_states>
 </element>
-<element height="62" id="Element@829163913:1605005301236" name="DB_CheckCCType" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="236" x="1348" y="-300">
+<element height="62" id="Element@829163913:1605005301236" name="DB_CheckCCType" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="236" x="1298" y="-476">
 <exit_states>
 <exit_state name="done" target="Element@1651687567:1603443344676"/>
 <exit_state name="Java Exception-Error_CheckCCType" target="Element@1156481242:1608141697071">
@@ -170,7 +170,7 @@
 </exit_states>
 </element>
 <element height="62" id="Element@2097765816:1605612543429" name="LastTransInfoToAgent" type="Element Group" width="277" x="1" y="-482"/>
-<element height="62" id="Element@1156481242:1608141697071" name="Log_CheckCCType" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="244" x="1017" y="-84">
+<element height="62" id="Element@1156481242:1608141697071" name="Log_CheckCCType" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="244" x="907" y="-156">
 <exit_states>
 <exit_state name="done" target="Element@1651687567:1603443344676"/>
 <exit_state name="Java Exception-Error_InsertLog" target="Element@1651687567:1603443344676">
