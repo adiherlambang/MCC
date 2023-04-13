@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@341350645:1606058694533" name="Corp_setUSD" version="6.0.1">
+<config>
+<settings>
+<setting name="CurrencyCodeDB">"002"</setting>
+<setting name="CurrencySpelling">"USD"</setting>
+</settings>
+</config>
+</action_element>

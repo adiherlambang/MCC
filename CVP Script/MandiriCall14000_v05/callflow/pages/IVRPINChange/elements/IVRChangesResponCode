@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@274789582:1605888296791" name="IVRChangesResponCode" version="6.0.1">
+<config>
+<settings>
+<setting name="IVRPinChangesRC1">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_IVRChangesPIN.response_body};
+
+var path= "$payload.responseCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+eval(result)</setting>
+<setting name="IVRPinChangesRC2">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_IVRChangesPIN.response_body};
+
+var path= "$payload.pinChangeInfo.responseCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="traceNum_IVRPINChange">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_IVRChangesPIN.response_body};
+
+var path= "$hubHeader.traceNumber";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="terminalId_IVRPINChange">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_IVRChangesPIN.response_body};
+
+var path= "$hubHeader.terminalId";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+</settings>
+<element_data>
+<data create_when="After" name="RC1" storable="true" type="String">{LocalVar.IVRPinChangesRC1}</data>
+<data create_when="After" name="RC2" storable="true" type="String">{LocalVar.IVRPinChangesRC2}</data>
+<data create_when="After" name="TraceNum_IVRPinChanges" storable="true" type="String">{LocalVar.traceNum_IVRPINChange}</data>
+<data create_when="After" name="TerminalID_IVRPinChanges" storable="true" type="String">{LocalVar.terminalId_IVRPINChange}</data>
+</element_data>
+</config>
+</action_element>

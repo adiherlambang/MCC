@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1115356598:1604389063355" name="Agent_Banking" version="6.0.1">
+<element height="62" id="Element@1929866190:1606996492465" name="ConnectAgentBankingBlok_eng" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="386" x="899" y="278">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1365505510:1606996492465" name="ConnectAgentBankingBlok_ina" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="377" x="775" y="386">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1485737116:1604389008344" name="ConnectAgentBanking_eng" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="340" x="-433" y="451">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="62" id="Element@93744046:1601902780269" name="ConnectAgentBanking_ina" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="331" x="-720" y="358">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1904323748:1606471802242" name="ConnectAgentCorp_eng" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="305" x="-661" y="175">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="62" id="Element@431972102:1606471802242" name="ConnectAgentCorp_ina" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="296" x="-700" y="8">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="62" id="Element@852555601:1604389063355" name="Group Start" type="Element Group Start" width="171" x="263" y="-15">
+<exit_states>
+<exit_state name="ConnectAgentBankingAudio:done" target="Element@969196428:1604389023131">
+<bendpoint>
+<dim1 x="-298" y="86"/>
+<dim2 x="78" y="-102"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ConnectAgentStaffAudio:done" target="Element@688599330:1611929509100"/>
+<exit_state name="ConnectAgentBankingCorpAudio:done" target="Element@1724166198:1606471802242"/>
+<exit_state name="ConnectAgentBankingBlocking:done" target="Element@1333396328:1606996492465"/>
+<exit_state name="ConnectAgentCorp_NonCust:next" target="Element@1897776543:1612530240943"/>
+<exit_state name="ConnectAgentBankingNonCust:done" target="Element@688599330:1611929509100">
+<bendpoint>
+<dim1 x="-218" y="142"/>
+<dim2 x="-42" y="-105"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ConnectAgentCorp:next" target="Element@1724166198:1606471802242">
+<bendpoint>
+<dim1 x="-200" y="-54"/>
+<dim2 x="233" y="-68"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@969196428:1604389023131" name="language_check4" type="Decision" width="233" x="-128" y="173">
+<exit_states>
+<exit_state name="Bahasa" target="Element@66377727:1623326855784"/>
+<exit_state name="English" target="Element@1216527566:1623326927401"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1724166198:1606471802242" name="language_check9" type="Decision" width="233" x="-210" y="-1">
+<exit_states>
+<exit_state name="Bahasa" target="Element@10179833:1623326128299"/>
+<exit_state name="English" target="Element@2013641330:1623326772391"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1333396328:1606996492465" name="language_checkBlocking" type="Decision" width="311" x="478" y="122">
+<exit_states>
+<exit_state name="Bahasa" target="Element@1998570612:1623327238900"/>
+<exit_state name="English" target="Element@1567186050:1623327323195"/>
+</exit_states>
+</element>
+<element height="62" id="Element@688599330:1611929509100" name="language_NonCust" type="Decision" width="252" x="207" y="246">
+<exit_states>
+<exit_state name="Bahasa" target="Element@2044466659:1623327058742"/>
+<exit_state name="English" target="Element@1862251653:1623327142285"/>
+</exit_states>
+</element>
+<element height="62" id="Element@548467586:1611929531626" name="ConnectAgentNonCust_ina" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="338" x="6" y="473">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="62" id="Element@69285454:1611929531626" name="ConnectAgentNonCust_eng" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="347" x="351" y="478">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1897776543:1612530240943" name="language_checkCorpNonCust" type="Decision" width="364" x="595" y="-21">
+<exit_states>
+<exit_state name="Bahasa" target="Element@1003853972:1612530240943"/>
+<exit_state name="English" target="Element@359908633:1612530240943"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1003853972:1612530240943" name="ConnectAgentCorpNonCust_ina" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="389" x="947" y="4">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="62" id="Element@359908633:1612530240943" name="ConnectAgentCorpNonCust_eng" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="398" x="748" y="97">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="62" id="Element@10179833:1623326128299" name="Log_ConnectAgentCorpIna" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="335" x="-499" y="-71">
+<exit_states>
+<exit_state name="done" target="Element@431972102:1606471802242"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@431972102:1606471802242">
+<bendpoint>
+<dim1 x="-1" y="73"/>
+<dim2 x="210" y="-6"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@2013641330:1623326772391" name="Log_ConnectAgentCorpEng" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="343" x="-462" y="86">
+<exit_states>
+<exit_state name="done" target="Element@1904323748:1606471802242"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@1904323748:1606471802242">
+<bendpoint>
+<dim1 x="10" y="91"/>
+<dim2 x="219" y="2"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@66377727:1623326855784" name="Log_ConnectAgentBankingIna" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="370" x="-509" y="255">
+<exit_states>
+<exit_state name="done" target="Element@93744046:1601902780269"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@93744046:1601902780269">
+<bendpoint>
+<dim1 x="8" y="90"/>
+<dim2 x="229" y="-13"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@1216527566:1623326927401" name="Log_ConnectAgentBankingEng" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="378" x="-293" y="342">
+<exit_states>
+<exit_state name="done" target="Element@1485737116:1604389008344"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@1485737116:1604389008344">
+<bendpoint>
+<dim1 x="66" y="100"/>
+<dim2 x="216" y="-9"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@2044466659:1623327058742" name="Log_ConnectNonCustBankingIna" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="399" x="-8" y="347">
+<exit_states>
+<exit_state name="done" target="Element@548467586:1611929531626"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@548467586:1611929531626">
+<bendpoint>
+<dim1 x="173" y="95"/>
+<dim2 x="175" y="-31"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@1862251653:1623327142285" name="Log_ConnectNonCustBankingEng" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="407" x="316" y="366">
+<exit_states>
+<exit_state name="done" target="Element@69285454:1611929531626"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@69285454:1611929531626">
+<bendpoint>
+<dim1 x="298" y="77"/>
+<dim2 x="183" y="-36"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@1998570612:1623327238900" name="Log_ConnectBlokBankingIna" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="352" x="559" y="276">
+<exit_states>
+<exit_state name="done" target="Element@1365505510:1606996492465"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@1365505510:1606996492465">
+<bendpoint>
+<dim1 x="4" y="103"/>
+<dim2 x="-218" y="-7"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@1567186050:1623327323195" name="Log_ConnectBlokBankingEng" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="360" x="749" y="183">
+<exit_states>
+<exit_state name="done" target="Element@1929866190:1606996492465"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@1929866190:1606996492465">
+<bendpoint>
+<dim1 x="295" y="49"/>
+<dim2 x="139" y="-46"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+</page>

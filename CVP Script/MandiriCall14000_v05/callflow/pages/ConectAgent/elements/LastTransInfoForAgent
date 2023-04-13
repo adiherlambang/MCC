@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@854526698:1605612779626" name="LastTransInfoForAgent" version="6.0.1">
+<config>
+<settings>
+<setting name="LastTransDate1">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last1Trans.response_body};
+var parse = JSON.parse(data);
+
+var date = parse.lastTxnInquiryInfo.transactions[0].transactionDate.substring(0,2);
+var month = parse.lastTxnInquiryInfo.transactions[0].transactionDate.substring(2,4);
+var year = parse.lastTxnInquiryInfo.transactions[0].transactionDate.substring(4,6);
+
+var result = date+"/"+month+"/"+"20"+year;
+
+result</setting>
+<setting name="LastTransIndicator1">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last1Trans.response_body}
+
+var parse = JSON.parse(data);
+
+var stat = parse.lastTxnInquiryInfo.transactions[0].debitCreditIndicator;
+
+stat</setting>
+<setting name="LastTransAmount1">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last1Trans.response_body};
+
+var parse = JSON.parse(data);
+
+var result = parse.lastTxnInquiryInfo.transactions[0].transactionAmount;
+
+var balance,beforecomma,frontliner,dividableby3;
+
+if (result == "00000000000000000"){
+	var formatted_number = "0";
+}else {
+	balance = result.replace(/^0+/, '');
+	beforecomma=balance.substring(0,balance.length-2);
+	frontliner = balance.substring(0,beforecomma.length%3);
+	var formatted_number="";
+	dividableby3 = beforecomma.substring(frontliner.length,beforecomma.length);
+	var i=(dividableby3.length/3);
+	while (i&gt;0){
+    		formatted_number=(dividableby3.substring((i-1)*3,i*3))+"."+formatted_number;
+    		i=i-1;
+	}
+	if (frontliner.length &gt; 0){
+   		 formatted_number=frontliner+"."+formatted_number.substring(0,formatted_number.length-1)+","+balance.substr(balance.length-2,balance.length);
+	} else {
+   		 formatted_number=formatted_number.substring(0,formatted_number.length-1)+","+balance.substr(balance.length-2,balance.length);
+	}
+}
+
+formatted_number</setting>
+<setting name="LastTransDate2">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last1Trans.response_body};
+var parse = JSON.parse(data);
+
+var date = parse.lastTxnInquiryInfo.transactions[1].transactionDate.substring(0,2);
+var month = parse.lastTxnInquiryInfo.transactions[1].transactionDate.substring(2,4);
+var year = parse.lastTxnInquiryInfo.transactions[1].transactionDate.substring(4,6);
+
+var result = date+"/"+month+"/"+"20"+year;
+
+result</setting>
+<setting name="LastTransIndicator2">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last1Trans.response_body}
+
+var parse = JSON.parse(data);
+
+var stat = parse.lastTxnInquiryInfo.transactions[1].debitCreditIndicator;
+
+stat</setting>
+<setting name="LastTransAmount2">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last1Trans.response_body};
+
+var parse = JSON.parse(data);
+
+var result = parse.lastTxnInquiryInfo.transactions[1].transactionAmount;
+
+var balance,beforecomma,frontliner,dividableby3;
+
+if (result == "00000000000000000"){
+	var formatted_number = "0";
+}else {
+	balance = result.replace(/^0+/, '');
+	beforecomma=balance.substring(0,balance.length-2);
+	frontliner = balance.substring(0,beforecomma.length%3);
+	var formatted_number="";
+	dividableby3 = beforecomma.substring(frontliner.length,beforecomma.length);
+	var i=(dividableby3.length/3);
+	while (i&gt;0){
+    		formatted_number=(dividableby3.substring((i-1)*3,i*3))+"."+formatted_number;
+    		i=i-1;
+	}
+	if (frontliner.length &gt; 0){
+   		 formatted_number=frontliner+"."+formatted_number.substring(0,formatted_number.length-1)+","+balance.substr(balance.length-2,balance.length);
+	} else {
+   		 formatted_number=formatted_number.substring(0,formatted_number.length-1)+","+balance.substr(balance.length-2,balance.length);
+	}
+}
+
+formatted_number</setting>
+<setting name="LastTransDate3">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last1Trans.response_body};
+var parse = JSON.parse(data);
+
+var date = parse.lastTxnInquiryInfo.transactions[2].transactionDate.substring(0,2);
+var month = parse.lastTxnInquiryInfo.transactions[2].transactionDate.substring(2,4);
+var year = parse.lastTxnInquiryInfo.transactions[2].transactionDate.substring(4,6);
+
+var result = date+"/"+month+"/"+"20"+year;
+
+result</setting>
+<setting name="LastTransIndicator3">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last1Trans.response_body}
+
+var parse = JSON.parse(data);
+
+var stat = parse.lastTxnInquiryInfo.transactions[2].debitCreditIndicator;
+
+stat</setting>
+<setting name="LastTransAmount3">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last1Trans.response_body};
+
+var parse = JSON.parse(data);
+
+var result = parse.lastTxnInquiryInfo.transactions[2].transactionAmount;
+
+var balance,beforecomma,frontliner,dividableby3;
+
+if (result == "00000000000000000"){
+	var formatted_number = "0";
+}else {
+	balance = result.replace(/^0+/, '');
+	beforecomma=balance.substring(0,balance.length-2);
+	frontliner = balance.substring(0,beforecomma.length%3);
+	var formatted_number="";
+	dividableby3 = beforecomma.substring(frontliner.length,beforecomma.length);
+	var i=(dividableby3.length/3);
+	while (i&gt;0){
+    		formatted_number=(dividableby3.substring((i-1)*3,i*3))+"."+formatted_number;
+    		i=i-1;
+	}
+	if (frontliner.length &gt; 0){
+   		 formatted_number=frontliner+"."+formatted_number.substring(0,formatted_number.length-1)+","+balance.substr(balance.length-2,balance.length);
+	} else {
+   		 formatted_number=formatted_number.substring(0,formatted_number.length-1)+","+balance.substr(balance.length-2,balance.length);
+	}
+}
+
+formatted_number</setting>
+<setting name="LastTransDate4">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last1Trans.response_body};
+var parse = JSON.parse(data);
+
+var date = parse.lastTxnInquiryInfo.transactions[3].transactionDate.substring(0,2);
+var month = parse.lastTxnInquiryInfo.transactions[3].transactionDate.substring(2,4);
+var year = parse.lastTxnInquiryInfo.transactions[3].transactionDate.substring(4,6);
+
+var result = date+"/"+month+"/"+"20"+year;
+
+result</setting>
+<setting name="LastTransIndicator4">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last1Trans.response_body}
+
+var parse = JSON.parse(data);
+
+var stat = parse.lastTxnInquiryInfo.transactions[3].debitCreditIndicator;
+
+stat</setting>
+<setting name="LastTransAmount4">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last1Trans.response_body};
+
+var parse = JSON.parse(data);
+
+var result = parse.lastTxnInquiryInfo.transactions[3].transactionAmount;
+
+var balance,beforecomma,frontliner,dividableby3;
+
+if (result == "00000000000000000"){
+	var formatted_number = "0";
+}else {
+	balance = result.replace(/^0+/, '');
+	beforecomma=balance.substring(0,balance.length-2);
+	frontliner = balance.substring(0,beforecomma.length%3);
+	var formatted_number="";
+	dividableby3 = beforecomma.substring(frontliner.length,beforecomma.length);
+	var i=(dividableby3.length/3);
+	while (i&gt;0){
+    		formatted_number=(dividableby3.substring((i-1)*3,i*3))+"."+formatted_number;
+    		i=i-1;
+	}
+	if (frontliner.length &gt; 0){
+   		 formatted_number=frontliner+"."+formatted_number.substring(0,formatted_number.length-1)+","+balance.substr(balance.length-2,balance.length);
+	} else {
+   		 formatted_number=formatted_number.substring(0,formatted_number.length-1)+","+balance.substr(balance.length-2,balance.length);
+	}
+}
+
+formatted_number</setting>
+<setting name="LastTransDate5">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last1Trans.response_body};
+var parse = JSON.parse(data);
+
+var date = parse.lastTxnInquiryInfo.transactions[4].transactionDate.substring(0,2);
+var month = parse.lastTxnInquiryInfo.transactions[4].transactionDate.substring(2,4);
+var year = parse.lastTxnInquiryInfo.transactions[4].transactionDate.substring(4,6);
+
+var result = date+"/"+month+"/"+"20"+year;
+
+result</setting>
+<setting name="LastTransIndicator5">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last1Trans.response_body}
+
+var parse = JSON.parse(data);
+
+var stat = parse.lastTxnInquiryInfo.transactions[4].debitCreditIndicator;
+
+stat</setting>
+<setting name="LastTransAmount5">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last1Trans.response_body};
+
+var parse = JSON.parse(data);
+
+var result = parse.lastTxnInquiryInfo.transactions[4].transactionAmount;
+
+var balance,beforecomma,frontliner,dividableby3;
+
+if (result == "00000000000000000"){
+	var formatted_number = "0";
+}else {
+	balance = result.replace(/^0+/, '');
+	beforecomma=balance.substring(0,balance.length-2);
+	frontliner = balance.substring(0,beforecomma.length%3);
+	var formatted_number="";
+	dividableby3 = beforecomma.substring(frontliner.length,beforecomma.length);
+	var i=(dividableby3.length/3);
+	while (i&gt;0){
+    		formatted_number=(dividableby3.substring((i-1)*3,i*3))+"."+formatted_number;
+    		i=i-1;
+	}
+	if (frontliner.length &gt; 0){
+   		 formatted_number=frontliner+"."+formatted_number.substring(0,formatted_number.length-1)+","+balance.substr(balance.length-2,balance.length);
+	} else {
+   		 formatted_number=formatted_number.substring(0,formatted_number.length-1)+","+balance.substr(balance.length-2,balance.length);
+	}
+}
+
+formatted_number</setting>
+</settings>
+<local_events>
+<local_event>
+<name>Error_NoData</name>
+<eventlist>com.audium.server.AudiumException</eventlist>
+<type>Java Exception</type>
+</local_event>
+</local_events>
+</config>
+</action_element>

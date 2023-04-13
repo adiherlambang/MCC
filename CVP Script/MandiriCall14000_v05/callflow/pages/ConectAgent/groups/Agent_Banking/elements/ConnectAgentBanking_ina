@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<subdialog_return id="Element@93744046:1601902780269" name="ConnectAgentBanking_ina" version="6.0.1">
+<config>
+<settings>
+<setting name="caller_input">1</setting>
+<setting name="FromExtVXML0">BC,4={LocalVar.GenderNasabah},1={LocalVar.NamaNasabah},8={LocalVar.menu_services}</setting>
+<setting name="FromExtVXML1">ina,reg,2={LocalVar.NmbrCardDebit},6={LocalVar.SaldoForAgent} {LocalVar.CurrencyForAgent}</setting>
+<setting name="FromExtVXML2">3={LocalVar.pickRek},5={LocalVar.TempatTglLahirNasabah},10={LocalVar.EmailNasabah}</setting>
+<setting name="FromExtVXML3">7={LocalVar.LastTransDate1},{LocalVar.LastTransIndicator1},{LocalVar.LastTransAmount1}.{LocalVar.LastTransDate2},{LocalVar.LastTransIndicator2},{LocalVar.LastTransAmount2}.{LocalVar.LastTransDate3},{LocalVar.LastTransIndicator3},{LocalVar.LastTransAmount3}</setting>
+</settings>
+</config>
+</subdialog_return>

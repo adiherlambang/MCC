@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@23431669:1610128595615" name="LengthInputCard" version="6.0.1">
+<config>
+<settings>
+<setting name="inputcard_length">var card = {Data.Element.MainMenuInput16DIgit.value};
+
+var length = card.length;
+
+length</setting>
+<setting name="validation_input16card">var input = {Data.Element.MainMenuInput16DIgit.value};
+
+input.indexOf("*")</setting>
+</settings>
+</config>
+</action_element>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1624970185:1611719394819" name="CCPersonalInfoData_Fail" version="6.0.1">
+<config>
+<settings>
+<setting name="NamaNasabah">var result = "---";
+
+result</setting>
+<setting name="GenderNasabah">var result = "---";
+
+result</setting>
+<setting name="TempatTglLahirNasabah">var result = "---";
+
+result</setting>
+<setting name="AlamatNasabah">var result = "---";
+
+result</setting>
+</settings>
+</config>
+</action_element>

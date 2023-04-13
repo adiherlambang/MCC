@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1011059002:1605179461243" name="TypeD" version="6.0.1">
+<element height="46" id="Element@441448261:1605179228634" name="CurrTypeD1" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="111" x="410" y="99">
+<exit_states>
+<exit_state name="done" target="Element@2102605327:1605175141854"/>
+</exit_states>
+</element>
+<element height="46" id="Element@18381002:1605179257815" name="CurrTypeD2" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="111" x="413" y="186">
+<exit_states>
+<exit_state name="done" target="Element@2102605327:1605175141854"/>
+</exit_states>
+</element>
+<element height="46" id="Element@867466343:1605179266448" name="CurrTypeD3" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="111" x="418" y="267">
+<exit_states>
+<exit_state name="done" target="Element@2102605327:1605175141854"/>
+</exit_states>
+</element>
+<element height="46" id="Element@340053460:1605179280899" name="CurrTypeD4" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="111" x="427" y="362">
+<exit_states>
+<exit_state name="done" target="Element@2102605327:1605175141854"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2127443010:1605179461243" name="Group Start" type="Element Group Start" width="110" x="34" y="19">
+<exit_states>
+<exit_state name="Currency_2:False" target="Element@318850003:1605176455848"/>
+</exit_states>
+</element>
+<element height="46" id="Element@318850003:1605176455848" name="TypeD1" type="Decision" width="88" x="243" y="93">
+<exit_states>
+<exit_state name="False" target="Element@1151557760:1605176487798"/>
+<exit_state name="TypeD1" target="Element@441448261:1605179228634"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1151557760:1605176487798" name="TypeD2" type="Decision" width="88" x="247" y="202">
+<exit_states>
+<exit_state name="False" target="Element@620683751:1605179191606"/>
+<exit_state name="TypeD2" target="Element@18381002:1605179257815"/>
+</exit_states>
+</element>
+<element height="46" id="Element@620683751:1605179191606" name="TypeD3" type="Decision" width="88" x="263" y="316">
+<exit_states>
+<exit_state name="TypeD3" target="Element@867466343:1605179266448"/>
+<exit_state name="TypeD4" target="Element@340053460:1605179280899"/>
+</exit_states>
+</element>
+</page>

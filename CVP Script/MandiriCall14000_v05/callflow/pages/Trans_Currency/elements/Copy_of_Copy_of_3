@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@474914758:1605471328288" name="Copy_of_Copy_of_3" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Copy_of_Copy_of_3" default_exit_state="False">
+        <exit_state name="typeb" conjugate="and">
+            <string operator="contains">
+                <local_variable name="transCurrencyAccount" />
+                <constant_string value="b" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

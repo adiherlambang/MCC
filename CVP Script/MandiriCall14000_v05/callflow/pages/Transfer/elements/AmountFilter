@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1437424798:1605446721566" name="AmountFilter" version="6.0.1">
+<config>
+<settings>
+<setting name="amountTransfer">var input = {Data.Element.InputDigitTransfer.value};
+
+input</setting>
+<setting name="amountLastDigitTransfer">var input = {Data.Element.InputDigitTransfer.value};
+
+var len = input.length;
+
+var result = input.substring(len-2,len);
+
+result</setting>
+<setting name="amount">var input = {Data.Element.InputDigitTransfer.value};
+
+var len = input.length;
+
+var amount = input.substring(0,len-2);
+
+amount</setting>
+<setting name="amount_len">var input = {Data.Element.InputDigitTransfer.value};
+
+var len = input.length;
+
+len</setting>
+<setting name="validation_amount">var input = {Data.Element.InputDigitTransfer.value};
+
+input.indexOf("*")</setting>
+</settings>
+<element_data>
+<data create_when="After" name="amount" storable="true" type="Integer">{LocalVar.amountTransfer}</data>
+</element_data>
+</config>
+</action_element>

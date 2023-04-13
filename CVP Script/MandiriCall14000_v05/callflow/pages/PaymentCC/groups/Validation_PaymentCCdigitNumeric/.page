@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@820762093:1610891572801" name="Validation_PaymentCCdigitNumeric" version="6.0.1">
+<element height="46" id="Element@238444320:1610891672835" name="Audio_3xErrorPaymentCCdigit" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="211" x="429" y="322">
+<exit_states>
+<exit_state name="done" target="Element@557995221:1610891731406"/>
+</exit_states>
+</element>
+<element height="46" id="Element@540393429:1610891392700" name="Audio_ErrorPaymentCCdigit" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="199" x="498" y="119">
+<exit_states>
+<exit_state name="done" target="Element@891669748:1610891545876"/>
+</exit_states>
+</element>
+<element height="46" id="Element@891669748:1610891545876" name="Counter_ErrorPaymentCCdigit" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="210" x="80" y="125">
+<exit_states>
+<exit_state name="done" target="Element@1917452008:1610891566780"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1474384135:1610891572801" name="Group Start" type="Element Group Start" width="110" x="99" y="3">
+<exit_states>
+<exit_state name="Length_DigitCC:Valid" target="Element@188366785:1610891331527"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1917452008:1610891566780" name="Validation_Error3xPaymentCCdigit" type="Decision" width="231" x="216" y="240">
+<exit_states>
+<exit_state name="True" target="Element@238444320:1610891672835"/>
+<exit_state name="False" target="Element@1698077372:1610891733105"/>
+</exit_states>
+</element>
+<element height="46" id="Element@188366785:1610891331527" name="Validation_paymentCCdigit" type="Decision" width="194" x="494" y="5">
+<exit_states>
+<exit_state name="Valid" target="Element@428634044:1605882888814"/>
+<exit_state name="NotValid" target="Element@540393429:1610891392700"/>
+</exit_states>
+</element>
+</page>

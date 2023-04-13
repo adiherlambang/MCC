@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@324627534:1605449270696" name="ListAccount" version="6.0.1">
+<element height="46" id="Element@22956683:1605449270696" name="Group Start" type="Element Group Start" width="110" x="202" y="5">
+<exit_states>
+<exit_state name="RegisteredAccount:done" target="Element@186669482:1605448595398"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1664340125:1605449002975" name="ListAccountResponCode" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="180" x="8" y="213">
+<exit_states>
+<exit_state name="done" target="Element@1814364450:1608097212023"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1814364450:1608097212023" name="Log_ListAccount_Respon" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="182" x="285" y="212">
+<exit_states>
+<exit_state name="done" target="Element@2014305861:1605449031891"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@2014305861:1605449031891"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1820365508:1608096745579" name="Log_ListAccount_Status" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="175" x="530" y="117">
+<exit_states>
+<exit_state name="done" target="Element@898891888:1605448923693"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@898891888:1605448923693"/>
+</exit_states>
+</element>
+<element height="46" id="Element@587326306:1608096844925" name="Log_RESTbeneficiarylist" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="173" x="703" y="-91">
+<exit_states>
+<exit_state name="done" target="Element@1654089835:1608097148978">
+<bendpoint>
+<dim1 x="301" y="-12"/>
+<dim2 x="-91" y="-6"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@1955298108:1611907030338">
+<bendpoint>
+<dim1 x="402" y="-96"/>
+<dim2 x="-295" y="26"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="409" y="-86"/>
+<dim2 x="17" y="-80"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@186669482:1605448595398" name="REST_RegisteredAccount" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="180" x="525" y="7">
+<exit_states>
+<exit_state name="done" target="Element@1820365508:1608096745579"/>
+<exit_state name="Java Exception-Error_RESTbeneficiarylist" target="Element@587326306:1608096844925"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2014305861:1605449031891" name="ResponCode1ListAccount" type="Decision" width="186" x="572" y="214">
+<exit_states>
+<exit_state name="Success" target="Element@1796001678:1605449051377"/>
+<exit_state name="Fail" target="Element@1188664642:1605449017790"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1796001678:1605449051377" name="ResponCode2ListAccount" type="Decision" width="186" x="309" y="338">
+<exit_states>
+<exit_state name="Success" target="Element@850010497:1605449295807"/>
+<exit_state name="Fail" target="Element@1188664642:1605449017790">
+<bendpoint>
+<dim1 x="-159" y="64"/>
+<dim2 x="121" y="65"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@898891888:1605448923693" name="StatusCodeListAccount" type="Decision" width="173" x="165" y="117">
+<exit_states>
+<exit_state name="Success" target="Element@1664340125:1605449002975"/>
+<exit_state name="Fail" target="Element@1188664642:1605449017790">
+<bendpoint>
+<dim1 x="-153" y="-73"/>
+<dim2 x="127" y="-72"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+</page>

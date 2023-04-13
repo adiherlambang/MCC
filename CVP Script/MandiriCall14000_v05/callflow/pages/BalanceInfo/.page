@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@372908981:1602075478589" name="BalanceInfo" version="6.0.1">
+<element height="62" id="Element@643713280:1602075478589" name="BalanceInfo" type="Page Entry" width="174" x="-4" y="-666">
+<exit_states>
+<exit_state name="next" target="Element@1440892851:1605186591234"/>
+</exit_states>
+</element>
+<element height="62" id="Element@684350822:1602116338189" name="BalanceInfo" type="Page Connector" width="174" x="-582" y="335">
+<page_connector target="Element@643713280:1602075478589">BalanceInfo<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1485446714:1602116625286" name="BalanceInfo" type="Page Connector" width="174" x="1022" y="645">
+<page_connector target="Element@643713280:1602075478589">BalanceInfo<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@217853727:1608306006980" name="BalanceInfo" type="Page Connector" width="174" x="77" y="168">
+<page_connector target="Element@643713280:1602075478589">BalanceInfo<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@634646569:1602116045534" name="BalanceInfoDeposit" src="com.audium.server.voiceElement.menu.MFoundation7OptionMenu" type="Voice Element" width="256" x="-169" y="485">
+<exit_states>
+<exit_state name="option1" target="Element@1106325829:1602116538368"/>
+<exit_state name="option2" target="Element@1222358154:1602116455281"/>
+<exit_state name="option3" target="Element@913264484:1602116417417"/>
+<exit_state name="option4" target="Element@1072172975:1606066361419"/>
+<exit_state name="option5" target="Element@380967967:1602116365878"/>
+<exit_state name="option6" target="Element@684350822:1602116338189"/>
+<exit_state name="option7" target="Element@2055598558:1602116322334"/>
+<exit_state name="max_nomatch" target="Element@726587968:1602116578678"/>
+<exit_state name="max_noinput" target="Element@1463270171:1602116564001"/>
+<exit_state name="VXML Event-Error_NoResource" target="Element@217853727:1608306006980"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1090283304:1602116625286" name="BalanceInfoOthers" src="com.audium.server.voiceElement.menu.MFoundation7OptionMenu" type="Voice Element" width="287" x="575" y="411">
+<exit_states>
+<exit_state name="option1" target="Element@1478901919:1602116625286"/>
+<exit_state name="option2" target="Element@432416701:1602116625286"/>
+<exit_state name="option3" target="Element@677818000:1602116625286"/>
+<exit_state name="option4" target="Element@1710566599:1606066820149"/>
+<exit_state name="option5" target="Element@843222796:1602116625286"/>
+<exit_state name="option6" target="Element@1485446714:1602116625286"/>
+<exit_state name="option7" target="Element@1893282899:1602116625286"/>
+<exit_state name="max_nomatch" target="Element@109694857:1602116625287"/>
+<exit_state name="max_noinput" target="Element@538254952:1602116625287"/>
+</exit_states>
+</element>
+<element height="62" id="Element@643956198:1605189854594" name="BalanceInfoValue" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="232" x="549" y="188">
+<exit_states>
+<exit_state name="done" target="Element@2046645816:1602116008015"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1710566599:1606066820149" name="BalanceOther_PersonalOrCrop" type="Decision" width="369" x="623" y="605">
+<exit_states>
+<exit_state name="Banking" target="Element@287603531:1602116625286"/>
+<exit_state name="Corp" target="Element@815155548:1606066857979"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1811199677:1605189498498" name="BalanceResponCodeValue" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="324" x="951" y="-133">
+<exit_states>
+<exit_state name="done" target="Element@213927990:1608095240588"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1041281140:1605189693293" name="BalanceRsCode1" type="Decision" width="225" x="484" y="13">
+<exit_states>
+<exit_state name="Success" target="Element@2073825052:1605189707576"/>
+<exit_state name="Fail" target="Element@1973054830:1606222164194"/>
+</exit_states>
+</element>
+<element height="62" id="Element@2073825052:1605189707576" name="BalanceRsCode2" type="Decision" width="225" x="165" y="69">
+<exit_states>
+<exit_state name="Success" target="Element@643956198:1605189854594"/>
+<exit_state name="Fail" target="Element@1973054830:1606222164194"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1835641974:1605189680418" name="BalanceStatCode" type="Decision" width="228" x="463" y="-218">
+<exit_states>
+<exit_state name="Success" target="Element@1811199677:1605189498498"/>
+<exit_state name="Fail" target="Element@1973054830:1606222164194"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1072172975:1606066361419" name="Balance_PersonalOrCrop" type="Decision" width="308" x="-241" y="746">
+<exit_states>
+<exit_state name="Banking" target="Element@2101040848:1602116390209"/>
+<exit_state name="Corp" target="Element@323480299:1606066443361"/>
+</exit_states>
+</element>
+<element height="62" id="Element@323480299:1606066443361" name="BankingCorp" type="Page Connector" width="187" x="-160" y="943">
+<page_connector target="Element@1021000466:1604638203394">BankingCorp<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@815155548:1606066857979" name="BankingCorp" type="Page Connector" width="187" x="775" y="712">
+<page_connector target="Element@1021000466:1604638203394">BankingCorp<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@380967967:1602116365878" name="ConnectAgentBanking" type="Page Connector" width="289" x="-516" y="633">
+<page_connector target="Element@1497709728:1601902705927">ConnectAgentBanking<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@843222796:1602116625286" name="ConnectAgentBanking" type="Page Connector" width="289" x="959" y="732">
+<page_connector target="Element@1497709728:1601902705927">ConnectAgentBanking<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@2046645816:1602116008015" name="DepositoCheck" type="Decision" width="234" x="274" y="277">
+<exit_states>
+<exit_state name="true" target="Element@1090283304:1602116625286"/>
+<exit_state name="false" target="Element@634646569:1602116045534"/>
+</exit_states>
+</element>
+<element height="62" id="Element@913264484:1602116417417" name="EndCall" type="Page Connector" width="129" x="-737" y="454">
+<page_connector target="Element@89933654:1601904832032">EndCall<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@677818000:1602116625286" name="EndCall" type="Page Connector" width="144" x="405" y="684">
+<page_connector target="Element@89933654:1601904832032">EndCall<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1463270171:1602116564001" name="Error_NoInput" type="Page Connector" width="198" x="358" y="478">
+<page_connector target="Element@270910828:1610085311655">Error_NoInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@538254952:1602116625287" name="Error_NoInput" type="Page Connector" width="198" x="1010" y="374">
+<page_connector target="Element@270910828:1610085311655">Error_NoInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@726587968:1602116578678" name="Error_NoMatchInput" type="Page Connector" width="265" x="303" y="566">
+<page_connector target="Element@1250119072:1610085949630">Error_NoMatchInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@109694857:1602116625287" name="Error_NoMatchInput" type="Page Connector" width="265" x="998" y="289">
+<page_connector target="Element@1250119072:1610085949630">Error_NoMatchInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1175588783:1606222224978" name="Error_ServiceCorpBanking" type="Page Connector" width="323" x="-505" y="175">
+<page_connector target="Element@1921377354:1606221975604">Error_ServiceCorpBanking<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1544360540:1606222229724" name="Error_ServicePersonalBanking" type="Page Connector" width="361" x="-624" y="-129">
+<page_connector target="Element@498803718:1606206566215">Error_ServicePersonalBanking<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@660171804:1608094759233" name="Error_ServiceSOA" type="Page Connector" width="231" x="-577" y="-598">
+<page_connector target="Element@623071406:1607697419497">Error_ServiceSOA<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1973054830:1606222164194" name="Error_Services" type="Decision" width="196" x="23" y="-122">
+<exit_states>
+<exit_state name="Personal" target="Element@1544360540:1606222229724"/>
+<exit_state name="Corporate" target="Element@1175588783:1606222224978"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1222358154:1602116455281" name="Inquiry" type="Page Connector" width="124" x="-119" y="126">
+<page_connector target="Element@1898384436:1602047218567">Inquiry<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@432416701:1602116625286" name="Inquiry" type="Page Connector" width="159" x="1067" y="465">
+<page_connector target="Element@1898384436:1602047218567">Inquiry<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1106325829:1602116538368" name="Last5TransactionInfo" type="Page Connector" width="266" x="172" y="631">
+<page_connector target="Element@578369192:1602116871606">Last5TransactionInfo<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1478901919:1602116625286" name="Last5TransactionInfo" type="Page Connector" width="266" x="756" y="248">
+<page_connector target="Element@578369192:1602116871606">Last5TransactionInfo<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@213927990:1608095240588" name="Log_BalanceInquiry_Respon" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="343" x="937" y="-3">
+<exit_states>
+<exit_state name="done" target="Element@1041281140:1605189693293"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@1041281140:1605189693293">
+<bendpoint>
+<dim1 x="-168" y="58"/>
+<dim2 x="152" y="63"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@1172243742:1608095149481" name="Log_BalanceInquiry_status" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="327" x="424" y="-518">
+<exit_states>
+<exit_state name="done" target="Element@1835641974:1605189680418"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@1835641974:1605189680418">
+<bendpoint>
+<dim1 x="39" y="68"/>
+<dim2 x="163" y="-55"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@610083807:1608094770250" name="Log_REST_BalanceInfo" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="285" x="-607" y="-342">
+<exit_states>
+<exit_state name="done" target="Element@660171804:1608094759233"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@660171804:1608094759233"/>
+</exit_states>
+</element>
+<element height="62" id="Element@2055598558:1602116322334" name="MainMenu" type="Page Connector" width="167" x="-311" y="284">
+<page_connector target="Element@1865813345:1601897428297">MainMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1893282899:1602116625286" name="MainMenu" type="Page Connector" width="167" x="1022" y="562">
+<page_connector target="Element@1865813345:1601897428297">MainMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@2101040848:1602116390209" name="PersonalBankingAccInfo" type="Page Connector" width="304" x="-667" y="899">
+<page_connector target="Element@1117826334:1602046296646">PersonalBankingAccInfo<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@287603531:1602116625286" name="PersonalBankingAccInfo" type="Page Connector" width="304" x="566" y="751">
+<page_connector target="Element@1117826334:1602046296646">PersonalBankingAccInfo<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1440892851:1605186591234" name="REST_BalanceInfo" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="236" x="-41" y="-513">
+<exit_states>
+<exit_state name="done" target="Element@1172243742:1608095149481"/>
+<exit_state name="Java Exception-Error_RESTBalanceInquiry" target="Element@610083807:1608094770250"/>
+</exit_states>
+</element>
+</page>

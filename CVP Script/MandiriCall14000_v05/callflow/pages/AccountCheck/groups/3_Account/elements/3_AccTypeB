@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1949436440:1605102467227" name="3_AccTypeB" version="6.0.1">
+<config>
+<settings>
+<setting name="sound1">"MenuSaldoTabungan.wav"</setting>
+<setting name="sound2">"MenuSaldoGiro.wav"</setting>
+<setting name="sound3">"MenuSaldoDeposito.wav"</setting>
+<setting name="code1">var value="S";
+value</setting>
+<setting name="code2">var value="D";
+value</setting>
+<setting name="code3">var value="L";
+value</setting>
+</settings>
+</config>
+</action_element>

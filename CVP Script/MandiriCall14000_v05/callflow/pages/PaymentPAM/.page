@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@497780782:1603192048928" name="PaymentPAM" version="6.0.1">
+<element height="62" id="Element@423103158:1603194221768" name="NoInput" type="Page Connector" width="138" x="18" y="308">
+<page_connector target="Element@372874912:1601898931749">NoInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@665787345:1603194234871" name="NoMatchInput" type="Page Connector" width="205" x="170" y="75">
+<page_connector target="Element@982309222:1601898944005">NoMatchInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1356460291:1603193641639" name="PaymentMenuPAM" src="com.audium.server.voiceElement.menu.MFoundation3OptionMenu" type="Voice Element" width="253" x="126" y="189">
+<exit_states>
+<exit_state name="option1" target="Element@970070985:1603195584835"/>
+<exit_state name="option2" target="Element@970070985:1603195584835"/>
+<exit_state name="option3" target="Element@970070985:1603195584835"/>
+<exit_state name="max_nomatch" target="Element@665787345:1603194234871"/>
+<exit_state name="max_noinput" target="Element@423103158:1603194221768"/>
+</exit_states>
+</element>
+<element height="62" id="Element@2100862887:1603192048928" name="PaymentPAM" type="Page Entry" width="190" x="11" y="26">
+<exit_states>
+<exit_state name="next" target="Element@1356460291:1603193641639"/>
+</exit_states>
+</element>
+<element height="62" id="Element@970070985:1603195584835" name="PaymentPAMConfirmation" type="Page Connector" width="330" x="373" y="190">
+<page_connector target="Element@1635501075:1603195547883">PaymentPAMConfirmation<config/>
+</page_connector>
+</element>
+</page>

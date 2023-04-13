@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1324900919:1602119321251" name="Transfer" version="6.0.1">
+<element height="62" id="Element@1437424798:1605446721566" name="AmountFilter" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="189" x="321" y="76">
+<exit_states>
+<exit_state name="done" target="Element@1883409447:1610964497874"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1115522846:1602120098366" name="Cancel" src="com.audium.server.voiceElement.menu.MFoundation5OptionMenu" type="Voice Element" width="121" x="464" y="341">
+<exit_states>
+<exit_state name="option1" target="Element@1116318168:1602120311261"/>
+<exit_state name="option2" target="Element@451689350:1602120295620"/>
+<exit_state name="option3" target="Element@2107977605:1602120268277"/>
+<exit_state name="option4" target="Element@1065628552:1602120277717"/>
+<exit_state name="option5" target="Element@1065628552:1602120277717"/>
+<exit_state name="max_nomatch" target="Element@1006549226:1602120325189"/>
+<exit_state name="max_noinput" target="Element@379560807:1602120325189"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1116318168:1602120311261" name="ConnectAgentBanking" type="Page Connector" width="289" x="111" y="395">
+<page_connector target="Element@1497709728:1601902705927">ConnectAgentBanking<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1302282615:1602120463358" name="ConnectAgentBanking" type="Page Connector" width="289" x="1820" y="662">
+<page_connector target="Element@1497709728:1601902705927">ConnectAgentBanking<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@430860125:1610398130665" name="ConnectAgentBanking" type="Page Connector" width="289" x="-278" y="238">
+<page_connector target="Element@1497709728:1601902705927">ConnectAgentBanking<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@655138965:1602119798985" name="DigiTransferMenu" src="com.audium.server.voiceElement.menu.MFoundation5OptionMenu" type="Voice Element" width="240" x="613" y="245">
+<exit_states>
+<exit_state name="option1" target="Element@752775968:1605444967850"/>
+<exit_state name="option2" target="Element@1045286906:1602120057700"/>
+<exit_state name="option3" target="Element@1115522846:1602120098366"/>
+<exit_state name="option4" target="Element@1115522846:1602120098366"/>
+<exit_state name="option5" target="Element@1115522846:1602120098366"/>
+<exit_state name="max_nomatch" target="Element@28540514:1602120109826"/>
+<exit_state name="max_noinput" target="Element@1028741684:1602120109826"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1065628552:1602120277717" name="EndCall" type="Page Connector" width="129" x="392" y="499">
+<page_connector target="Element@89933654:1601904832032">EndCall<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@948407825:1609854340182" name="EndCall" type="Page Connector" width="129" x="1427" y="714">
+<page_connector target="Element@89933654:1601904832032">EndCall<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1270437352:1609854125531" name="Error_MenuTransfer" src="com.audium.server.voiceElement.menu.MFoundation2OptionMenu" type="Voice Element" width="257" x="355" y="-76">
+<exit_states>
+<exit_state name="option1" target="Element@1430914196:1609854125531"/>
+<exit_state name="option2" target="Element@539123406:1609854125531"/>
+<exit_state name="max_nomatch" target="Element@28540514:1602120109826"/>
+<exit_state name="max_noinput" target="Element@1028741684:1602120109826"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1028741684:1602120109826" name="Error_NoInput" type="Page Connector" width="198" x="975" y="11">
+<page_connector target="Element@270910828:1610085311655">Error_NoInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@379560807:1602120325189" name="Error_NoInput" type="Page Connector" width="198" x="673" y="383">
+<page_connector target="Element@270910828:1610085311655">Error_NoInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@882555829:1602120629275" name="Error_NoInput" type="Page Connector" width="198" x="1582" y="369">
+<page_connector target="Element@270910828:1610085311655">Error_NoInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@28540514:1602120109826" name="Error_NoMatchInput" type="Page Connector" width="265" x="544" y="72">
+<page_connector target="Element@1250119072:1610085949630">Error_NoMatchInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1006549226:1602120325189" name="Error_NoMatchInput" type="Page Connector" width="265" x="152" y="316">
+<page_connector target="Element@1250119072:1610085949630">Error_NoMatchInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1888533001:1602120629275" name="Error_NoMatchInput" type="Page Connector" width="265" x="1385" y="435">
+<page_connector target="Element@1250119072:1610085949630">Error_NoMatchInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1658897290:1610356297254" name="ExitOptionMenu" type="Page Connector" width="224" x="775" y="867">
+<page_connector target="Element@2112944412:1610627035755">ExitOptionMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1819036880:1605445514757" name="Error_ServiceSOA" type="Page Connector" width="231" x="1201" y="769">
+<page_connector target="Element@623071406:1607697419497">Error_ServiceSOA<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@292635797:1608095562191" name="Error_ServiceSOA" type="Page Connector" width="231" x="1339" y="75">
+<page_connector target="Element@623071406:1607697419497">Error_ServiceSOA<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1430914196:1609854125531" name="Error_Transfer" type="Page Connector" width="194" x="632" y="-282">
+<page_connector target="Element@1099982141:1609855704412">Error_Transfer<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1709597105:1605669586362" name="FromAccountTransfer" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="276" x="175" y="-801">
+<exit_states>
+<exit_state name="done" target="Element@566985076:1605669586362"/>
+</exit_states>
+</element>
+<element height="62" id="Element@863139924:1605676960056" name="FromAccountTransferOther" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="337" x="-306" y="-827">
+<exit_states>
+<exit_state name="done" target="Element@537705292:1605669859363"/>
+</exit_states>
+</element>
+<element height="62" id="Element@539123406:1609854125531" name="From_TransferMenu_Error" type="Page Connector" width="322" x="948" y="-206">
+<page_connector target="Element@2074293675:1609853862235">From_TransferMenu_Error<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@318837681:1602119623769" name="InputDigitTransfer" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="241" x="-41" y="112">
+<exit_states>
+<exit_state name="done" target="Element@1437424798:1605446721566"/>
+<exit_state name="max_nomatch" target="Element@430860125:1610398130665">
+<bendpoint>
+<dim1 x="-175" y="0"/>
+<dim2 x="39" y="-76"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_noinput" target="Element@430860125:1610398130665">
+<bendpoint>
+<dim1 x="4" y="79"/>
+<dim2 x="218" y="3"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@566985076:1605669586362" name="Inquiry" type="Page Connector" width="124" x="206" y="-626">
+<page_connector target="Element@1898384436:1602047218567">Inquiry<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@537705292:1605669859363" name="InquiryTransferOther" type="Page Connector" width="269" x="-368" y="-672">
+<page_connector target="Element@1826042868:1605448267758">InquiryTransferOther<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1047041270:1608095593742" name="Log_Transfer" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="183" x="1405" y="271">
+<exit_states>
+<exit_state name="done" target="Element@292635797:1608095562191"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@292635797:1608095562191"/>
+</exit_states>
+</element>
+<element height="62" id="Element@2107977605:1602120268277" name="MainMenu" type="Page Connector" width="167" x="557" y="477">
+<page_connector target="Element@1865813345:1601897428297">MainMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1902133386:1602120456591" name="MainMenu" type="Page Connector" width="167" x="1822" y="536">
+<page_connector target="Element@1865813345:1601897428297">MainMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@2085811279:1609854071502" name="MenuFlagTransfer" type="Decision" width="241" x="86" y="-321">
+<exit_states>
+<exit_state name="SameCard" target="Element@2087886472:1609854085993"/>
+<exit_state name="OtherCard" target="Element@2048630991:1609854085993"/>
+</exit_states>
+</element>
+<element height="62" id="Element@451689350:1602120295620" name="PersonalBanking" type="Page Connector" width="225" x="177" y="487">
+<page_connector target="Element@1566819678:1602039229515">PersonalBanking<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@415529435:1602120481882" name="PersonalBanking" type="Page Connector" width="225" x="1614" y="733">
+<page_connector target="Element@1566819678:1602039229515">PersonalBanking<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@752775968:1605444967850" name="ProccessTransfer" type="Element Group" width="224" x="999" y="446"/>
+<element height="62" id="Element@1045286906:1602120057700" name="ReEnterAmountTransfer" type="Page Connector" width="301" x="917" y="123">
+<page_connector target="Element@1316554172:1610398359293">ReEnterAmountTransfer<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1316554172:1610398359293" name="ReEnterAmountTransfer" type="Page Entry" width="301" x="-227" y="-46">
+<exit_states>
+<exit_state name="next" target="Element@318837681:1602119623769"/>
+</exit_states>
+</element>
+<element height="62" id="Element@660285563:1610448351061" name="ReEnterAmountTransfer" type="Page Connector" width="301" x="-197" y="395">
+<page_connector target="Element@1316554172:1610398359293">ReEnterAmountTransfer<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@569476788:1605447788740" name="ReferenceTransfer" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="240" x="1293" y="530">
+<exit_states>
+<exit_state name="done" target="Element@850689605:1610399034235"/>
+</exit_states>
+</element>
+<element height="62" id="Element@850689605:1610399034235" name="SuccessTransfer" src="com.audium.server.voiceElement.menu.MFoundation6OptionMenu" type="Voice Element" width="216" x="1556" y="587">
+<exit_states>
+<exit_state name="option1" target="Element@185470400:1602120499805"/>
+<exit_state name="option2" target="Element@1302282615:1602120463358"/>
+<exit_state name="option3" target="Element@415529435:1602120481882"/>
+<exit_state name="option4" target="Element@1902133386:1602120456591"/>
+<exit_state name="option5" target="Element@948407825:1609854340182"/>
+<exit_state name="option6" target="Element@850689605:1610399034235">
+<bendpoint>
+<dim1 x="0" y="48"/>
+<dim2 x="0" y="48"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="100" y="48"/>
+<dim2 x="100" y="48"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="100" y="0"/>
+<dim2 x="100" y="0"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_nomatch" target="Element@1888533001:1602120629275"/>
+<exit_state name="max_noinput" target="Element@882555829:1602120629275"/>
+</exit_states>
+</element>
+<element height="62" id="Element@185470400:1602120499805" name="Trans_Inquiry" type="Page Connector" width="189" x="1738" y="430">
+<page_connector target="Element@239805318:1603536635014">Trans_Inquiry<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@696792022:1602119321251" name="Transfer" type="Page Entry" width="134" x="-346" y="-1025">
+<exit_states>
+<exit_state name="next" target="Element@775471019:1605669859364"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1047964362:1609854008017" name="TransferMenuFlag" type="Decision" width="241" x="299" y="-1012">
+<exit_states>
+<exit_state name="SelectToAccount" target="Element@1590154117:1605669586362"/>
+<exit_state name="SelectFromAccount" target="Element@1709597105:1605669586362"/>
+</exit_states>
+</element>
+<element height="62" id="Element@775471019:1605669859364" name="TransferMenuFlagOther" type="Decision" width="302" x="-125" y="-1019">
+<exit_states>
+<exit_state name="True" target="Element@863139924:1605676960056"/>
+<exit_state name="False" target="Element@1047964362:1609854008017"/>
+</exit_states>
+</element>
+<element height="62" id="Element@344714901:1605669586362" name="TransferRek" type="Page Connector" width="172" x="647" y="-617">
+<page_connector target="Element@2083318994:1605670009393">TransferRek<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@2083318994:1605670009393" name="TransferRek" type="Page Entry" width="172" x="105" y="-437">
+<exit_states>
+<exit_state name="next" target="Element@2085811279:1609854071502"/>
+</exit_states>
+</element>
+<element height="62" id="Element@2048630991:1609854085993" name="TransferValueOther" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="253" x="-71" y="-183">
+<exit_states>
+<exit_state name="done" target="Element@1810155544:1605442708036"/>
+</exit_states>
+</element>
+<element height="62" id="Element@2087886472:1609854085993" name="TransferValueSameCard" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="300" x="218" y="-189">
+<exit_states>
+<exit_state name="done" target="Element@1810155544:1605442708036"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1810155544:1605442708036" name="ValidTransfer" type="Decision" width="185" x="121" y="-35">
+<exit_states>
+<exit_state name="True" target="Element@1270437352:1609854125531"/>
+<exit_state name="False" target="Element@318837681:1602119623769"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1883409447:1610964497874" name="Validation_AmountTransfer" type="Element Group" width="335" x="228" y="193"/>
+<element height="62" id="Element@1590154117:1605669586362" name="toAccountTransfer" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="243" x="685" y="-835">
+<exit_states>
+<exit_state name="done" target="Element@344714901:1605669586362"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1290532136:1611565836534" name="Error_Check_Transfer" type="Element Group" width="269" x="796" y="682"/>
+<element height="62" id="Element@644016625:1612756072928" name="Counter_InvalidTransfer" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="300" x="451" y="688">
+<exit_states>
+<exit_state name="done" target="Element@374946845:1612756127678"/>
+</exit_states>
+</element>
+<element height="62" id="Element@374946845:1612756127678" name="Decision_InvalidTransfer" type="Decision" width="305" x="183" y="749">
+<exit_states>
+<exit_state name="True" target="Element@978201295:1612756276774"/>
+<exit_state name="False" target="Element@1296242110:1612756241170"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1296242110:1612756241170" name="ReEnterAmountTransfer" type="Page Connector" width="301" x="22" y="652">
+<page_connector target="Element@1316554172:1610398359293">ReEnterAmountTransfer<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@978201295:1612756276774" name="Audio_ErrorInvalidTransfer3x" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="351" x="170" y="840">
+<exit_states>
+<exit_state name="done" target="Element@564335822:1612756434846"/>
+</exit_states>
+</element>
+<element height="62" id="Element@564335822:1612756434846" name="ExitOptionMenu" type="Page Connector" width="224" x="200" y="926">
+<page_connector target="Element@2112944412:1610627035755">ExitOptionMenu<config/>
+</page_connector>
+</element>
+</page>

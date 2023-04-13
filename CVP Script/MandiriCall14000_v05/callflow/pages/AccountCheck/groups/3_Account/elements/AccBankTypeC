@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@799921442:1605100256537" name="AccBankTypeC" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="AccBankTypeC" default_exit_state="b4">
+        <exit_state name="b3" conjugate="and">
+            <string operator="equal">
+                <local_variable name="IndexAccountType" />
+                <constant_string value="b3" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

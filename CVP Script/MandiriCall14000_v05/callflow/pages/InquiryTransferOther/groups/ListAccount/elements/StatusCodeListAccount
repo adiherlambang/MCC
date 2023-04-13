@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@898891888:1605448923693" name="StatusCodeListAccount" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="StatusCodeListAccount" default_exit_state="Fail">
+        <exit_state name="Success" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <element name="REST_RegisteredAccount" variable="status_code" />
+                </data>
+                <constant_string value="200" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

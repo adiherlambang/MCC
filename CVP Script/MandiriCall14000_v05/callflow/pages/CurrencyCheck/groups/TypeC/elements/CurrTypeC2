@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1534513484:1605174664426" name="CurrTypeC2" version="6.0.1">
+<config>
+<settings>
+<setting name="soundType1">"Rupiah.wav"</setting>
+<setting name="soundType2">"HKD.wav"</setting>
+<setting name="codeType1">"IDR"</setting>
+<setting name="codeType2">"HKD"</setting>
+</settings>
+</config>
+</action_element>

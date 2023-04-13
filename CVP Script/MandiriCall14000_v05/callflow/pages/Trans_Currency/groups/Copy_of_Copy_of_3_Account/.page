@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@2711460:1605471328289" name="Copy_of_Copy_of_3_Account" version="6.0.1">
+<element height="46" id="Element@510199522:1605471328289" name="Copy_of_Copy_of_3_AccTypeD" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="211" x="343" y="414">
+<exit_states>
+<exit_state name="done" target="Element@506484842:1605471328288"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1254139983:1605471328289" name="Copy_of_Trans_3_AccTypeB1" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="199" x="345" y="140">
+<exit_states>
+<exit_state name="done" target="Element@506484842:1605471328288"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1117274221:1605471328289" name="Copy_of_Trans_3_AccTypeB2" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="199" x="355" y="231">
+<exit_states>
+<exit_state name="done" target="Element@506484842:1605471328288"/>
+</exit_states>
+</element>
+<element height="46" id="Element@598323181:1605471328289" name="Copy_of_Trans_3_AccTypeB3" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="199" x="346" y="321">
+<exit_states>
+<exit_state name="done" target="Element@506484842:1605471328288"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1164144057:1605471328289" name="Copy_of_Trans_AccBankTypeB1" type="Decision" width="214" x="100" y="185">
+<exit_states>
+<exit_state name="False" target="Element@1417129716:1605471328289"/>
+<exit_state name="b1" target="Element@1254139983:1605471328289"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1417129716:1605471328289" name="Copy_of_Trans_AccBankTypeB2" type="Decision" width="214" x="109" y="273">
+<exit_states>
+<exit_state name="False" target="Element@482927394:1605471328289"/>
+<exit_state name="b2" target="Element@1117274221:1605471328289"/>
+</exit_states>
+</element>
+<element height="46" id="Element@482927394:1605471328289" name="Copy_of_Trans_AccBankTypeB3" type="Decision" width="214" x="98" y="361">
+<exit_states>
+<exit_state name="b3" target="Element@598323181:1605471328289"/>
+<exit_state name="b4" target="Element@510199522:1605471328289"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1016421786:1605471328289" name="Group Start" type="Element Group Start" width="110" x="150" y="47">
+<exit_states>
+<exit_state name="Copy_of_Copy_of_3:typeb" target="Element@1164144057:1605471328289"/>
+</exit_states>
+</element>
+</page>

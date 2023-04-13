@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1477459884:1603206523016" name="PAMConfirmation" version="6.0.1">
+<element height="62" id="Element@885274168:1603206585184" name="ConnectAgentStaff" type="Page Connector" width="251" x="475" y="31">
+<page_connector target="Element@1100459976:1601902754803">ConnectAgentStaff<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1698371518:1603206585184" name="EndCall" type="Page Connector" width="129" x="564" y="148">
+<page_connector target="Element@89933654:1601904832032">EndCall<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1341352359:1603206585184" name="Konfirmasi3" src="com.audium.server.voiceElement.menu.MFoundation7OptionMenu" type="Voice Element" width="175" x="199" y="189">
+<exit_states>
+<exit_state name="option1" target="Element@405973770:1603206688243"/>
+<exit_state name="option2" target="Element@405973770:1603206688243"/>
+<exit_state name="option3" target="Element@885274168:1603206585184"/>
+<exit_state name="option4" target="Element@1698371518:1603206585184"/>
+<exit_state name="option5" target="Element@1442667438:1603206585184"/>
+<exit_state name="option6" target="Element@1757814856:1603206585184"/>
+<exit_state name="option7" target="Element@309406534:1603206637129"/>
+<exit_state name="max_nomatch" target="Element@1854275891:1603206718724"/>
+<exit_state name="max_noinput" target="Element@1374502443:1603206716674"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1442667438:1603206585184" name="MainMenu" type="Page Connector" width="167" x="595" y="238">
+<page_connector target="Element@1865813345:1601897428297">MainMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1374502443:1603206716674" name="NoInput" type="Page Connector" width="138" x="34" y="256">
+<page_connector target="Element@372874912:1601898931749">NoInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1854275891:1603206718724" name="NoMatchInput" type="Page Connector" width="205" x="100" y="342">
+<page_connector target="Element@982309222:1601898944005">NoMatchInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1375638903:1603206523016" name="PAMConfirmation" type="Page Entry" width="238" x="20" y="52">
+<exit_states>
+<exit_state name="next" target="Element@1341352359:1603206585184"/>
+</exit_states>
+</element>
+<element height="62" id="Element@309406534:1603206637129" name="PAMConfirmation" type="Page Connector" width="238" x="265" y="402">
+<page_connector target="Element@1375638903:1603206523016">PAMConfirmation<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1757814856:1603206585184" name="PaymentPAM" type="Page Connector" width="190" x="522" y="336">
+<page_connector target="Element@2100862887:1603192048928">PaymentPAM<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@405973770:1603206688243" name="PaymentPAM" type="Page Connector" width="190" x="189" y="21">
+<page_connector target="Element@2100862887:1603192048928">PaymentPAM<config/>
+</page_connector>
+</element>
+</page>

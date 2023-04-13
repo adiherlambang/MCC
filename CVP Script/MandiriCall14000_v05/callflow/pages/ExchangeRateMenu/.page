@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@837860667:1601901904621" name="ExchangeRateMenu" version="6.0.1">
+<element height="62" id="Element@1724929522:1601906204595" name="ConnectAgentStaff" type="Page Connector" width="251" x="46" y="50">
+<page_connector target="Element@1100459976:1601902754803">ConnectAgentStaff<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1845901092:1610297023680" name="Error_NoInput" type="Page Connector" width="198" x="64" y="199">
+<page_connector target="Element@270910828:1610085311655">Error_NoInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1247614772:1610297023680" name="Error_NoMatchInput" type="Page Connector" width="265" x="184" y="-8">
+<page_connector target="Element@1250119072:1610085949630">Error_NoMatchInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1145360343:1601906153238" name="ExchangeInterestMenu" type="Page Connector" width="294" x="640" y="208">
+<page_connector target="Element@470100203:1601899151411">ExchangeInterestMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@359458440:1601906295747" name="ExchangeRateInfo" type="Page Connector" width="240" x="192" y="323">
+<page_connector target="Element@1721500301:1601906272695">ExchangeRateInfo<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1368066083:1601901904621" name="ExchangeRateMenu" type="Page Entry" width="261" x="370" y="-10">
+<exit_states>
+<exit_state name="next" target="Element@662196755:1601905893769"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1969367361:1601906118633" name="ExchangeRateMenu" type="Page Connector" width="261" x="647" y="134">
+<page_connector target="Element@1368066083:1601901904621">ExchangeRateMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@662196755:1601905893769" name="ExchangeRateMenuOption" src="com.audium.server.voiceElement.menu.MFoundation10OptionMenu" type="Voice Element" width="335" x="296" y="171">
+<exit_states>
+<exit_state name="option1" target="Element@359458440:1601906295747"/>
+<exit_state name="option2" target="Element@359458440:1601906295747"/>
+<exit_state name="option3" target="Element@359458440:1601906295747"/>
+<exit_state name="option4" target="Element@359458440:1601906295747"/>
+<exit_state name="option5" target="Element@359458440:1601906295747"/>
+<exit_state name="option6" target="Element@2138876774:1601906354198"/>
+<exit_state name="option7" target="Element@1724929522:1601906204595">
+<bendpoint>
+<dim1 x="-163" y="-75"/>
+<dim2 x="44" y="90"/>
+</bendpoint>
+</exit_state>
+<exit_state name="option8" target="Element@1145360343:1601906153238"/>
+<exit_state name="option9" target="Element@1206971812:1601906133756"/>
+<exit_state name="option10" target="Element@1969367361:1601906118633"/>
+<exit_state name="max_nomatch" target="Element@1247614772:1610297023680"/>
+<exit_state name="max_noinput" target="Element@1845901092:1610297023680"/>
+</exit_states>
+</element>
+<element height="62" id="Element@2138876774:1601906354198" name="ExchangeRateMenuOthers" type="Page Connector" width="332" x="450" y="327">
+<page_connector target="Element@2037359303:1601963613893">ExchangeRateMenuOthers<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1206971812:1601906133756" name="MainMenu" type="Page Connector" width="204" x="624" y="40">
+<page_connector target="Element@1865813345:1601897428297">MainMenu<config/>
+</page_connector>
+</element>
+</page>

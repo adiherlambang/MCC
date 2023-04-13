@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@727432452:1610619521757" name="Check_ErrorCC" version="6.0.1">
+<element height="46" id="Element@308192031:1610619460976" name="Audio_Error3xCC" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="140" x="525" y="51">
+<exit_states>
+<exit_state name="done" target="Element@1658991135:1610619420938"/>
+</exit_states>
+</element>
+<element height="46" id="Element@65872533:1610619306293" name="Counter_ErrorCC" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="139" x="322" y="255">
+<exit_states>
+<exit_state name="done" target="Element@535081975:1610619342788"/>
+</exit_states>
+</element>
+<element height="46" id="Element@535081975:1610619342788" name="Decision_3x_errorCC" type="Decision" width="158" x="362" y="138">
+<exit_states>
+<exit_state name="True" target="Element@308192031:1610619460976"/>
+<exit_state name="False" target="Element@1974807729:1610619375585"/>
+</exit_states>
+</element>
+<element height="46" id="Element@884180444:1610619521757" name="Group Start" type="Element Group Start" width="110" x="42" y="75">
+<exit_states>
+<exit_state name="Audio_errorNumbrCard:done" target="Element@65872533:1610619306293"/>
+</exit_states>
+</element>
+</page>

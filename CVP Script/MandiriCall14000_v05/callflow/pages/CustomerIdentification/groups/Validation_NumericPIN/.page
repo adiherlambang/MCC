@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@841636101:1610877269416" name="Validation_NumericPIN" version="6.0.1">
+<element height="46" id="Element@291981718:1610877210155" name="Audio_3xNotValidPIN" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="163" x="220" y="169">
+<exit_states>
+<exit_state name="done" target="Element@1649125687:1610877175852"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2016315109:1610877073549" name="Audio_PINnotValid" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="149" x="305" y="-112">
+<exit_states>
+<exit_state name="done" target="Element@2007108606:1610877089434"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2007108606:1610877089434" name="Counter_PINnotValid" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="160" x="290" y="8">
+<exit_states>
+<exit_state name="done" target="Element@1104383789:1610877111782"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1104383789:1610877111782" name="Decision_3xNotValid" type="Decision" width="157" x="-40" y="77">
+<exit_states>
+<exit_state name="True" target="Element@291981718:1610877210155"/>
+<exit_state name="False" target="Element@652282012:1610877162896"/>
+</exit_states>
+</element>
+<element height="46" id="Element@145070679:1610877269416" name="Group Start" type="Element Group Start" width="110" x="-218" y="-143">
+<exit_states>
+<exit_state name="CheckLengthPIN:done" target="Element@1928184390:1610877003041"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1928184390:1610877003041" name="Validation_pinDebit" type="Decision" width="152" x="-91" y="-39">
+<exit_states>
+<exit_state name="Valid" target="Element@966697647:1604927480174"/>
+<exit_state name="NotValid" target="Element@2016315109:1610877073549"/>
+</exit_states>
+</element>
+</page>

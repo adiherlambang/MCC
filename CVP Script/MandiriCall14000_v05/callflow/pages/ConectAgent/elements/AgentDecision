@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1080530667:1610627303975" name="AgentDecision" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="AgentDecision" default_exit_state="AgentStaff">
+        <exit_state name="AgentDebit" conjugate="and">
+            <string operator="equal">
+                <local_variable name="MenuLogInIVR" />
+                <constant_string value="BANKING" />
+            </string>
+        </exit_state>
+        <exit_state name="AgentCredit" conjugate="and">
+            <string operator="equal">
+                <local_variable name="MenuLogInIVR" />
+                <constant_string value="CREDIT CARD" />
+            </string>
+        </exit_state>
+        <exit_state name="AgentPerusahaan" conjugate="and">
+            <string operator="equal">
+                <local_variable name="MenuLogInIVR" />
+                <constant_string value="PERUSAHAAN" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

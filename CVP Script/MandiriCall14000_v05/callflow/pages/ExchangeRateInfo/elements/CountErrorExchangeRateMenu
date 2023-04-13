@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@866645998:1604681872130" name="CountErrorExchangeRateMenu" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule default_exit_state="False" name="Decision_03">
+        <exit_state conjugate="and" name="True">
+            <number operator="greater">
+                <data>
+                    <element name="ExchangeRateFailCount" variable="count"/>
+                </data>
+                <constant_number value="2"/>
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>
+]]></source>
+</config>
+</decision>

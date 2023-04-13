@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@418623258:1605764581470" name="PrefixPhone" version="6.0.1">
+<config>
+<settings>
+<setting name="ProcessedPhoneNumber">var nmbr = {Data.Element.DigitPhone.value}.replace("#",'');
+var newNumber = nmbr;
+var prefix2d = nmbr.substring(0,2);
+
+if (prefix2d =="02"){
+	if(nmbr.substring(2,3)=="1" || nmbr.substring(2,3)=="2" || nmbr.substring(2,3)=="4"){
+		newNumber =	0+nmbr;
+	}else{
+		newNumber =	nmbr;
+	}
+}else if(prefix2d =="03" ){
+	if(nmbr.substring(2,3)=="1"){
+		newNumber =	0+nmbr;
+	}else{
+		newNumber =	nmbr;
+	}
+}else if(prefix2d =="06" ){
+	if(nmbr.substring(2,3)=="1"){
+		newNumber =	0+nmbr;
+	}else{
+		newNumber =	nmbr;
+	}
+}
+else{
+	newNumber =	nmbr;
+}
+
+newNumber</setting>
+<setting name="prefixPhoneNmbr">var newNumber = {LocalVar.ProcessedPhoneNumber};
+
+var prefix = newNumber.substring(0,4);
+
+prefix</setting>
+<setting name="PhoneNumber">var phone = {Data.Element.DigitPhone.value};
+
+phone</setting>
+<setting name="validation_phone">var phone = {Data.Element.DigitPhone.value};
+
+phone.indexOf("*")</setting>
+</settings>
+<element_data>
+<data create_when="After" name="prefix" storable="true" type="String">{LocalVar.prefixPhoneNmbr}</data>
+</element_data>
+</config>
+</action_element>

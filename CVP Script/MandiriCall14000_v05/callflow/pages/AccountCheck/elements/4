@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1815852694:1605086655007" name="4" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="4" default_exit_state="False">
+        <exit_state name="True" conjugate="and">
+            <string operator="equal">
+                <local_variable name="IndexAccountType" />
+                <constant_string value="a" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

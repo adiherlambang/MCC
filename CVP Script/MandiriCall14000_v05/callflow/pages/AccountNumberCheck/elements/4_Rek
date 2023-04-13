@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1932824974:1605268707459" name="4_Rek" version="6.0.1">
+<config>
+<settings>
+<setting name="Rek_1">importPackage(com.audium.server.cvpUtil);
+var index = new Array();
+var data = {Data.Element.REST_DebitCard.response_body};
+var path1,path2,path3,i,result,result2,result3;
+
+for (i=0; i&lt; {LocalVar.IndexAccount}; i++)
+{
+	path2 = "$signOnInfo.customerDetail.accounts["+i+"].accountType";
+	result2 = JSONPathUtil.eval(data,path2);
+	if( result2 == {LocalVar.pick} )
+	{
+		path = "$signOnInfo.customerDetail.accounts["+i+"].currency";
+		result = JSONPathUtil.eval(data,path);
+		if (result =={LocalVar.pickCurrency} ){
+			path3 = "$signOnInfo.customerDetail.accounts["+i+"].accountNumber";
+			result3 = JSONPathUtil.eval(data,path3);
+			index.push(result3);
+		}	
+	}	
+}
+
+
+index[0]</setting>
+<setting name="Rek_2">importPackage(com.audium.server.cvpUtil);
+var index = new Array();
+var data = {Data.Element.REST_DebitCard.response_body};
+var path1,path2,path3,i,result,result2,result3;
+
+for (i=0; i&lt; {LocalVar.IndexAccount}; i++)
+{
+	path2 = "$signOnInfo.customerDetail.accounts["+i+"].accountType";
+	result2 = JSONPathUtil.eval(data,path2);
+	if( result2 == {LocalVar.pick} )
+	{
+		path = "$signOnInfo.customerDetail.accounts["+i+"].currency";
+		result = JSONPathUtil.eval(data,path);
+		if (result =={LocalVar.pickCurrency} ){
+			path3 = "$signOnInfo.customerDetail.accounts["+i+"].accountNumber";
+			result3 = JSONPathUtil.eval(data,path3);
+			index.push(result3);
+		}	
+	}	
+}
+
+index[1]</setting>
+<setting name="lastRek1">importPackage(com.audium.server.cvpUtil);
+var index = new Array();
+var data = {Data.Element.REST_DebitCard.response_body};
+var path1,path2,path3,i,result,result2,result3;
+
+for (i=0; i&lt; {LocalVar.IndexAccount}; i++)
+{
+	path2 = "$signOnInfo.customerDetail.accounts["+i+"].accountType";
+	result2 = JSONPathUtil.eval(data,path2);
+	if( result2 == {LocalVar.pick} )
+	{
+		path = "$signOnInfo.customerDetail.accounts["+i+"].currency";
+		result = JSONPathUtil.eval(data,path);
+		if (result =={LocalVar.pickCurrency} ){
+			path3 = "$signOnInfo.customerDetail.accounts["+i+"].lastDigit";
+			result3 = JSONPathUtil.eval(data,path3);
+			index.push(result3);
+		}	
+	}	
+}
+
+
+index[0]</setting>
+<setting name="lastRek2">importPackage(com.audium.server.cvpUtil);
+var index = new Array();
+var data = {Data.Element.REST_DebitCard.response_body};
+var path1,path2,path3,i,result,result2,result3;
+
+for (i=0; i&lt;  {LocalVar.IndexAccount}; i++)
+{
+	path2 = "$signOnInfo.customerDetail.accounts["+i+"].accountType";
+	result2 = JSONPathUtil.eval(data,path2);
+	if( result2 == {LocalVar.pick} )
+	{
+		path = "$signOnInfo.customerDetail.accounts["+i+"].currency";
+		result = JSONPathUtil.eval(data,path);
+		if (result =={LocalVar.pickCurrency} ){
+			path3 = "$signOnInfo.customerDetail.accounts["+i+"].lastDigit";
+			result3 = JSONPathUtil.eval(data,path3);
+			index.push(result3);
+		}	
+	}	
+}
+
+
+index[1]</setting>
+<setting name="Rek_3">importPackage(com.audium.server.cvpUtil);
+var index = new Array();
+var data = {Data.Element.REST_DebitCard.response_body};
+var path1,path2,path3,i,result,result2,result3;
+
+for (i=0; i&lt; {LocalVar.IndexAccount}; i++)
+{
+	path2 = "$signOnInfo.customerDetail.accounts["+i+"].accountType";
+	result2 = JSONPathUtil.eval(data,path2);
+	if( result2 == {LocalVar.pick} )
+	{
+		path = "$signOnInfo.customerDetail.accounts["+i+"].currency";
+		result = JSONPathUtil.eval(data,path);
+		if (result =={LocalVar.pickCurrency} ){
+			path3 = "$signOnInfo.customerDetail.accounts["+i+"].accountNumber";
+			result3 = JSONPathUtil.eval(data,path3);
+			index.push(result3);
+		}	
+	}	
+}
+
+index[2]</setting>
+<setting name="lastRek3">importPackage(com.audium.server.cvpUtil);
+var index = new Array();
+var data = {Data.Element.REST_DebitCard.response_body};
+var path1,path2,path3,i,result,result2,result3;
+
+for (i=0; i&lt;  {LocalVar.IndexAccount}; i++)
+{
+	path2 = "$signOnInfo.customerDetail.accounts["+i+"].accountType";
+	result2 = JSONPathUtil.eval(data,path2);
+	if( result2 == {LocalVar.pick} )
+	{
+		path = "$signOnInfo.customerDetail.accounts["+i+"].currency";
+		result = JSONPathUtil.eval(data,path);
+		if (result =={LocalVar.pickCurrency} ){
+			path3 = "$signOnInfo.customerDetail.accounts["+i+"].lastDigit";
+			result3 = JSONPathUtil.eval(data,path3);
+			index.push(result3);
+		}	
+	}	
+}
+
+
+index[2]</setting>
+<setting name="Rek_4">importPackage(com.audium.server.cvpUtil);
+var index = new Array();
+var data = {Data.Element.REST_DebitCard.response_body};
+var path1,path2,path3,i,result,result2,result3;
+
+for (i=0; i&lt;  {LocalVar.IndexAccount}; i++)
+{
+	path2 = "$signOnInfo.customerDetail.accounts["+i+"].accountType";
+	result2 = JSONPathUtil.eval(data,path2);
+	if( result2 == {LocalVar.pick} )
+	{
+		path = "$signOnInfo.customerDetail.accounts["+i+"].currency";
+		result = JSONPathUtil.eval(data,path);
+		if (result =={LocalVar.pickCurrency} ){
+			path3 = "$signOnInfo.customerDetail.accounts["+i+"].accountNumber";
+			result3 = JSONPathUtil.eval(data,path3);
+			index.push(result3);
+		}	
+	}	
+}
+
+index[3]</setting>
+<setting name="lastRek4">importPackage(com.audium.server.cvpUtil);
+var index = new Array();
+var data = {Data.Element.REST_DebitCard.response_body};
+var path1,path2,path3,i,result,result2,result3;
+
+for (i=0; i&lt;  {LocalVar.IndexAccount}; i++)
+{
+	path2 = "$signOnInfo.customerDetail.accounts["+i+"].accountType";
+	result2 = JSONPathUtil.eval(data,path2);
+	if( result2 == {LocalVar.pick} )
+	{
+		path = "$signOnInfo.customerDetail.accounts["+i+"].currency";
+		result = JSONPathUtil.eval(data,path);
+		if (result =={LocalVar.pickCurrency} ){
+			path3 = "$signOnInfo.customerDetail.accounts["+i+"].lastDigit";
+			result3 = JSONPathUtil.eval(data,path3);
+			index.push(result3);
+		}	
+	}	
+}
+
+
+index[3]</setting>
+</settings>
+</config>
+</action_element>

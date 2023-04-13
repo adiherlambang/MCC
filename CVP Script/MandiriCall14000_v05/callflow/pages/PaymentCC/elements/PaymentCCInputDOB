@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1909632298:1610707409376" name="PaymentCCInputDOB" version="6.0.1">
+<config>
+<settings>
+<setting name="PaymentCC_InputDOB">var dob = {Data.Element.InputDigitDOB.value};
+
+var dd = dob.substring(0,2);
+
+var mm = dob.substring(2,4);
+
+var yy = dob.substring(4,6);
+
+var result = yy+mm+dd;
+
+result
+</setting>
+<setting name="validation_paymentCCDOB">var input = {Data.Element.InputDigitDOB.value};
+
+input.indexOf("*")</setting>
+</settings>
+</config>
+</action_element>

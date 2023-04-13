@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1556467437:1602120801761" name="PersonalBankingPaymenFlag" version="6.0.1">
+<config>
+<settings>
+<setting name="value">var str = "";</setting>
+</settings>
+<element_data>
+<data create_when="Before" name="value" storable="false" type="String">True</data>
+</element_data>
+</config>
+<skipped exit_state="done"/>
+</action_element>

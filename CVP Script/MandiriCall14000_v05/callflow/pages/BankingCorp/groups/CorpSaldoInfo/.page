@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1602219271:1606061040993" name="CorpSaldoInfo" version="6.0.1">
+<element height="46" id="Element@2087296042:1606219147566" name="Copy_of_SaldoValue" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="156" x="235" y="61">
+<exit_states>
+<exit_state name="done" target="Element@1424433061:1606061014528"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1664750511:1608713387394" name="CorpSaldoGiro" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="137" x="436" y="233">
+<exit_states>
+<exit_state name="done" target="Element@331795079:1606059267083">
+<bendpoint>
+<dim1 x="-235" y="26"/>
+<dim2 x="186" y="81"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1768247972:1606061014528" name="CorpSaldoLoan" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="154" x="238" y="317">
+<exit_states>
+<exit_state name="done" target="Element@331795079:1606059267083">
+<bendpoint>
+<dim1 x="-230" y="-8"/>
+<dim2 x="191" y="47"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@731385222:1606061014528" name="CorpSaldoSaving" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="163" x="18" y="249">
+<exit_states>
+<exit_state name="done" target="Element@331795079:1606059267083">
+<bendpoint>
+<dim1 x="-183" y="-46"/>
+<dim2 x="238" y="9"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1424433061:1606061014528" name="Corp_TypeCard" type="Decision" width="148" x="240" y="138">
+<exit_states>
+<exit_state name="SAVING" target="Element@731385222:1606061014528"/>
+<exit_state name="LOAN" target="Element@1768247972:1606061014528"/>
+<exit_state name="GIRO" target="Element@1664750511:1608713387394"/>
+</exit_states>
+</element>
+<element default_entry="true" height="46" id="Element@1444082923:1606061040993" name="Group Start" type="Element Group Start" width="110" x="247" y="-14">
+<exit_states>
+<exit_state name="entry" target="Element@2087296042:1606219147566"/>
+</exit_states>
+</element>
+</page>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1386327529:1605174831635" name="CurrTypeC5" version="6.0.1">
+<config>
+<settings>
+<setting name="soundType1">"HKD.wav"</setting>
+<setting name="soundType2">"SGD.wav"</setting>
+<setting name="codeType1">"HKD"</setting>
+<setting name="codeType2">"SGD"</setting>
+</settings>
+</config>
+</action_element>

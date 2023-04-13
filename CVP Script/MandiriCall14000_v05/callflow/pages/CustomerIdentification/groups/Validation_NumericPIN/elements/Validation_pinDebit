@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1928184390:1610877003041" name="Validation_pinDebit" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Validation_pinDebit" default_exit_state="NotValid">
+        <exit_state name="Valid" conjugate="and">
+            <number operator="less">
+                <local_variable name="validation_pinDebit" />
+                <constant_number value="0" />
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

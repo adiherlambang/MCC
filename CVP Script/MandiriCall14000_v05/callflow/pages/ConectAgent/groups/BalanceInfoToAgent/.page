@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@2091503185:1605612305965" name="BalanceInfoToAgent" version="6.0.1">
+<element height="62" id="Element@1753514583:1605612261529" name="AgentBalanceRespon1" type="Decision" width="287" x="352" y="97">
+<exit_states>
+<exit_state name="Success" target="Element@1637624236:1605612292920"/>
+<exit_state name="Fail" target="Element@2097765816:1605612543429">
+<bendpoint>
+<dim1 x="-87" y="91"/>
+<dim2 x="-81" y="-156"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@1637624236:1605612292920" name="AgentBalanceRespon2" type="Decision" width="287" x="352" y="245">
+<exit_states>
+<exit_state name="Success" target="Element@1769323630:1605612477898"/>
+<exit_state name="Fail" target="Element@2097765816:1605612543429">
+<bendpoint>
+<dim1 x="82" y="180"/>
+<dim2 x="88" y="-67"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@227987858:1605611801002" name="AgentBalanceStatus" type="Decision" width="260" x="65" y="104">
+<exit_states>
+<exit_state name="Success" target="Element@1468026209:1605611852265"/>
+<exit_state name="Fail" target="Element@2097765816:1605612543429">
+<bendpoint>
+<dim1 x="70" y="147"/>
+<dim2 x="76" y="-100"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@1468026209:1605611852265" name="BalanceToAgentRC" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="250" x="68" y="219">
+<exit_states>
+<exit_state name="done" target="Element@1753514583:1605612261529"/>
+</exit_states>
+</element>
+<element height="62" id="Element@722517:1605612305965" name="Group Start" type="Element Group Start" width="171" x="45" y="-25">
+<exit_states>
+<exit_state name="BacktoAgent:next" target="Element@1989595244:1605611764928"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1989595244:1605611764928" name="REST_BalanceToAgent" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="283" x="269" y="-15">
+<exit_states>
+<exit_state name="done" target="Element@227987858:1605611801002"/>
+<exit_state name="Java Exception-REST_BalanceInquiryError" target="Element@2097765816:1605612543429">
+<bendpoint>
+<dim1 x="-104" y="231"/>
+<dim2 x="-98" y="-16"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+</page>

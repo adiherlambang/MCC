@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@221954683:1601899003776" name="BlockingCard" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="BlockingCard" default_exit_state="else">
+        <exit_state name="BlockingCard" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <element name="MainMenuInput16DIgit" variable="value" />
+                </data>
+                <constant_string value="1" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

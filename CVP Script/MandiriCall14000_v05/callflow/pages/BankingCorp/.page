@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1085039239:1604638143351" name="BankingCorp" version="6.0.1">
+<element height="62" id="Element@1021000466:1604638203394" name="BankingCorp" type="Page Entry" width="187" x="-176" y="-948">
+<exit_states>
+<exit_state name="next" target="Element@1810109964:1612339480836"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1347685434:1606060763610" name="BankingCorp" type="Page Connector" width="187" x="575" y="1185">
+<page_connector target="Element@1021000466:1604638203394">BankingCorp<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1028058916:1606060847876" name="ConnectAgentBanking" type="Page Connector" width="289" x="-666" y="1153">
+<page_connector target="Element@1497709728:1601902705927">ConnectAgentBanking<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1573680011:1606060092732" name="CorpBankingMenu" src="com.audium.server.voiceElement.menu.MFoundation8OptionMenu" type="Voice Element" width="250" x="-47" y="908">
+<exit_states>
+<exit_state name="option1" target="Element@1857104562:1606060502685"/>
+<exit_state name="option2" target="Element@863641634:1606060517139"/>
+<exit_state name="option3" target="Element@333018257:1606060698804"/>
+<exit_state name="option4" target="Element@1347685434:1606060763610"/>
+<exit_state name="option5" target="Element@1235736217:1606060813900"/>
+<exit_state name="option6" target="Element@1894919637:1606060834540"/>
+<exit_state name="option7" target="Element@1028058916:1606060847876"/>
+<exit_state name="option8" target="Element@1094071478:1606060865668"/>
+<exit_state name="max_nomatch" target="Element@950313112:1610301257652">
+<bendpoint>
+<dim1 x="-79" y="132"/>
+<dim2 x="61" y="-100"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_noinput" target="Element@1280927668:1610301257652"/>
+</exit_states>
+</element>
+<element height="62" id="Element@369095898:1606059865548" name="CorpInfoData" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="192" x="-644" y="-235">
+<exit_states>
+<exit_state name="done" target="Element@951332874:1609357194699"/>
+<exit_state name="Java Exception-Error_JAVA" target="Element@1777314575:1681103672585"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1415413772:1610957609648" name="CorpInfoData_Fail" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="237" x="-34" y="-380">
+<exit_states>
+<exit_state name="done" target="Element@951332874:1609357194699"/>
+</exit_states>
+</element>
+<element height="62" id="Element@518076397:1606059779044" name="CorpInfoStatusResponCode" type="Element Group" width="341" x="-748" y="-485"/>
+<element height="62" id="Element@1487186396:1606061040993" name="CorpSaldoInfo" type="Element Group" width="202" x="912" y="-509"/>
+<element height="62" id="Element@331795079:1606059267083" name="CorpValue" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="159" x="164" y="-746">
+<exit_states>
+<exit_state name="done" target="Element@2087354343:1606059345332"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1894196217:1606059178219" name="Corp_SaldoResponCode" type="Element Group" width="304" x="804" y="-808"/>
+<element height="62" id="Element@1510876808:1606058787744" name="Corp_SetCurrency" type="Element Group" width="240" x="650" y="-1043"/>
+<element height="62" id="Element@980218033:1609684324876" name="DBReplaceInq_Corp" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="258" x="-304" y="125">
+<exit_states>
+<exit_state name="done" target="Element@601744495:1609684454157"/>
+</exit_states>
+</element>
+<element height="62" id="Element@693157016:1609684546505" name="DBReplaceInq_Corp" type="Element Group" width="258" x="-299" y="-42"/>
+<element height="62" id="Element@45287392:1610957420632" name="DBReplaceInq_Corp_Fail" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="303" x="-44" y="40">
+<exit_states>
+<exit_state name="done" target="Element@601744495:1609684454157"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1094071478:1606060865668" name="EndCall" type="Page Connector" width="129" x="-731" y="860">
+<page_connector target="Element@89933654:1601904832032">EndCall<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1280927668:1610301257652" name="Error_NoInput" type="Page Connector" width="198" x="-762" y="1016">
+<page_connector target="Element@270910828:1610085311655">Error_NoInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@950313112:1610301257652" name="Error_NoMatchInput" type="Page Connector" width="265" x="-325" y="1230">
+<page_connector target="Element@1250119072:1610085949630">Error_NoMatchInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1579994321:1609689807739" name="GetEmailCorp" type="Element Group" width="195" x="766" y="168"/>
+<element height="62" id="Element@1852976956:1609690018452" name="GetEmail_Corp" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="205" x="661" y="349">
+<exit_states>
+<exit_state name="done" target="Element@708409840:1609690220413"/>
+</exit_states>
+</element>
+<element height="62" id="Element@847416962:1610957336017" name="GetEmail_Corp_Fail" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="250" x="460" y="248">
+<exit_states>
+<exit_state name="done" target="Element@708409840:1609690220413"/>
+</exit_states>
+</element>
+<element height="62" id="Element@333018257:1606060698804" name="IVRPINChange" type="Page Connector" width="204" x="704" y="1020">
+<page_connector target="Element@73167256:1604932807279">IVRPINChange<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1857104562:1606060502685" name="Inquiry" type="Page Connector" width="159" x="711" y="735">
+<page_connector target="Element@1898384436:1602047218567">Inquiry<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@863641634:1606060517139" name="Lasrt5Transaction" type="Page Connector" width="232" x="692" y="895">
+<page_connector target="Element@1707618586:1602116517800">Lasrt5Transaction<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@788071501:1610955517749" name="Log_REST_CorpDBReplaceInq" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="359" x="196" y="-65">
+<exit_states>
+<exit_state name="done" target="Element@45287392:1610957420632"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@45287392:1610957420632">
+<bendpoint>
+<dim1 x="-2" y="52"/>
+<dim2 x="270" y="32"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@2111475834:1610956143447" name="Log_REST_CorpGetEmail" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="306" x="216" y="229">
+<exit_states>
+<exit_state name="done" target="Element@708409840:1609690220413"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@708409840:1609690220413">
+<bendpoint>
+<dim1 x="-92" y="85"/>
+<dim2 x="-185" y="-56"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@963196316:1608094432325" name="Log_REST_CorpInfo" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="254" x="268" y="-512">
+<exit_states>
+<exit_state name="done" target="Element@1415413772:1610957609648"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@1415413772:1610957609648">
+<bendpoint>
+<dim1 x="101" y="85"/>
+<dim2 x="217" y="-15"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@1412450287:1610956686995" name="Log_REST_TaxNumber" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="282" x="585" y="563">
+<exit_states>
+<exit_state name="done" target="Element@2025872828:1610957275443"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@2025872828:1610957275443">
+<bendpoint>
+<dim1 x="9" y="67"/>
+<dim2 x="212" y="14"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@1235736217:1606060813900" name="MainMenu" type="Page Connector" width="167" x="329" y="1230">
+<page_connector target="Element@1865813345:1601897428297">MainMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1894919637:1606060834540" name="MainMenu" type="Page Connector" width="167" x="67" y="1273">
+<page_connector target="Element@1865813345:1601897428297">MainMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@2087354343:1606059345332" name="REST_CorpInfo" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="205" x="-340" y="-746">
+<exit_states>
+<exit_state name="done" target="Element@518076397:1606059779044"/>
+<exit_state name="Java Exception-REST_CifInquiryCorpError" target="Element@963196316:1608094432325"/>
+</exit_states>
+</element>
+<element height="62" id="Element@318871129:1606058812825" name="REST_Corp_SaldoDB" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="263" x="513" y="-892">
+<exit_states>
+<exit_state name="done" target="Element@1894196217:1606059178219"/>
+<exit_state name="Java Exception-REST_BalanceInquiryErrorCorp" target="Element@331795079:1606059267083">
+<bendpoint>
+<dim1 x="-181" y="133"/>
+<dim2 x="-199" y="-155"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@951332874:1609357194699" name="REST_DBReplaceInq_Corp" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="320" x="-132" y="-238">
+<exit_states>
+<exit_state name="done" target="Element@693157016:1609684546505"/>
+<exit_state name="Java Exception-REST_DBReplaceInqCorpError" target="Element@788071501:1610955517749">
+<bendpoint>
+<dim1 x="194" y="103"/>
+<dim2 x="-44" y="-106"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@601744495:1609684454157" name="REST_GetEmail_Corp" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="267" x="247" y="107">
+<exit_states>
+<exit_state name="done" target="Element@1579994321:1609689807739"/>
+<exit_state name="Java Exception-REST_GetEmailCorpError" target="Element@2111475834:1610956143447">
+<bendpoint>
+<dim1 x="-34" y="68"/>
+<dim2 x="-41" y="-61"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@708409840:1609690220413" name="REST_TaxNumberCorp" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="284" x="246" y="353">
+<exit_states>
+<exit_state name="done" target="Element@1209553927:1609690574667"/>
+<exit_state name="Java Exception-REST_TaxNumberCorpError" target="Element@1412450287:1610956686995">
+<bendpoint>
+<dim1 x="40" y="102"/>
+<dim2 x="141" y="-87"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@1209553927:1609690574667" name="TaxNumberCorp" type="Element Group" width="222" x="-87" y="380"/>
+<element height="62" id="Element@1648026586:1609690594768" name="TaxNumberCorp" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="222" x="-683" y="611">
+<exit_states>
+<exit_state name="done" target="Element@1573680011:1606060092732"/>
+</exit_states>
+</element>
+<element height="62" id="Element@2025872828:1610957275443" name="TaxNumberCorp_fail" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="264" x="-103" y="704">
+<exit_states>
+<exit_state name="done" target="Element@1573680011:1606060092732"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1810109964:1612339480836" name="Menu_Services_Corp" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="270" x="5" y="-1046">
+<exit_states>
+<exit_state name="done" target="Element@1510876808:1606058787744"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1777314575:1681103672585" name="Error_ServiceSOA" type="Page Connector" width="231" x="-717" y="-21">
+<page_connector target="Element@623071406:1607697419497">Error_ServiceSOA<config/>
+</page_connector>
+</element>
+</page>

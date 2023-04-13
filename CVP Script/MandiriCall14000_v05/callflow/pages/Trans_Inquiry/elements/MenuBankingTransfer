@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@1881445922:1605279617916" name="MenuBankingTransfer" version="6.0.1">
+<config>
+<settings>
+<setting name="noinput_timeout">5s</setting>
+<setting name="max_noinput_count">2</setting>
+<setting name="max_nomatch_count">2</setting>
+<setting name="confidence_level">0.40</setting>
+<setting name="modal">false</setting>
+<setting name="option1_dtmf">1</setting>
+<setting name="option1_voice"/>
+<setting name="option1_value">transferOther</setting>
+<setting name="option2_dtmf">2</setting>
+<setting name="option2_voice"/>
+<setting name="option2_value">transferSame</setting>
+<setting name="option3_dtmf">0</setting>
+<setting name="option3_voice"/>
+<setting name="option3_value">Connect Agent</setting>
+<setting name="option4_dtmf">8</setting>
+<setting name="option4_voice"/>
+<setting name="option4_value">End Call</setting>
+<setting name="option5_dtmf">9</setting>
+<setting name="option5_voice"/>
+<setting name="option5_value">Menu Sebelumnya</setting>
+<setting name="option6_dtmf">#</setting>
+<setting name="option6_voice"/>
+<setting name="option6_value">Menu Utama</setting>
+<setting name="option7_dtmf">*</setting>
+<setting name="option7_voice"/>
+<setting name="option7_value">Repeat</setting>
+</settings>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.00/MenuTransfer.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/general/GeneralInfo.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="1" name="nomatch_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/NoMatchInput.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.00/MenuTransfer.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 3" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/general/GeneralInfo.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="2" name="nomatch_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/NoMatchInput.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.00/MenuTransfer.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 3" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/general/GeneralInfo.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="3" name="nomatch_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/NoMatchInput.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/Error_3x.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="1" name="noinput_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/NoInput.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.00/MenuTransfer.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 3" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/general/GeneralInfo.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="2" name="noinput_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/NoInput.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.00/MenuTransfer.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 3" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/general/GeneralInfo.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="3" name="noinput_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/NoInput.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/Error_3x.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+</config>
+</voice_element>

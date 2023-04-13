@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1731640827:1611565596573" name="Personal_Balance" version="6.0.1">
+<element height="46" id="Element@682562913:1611565596573" name="Group Start" type="Element Group Start" width="110" x="230" y="30">
+<exit_states>
+<exit_state name="ResponseCode2SaldoDB:True" target="Element@852557800:1606215024731"/>
+</exit_states>
+</element>
+<element height="46" id="Element@351806985:1604389992067" name="SaldoSaving" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="131" x="842" y="-951">
+<exit_states>
+<exit_state name="done" target="Element@389421101:1605190431458"/>
+</exit_states>
+</element>
+<element height="46" id="Element@589255243:1604389875106" name="TypeCard" type="Decision" width="116" x="1117" y="-1086">
+<exit_states>
+<exit_state name="SAVING" target="Element@351806985:1604389992067"/>
+<exit_state name="LOAN" target="Element@416098797:1604390011198"/>
+<exit_state name="GIRO" target="Element@1585584596:1608714839011"/>
+<exit_state name="DEPOSITO" target="Element@541680038:1608714861806"/>
+</exit_states>
+</element>
+<element height="46" id="Element@416098797:1604390011198" name="SaldoLoan" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="122" x="989" y="-875">
+<exit_states>
+<exit_state name="done" target="Element@389421101:1605190431458"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1585584596:1608714839011" name="SaldoGiro" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="118" x="1164" y="-910">
+<exit_states>
+<exit_state name="done" target="Element@389421101:1605190431458"/>
+</exit_states>
+</element>
+<element height="46" id="Element@852557800:1606215024731" name="SaldoValue" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="124" x="862" y="-1157">
+<exit_states>
+<exit_state name="done" target="Element@589255243:1604389875106"/>
+</exit_states>
+</element>
+<element height="46" id="Element@541680038:1608714861806" name="SaldoDeposito" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="143" x="1313" y="-982">
+<exit_states>
+<exit_state name="done" target="Element@389421101:1605190431458"/>
+</exit_states>
+</element>
+</page>

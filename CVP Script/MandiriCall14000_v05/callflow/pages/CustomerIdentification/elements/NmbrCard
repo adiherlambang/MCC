@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1987392376:1604664722960" name="NmbrCard" version="6.0.1">
+<config>
+<settings>
+<setting name="PrefixCard">var nmbr = {Data.Element.MainMenuInput16DIgit.value};
+var prefix;
+if(nmbr.substring(0,6)=="603298"){
+	prefix = nmbr.substring(0,8);
+}else{
+	prefix = nmbr.substring(0,6);
+}
+
+prefix</setting>
+<setting name="CardInput">{Data.Element.MainMenuInput16DIgit.value}</setting>
+<setting name="TransferLooping">var initial=0;
+initial</setting>
+</settings>
+<element_data>
+<data create_when="After" name="prefix" storable="true" type="String">{LocalVar.PrefixCard}</data>
+</element_data>
+</config>
+</action_element>

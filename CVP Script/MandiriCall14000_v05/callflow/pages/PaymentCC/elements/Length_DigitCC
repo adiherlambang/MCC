@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@914071822:1611118097142" name="Length_DigitCC" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Length_DigitCC" default_exit_state="NotValid">
+        <exit_state name="Valid" conjugate="and">
+            <number operator="equal">
+                <local_variable name="inputDigitCCpayment_length" />
+                <constant_number value="16" />
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

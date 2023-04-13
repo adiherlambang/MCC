@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1457224411:1604916080248" name="SavingRateValue" version="6.0.1">
+<config>
+<settings>
+<setting name="SavingRC1">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_SavingRate.response_body};
+
+var path= "$responseCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+eval(result)</setting>
+<setting name="SavingRC2">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_SavingRate.response_body};
+
+var path= "$interestRateInfo.responseCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+eval(result)</setting>
+<setting name="SavingIDR1">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_SavingRate.response_body};
+
+var path= "$interestRateInfo.rates[0].rate";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(0,3);</setting>
+<setting name="SavingUSD1">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_SavingRate.response_body};
+
+var path= "$interestRateInfo.rates[1].rate";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(0,3)</setting>
+<setting name="SavingIDR2">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_SavingRate.response_body};
+
+var path= "$interestRateInfo.rates[0].rate";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(3,5)</setting>
+<setting name="SavingUSD2">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_SavingRate.response_body};
+
+var path= "$interestRateInfo.rates[1].rate";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(3.5)</setting>
+<setting name="traceNum_SavingRate">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_SavingRate.response_body};
+
+var path= "$hubHeader.traceNumber";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="terminalId_SavingRate">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_SavingRate.response_body};
+
+var path= "$hubHeader.terminalId";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+</settings>
+<element_data>
+<data create_when="After" name="SavingRate" storable="true" type="String">{LocalVar.SavingIDR1}</data>
+</element_data>
+</config>
+</action_element>

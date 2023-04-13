@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1760885428:1605175304970" name="LastDigitData" version="6.0.1">
+<config>
+<settings>
+<setting name="jmlNmrRekening">importPackage(com.audium.server.cvpUtil);
+var index = new Array();
+var data = {Data.Element.REST_DebitCard.response_body};
+var path1,path2,path3,i,result,result2,result3;
+
+for (i=0; i&lt;  {LocalVar.IndexAccount}; i++)
+{
+	path2 = "$signOnInfo.customerDetail.accounts["+i+"].accountType";
+	result2 = JSONPathUtil.eval(data,path2);
+	if( result2 == {LocalVar.pick} )
+	{
+		path = "$signOnInfo.customerDetail.accounts["+i+"].currency";
+		result = JSONPathUtil.eval(data,path);
+		if (result =={LocalVar.pickCurrency} ){
+			path3 = "$signOnInfo.customerDetail.accounts["+i+"].accountNumber";
+			result3 = JSONPathUtil.eval(data,path);
+			index.push(result3);
+		}	
+	}	
+}
+
+var total_Index= index.length;
+total_Index</setting>
+<setting name="NmrRekening">importPackage(com.audium.server.cvpUtil);
+var index = new Array();
+var data = {Data.Element.REST_DebitCard.response_body};
+var path1,path2,path3,i,result,result2,result3;
+
+for (i=0; i&lt;  {LocalVar.IndexAccount}; i++)
+{
+	path2 = "$signOnInfo.customerDetail.accounts["+i+"].accountType";
+	result2 = JSONPathUtil.eval(data,path2);
+	if( result2 == {LocalVar.pick} )
+	{
+		path = "$signOnInfo.customerDetail.accounts["+i+"].currency";
+		result = JSONPathUtil.eval(data,path);
+		if (result =={LocalVar.pickCurrency} ){
+			path3 = "$signOnInfo.customerDetail.accounts["+i+"].accountNumber";
+			result3 = JSONPathUtil.eval(data,path);
+			index.push(result3);
+		}	
+	}	
+}
+
+index</setting>
+<setting name="pick">var result = {LocalVar.pickType}.substring(9,10);
+
+if ( result == "T")
+{
+	result = "S";	
+}else if( result == "D" ){
+	result = "T";
+}else if( result == "G" ){
+	result = "D";
+}else if( result == "P" ){
+	result = "L";
+} 
+
+result</setting>
+<setting name="NmbrCardDebit">{LocalVar.CardInput}</setting>
+<setting name="PINDB">{Data.Element.CustomerIdentificationPersonalBankingPin.value}</setting>
+<setting name="pickCurrencyEdit">var result;
+
+if ( {LocalVar.pickCurrency} =="IDR"){
+	result = "001";
+}else if ({LocalVar.pickCurrency} =="USD"){
+	result = "002";
+}else if ({LocalVar.pickCurrency} =="SGD"){
+	result = "003";
+}else if ({LocalVar.pickCurrency} =="HKD"){
+	result = "004";
+}
+
+result</setting>
+<setting name="fromMenu">{LocalVar.flagMenu}</setting>
+</settings>
+</config>
+</action_element>

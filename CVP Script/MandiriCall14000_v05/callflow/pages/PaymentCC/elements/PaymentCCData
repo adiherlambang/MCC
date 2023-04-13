@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@522403871:1605896234049" name="PaymentCCData" version="6.0.1">
+<config>
+<settings>
+<setting name="RefNumberCCPayment">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_PaymentCC.response_body};
+
+var path= "$payload.creditCardPaymentInfo.referenceNumber";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+</settings>
+<element_data>
+<data create_when="After" name="ReferenceNumber" storable="true" type="String">{LocalVar.RefNumberCCPayment}</data>
+</element_data>
+</config>
+</action_element>

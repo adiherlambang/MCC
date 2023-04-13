@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1685397777:1610964497874" name="Validation_AmountTransfer" version="6.0.1">
+<element height="46" id="Element@1473480753:1610448187931" name="Audio_3xNotValidAmount" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="188" x="-454" y="348">
+<exit_states>
+<exit_state name="done" target="Element@430860125:1610398130665"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2039169231:1610448174900" name="Audio_NotValidAmount" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="176" x="-75" y="301">
+<exit_states>
+<exit_state name="done" target="Element@1218685602:1610448214908"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1218685602:1610448214908" name="Counter_validation_amount" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="197" x="-209" y="401">
+<exit_states>
+<exit_state name="done" target="Element@351181914:1610448285739"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1304490034:1610964497874" name="Group Start" type="Element Group Start" width="110" x="230" y="30">
+<exit_states>
+<exit_state name="AmountFilter:done" target="Element@390907655:1610448086726"/>
+</exit_states>
+</element>
+<element height="46" id="Element@390907655:1610448086726" name="Valid_amount" type="Decision" width="122" x="216" y="188">
+<exit_states>
+<exit_state name="Valid" target="Element@655138965:1602119798985"/>
+<exit_state name="NotValid" target="Element@2039169231:1610448174900"/>
+</exit_states>
+</element>
+<element height="46" id="Element@351181914:1610448285739" name="Validation" type="Decision" width="112" x="-372" y="501">
+<exit_states>
+<exit_state name="True" target="Element@1473480753:1610448187931"/>
+<exit_state name="False" target="Element@660285563:1610448351061"/>
+</exit_states>
+</element>
+</page>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1955364439:1605444967850" name="ProccessTransfer" version="6.0.1">
+<element default_entry="true" height="46" id="Element@1062515742:1605444967850" name="Group Start" type="Element Group Start" width="110" x="4" y="-18">
+<exit_states>
+<exit_state name="entry" target="Element@2102522118:1605444952939"/>
+</exit_states>
+</element>
+<element height="46" id="Element@553493553:1608096043024" name="Log_Transfer_Respon" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="160" x="274" y="141">
+<exit_states>
+<exit_state name="done" target="Element@1801299239:1605445035163"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@1801299239:1605445035163"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2117833101:1608095701634" name="Log_Transfer_Status" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="153" x="279" y="34">
+<exit_states>
+<exit_state name="done" target="Element@1725541409:1605444960123"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@1725541409:1605444960123"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2102522118:1605444952939" name="REST_Transfer" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="125" x="78" y="81">
+<exit_states>
+<exit_state name="done" target="Element@2117833101:1608095701634"/>
+<exit_state name="Java Exception-Error_RESTTransfer" target="Element@1047041270:1608095593742"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1801299239:1605445035163" name="ResponCode1Transfer" type="Decision" width="164" x="70" y="189">
+<exit_states>
+<exit_state name="Success" target="Element@96703808:1605445047549"/>
+<exit_state name="Fail" target="Element@1819036880:1605445514757"/>
+</exit_states>
+</element>
+<element height="46" id="Element@96703808:1605445047549" name="ResponCode2Transfer" type="Decision" width="164" x="70" y="294">
+<exit_states>
+<exit_state name="Success" target="Element@569476788:1605447788740"/>
+<exit_state name="Fail" target="Element@1290532136:1611565836534"/>
+<exit_state name="NotEnoughBalance" target="Element@1290532136:1611565836534">
+<bendpoint>
+<dim1 x="-346" y="103"/>
+<dim2 x="-13" y="-146"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ExceedDailyLimit" target="Element@1290532136:1611565836534"/>
+<exit_state name="ExceedLimitTransfer" target="Element@1290532136:1611565836534">
+<bendpoint>
+<dim1 x="-335" y="14"/>
+<dim2 x="-60" y="-151"/>
+</bendpoint>
+</exit_state>
+<exit_state name="InvalidCurrrency" target="Element@1290532136:1611565836534"/>
+<exit_state name="InvalidAmount" target="Element@1290532136:1611565836534"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1725541409:1605444960123" name="StatusCodeTransfer" type="Decision" width="151" x="499" y="82">
+<exit_states>
+<exit_state name="Success" target="Element@528396081:1605444964619"/>
+<exit_state name="Fail" target="Element@1819036880:1605445514757"/>
+</exit_states>
+</element>
+<element height="46" id="Element@528396081:1605444964619" name="TransferResponCode" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="158" x="494" y="192">
+<exit_states>
+<exit_state name="done" target="Element@553493553:1608096043024"/>
+</exit_states>
+</element>
+</page>

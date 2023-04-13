@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@716034548:1605764714163" name="DB_CheckPhone" version="6.0.1">
+<config>
+<settings>
+<setting name="type">single</setting>
+<setting name="jndiName">cvp_mdr</setting>
+<setting name="query">SELECT * 
+FROM 
+telkoprefix
+WHERE Prefix = {LocalVar.prefixPhoneNmbr}</setting>
+<setting name="enableXmlResultSet">true</setting>
+<setting name="maxRowsInXML">1</setting>
+</settings>
+<local_events>
+<local_event>
+<name>Error_DBCheckCard</name>
+<eventlist>com.audium.server.*</eventlist>
+<type>Java Exception</type>
+</local_event>
+</local_events>
+</config>
+</action_element>

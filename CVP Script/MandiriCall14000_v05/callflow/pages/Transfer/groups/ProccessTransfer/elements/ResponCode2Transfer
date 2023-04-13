@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@96703808:1605445047549" name="ResponCode2Transfer" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="ResponCode2Transfer" default_exit_state="Fail">
+        <exit_state name="Success" conjugate="and">
+            <string operator="equal">
+                <local_variable name="RC2TransferCode" />
+                <constant_string value="00" />
+            </string>
+        </exit_state>
+        <exit_state name="NotEnoughBalance" conjugate="and">
+            <string operator="equal">
+                <local_variable name="RC2TransferCode" />
+                <constant_string value="51" />
+            </string>
+        </exit_state>
+        <exit_state name="ExceedDailyLimit" conjugate="and">
+            <string operator="equal">
+                <local_variable name="RC2TransferCode" />
+                <constant_string value="52" />
+            </string>
+        </exit_state>
+        <exit_state name="ExceedLimitTransfer" conjugate="and">
+            <string operator="equal">
+                <local_variable name="RC2TransferCode" />
+                <constant_string value="61" />
+            </string>
+        </exit_state>
+        <exit_state name="InvalidCurrrency" conjugate="and">
+            <string operator="equal">
+                <local_variable name="RC2TransferCode" />
+                <constant_string value="11" />
+            </string>
+        </exit_state>
+        <exit_state name="InvalidAmount" conjugate="and">
+            <string operator="equal">
+                <local_variable name="RC2TransferCode" />
+                <constant_string value="13" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

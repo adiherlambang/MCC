@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@815562607:1604658564518" name="StatusResponseCodeCheck" version="6.0.1">
+<element height="46" id="Element@1843774765:1604658404521" name="ExchangeRateValue" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="152" x="530" y="132">
+<exit_states>
+<exit_state name="done" target="Element@786522501:1608118077177"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1905962401:1604658564518" name="Group Start" type="Element Group Start" width="110" x="68" y="28">
+<exit_states>
+<exit_state name="REST_ExchangeRateInfo:done" target="Element@1265295445:1608117965522"/>
+</exit_states>
+</element>
+<element height="46" id="Element@786522501:1608118077177" name="Log_ExchangeRate_Respon" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="193" x="281" y="185">
+<exit_states>
+<exit_state name="done" target="Element@388945517:1604681588128"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1265295445:1608117965522" name="Log_ExchangeRate_Status" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="186" x="259" y="-45">
+<exit_states>
+<exit_state name="done" target="Element@1732948270:1604658241809"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@1732948270:1604658241809"/>
+</exit_states>
+</element>
+<element height="46" id="Element@388945517:1604681588128" name="ResponseCode1_check" type="Decision" width="170" x="48" y="134">
+<exit_states>
+<exit_state name="Success" target="Element@340361956:1604658588170"/>
+<exit_state name="Fail" target="Element@329206545:1610117906937"/>
+</exit_states>
+</element>
+<element height="46" id="Element@340361956:1604658588170" name="ResponseCode2_check" type="Decision" width="170" x="59" y="247">
+<exit_states>
+<exit_state name="Success" target="Element@57920274:1610278818811"/>
+<exit_state name="Fail" target="Element@329206545:1610117906937"/>
+<exit_state name="Currency_NotAvailable" target="Element@1843103642:1604681760619"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1732948270:1604658241809" name="statusCodeCheck" type="Decision" width="142" x="528" y="33">
+<exit_states>
+<exit_state name="Success" target="Element@1843774765:1604658404521"/>
+<exit_state name="Fail" target="Element@329206545:1610117906937"/>
+</exit_states>
+</element>
+</page>

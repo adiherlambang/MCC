@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@859802295:1610892230275" name="Validation_PaymentCCDOBNumeric" version="6.0.1">
+<element height="46" id="Element@1381175661:1610892328042" name="Audio_3xErrorPaymentCCDOB" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="211" x="322" y="324">
+<exit_states>
+<exit_state name="done" target="Element@165286789:1610892365594"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2023754125:1610892156331" name="Audio_ErrorPaymentCCDOB" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="199" x="608" y="121">
+<exit_states>
+<exit_state name="done" target="Element@1789165763:1610892214309"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1789165763:1610892214309" name="Counter_3xErrorPaymentCCDOB" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="222" x="282" y="125">
+<exit_states>
+<exit_state name="done" target="Element@1631103919:1610892203043"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1057982570:1610892230275" name="Group Start" type="Element Group Start" width="110" x="94" y="15">
+<exit_states>
+<exit_state name="PaymentCCInputDOB:done" target="Element@1919381991:1610892070313"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1631103919:1610892203043" name="Validation_3xErrorPaymentCCDOB" type="Decision" width="231" x="69" y="228">
+<exit_states>
+<exit_state name="True" target="Element@1381175661:1610892328042"/>
+<exit_state name="False" target="Element@1146576252:1610892363938"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1919381991:1610892070313" name="Validation_PaymentCCDOB" type="Decision" width="194" x="609" y="18">
+<exit_states>
+<exit_state name="Valid" target="Element@1659948222:1605883762889"/>
+<exit_state name="NotValid" target="Element@2023754125:1610892156331"/>
+</exit_states>
+</element>
+</page>

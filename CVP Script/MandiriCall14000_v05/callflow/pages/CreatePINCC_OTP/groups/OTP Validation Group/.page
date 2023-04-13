@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1740524243:1610682885617" name="OTP Validation Group" version="6.0.1">
+<element height="46" id="Element@1868393130:1610682885617" name="Group Start" type="Element Group Start" width="110" x="154" y="-10">
+<exit_states>
+<exit_state name="OTP_Check:done" target="Element@985397959:1610682855120"/>
+</exit_states>
+</element>
+<element height="46" id="Element@985397959:1610682855120" name="OTP_validation" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="128" x="365" y="83">
+<exit_states>
+<exit_state name="done" target="Element@1552585134:1610682882343"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1552585134:1610682882343" name="valid_OTPcode" type="Decision" width="127" x="245" y="197">
+<exit_states>
+<exit_state name="Valid Code" target="Element@188034814:1603356412246"/>
+<exit_state name="Not Valid" target="Element@621742084:1610683222869"/>
+</exit_states>
+</element>
+</page>

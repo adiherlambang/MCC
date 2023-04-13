@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1843774765:1604658404521" name="ExchangeRateValue" version="6.0.1">
+<config>
+<settings>
+<setting name="responseCode1">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_ExchangeRateInfo.response_body} ;
+
+var path= "$responseCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+eval(result)</setting>
+<setting name="responseCode2">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_ExchangeRateInfo.response_body} ;
+
+var path= "$currencyRateInfo.responseCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="sellingTT_1">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_ExchangeRateInfo.response_body} ;
+
+var path= "$currencyRateInfo.sellingTT";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(0,4)</setting>
+<setting name="buyingTT_1">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_ExchangeRateInfo.response_body} ;
+
+var path= "$currencyRateInfo.buyingTT";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(0,4)</setting>
+<setting name="sellingOD_1">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_ExchangeRateInfo.response_body} ;
+
+var path= "$currencyRateInfo.sellingOD";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(0,4)</setting>
+<setting name="buyingOD_1">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_ExchangeRateInfo.response_body} ;
+
+var path= "$currencyRateInfo.buyingOD";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(0,4)</setting>
+<setting name="sellingTT_2">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_ExchangeRateInfo.response_body} ;
+
+var path= "$currencyRateInfo.sellingTT";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(4,6)</setting>
+<setting name="buyingTT_2">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_ExchangeRateInfo.response_body} ;
+
+var path= "$currencyRateInfo.buyingTT";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(4,6)</setting>
+<setting name="sellingOD_2">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_ExchangeRateInfo.response_body} ;
+
+var path= "$currencyRateInfo.sellingOD";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(4,6)</setting>
+<setting name="buyingOD_2">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_ExchangeRateInfo.response_body} ;
+
+var path= "$currencyRateInfo.buyingOD";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(4,6)</setting>
+<setting name="traceNum_ExchangeRate">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_ExchangeRateInfo.response_body} ;
+
+var path= "$hubHeader.traceNumber";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="terminalId_ExchangeRate">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_ExchangeRateInfo.response_body} ;
+
+var path= "$hubHeader.terminalId";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+</settings>
+<element_data>
+<data create_when="After" name="sellingTT2" storable="true" type="String">{LocalVar.sellingTT_2}</data>
+<data create_when="After" name="sellingTT1" storable="true" type="String">{LocalVar.sellingTT_1}</data>
+<data create_when="After" name="buyingTT2" storable="true" type="String">{LocalVar.buyingTT_2}</data>
+<data create_when="After" name="buyingTT1" storable="true" type="String">{LocalVar.buyingTT_1}</data>
+<data create_when="After" name="buyingOD2" storable="true" type="String">{LocalVar.buyingOD_2}</data>
+<data create_when="After" name="buyingOD1" storable="true" type="String">{LocalVar.buyingOD_1}</data>
+<data create_when="After" name="sellingOD2" storable="true" type="String">{LocalVar.sellingOD_2}</data>
+<data create_when="After" name="sellingOD1" storable="true" type="String">{LocalVar.sellingOD_1}</data>
+<data create_when="After" name="ratevalue" storable="true" type="String">{LocalVar.ratevalue}</data>
+<data create_when="After" name="rc1" storable="true" type="String">{LocalVar.responseCode1}</data>
+<data create_when="After" name="rc2" storable="true" type="String">{LocalVar.responseCode2}</data>
+</element_data>
+</config>
+</action_element>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@545662031:1604657560114" name="REST_ExchangeRateInfo" version="6.0.1">
+<config>
+<settings>
+<setting name="EndpointURL">{LocalVar.hubAddress}/foreign-rate</setting>
+<setting name="HTTPMethod">POST</setting>
+<setting name="Parameters"/>
+<setting name="ignoreCertificateValidation">true</setting>
+<setting name="requireHttpAuthentication">false</setting>
+<setting name="headers">'Content-Type':'application/json'</setting>
+<setting name="body">{
+	"currency":"{LocalVar.ratevalue}",
+	"origin":"{LocalVar.cvp_hub}"
+}</setting>
+<setting name="useProxy">false</setting>
+<setting name="connectTimeout">3000</setting>
+<setting name="readTimeout">5000</setting>
+</settings>
+<local_events>
+<local_event>
+<name>Error_RESTExchangeRate</name>
+<eventlist>com.sun.jersey.api.client.ClientHandlerException</eventlist>
+<type>Java Exception</type>
+</local_event>
+</local_events>
+</config>
+</action_element>

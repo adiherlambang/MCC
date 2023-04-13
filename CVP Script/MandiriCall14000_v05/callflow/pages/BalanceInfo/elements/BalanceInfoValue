@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@643956198:1605189854594" name="BalanceInfoValue" version="6.0.1">
+<config>
+<settings>
+<setting name="saldoPilihRek">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_BalanceInfo.response_body};
+
+var path= "$balanceInquiryInfo.balanceDetail.amount1";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(0,15)</setting>
+<setting name="pickRekInfo">{LocalVar.pickRek}</setting>
+<setting name="pickCurrencyInfo">{LocalVar.pickCurrencyEdit}</setting>
+<setting name="PINDB">{Data.Element.CustomerIdentificationPersonalBankingPin.value}</setting>
+<setting name="NmbrCardDebit">{LocalVar.CardInput}</setting>
+<setting name="saldoPilihRek2">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_BalanceInfo.response_body};
+
+var path= "$balanceInquiryInfo.balanceDetail.amount1";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(15,17)</setting>
+<setting name="currency">var x = {LocalVar.pickCurrency};
+var cur;
+
+if (x=="IDR"){
+	cur="Rupiah";	
+}else{
+	cur=x;
+}
+
+cur</setting>
+</settings>
+</config>
+</action_element>

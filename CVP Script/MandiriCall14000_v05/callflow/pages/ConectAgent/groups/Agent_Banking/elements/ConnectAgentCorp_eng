@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<subdialog_return id="Element@1904323748:1606471802242" name="ConnectAgentCorp_eng" version="6.0.1">
+<config>
+<settings>
+<setting name="caller_input">1</setting>
+<setting name="FromExtVXML0">CO,8={LocalVar.CabangPembuka},1={LocalVar.NamaNasabah},6={LocalVar.statusAcc_Corp}</setting>
+<setting name="FromExtVXML1">eng,4={LocalVar.pickRek},10={LocalVar.EmailNasabah},9={LocalVar.menu_services}</setting>
+<setting name="FromExtVXML2">2={LocalVar.AlamatNasabah},3={LocalVar.TaxNumberNasabah}</setting>
+<setting name="FromExtVXML3">5={LocalVar.SaldoForAgent} {LocalVar.CurrencyForAgent},{LocalVar.LastTransDate1},{LocalVar.LastTransIndicator1},{LocalVar.LastTransAmount1}</setting>
+</settings>
+</config>
+</subdialog_return>

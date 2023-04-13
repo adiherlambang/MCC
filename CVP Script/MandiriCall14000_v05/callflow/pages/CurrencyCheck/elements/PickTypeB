@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@739148637:1605174205209" name="PickTypeB" version="6.0.1">
+<config>
+<settings>
+<setting name="pickCurrency">{Data.Element.Currency_typeB.value}</setting>
+</settings>
+</config>
+</action_element>

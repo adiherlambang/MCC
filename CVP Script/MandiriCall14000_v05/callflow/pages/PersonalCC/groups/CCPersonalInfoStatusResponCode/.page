@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@541484527:1609211267071" name="CCPersonalInfoStatusResponCode" version="6.0.1">
+<element height="46" id="Element@560399654:1609211267071" name="CCPersonalInfoResponCode" type="Decision" width="199" x="172" y="341">
+<exit_states>
+<exit_state name="Success" target="Element@1182250254:1609211267071">
+<bendpoint>
+<dim1 x="-142" y="78"/>
+<dim2 x="5" y="-36"/>
+</bendpoint>
+</exit_state>
+<exit_state name="fail" target="Element@1624970185:1611719394819"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1031400452:1609211267071" name="CCPersonalInfoResponValue" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="232" x="174" y="169">
+<exit_states>
+<exit_state name="done" target="Element@2119044208:1610026158864"/>
+</exit_states>
+</element>
+<element height="46" id="Element@371448187:1609211267071" name="CCPersonalInfoStatusCode" type="Decision" width="192" x="265" y="13">
+<exit_states>
+<exit_state name="Success" target="Element@1156812365:1610025956050"/>
+<exit_state name="fail" target="Element@1624970185:1611719394819">
+<bendpoint>
+<dim1 x="218" y="79"/>
+<dim2 x="116" y="-77"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element default_entry="true" height="46" id="Element@989698753:1609211267071" name="Group Start" type="Element Group Start" width="110" x="43" y="98">
+<exit_states>
+<exit_state name="entry" target="Element@371448187:1609211267071"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2119044208:1610026158864" name="Log_CifInqCC_respon" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="164" x="513" y="267">
+<exit_states>
+<exit_state name="done" target="Element@560399654:1609211267071"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1156812365:1610025956050" name="Log_CifInqCC_status" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="159" x="518" y="108">
+<exit_states>
+<exit_state name="done" target="Element@1031400452:1609211267071"/>
+</exit_states>
+</element>
+</page>

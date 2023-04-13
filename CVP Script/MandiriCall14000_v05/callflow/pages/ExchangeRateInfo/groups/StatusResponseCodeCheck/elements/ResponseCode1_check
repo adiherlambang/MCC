@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@388945517:1604681588128" name="ResponseCode1_check" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="ResponseCode1_check" default_exit_state="Fail">
+        <exit_state name="Success" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <element name="ExchangeRateValue" variable="rc1" />
+                </data>
+                <constant_string value="1" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

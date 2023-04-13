@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1089472562:1605583446421" name="PersonalInfoStatusResponCode" version="6.0.1">
+<element default_entry="true" height="46" id="Element@553256700:1605583446421" name="Group Start" type="Element Group Start" width="110" x="16" y="8">
+<exit_states>
+<exit_state name="entry" target="Element@2134282358:1610288302537"/>
+</exit_states>
+</element>
+<element height="46" id="Element@819041667:1605583371115" name="PersonalInfoResponCode" type="Decision" width="225" x="28" y="327">
+<exit_states>
+<exit_state name="Success" target="Element@1301525222:1605600926122">
+<bendpoint>
+<dim1 x="-4" y="138"/>
+<dim2 x="-85" y="-70"/>
+</bendpoint>
+</exit_state>
+<exit_state name="fail" target="Element@1050130498:1610958251359"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1660685562:1605583098278" name="PersonalInfoResponValue" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="183" x="599" y="185">
+<exit_states>
+<exit_state name="done" target="Element@578921618:1610288428819"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1120972967:1605583053959" name="PersonalInfoStatusCode" type="Decision" width="176" x="602" y="11">
+<exit_states>
+<exit_state name="Success" target="Element@1660685562:1605583098278"/>
+<exit_state name="fail" target="Element@1050130498:1610958251359">
+<bendpoint>
+<dim1 x="236" y="79"/>
+<dim2 x="-3" y="-122"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@578921618:1610288428819" name="log_PersonalInfo_respon" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="179" x="312" y="201">
+<exit_states>
+<exit_state name="done" target="Element@819041667:1605583371115">
+<bendpoint>
+<dim1 x="-264" y="15"/>
+<dim2 x="-21" y="-113"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Java Exception-Error_InsertLogPersonalInfoRespon" target="Element@819041667:1605583371115">
+<bendpoint>
+<dim1 x="9" y="83"/>
+<dim2 x="245" y="0"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@2134282358:1610288302537" name="log_PersonalInfo_status" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="174" x="250" y="9">
+<exit_states>
+<exit_state name="done" target="Element@1120972967:1605583053959"/>
+<exit_state name="Java Exception-Error_InsertLogPersonalInfoStatus" target="Element@1120972967:1605583053959">
+<bendpoint>
+<dim1 x="189" y="63"/>
+<dim2 x="-164" y="61"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+</page>

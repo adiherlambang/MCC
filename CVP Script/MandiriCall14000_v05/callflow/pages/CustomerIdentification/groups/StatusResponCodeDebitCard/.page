@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1478402905:1604931314350" name="StatusResponCodeDebitCard" version="6.0.1">
+<element height="62" id="Element@231834415:1605582048935" name="DebitCardResponCode" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="291" x="-121" y="6">
+<exit_states>
+<exit_state name="done" target="Element@242783599:1607889934455"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1258179103:1604927879462" name="DebitResponseCode1" type="Decision" width="278" x="525" y="7">
+<exit_states>
+<exit_state name="Success" target="Element@1101509377:1604928031017"/>
+<exit_state name="Fail" target="Element@888834333:1604991395883"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1101509377:1604928031017" name="DebitResponseCode2" type="Decision" width="278" x="50" y="116">
+<exit_states>
+<exit_state name="Success" target="Element@1717165388:1604990406047"/>
+<exit_state name="Fail" target="Element@207307603:1612533747675">
+<bendpoint>
+<dim1 x="177" y="77"/>
+<dim2 x="-102" y="-49"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@494677088:1604932464445" name="DebitResponseCode2_3xError" type="Decision" width="362" x="241" y="456">
+<exit_states>
+<exit_state name="False" target="Element@1984135393:1614175661171"/>
+<exit_state name="3xErrorPin" target="Element@409308590:1607018415187"/>
+</exit_states>
+</element>
+<element height="62" id="Element@103154420:1605886636819" name="DebitResponseCode2_ForceChangePIN" type="Decision" width="465" x="234" y="210">
+<exit_states>
+<exit_state name="True" target="Element@1886839632:1604932851331"/>
+<exit_state name="False" target="Element@1018211499:1604931917363"/>
+</exit_states>
+</element>
+<element height="62" id="Element@320957839:1604932326696" name="DebitResponseCode2_StatusCard" type="Decision" width="401" x="246" y="374">
+<exit_states>
+<exit_state name="True" target="Element@702076231:1604975029700"/>
+<exit_state name="False" target="Element@494677088:1604932464445"/>
+</exit_states>
+</element>
+<element height="62" id="Element@888834333:1604991395883" name="DebitResponseCode2_WrongInputCard" type="Decision" width="465" x="444" y="117">
+<exit_states>
+<exit_state name="True" target="Element@448634277:1612532266791"/>
+<exit_state name="False" target="Element@103154420:1605886636819"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1018211499:1604931917363" name="DebitResponseCode2_WrongInputPIN" type="Decision" width="453" x="226" y="303">
+<exit_states>
+<exit_state name="True" target="Element@1433653127:1610090934297"/>
+<exit_state name="False" target="Element@320957839:1604932326696"/>
+</exit_states>
+</element>
+<element height="62" id="Element@2113420967:1604927858221" name="DebitStatusCode" type="Decision" width="228" x="-105" y="-95">
+<exit_states>
+<exit_state name="Success" target="Element@231834415:1605582048935"/>
+<exit_state name="Fail" target="Element@325343964:1607697527201"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1846609809:1604931314350" name="Group Start" type="Element Group Start" width="171" x="571" y="-100">
+<exit_states>
+<exit_state name="REST_DebitCard:done" target="Element@854388492:1607889810683"/>
+</exit_states>
+</element>
+<element height="62" id="Element@242783599:1607889934455" name="log_DebitSignOnRespon" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="309" x="232" y="5">
+<exit_states>
+<exit_state name="done" target="Element@1258179103:1604927879462"/>
+<exit_state name="Java Exception-Error_InsertLogDebitSignOnRespon" target="Element@1258179103:1604927879462">
+<bendpoint>
+<dim1 x="160" y="-65"/>
+<dim2 x="-125" y="-67"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@854388492:1607889810683" name="log_DebitSignOnStatus" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="295" x="241" y="-96">
+<exit_states>
+<exit_state name="done" target="Element@2113420967:1604927858221"/>
+<exit_state name="Java Exception-Error_InsertLogDebitSignOnStatus" target="Element@2113420967:1604927858221">
+<bendpoint>
+<dim1 x="-186" y="-71"/>
+<dim2 x="176" y="-72"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@1984135393:1614175661171" name="DebitResponseCode2_01Error" type="Decision" width="364" x="235" y="547">
+<exit_states>
+<exit_state name="True" target="Element@1593916384:1614175784858"/>
+<exit_state name="False" target="Element@643222098:1614325571937"/>
+</exit_states>
+</element>
+<element height="62" id="Element@643222098:1614325571937" name="Debit ResponseCode2_Block" type="Decision" width="352" x="241" y="645">
+<exit_states>
+<exit_state name="MandiriCallBlock" target="Element@571193345:1614325686856"/>
+<exit_state name="False" target="Element@207307603:1612533747675">
+<bendpoint>
+<dim1 x="509" y="375"/>
+<dim2 x="-392" y="35"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+</page>

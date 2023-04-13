@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1578525376:1605242063632" name="Last5TransValue" version="6.0.1">
+<config>
+<settings>
+<setting name="TotalLastTrans">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last5Trans.response_body};
+
+var parse = JSON.parse(data);
+
+parse.lastTxnInquiryInfo.transactions.length</setting>
+<setting name="last5Trans_currencyAudio">var audio = {LocalVar.pickCurrency};
+
+if ( {LocalVar.pickCurrency} =="IDR"){
+	audio = "Rupiah";
+}
+
+audio</setting>
+</settings>
+<element_data>
+<data create_when="After" name="totaltrans" storable="true" type="String">{LocalVar.TotalLastTrans}</data>
+</element_data>
+</config>
+</action_element>

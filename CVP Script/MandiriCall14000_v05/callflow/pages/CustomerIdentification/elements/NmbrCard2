@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1766317620:1609853862235" name="NmbrCard2" version="6.0.1">
+<config>
+<settings>
+<setting name="CardInput">{LocalVar.fromNmbrCard}</setting>
+<setting name="PrefixCard">var nmbr = {LocalVar.CardInput};
+var prefix;
+
+if(nmbr.substring(0,6)=="603298"){
+	prefix = nmbr.substring(0,8);
+}else{
+	prefix = nmbr.substring(0,6);
+}
+
+prefix</setting>
+<setting name="TransferLooping">var initial=0;
+initial</setting>
+</settings>
+</config>
+</action_element>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@888608646:1605448500669" name="RegisteredAccount" version="6.0.1">
+<config>
+<settings>
+<setting name="NmbrCardDebit">{LocalVar.CardInput}</setting>
+<setting name="PINDB">{Data.Element.CustomerIdentificationPersonalBankingPin.value}</setting>
+<setting name="fromAccountTransOther">{LocalVar.pickRek}</setting>
+<setting name="fromCurrencyTransOther">{LocalVar.pickCurrencyEdit}</setting>
+</settings>
+<element_data>
+<data create_when="After" name="nmbrcard" storable="true" type="String">{LocalVar.NmbrCardDebit}</data>
+<data create_when="After" name="pin" storable="true" type="String">{LocalVar.PINDB}</data>
+<data create_when="After" name="fromacc" storable="true" type="String">{LocalVar.fromAccountTransOther}</data>
+<data create_when="After" name="fromcurr" storable="true" type="String">{LocalVar.fromCurrencyTransOther}</data>
+</element_data>
+</config>
+</action_element>

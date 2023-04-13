@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@370993620:1605085238072" name="IndexAcc" version="6.0.1">
+<config>
+<settings>
+<setting name="IndexAccount">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_DebitCard.response_body};
+
+var parse = JSON.parse(data);
+
+parse.signOnInfo.customerDetail.accounts.length</setting>
+<setting name="IndexAccSaving">importPackage(com.audium.server.cvpUtil);
+var data = {Data.Element.REST_DebitCard.response_body};
+var index = new Array();
+var i,path,result;
+
+for(i=0; i&lt;{LocalVar.IndexAccount}; i++){
+	
+	path= "$signOnInfo.customerDetail.accounts["+i+"].accountType";
+	result = JSONPathUtil.eval(data,path);
+	if(result=="S"){
+		index.push(result);
+	}
+}
+
+index.length
+
+</setting>
+<setting name="IndexAccGiro">importPackage(com.audium.server.cvpUtil);
+var data = {Data.Element.REST_DebitCard.response_body};
+var index = new Array();
+var i,path,result;
+
+for(i=0; i&lt;{LocalVar.IndexAccount}; i++){
+	
+	path= "$signOnInfo.customerDetail.accounts["+i+"].accountType";
+	result = JSONPathUtil.eval(data,path);
+	if(result=="D"){
+		index.push(result);
+	}
+}
+
+index.length
+
+</setting>
+<setting name="IndexAccLoan">importPackage(com.audium.server.cvpUtil);
+var data = {Data.Element.REST_DebitCard.response_body};
+var index = new Array();
+var i,path,result;
+
+for(i=0; i&lt;{LocalVar.IndexAccount}; i++){
+	
+	path= "$signOnInfo.customerDetail.accounts["+i+"].accountType";
+	result = JSONPathUtil.eval(data,path);
+	if(result=="L"){
+		index.push(result);
+	}
+}
+
+index.length
+
+</setting>
+<setting name="NmbrCardDebit">{LocalVar.CardInput}</setting>
+<setting name="PINDB">{Data.Element.CustomerIdentificationPersonalBankingPin.value}</setting>
+<setting name="IndexAccDeposit">importPackage(com.audium.server.cvpUtil);
+var data = {Data.Element.REST_DebitCard.response_body};
+var index = new Array();
+var i,path,result;
+
+for(i=0; i&lt;{LocalVar.IndexAccount}; i++){
+	
+	path= "$signOnInfo.customerDetail.accounts["+i+"].accountType";
+	result = JSONPathUtil.eval(data,path);
+	if(result=="T"){
+		index.push(result);
+	}
+}
+
+index.length
+
+</setting>
+<setting name="IndexAccountType">var result;
+
+var s = {LocalVar.IndexAccSaving};
+var l = {LocalVar.IndexAccLoan};
+var d = {LocalVar.IndexAccGiro};
+var t = {LocalVar.IndexAccDeposit};
+
+if( s&gt;0 &amp; d&gt;0 &amp; l&gt;0 &amp; t&gt;0)
+{
+	result = "a";	
+}else if( s&gt;0 &amp; d&gt;0 &amp; l&gt;0 &amp; t&lt;=0)
+{
+	result = "b1";	
+}else if( s&gt;0 &amp; d&gt;0 &amp; l&lt;=0 &amp; t&gt;0)
+{
+	result = "b2";	
+}else if( s&gt;0 &amp; d&lt;=0 &amp; l&gt;0 &amp; t&gt;0)
+{
+	result = "b3";	
+}else if( s&lt;=0 &amp; d&gt;0 &amp; l&gt;0 &amp; t&gt;0)
+{
+	result = "b4";	
+}else if( s&gt;0 &amp; d&gt;0 &amp; l&lt;=0 &amp; t&lt;=0)
+{
+	result = "c1";	
+}else if( s&gt;0 &amp; d&lt;=0 &amp; l&gt;0 &amp; t&lt;=0)
+{
+	result = "c2";	
+}else if( s&gt;0 &amp; d&lt;=0 &amp; l&lt;=0 &amp; t&gt;0)
+{
+	result = "c3";	
+}else if( s&lt;=0 &amp; d&gt;0 &amp; l&lt;=0 &amp; t&gt;0)
+{
+	result = "c4";	
+}else if( s&lt;=0 &amp; d&lt;=0 &amp; l&gt;0 &amp; t&gt;0)
+{
+	result = "c5";	
+}else if( s&gt;0 &amp; d&lt;=0 &amp; l&lt;=0 &amp; t&lt;=0)
+{
+	result = "d1";	
+}else if( s&lt;=0 &amp; d&gt;0 &amp; l&lt;=0 &amp; t&lt;=0)
+{
+	result = "d2";	
+}else if( s&lt;=0 &amp; d&lt;=0 &amp; l&gt;0 &amp; t&lt;=0)
+{
+	result = "d3";	
+}else if( s&lt;=0 &amp; d&lt;=0 &amp; l&lt;=0 &amp; t&gt;0)
+{
+	result = "d4";	
+}
+
+result</setting>
+</settings>
+</config>
+</action_element>

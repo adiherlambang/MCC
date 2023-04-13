@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1196384757:1606059102162" name="Corp_SaldoResponCode1" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Corp_SaldoResponCode1" default_exit_state="Fail">
+        <exit_state name="Success" conjugate="and">
+            <string operator="equal">
+                <local_variable name="CorpSaldoRC1" />
+                <constant_string value="1" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

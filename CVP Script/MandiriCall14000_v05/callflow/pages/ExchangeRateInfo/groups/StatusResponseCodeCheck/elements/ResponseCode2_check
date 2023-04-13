@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@340361956:1604658588170" name="ResponseCode2_check" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="ResponseCode2_check" default_exit_state="Fail">
+        <exit_state name="Success" conjugate="and">
+            <string operator="equal">
+                <local_variable name="responseCode2" />
+                <constant_string value="00" />
+            </string>
+        </exit_state>
+        <exit_state name="Currency_NotAvailable" conjugate="and">
+            <string operator="equal">
+                <local_variable name="responseCode2" />
+                <constant_string value="11" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@819897499:1607019037677" name="CheckCC" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Decision_03" default_exit_state="Not Registered">
+        <exit_state name="Registered" conjugate="and">
+            <number operator="greater">
+                <data>
+                    <element name="DB_CheckCCType" variable="num_rows_processed" />
+                </data>
+                <constant_number value="0" />
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

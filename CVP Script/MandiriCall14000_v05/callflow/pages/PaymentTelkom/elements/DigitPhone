@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@45508505:1602127706684" name="DigitPhone" version="6.0.1">
+<config>
+<settings>
+<setting name="inputmode">both</setting>
+<setting name="noinput_timeout">20s</setting>
+<setting name="max_noinput_count">3</setting>
+<setting name="max_nomatch_count">3</setting>
+<setting name="digits_confidence_level">0.20</setting>
+<setting name="min_digit">3</setting>
+<setting name="max_digit">16</setting>
+<setting name="modal">false</setting>
+<setting name="secure_logging">false</setting>
+<setting name="maxnbest">1</setting>
+<setting name="dtmf_overlay">false</setting>
+</settings>
+<vxml_properties>
+<data name="termchar">#</data>
+</vxml_properties>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.03.01/InputPhoneNumber.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="1" name="nomatch_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/Error_NoTelpSalah.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy of audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.03.01/InputPhoneNumber.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="2" name="nomatch_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/Error_NoTelpSalah.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy of audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.03.01/InputPhoneNumber.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="3" name="nomatch_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/Error_NoTelpSalah.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/Error_3xBU.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="1" name="noinput_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/NoInput.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy of audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.03.01/InputPhoneNumber.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="2" name="noinput_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/NoInput.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy of audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.03.01/InputPhoneNumber.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="3" name="noinput_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/NoInput.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/Error_3xBU.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+</config>
+</voice_element>

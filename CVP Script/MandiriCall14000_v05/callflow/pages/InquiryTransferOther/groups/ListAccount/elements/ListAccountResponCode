@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1664340125:1605449002975" name="ListAccountResponCode" version="6.0.1">
+<config>
+<settings>
+<setting name="RC1ListAccount">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_RegisteredAccount.response_body};
+
+var path= "$payload.responseCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+eval(result)</setting>
+<setting name="RC2ListAccount">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_RegisteredAccount.response_body};
+
+var path= "$payload.ftBeneficiaryListInfo.responseCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="traceNum_ListAccount">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_RegisteredAccount.response_body};
+
+var path= "$hubHeader.traceNumber";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="terminalId_ListAccount">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_RegisteredAccount.response_body};
+
+var path= "$hubHeader.terminalId";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+</settings>
+<element_data>
+<data create_when="After" name="ListAccount_RC1" storable="true" type="String">{LocalVar.RC1ListAccount}</data>
+<data create_when="After" name="ListAccount_RC2" storable="true" type="String">{LocalVar.RC2ListAccount}</data>
+<data create_when="After" name="TraceNum_ListAccount" storable="true" type="String">{LocalVar.traceNum_ListAccount}</data>
+<data create_when="After" name="TerminalID_ListAccount" storable="true" type="String">{LocalVar.terminalId_ListAccount}</data>
+</element_data>
+</config>
+</action_element>

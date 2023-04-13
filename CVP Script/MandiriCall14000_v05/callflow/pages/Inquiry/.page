@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@580540381:1602047218567" name="Inquiry" version="6.0.1">
+<element height="62" id="Element@1337735989:1602062369088" name="AccountCheck" type="Page Connector" width="202" x="1132" y="959">
+<page_connector target="Element@111356485:1602062386819">AccountCheck<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@370993620:1605085238072" name="IndexAcc" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="145" x="776" y="665">
+<exit_states>
+<exit_state name="done" target="Element@1337735989:1602062369088"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1898384436:1602047218567" name="Inquiry" type="Page Entry" width="124" x="68" y="178">
+<exit_states>
+<exit_state name="next" target="Element@2068560711:1612415053914"/>
+</exit_states>
+</element>
+<element height="62" id="Element@986681496:1609853938693" name="TransferLooping" src="com.audium.server.action.math.MathAction" type="Action Element" width="221" x="1302" y="195">
+<exit_states>
+<exit_state name="done" target="Element@1552457168:1681285868120"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1672792803:1605441512684" name="TransferSameCard" type="Decision" width="242" x="737" y="191">
+<exit_states>
+<exit_state name="True" target="Element@986681496:1609853938693"/>
+<exit_state name="False" target="Element@1252073050:1681285868120"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1527879739:1605430855586" name="TransferValue" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="192" x="759" y="18">
+<exit_states>
+<exit_state name="done" target="Element@1672792803:1605441512684"/>
+</exit_states>
+</element>
+<element height="62" id="Element@564935375:1611677509307" name="Inquiry_forAgent" type="Page Entry" width="228" x="264" y="952">
+<exit_states>
+<exit_state name="next" target="Element@370993620:1605085238072"/>
+</exit_states>
+</element>
+<element height="62" id="Element@2068560711:1612415053914" name="FlagMenu_Decision" type="Decision" width="258" x="273" y="11">
+<exit_states>
+<exit_state name="transfer" target="Element@1527879739:1605430855586"/>
+<exit_state name="NotTransfer" target="Element@843388048:1681285835102"/>
+</exit_states>
+</element>
+<element height="62" id="Element@843388048:1681285835102" name="Audio_ValueNotTransfer" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="305" x="239" y="509">
+<exit_states>
+<exit_state name="done" target="Element@370993620:1605085238072"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1252073050:1681285868120" name="Audio_ValueTransOther" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="297" x="709" y="415">
+<exit_states>
+<exit_state name="done" target="Element@370993620:1605085238072"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1552457168:1681285868120" name="Audio_ValueTransSame" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="295" x="1253" y="555">
+<exit_states>
+<exit_state name="done" target="Element@370993620:1605085238072"/>
+</exit_states>
+</element>
+</page>

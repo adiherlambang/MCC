@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1294652508:1602118321037" name="Copy_of_Last5TransactionDataCheck10" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Copy_of_Last5TransactionDataCheck10" default_exit_state="false">
+        <exit_state name="true" conjugate="and">
+            <number operator="greater">
+                <local_variable name="TotalLastTrans" />
+                <constant_number value="1" />
+            </number>
+            <number operator="less_equal">
+                <local_variable name="TotalLastTrans" />
+                <constant_number value="10" />
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1367202369:1605174464833" name="TypeC" version="6.0.1">
+<element height="62" id="Element@237895067:1605174628787" name="CurrTypeC1" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="174" x="875" y="254">
+<exit_states>
+<exit_state name="done" target="Element@288597484:1605174885370"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1534513484:1605174664426" name="CurrTypeC2" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="174" x="830" y="435">
+<exit_states>
+<exit_state name="done" target="Element@288597484:1605174885370"/>
+</exit_states>
+</element>
+<element height="62" id="Element@308905451:1605174699597" name="CurrTypeC3" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="174" x="839" y="638">
+<exit_states>
+<exit_state name="done" target="Element@288597484:1605174885370"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1728289048:1605174762615" name="CurrTypeC4" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="174" x="832" y="804">
+<exit_states>
+<exit_state name="done" target="Element@288597484:1605174885370"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1386327529:1605174831635" name="CurrTypeC5" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="174" x="781" y="1027">
+<exit_states>
+<exit_state name="done" target="Element@288597484:1605174885370"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1943436836:1605174464833" name="Group Start" type="Element Group Start" width="171" x="283" y="31">
+<exit_states>
+<exit_state name="Currency_2:True" target="Element@1245526830:1605174291022"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1245526830:1605174291022" name="TypeC1" type="Decision" width="129" x="344" y="312">
+<exit_states>
+<exit_state name="False" target="Element@920886697:1605174338003"/>
+<exit_state name="TypeC1" target="Element@237895067:1605174628787"/>
+</exit_states>
+</element>
+<element height="62" id="Element@920886697:1605174338003" name="TypeC2" type="Decision" width="129" x="354" y="541">
+<exit_states>
+<exit_state name="False" target="Element@1506168654:1605174346792"/>
+<exit_state name="TypeC2" target="Element@1534513484:1605174664426"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1506168654:1605174346792" name="TypeC3" type="Decision" width="129" x="399" y="722">
+<exit_states>
+<exit_state name="False" target="Element@74330896:1605174355865"/>
+<exit_state name="TypeC3" target="Element@308905451:1605174699597"/>
+</exit_states>
+</element>
+<element height="62" id="Element@74330896:1605174355865" name="TypeC4" type="Decision" width="129" x="400" y="890">
+<exit_states>
+<exit_state name="TypeC4" target="Element@1728289048:1605174762615"/>
+<exit_state name="TypeC5" target="Element@1386327529:1605174831635"/>
+</exit_states>
+</element>
+</page>

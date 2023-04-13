@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1050490094:1612339083890" name="Menu_Services" version="6.0.1">
+<config>
+<settings>
+<setting name="menu_services">var menu = {LocalVar.lang_select} + "_"+"Regular"+"_" +{Data.Element.DB_CheckCard.name};
+
+menu</setting>
+</settings>
+</config>
+</action_element>

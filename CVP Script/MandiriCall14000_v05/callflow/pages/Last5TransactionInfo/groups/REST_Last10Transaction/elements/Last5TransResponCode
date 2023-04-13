@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1777829381:1605241761759" name="Last5TransResponCode" version="6.0.1">
+<config>
+<settings>
+<setting name="last5RC1">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last5Trans.response_body};
+
+var path= "$responseCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+eval(result)</setting>
+<setting name="last5RC2">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last5Trans.response_body};
+
+var path= "$lastTxnInquiryInfo.responseCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="traceNum_Last5Trans">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last5Trans.response_body};
+
+var path= "$hubHeader.traceNumber";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="terminalId_Last5Trans">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_Last5Trans.response_body};
+
+var path= "$hubHeader.terminalId";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+</settings>
+<element_data>
+<data create_when="After" name="TerminalID" storable="true" type="String">{LocalVar.terminalId_Last5Trans}</data>
+<data create_when="After" name="traceNum" storable="true" type="String">{LocalVar.traceNum_Last5Trans}</data>
+<data create_when="After" name="lastTransRC1" storable="true" type="String">{LocalVar.last5RC1}</data>
+<data create_when="After" name="lastTransRC2" storable="true" type="String">{LocalVar.last5RC2}</data>
+</element_data>
+</config>
+</action_element>

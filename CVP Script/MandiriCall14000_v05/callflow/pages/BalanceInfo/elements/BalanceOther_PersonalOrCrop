@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1710566599:1606066820149" name="BalanceOther_PersonalOrCrop" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="PersonalOrCrop" default_exit_state="Corp">
+        <exit_state name="Banking" conjugate="and">
+            <string operator="equal">
+                <local_variable name="fromMenu" />
+                <constant_string value="bank" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<subdialog_return id="Element@1290047496:1601902781453" name="ConnectAgentCreditCard_INA" version="6.0.1">
+<config>
+<settings>
+<setting name="caller_input">1</setting>
+<setting name="FromExtVXML0">CC,9={LocalVar.STMT_DATE_CC},{LocalVar.DUE_DATE_CC},1={LocalVar.NamaNasabahCC}</setting>
+<setting name="FromExtVXML1">ina,reg,2={LocalVar.CardInput},10={LocalVar.EmailNasabah}</setting>
+<setting name="FromExtVXML2">4={LocalVar.DOB_CC},7={LocalVar.expDateCC_mmyy},3={LocalVar.GenderNasabah},6={LocalVar.PhoneNumberCC}</setting>
+<setting name="FromExtVXML3">8={LocalVar.lang_select}_Regular_CC,5={LocalVar.AlamatNasabah}</setting>
+</settings>
+</config>
+</subdialog_return>

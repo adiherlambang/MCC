@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@867190258:1609854765518" name="2_AccTypeC5" version="6.0.1">
+<config>
+<settings>
+<setting name="TransAccSound1">"MenuSaldoPinjaman.wav"</setting>
+<setting name="TransAccSound2">"MenuSaldoDeposito.wav"</setting>
+<setting name="TransAccCode1">var result = "L";
+result</setting>
+<setting name="TransAccCode2">var result = "T";
+result</setting>
+</settings>
+</config>
+</action_element>

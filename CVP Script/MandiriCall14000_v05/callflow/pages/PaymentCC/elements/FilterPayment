@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1136988048:1605894009089" name="FilterPayment" version="6.0.1">
+<config>
+<settings>
+<setting name="FlagPayment">var flag = "ccbill";
+flag</setting>
+<setting name="validation_paymentCC">var payment = {Data.Element.InputDigitPaymentCC.value};
+
+payment.indexOf("*")</setting>
+</settings>
+</config>
+</action_element>

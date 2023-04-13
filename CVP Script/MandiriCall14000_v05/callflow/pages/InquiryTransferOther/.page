@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@271276758:1603604217373" name="InquiryTransferOther" version="6.0.1">
+<element height="62" id="Element@1188664642:1605449017790" name="Error_ServiceSOA" type="Page Connector" width="231" x="68" y="260">
+<page_connector target="Element@623071406:1607697419497">Error_ServiceSOA<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1654089835:1608097148978" name="Error_ServiceSOA" type="Page Connector" width="231" x="871" y="391">
+<page_connector target="Element@623071406:1607697419497">Error_ServiceSOA<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1826042868:1605448267758" name="InquiryTransferOther" type="Page Entry" width="269" x="98" y="56">
+<exit_states>
+<exit_state name="next" target="Element@888608646:1605448500669"/>
+</exit_states>
+</element>
+<element height="62" id="Element@248796956:1605449270696" name="ListAccount" type="Element Group" width="172" x="426" y="259"/>
+<element height="62" id="Element@850010497:1605449295807" name="ListAccountValue" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="230" x="404" y="399">
+<exit_states>
+<exit_state name="done" target="Element@2065080390:1605459161992"/>
+</exit_states>
+</element>
+<element height="62" id="Element@888608646:1605448500669" name="RegisteredAccount" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="249" x="410" y="135">
+<exit_states>
+<exit_state name="done" target="Element@248796956:1605449270696"/>
+</exit_states>
+</element>
+<element height="62" id="Element@2065080390:1605459161992" name="Trans_Account" type="Page Connector" width="202" x="407" y="521">
+<page_connector target="Element@461473240:1605458002744">Trans_Account<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1955298108:1611907030338" name="Log_ListAccount_TimeOut" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="324" x="883" y="174">
+<exit_states>
+<exit_state name="done" target="Element@1654089835:1608097148978"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@1654089835:1608097148978"/>
+</exit_states>
+</element>
+</page>

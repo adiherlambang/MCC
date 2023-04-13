@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@428634044:1605882888814" name="DB_CheckCC" version="6.0.1">
+<config>
+<settings>
+<setting name="type">single</setting>
+<setting name="jndiName">cvp_mdr</setting>
+<setting name="query">SELECT * 
+FROM 
+ccprefix
+WHERE Prefix = '{LocalVar.prefixCC}'</setting>
+<setting name="enableXmlResultSet">true</setting>
+<setting name="maxRowsInXML">1</setting>
+</settings>
+<element_data>
+<data create_when="After" name="prefix" storable="true" type="String">{Data.Element.DB_CheckCC.prefix}</data>
+<data create_when="After" name="name" storable="true" type="String">{Data.Element.DB_CheckCC.name}</data>
+</element_data>
+</config>
+</action_element>

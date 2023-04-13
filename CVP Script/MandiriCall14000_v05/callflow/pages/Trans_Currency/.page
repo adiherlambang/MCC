@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@606892481:1603647441024" name="Trans_Currency" version="6.0.1">
+<element height="62" id="Element@610240661:1605471328287" name="Copy_of_1_Account" type="Element Group" width="257" x="180" y="736"/>
+<element height="62" id="Element@580672184:1605471328288" name="Copy_of_Copy_of_2" type="Decision" width="257" x="139" y="595">
+<exit_states>
+<exit_state name="typec" target="Element@370065820:1605471328288"/>
+<exit_state name="typed" target="Element@610240661:1605471328287"/>
+</exit_states>
+</element>
+<element height="62" id="Element@370065820:1605471328288" name="Copy_of_Copy_of_2_Account" type="Element Group" width="354" x="485" y="575"/>
+<element height="62" id="Element@474914758:1605471328288" name="Copy_of_Copy_of_3" type="Decision" width="257" x="135" y="421">
+<exit_states>
+<exit_state name="False" target="Element@580672184:1605471328288"/>
+<exit_state name="typeb" target="Element@919689769:1605471328289"/>
+</exit_states>
+</element>
+<element height="62" id="Element@919689769:1605471328289" name="Copy_of_Copy_of_3_Account" type="Element Group" width="354" x="409" y="414"/>
+<element height="62" id="Element@1423332906:1605471328288" name="Copy_of_Copy_of_4" type="Decision" width="257" x="139" y="279">
+<exit_states>
+<exit_state name="False" target="Element@474914758:1605471328288"/>
+<exit_state name="typea" target="Element@290360330:1605471328288"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1513160882:1605471328288" name="Copy_of_Copy_of_pick1Account" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="387" x="625" y="925">
+<exit_states>
+<exit_state name="done" target="Element@371197128:1608098030980"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1994938846:1605471328288" name="Copy_of_Copy_of_pick2Account" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="387" x="689" y="778">
+<exit_states>
+<exit_state name="done" target="Element@371197128:1608098030980"/>
+</exit_states>
+</element>
+<element height="62" id="Element@2080094586:1605471328288" name="Error_NoInput" type="Page Connector" width="198" x="1114" y="282">
+<page_connector target="Element@270910828:1610085311655">Error_NoInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1330992906:1605471328289" name="Error_NoInput" type="Page Connector" width="198" x="264" y="-4">
+<page_connector target="Element@270910828:1610085311655">Error_NoInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@2016947834:1605471328289" name="Error_NoInput" type="Page Connector" width="198" x="1138" y="528">
+<page_connector target="Element@270910828:1610085311655">Error_NoInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1828422328:1605471328289" name="Error_NoMatchInput" type="Page Connector" width="265" x="452" y="-13">
+<page_connector target="Element@1250119072:1610085949630">Error_NoMatchInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@112255710:1605471328288" name="Error_NoMatchInput" type="Page Connector" width="265" x="970" y="174">
+<page_connector target="Element@1250119072:1610085949630">Error_NoMatchInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@598874333:1605471328289" name="Error_NoMatchInput" type="Page Connector" width="265" x="888" y="491">
+<page_connector target="Element@1250119072:1610085949630">Error_NoMatchInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1984992521:1608098223964" name="Error_currencytype_transfer1" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="352" x="878" y="-49">
+<exit_states>
+<exit_state name="done" target="Element@908681698:1608098016907"/>
+</exit_states>
+</element>
+<element height="62" id="Element@824780786:1608098243596" name="Error_currencytype_transfer2" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="352" x="1096" y="809">
+<exit_states>
+<exit_state name="done" target="Element@1695601527:1608098071275"/>
+</exit_states>
+</element>
+<element height="62" id="Element@392388056:1605471328288" name="NoInput" type="Page Connector" width="138" x="455" y="1018">
+<page_connector target="Element@372874912:1601898931749">NoInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@823077877:1605471328288" name="NoMatchInput" type="Page Connector" width="205" x="301" y="1001">
+<page_connector target="Element@982309222:1601898944005">NoMatchInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1524630110:1605466535852" name="Trans_Currency" type="Page Entry" width="210" x="39" y="26">
+<exit_states>
+<exit_state name="next" target="Element@9509065:1605466638426"/>
+</exit_states>
+</element>
+<element height="62" id="Element@9509065:1605466638426" name="Trans_CurrencyValue" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="268" x="26" y="128">
+<exit_states>
+<exit_state name="done" target="Element@1423332906:1605471328288"/>
+</exit_states>
+</element>
+<element height="62" id="Element@908681698:1608098016907" name="Trans_Inquiry" type="Page Connector" width="189" x="1158" y="-98">
+<page_connector target="Element@239805318:1603536635014">Trans_Inquiry<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1695601527:1608098071275" name="Trans_Inquiry" type="Page Connector" width="189" x="1352" y="788">
+<page_connector target="Element@239805318:1603536635014">Trans_Inquiry<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1677608837:1605471328288" name="Trans_LastDigitRek" type="Page Connector" width="245" x="1161" y="62">
+<page_connector target="Element@984437585:1605496800455">Trans_LastDigitRek<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@283716335:1605471328288" name="Trans_LastDigitRek" type="Page Connector" width="245" x="1116" y="917">
+<page_connector target="Element@984437585:1605496800455">Trans_LastDigitRek<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@427705700:1605471328288" name="Trans_of_1_CurrencyBanking" skipped="true" src="com.audium.server.voiceElement.menu.MFoundation2OptionMenu" type="Voice Element" width="351" x="325" y="879">
+<exit_states>
+<exit_state name="option1" target="Element@1513160882:1605471328288"/>
+<exit_state name="option2" target="Element@427705700:1605471328288">
+<bendpoint>
+<dim1 x="0" y="48"/>
+<dim2 x="0" y="48"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="124" y="48"/>
+<dim2 x="124" y="48"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="124" y="0"/>
+<dim2 x="124" y="0"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_nomatch" target="Element@823077877:1605471328288"/>
+<exit_state name="max_noinput" target="Element@392388056:1605471328288"/>
+</exit_states>
+</element>
+<element height="62" id="Element@237874197:1605471328289" name="Trans_of_2_CurrencyBanking" src="com.audium.server.voiceElement.menu.MFoundation3OptionMenu" type="Voice Element" width="351" x="809" y="638">
+<exit_states>
+<exit_state name="option1" target="Element@1994938846:1605471328288"/>
+<exit_state name="option2" target="Element@1994938846:1605471328288"/>
+<exit_state name="option3" target="Element@237874197:1605471328289">
+<bendpoint>
+<dim1 x="0" y="48"/>
+<dim2 x="0" y="48"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="115" y="48"/>
+<dim2 x="115" y="48"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="115" y="0"/>
+<dim2 x="115" y="0"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_nomatch" target="Element@598874333:1605471328289"/>
+<exit_state name="max_noinput" target="Element@2016947834:1605471328289"/>
+</exit_states>
+</element>
+<element height="62" id="Element@506484842:1605471328288" name="Trans_of_3_CurrencyBanking" src="com.audium.server.voiceElement.menu.MFoundation4OptionMenu" type="Voice Element" width="351" x="751" y="300">
+<exit_states>
+<exit_state name="option1" target="Element@2124093990:1605471328288"/>
+<exit_state name="option2" target="Element@2124093990:1605471328288"/>
+<exit_state name="option3" target="Element@2124093990:1605471328288"/>
+<exit_state name="option4" target="Element@506484842:1605471328288">
+<bendpoint>
+<dim1 x="0" y="48"/>
+<dim2 x="0" y="48"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="118" y="46"/>
+<dim2 x="118" y="46"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="152" y="15"/>
+<dim2 x="152" y="15"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="99" y="0"/>
+<dim2 x="99" y="0"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_nomatch" target="Element@112255710:1605471328288"/>
+<exit_state name="max_noinput" target="Element@2080094586:1605471328288"/>
+</exit_states>
+</element>
+<element height="62" id="Element@290360330:1605471328288" name="Trans_of_4_CurrencyBanking" src="com.audium.server.voiceElement.menu.MFoundation5OptionMenu" type="Voice Element" width="351" x="368" y="141">
+<exit_states>
+<exit_state name="option1" target="Element@1272869722:1605471328288"/>
+<exit_state name="option2" target="Element@1272869722:1605471328288"/>
+<exit_state name="option3" target="Element@1272869722:1605471328288"/>
+<exit_state name="option4" target="Element@1272869722:1605471328288"/>
+<exit_state name="option5" target="Element@290360330:1605471328288">
+<bendpoint>
+<dim1 x="-67" y="86"/>
+<dim2 x="-67" y="86"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="32" y="83"/>
+<dim2 x="32" y="83"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_nomatch" target="Element@1828422328:1605471328289"/>
+<exit_state name="max_noinput" target="Element@1330992906:1605471328289"/>
+</exit_states>
+</element>
+<element height="62" id="Element@2124093990:1605471328288" name="Trans_pick3Currency" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="266" x="701" y="140">
+<exit_states>
+<exit_state name="done" target="Element@825001827:1608097911059"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1272869722:1605471328288" name="Trans_pick4Currency" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="266" x="663" y="30">
+<exit_states>
+<exit_state name="done" target="Element@825001827:1608097911059"/>
+</exit_states>
+</element>
+<element height="62" id="Element@825001827:1608097911059" name="check_currency1" type="Decision" width="225" x="910" y="67">
+<exit_states>
+<exit_state name="Success" target="Element@1677608837:1605471328288"/>
+<exit_state name="Failed" target="Element@1984992521:1608098223964"/>
+</exit_states>
+</element>
+<element height="62" id="Element@371197128:1608098030980" name="check_currency2" type="Decision" width="225" x="901" y="870">
+<exit_states>
+<exit_state name="Success" target="Element@283716335:1605471328288"/>
+<exit_state name="Failed" target="Element@824780786:1608098243596"/>
+</exit_states>
+</element>
+</page>

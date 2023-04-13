@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1235501420:1610301161618" name="NoMatch_ConnectAgentBU" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="NoInput_ConnectAgentBU" default_exit_state="STAFF">
+        <exit_state name="BANKING" conjugate="and">
+            <string operator="equal">
+                <local_variable name="flagMenu" />
+                <constant_string value="bank" />
+            </string>
+        </exit_state>
+        <exit_state name="CORP" conjugate="and">
+            <string operator="equal">
+                <local_variable name="flagMenu" />
+                <constant_string value="corp" />
+            </string>
+        </exit_state>
+        <exit_state name="CREDIT" conjugate="and">
+            <string operator="equal">
+                <local_variable name="flagMenu" />
+                <constant_string value="credit" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

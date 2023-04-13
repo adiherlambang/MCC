@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1211129164:1609854765518" name="2_AccTypeC1" version="6.0.1">
+<config>
+<settings>
+<setting name="TransAccSound1">"MenuSaldoTabungan.wav"</setting>
+<setting name="TransAccSound2">"MenuSaldoGiro.wav"</setting>
+<setting name="TransAccCode1">var result = "S";
+result</setting>
+<setting name="TransAccCode2">var result = "D";
+result</setting>
+</settings>
+</config>
+</action_element>

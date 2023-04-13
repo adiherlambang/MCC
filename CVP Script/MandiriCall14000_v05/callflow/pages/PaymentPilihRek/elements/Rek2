@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1751460459:1605781127283" name="Rek2" version="6.0.1">
+<config>
+<settings>
+<setting name="PaymentRek1">var list = {LocalVar.ListRek};
+
+list[0]</setting>
+<setting name="PaymentRek2">var list = {LocalVar.ListRek};
+
+list[1]</setting>
+<setting name="PaymentRek1_last">var list = {LocalVar.ListLastDigitRek};
+
+list[0]</setting>
+<setting name="PaymentRek2_last">var list = {LocalVar.ListLastDigitRek};
+
+list[1]</setting>
+</settings>
+</config>
+</action_element>

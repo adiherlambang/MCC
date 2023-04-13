@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@340053460:1605179280899" name="CurrTypeD4" version="6.0.1">
+<config>
+<settings>
+<setting name="soundType1">"HKD.wav"</setting>
+<setting name="codeType1">var result = "HKD";
+result</setting>
+</settings>
+</config>
+</action_element>

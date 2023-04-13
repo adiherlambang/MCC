@@ -1,0 +1,1251 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@362370631:1608231763005" name="PersonalCCInformation" version="6.0.1">
+<config>
+<settings>
+<setting name="noinput_timeout">5s</setting>
+<setting name="max_noinput_count">2</setting>
+<setting name="max_nomatch_count">2</setting>
+<setting name="confidence_level">0.40</setting>
+<setting name="modal">false</setting>
+<setting name="option1_dtmf">0</setting>
+<setting name="option1_voice"/>
+<setting name="option1_value">CallAgent</setting>
+<setting name="option2_dtmf">8</setting>
+<setting name="option2_voice"/>
+<setting name="option2_value">EndCall</setting>
+<setting name="option3_dtmf">#</setting>
+<setting name="option3_voice"/>
+<setting name="option3_value">MainMenu</setting>
+<setting name="option4_dtmf">9</setting>
+<setting name="option4_voice"/>
+<setting name="option4_value">MenuSebelumnya</setting>
+<setting name="option5_dtmf">*</setting>
+<setting name="option5_voice"/>
+<setting name="option5_value">MengulangInformasi</setting>
+</settings>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Info_JmlhPemakaian.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.currentBalanceCC}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="enhanced" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 24" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Koma.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 25" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.currentBalanceCC_koma}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 3" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Rupiah.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 4" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Info_SisaLimit.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 5" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.RemainLimitCC}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="enhanced" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 26" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Koma.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 27" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.RemainLimitCC_koma}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 6" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Rupiah.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 7" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/TagihanTerakhir.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 8" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.dateOfBillCC_dd}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 9" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="mmyy" output_format="month_year_20" type="date">{LocalVar.dateOfBillCC_yymm}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="month_standard_year" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 10" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Adalah.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 11" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.currentBillCC}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="enhanced" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 28" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Koma.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 29" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.currentBillCC_koma}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 12" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Rupiah.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 21" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/JumlahBayarMin.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 22" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.minPaymentCC}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="enhanced" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 30" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Koma.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 31" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.minPaymentCC_koma}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 23" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Rupiah.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 13" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/TglJatuhTempo.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 14" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.dueDateCC_dd}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 15" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="mmyy" output_format="month_year_20" type="date">{LocalVar.dueDateCC_yymm}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="month_standard_year" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 16" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/BayarTerakhir.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 17" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.lastPaymentDateCC_dd}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 32" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="mmyy" output_format="month_year_20" type="date">{LocalVar.lastPaymentDateCC_yymm}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="month_standard_year" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 33" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/sebesar.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 18" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.lastPaymentAmntCC}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="enhanced" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 19" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Koma.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 20" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.lastPaymentAmtCC_koma}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 34" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Rupiah.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 35" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Info_AktifCard.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 36" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/general/GeneralInfo.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="1" name="nomatch_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/NoMatchInput.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy of audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Info_JmlhPemakaian.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.currentBalanceCC}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="enhanced" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 24" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Koma.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 25" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.currentBalanceCC_koma}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 3" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Rupiah.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 4" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Info_SisaLimit.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 5" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.RemainLimitCC}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="enhanced" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 26" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Koma.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 27" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.RemainLimitCC_koma}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 6" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Rupiah.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 7" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/TagihanTerakhir.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 8" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.dateOfBillCC_dd}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 9" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="mmyy" output_format="month_year_20" type="date">{LocalVar.dateOfBillCC_yymm}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="month_standard_year" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 10" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Adalah.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 11" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.currentBillCC}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="enhanced" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 28" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Koma.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 29" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.currentBillCC_koma}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 12" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Rupiah.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 21" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/JumlahBayarMin.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 22" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.minPaymentCC}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="enhanced" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 30" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Koma.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 31" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.minPaymentCC_koma}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 23" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Rupiah.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 13" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/TglJatuhTempo.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 14" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.dueDateCC_dd}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 15" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="mmyy" output_format="month_year_20" type="date">{LocalVar.dueDateCC_yymm}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="month_standard_year" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 16" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/BayarTerakhir.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 17" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.lastPaymentDateCC_dd}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="enhanced" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 32" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="mmyy" output_format="month_year_20" type="date">{LocalVar.lastPaymentDateCC_yymm}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="month_standard_year" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 33" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/sebesar.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 18" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.lastPaymentAmntCC}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="enhanced" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 19" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Koma.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 20" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.lastPaymentAmtCC_koma}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 34" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Rupiah.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 35" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Info_AktifCard.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 36" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/general/GeneralInfo.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="2" name="nomatch_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/NoMatchInput.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy of audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Info_JmlhPemakaian.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.currentBalanceCC}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="enhanced" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 24" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Koma.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 25" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.currentBalanceCC_koma}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 3" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Rupiah.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 4" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Info_SisaLimit.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 5" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.RemainLimitCC}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="enhanced" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 26" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Koma.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 27" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.RemainLimitCC_koma}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 6" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Rupiah.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 7" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/TagihanTerakhir.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 8" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.dateOfBillCC_dd}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 9" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="mmyy" output_format="month_year_20" type="date">{LocalVar.dateOfBillCC_yymm}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="month_standard_year" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 10" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Adalah.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 11" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.currentBillCC}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="enhanced" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 28" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Koma.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 29" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.currentBillCC_koma}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 12" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Rupiah.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 21" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/JumlahBayarMin.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 22" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.minPaymentCC}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="enhanced" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 30" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Koma.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 31" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.minPaymentCC_koma}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 23" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Rupiah.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 13" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/TglJatuhTempo.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 14" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.dueDateCC_dd}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 15" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="mmyy" output_format="month_year_20" type="date">{LocalVar.dueDateCC_yymm}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="month_standard_year" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 16" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/BayarTerakhir.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 17" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.lastPaymentDateCC_dd}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="enhanced" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 32" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="mmyy" output_format="month_year_20" type="date">{LocalVar.lastPaymentDateCC_yymm}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="month_standard_year" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 33" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/sebesar.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 18" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.lastPaymentAmntCC}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="enhanced" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 19" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Koma.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 20" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.lastPaymentAmtCC_koma}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 34" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Rupiah.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 35" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Info_AktifCard.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 36" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/general/GeneralInfo.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="3" name="nomatch_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/NoMatchInput.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/Error_3xBU.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="1" name="noinput_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/NoInput.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy of audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Info_JmlhPemakaian.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.currentBalanceCC}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="enhanced" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 24" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Koma.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 25" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.currentBalanceCC_koma}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 3" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Rupiah.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 4" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Info_SisaLimit.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 5" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.RemainLimitCC}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="enhanced" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 26" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Koma.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 27" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.RemainLimitCC_koma}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 6" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Rupiah.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 7" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/TagihanTerakhir.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 8" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.dateOfBillCC_dd}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 9" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="mmyy" output_format="month_year_20" type="date">{LocalVar.dateOfBillCC_yymm}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="month_standard_year" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 10" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Adalah.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 11" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.currentBillCC}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="enhanced" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 28" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Koma.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 29" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.currentBillCC_koma}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 12" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Rupiah.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 21" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/JumlahBayarMin.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 22" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.minPaymentCC}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="enhanced" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 30" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Koma.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 31" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.minPaymentCC_koma}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 23" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Rupiah.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 13" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/TglJatuhTempo.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 14" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.dueDateCC_dd}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 15" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="mmyy" output_format="month_year_20" type="date">{LocalVar.dueDateCC_yymm}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="month_standard_year" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 16" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/BayarTerakhir.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 17" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.lastPaymentDateCC_dd}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="enhanced" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 32" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="mmyy" output_format="month_year_20" type="date">{LocalVar.lastPaymentDateCC_yymm}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="month_standard_year" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 33" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/sebesar.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 18" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.lastPaymentAmntCC}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="enhanced" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 19" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Koma.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 20" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.lastPaymentAmtCC_koma}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 34" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Rupiah.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 35" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Info_AktifCard.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 36" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/general/GeneralInfo.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="2" name="noinput_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/NoInput.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy of audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Info_JmlhPemakaian.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.currentBalanceCC}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="enhanced" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 24" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Koma.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 25" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.currentBalanceCC_koma}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 3" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Rupiah.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 4" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Info_SisaLimit.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 5" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.RemainLimitCC}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="enhanced" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 26" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Koma.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 27" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.RemainLimitCC_koma}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 6" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Rupiah.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 7" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/TagihanTerakhir.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 8" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.dateOfBillCC_dd}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 9" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="mmyy" output_format="month_year_20" type="date">{LocalVar.dateOfBillCC_yymm}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="month_standard_year" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 10" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Adalah.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 11" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.currentBillCC}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="enhanced" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 28" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Koma.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 29" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.currentBillCC_koma}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 12" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Rupiah.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 21" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/JumlahBayarMin.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 22" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.minPaymentCC}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="enhanced" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 30" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Koma.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 31" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.minPaymentCC_koma}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 23" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Rupiah.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 13" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/TglJatuhTempo.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 14" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.dueDateCC_dd}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 15" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="mmyy" output_format="month_year_20" type="date">{LocalVar.dueDateCC_yymm}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="month_standard_year" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 16" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/BayarTerakhir.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 17" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.lastPaymentDateCC_dd}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="enhanced" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 32" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="mmyy" output_format="month_year_20" type="date">{LocalVar.lastPaymentDateCC_yymm}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="month_standard_year" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 33" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/sebesar.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 18" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.lastPaymentAmntCC}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="enhanced" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 19" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Koma.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 20" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.lastPaymentAmtCC_koma}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 34" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Rupiah.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 35" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.02.00/Info_AktifCard.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 36" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/general/GeneralInfo.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="3" name="noinput_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/NoInput.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/Error_3xBU.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+</config>
+</voice_element>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@806456675:1610134617103" name="CheckLengthPIN" version="6.0.1">
+<config>
+<settings>
+<setting name="inputpin_length">var pin = {Data.Element.CustomerIdentificationPersonalBankingPin.value};
+
+var length = pin.length;
+
+length</setting>
+<setting name="MenuLogInIVR">menu = {Data.Element.DB_CheckCard.name};
+menu</setting>
+<setting name="validation_pinDebit">var input = {Data.Element.CustomerIdentificationPersonalBankingPin.value};
+
+input.indexOf("*")</setting>
+</settings>
+</config>
+</action_element>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1776787687:1604681076479" name="PersonalCCValue" version="6.0.1">
+<config>
+<settings>
+<setting name="responCode1_CC">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.responseCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+eval(result)</setting>
+<setting name="responCode2_CC">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$payload.signOnInfo.responseCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="TraceNum_CCSignOn">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$hubHeader.traceNumber";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="TerminalID_CCSignOn">importPackage(com.audium.server.cvpUtil);
+
+var data =  {Data.Element.REST_CreditCard.response_body};
+
+var path= "$hubHeader.terminalId";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+</settings>
+<element_data>
+<data create_when="After" name="CCSignOn_RC1" storable="true" type="String">{LocalVar.responCode1_CC}</data>
+<data create_when="After" name="CCSignOn_RC2" storable="true" type="String">{LocalVar.responCode2_CC}</data>
+<data create_when="After" name="TraceNum_CCSignOn" storable="true" type="String">{LocalVar.TraceNum_CCSignOn}</data>
+<data create_when="After" name="TerminalID_CCSignOn" storable="true" type="String">{LocalVar.TerminalID_CCSignOn}</data>
+</element_data>
+</config>
+</action_element>

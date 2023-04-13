@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1108072096:1605800547273" name="PaymentPhoneRespon" version="6.0.1">
+<config>
+<settings>
+<setting name="PaymentPhoneRC1">importPackage(com.audium.server.cvpUtil);
+
+var data ={Data.Element.REST_PaymentPhone.response_body};
+
+var path= "$payload.responseCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="PaymentPhoneRC2">importPackage(com.audium.server.cvpUtil);
+
+var data ={Data.Element.REST_PaymentPhone.response_body};
+
+var path= "$payload.billPaymentInfo.responseCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="traceNum_paymentPhone">importPackage(com.audium.server.cvpUtil);
+
+var data ={Data.Element.REST_PaymentPhone.response_body};
+
+var path= "$hubHeader.traceNumber";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="terminalId_paymentPhone">importPackage(com.audium.server.cvpUtil);
+
+var data ={Data.Element.REST_PaymentPhone.response_body};
+
+var path= "$hubHeader.terminalId";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+</settings>
+</config>
+</action_element>

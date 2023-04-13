@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1408730171:1604681351873" name="CCResponseCode1" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="CCResponseCode1" default_exit_state="Fail">
+        <exit_state name="Success" conjugate="or">
+            <string operator="equal">
+                <local_variable name="responCode1_CC" />
+                <constant_string value="1" />
+            </string>
+            <string operator="equal">
+                <local_variable name="responCode1_CC" />
+                <constant_string value="2" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@2080057289:1604905143749" name="CCFiestaValue" version="6.0.1">
+<config>
+<settings>
+<setting name="CCfiestaRC1">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_CCFiestaPoint.response_body};
+
+var path= "$payload.responseCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+eval(result)</setting>
+<setting name="CCfiestaRC2">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_CCFiestaPoint.response_body};
+
+var path= "$payload.xlsAccountStatusInfo.responseCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+eval(result)</setting>
+<setting name="traceNum_FiestaCC">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_CCFiestaPoint.response_body};
+
+var path= "$hubHeader.traceNumber";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="terminalId_FiestaCC">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_CCFiestaPoint.response_body};
+
+var path= "$hubHeader.terminalId";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+</settings>
+<element_data>
+<data create_when="After" name="RC1" storable="true" type="String">{LocalVar.CCfiestaRC1}</data>
+<data create_when="After" name="RC2" storable="true" type="String">{LocalVar.CCfiestaRC2}</data>
+<data create_when="After" name="traceNum_FiestaCC" storable="true" type="String">{LocalVar.traceNum_FiestaCC}</data>
+<data create_when="After" name="terminalID_FiestaCC" storable="true" type="String">{LocalVar.terminalId_FiestaCC}</data>
+</element_data>
+</config>
+</action_element>

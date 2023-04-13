@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@349178773:1605461883543" name="Copy_of_3_Account" version="6.0.1">
+<element height="46" id="Element@647685605:1609854524678" name="Copy_of_3_AccTypeD" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="162" x="346" y="438">
+<exit_states>
+<exit_state name="done" target="Element@291492076:1605461883543"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1785212140:1605461883543" name="Group Start" type="Element Group Start" width="110" x="140" y="37">
+<exit_states>
+<exit_state name="Copy_of_3:typeb" target="Element@933202242:1605461883543"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1722520683:1609854524678" name="Trans_3_AccTypeB1" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="162" x="358" y="143">
+<exit_states>
+<exit_state name="done" target="Element@291492076:1605461883543"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1366732316:1609854524678" name="Trans_3_AccTypeB2" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="150" x="355" y="231">
+<exit_states>
+<exit_state name="done" target="Element@291492076:1605461883543"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2138165951:1609854524678" name="Trans_3_AccTypeB3" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="162" x="348" y="317">
+<exit_states>
+<exit_state name="done" target="Element@291492076:1605461883543"/>
+</exit_states>
+</element>
+<element height="46" id="Element@933202242:1605461883543" name="Trans_AccBankTypeB1" type="Decision" width="177" x="90" y="175">
+<exit_states>
+<exit_state name="False" target="Element@2093928824:1605463631986"/>
+<exit_state name="b1" target="Element@1722520683:1609854524678"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2093928824:1605463631986" name="Trans_AccBankTypeB2" type="Decision" width="165" x="99" y="263">
+<exit_states>
+<exit_state name="False" target="Element@994467464:1605463861078"/>
+<exit_state name="b2" target="Element@1366732316:1609854524678"/>
+</exit_states>
+</element>
+<element height="46" id="Element@994467464:1605463861078" name="Trans_AccBankTypeB3" type="Decision" width="165" x="88" y="351">
+<exit_states>
+<exit_state name="b3" target="Element@2138165951:1609854524678"/>
+<exit_state name="b4" target="Element@647685605:1609854524678"/>
+</exit_states>
+</element>
+</page>

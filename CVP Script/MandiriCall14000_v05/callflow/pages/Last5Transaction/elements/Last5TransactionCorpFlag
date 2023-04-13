@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1727276563:1606061930599" name="Last5TransactionCorpFlag" version="6.0.1">
+<config>
+<settings>
+<setting name="flagMenuTransCorp">var transaksi="corp_last5transInfo";
+
+transaksi</setting>
+</settings>
+</config>
+</action_element>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1944254699:1604916090447" name="StatusResponSavingCode" version="6.0.1">
+<element default_entry="true" height="46" id="Element@1768609210:1604916090447" name="Group Start" type="Element Group Start" width="110" x="47" y="39">
+<exit_states>
+<exit_state name="entry" target="Element@1960409318:1608119779384"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1959751363:1608120265820" name="Log_SavingRate_Respon" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="177" x="233" y="228">
+<exit_states>
+<exit_state name="done" target="Element@1404591634:1604916085587"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@1404591634:1604916085587"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1960409318:1608119779384" name="Log_SavingRate_status" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="169" x="220" y="-39">
+<exit_states>
+<exit_state name="done" target="Element@1961784728:1604916077657"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@1961784728:1604916077657"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1404591634:1604916085587" name="SavingRateRC1" type="Decision" width="129" x="-10" y="177">
+<exit_states>
+<exit_state name="Success" target="Element@1721917088:1604916086944"/>
+<exit_state name="Fail" target="Element@505249762:1604916584718"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1721917088:1604916086944" name="SavingRateRC2" type="Decision" width="129" x="-6" y="285">
+<exit_states>
+<exit_state name="Success" target="Element@1837814796:1624366833047"/>
+<exit_state name="Fail" target="Element@505249762:1604916584718"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1457224411:1604916080248" name="SavingRateValue" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="136" x="481" y="179">
+<exit_states>
+<exit_state name="done" target="Element@1959751363:1608120265820"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1961784728:1604916077657" name="StatusCodeSavingRate" type="Decision" width="168" x="461" y="38">
+<exit_states>
+<exit_state name="Success" target="Element@1457224411:1604916080248"/>
+<exit_state name="Fail" target="Element@505249762:1604916584718"/>
+</exit_states>
+</element>
+</page>

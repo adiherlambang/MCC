@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@432421859:1602140235856" name="PersonalCC" version="6.0.1">
+<element height="62" id="Element@1182250254:1609211267071" name="CCPersonalInfoData" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="259" x="28" y="-534">
+<exit_states>
+<exit_state name="done" target="Element@371579810:1609211267071"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1959285623:1609211267070" name="CCPersonalInfoStatusResponCode" type="Element Group" width="408" x="214" y="-841"/>
+<element height="62" id="Element@1639636431:1609211267071" name="CIFNumberData" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="220" x="1587" y="-852">
+<exit_states>
+<exit_state name="done" target="Element@615762846:1609211267070"/>
+</exit_states>
+</element>
+<element height="62" id="Element@543937956:1602145570091" name="ConnectAgentCreditCard" type="Page Connector" width="316" x="110" y="435">
+<page_connector target="Element@1538857490:1601902715772">ConnectAgentCreditCard<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@645282520:1602145627483" name="CreatePINCC" type="Page Connector" width="185" x="654" y="281">
+<page_connector target="Element@242059721:1603355984716">CreatePINCC<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@624419688:1602145533886" name="EndCall" type="Page Connector" width="129" x="370" y="432">
+<page_connector target="Element@89933654:1601904832032">EndCall<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1477739830:1602140496363" name="Error_NoInput" type="Page Connector" width="198" x="38" y="202">
+<page_connector target="Element@270910828:1610085311655">Error_NoInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@206247664:1602140503303" name="Error_NoMatchInput" type="Page Connector" width="265" x="126" y="121">
+<page_connector target="Element@1250119072:1610085949630">Error_NoMatchInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@942866784:1609211267071" name="GetEmailCCStatusRespon" type="Element Group" width="315" x="558" y="-252"/>
+<element height="62" id="Element@1795936028:1609211267071" name="GetEmailDataCC" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="222" x="646" y="-17">
+<exit_states>
+<exit_state name="done" target="Element@1244792078:1602140474686"/>
+</exit_states>
+</element>
+<element height="62" id="Element@626774763:1610948960751" name="Log_REST_CCGetEmail" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="283" x="246" y="-241">
+<exit_states>
+<exit_state name="done" target="Element@1244792078:1602140474686"/>
+<exit_state name="Java Exception-Error_InsertLogCCGetEmail" target="Element@1244792078:1602140474686">
+<bendpoint>
+<dim1 x="-188" y="182"/>
+<dim2 x="-280" y="-319"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@2100440492:1610024933269" name="Log_REST_CifInqCC" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="253" x="804" y="-399">
+<exit_states>
+<exit_state name="done" target="Element@371579810:1609211267071"/>
+</exit_states>
+</element>
+<element height="62" id="Element@811904300:1602145453731" name="MainMenu" type="Page Connector" width="167" x="648" y="117">
+<page_connector target="Element@1865813345:1601897428297">MainMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1828941132:1602145553240" name="MainMenu" type="Page Connector" width="167" x="46" y="317">
+<page_connector target="Element@1865813345:1601897428297">MainMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@40213579:1602140235856" name="PersonalCC" type="Page Entry" width="168" x="125" y="-1292">
+<exit_states>
+<exit_state name="next" target="Element@135742835:1605619019575"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1244792078:1602140474686" name="PersonalCC" src="com.audium.server.voiceElement.menu.MFoundation8OptionMenu" type="Voice Element" width="168" x="360" y="260">
+<exit_states>
+<exit_state name="option1" target="Element@955744919:1602148275710"/>
+<exit_state name="option2" target="Element@132743577:1602147980972"/>
+<exit_state name="option3" target="Element@645282520:1602145627483"/>
+<exit_state name="option4" target="Element@543937956:1602145570091"/>
+<exit_state name="option5" target="Element@1828941132:1602145553240"/>
+<exit_state name="option6" target="Element@624419688:1602145533886"/>
+<exit_state name="option7" target="Element@1512715058:1602145514228"/>
+<exit_state name="option8" target="Element@811904300:1602145453731"/>
+<exit_state name="max_nomatch" target="Element@206247664:1602140503303"/>
+<exit_state name="max_noinput" target="Element@1477739830:1602140496363"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1512715058:1602145514228" name="PersonalCC" type="Page Connector" width="168" x="693" y="197">
+<page_connector target="Element@40213579:1602140235856">PersonalCC<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@132743577:1602147980972" name="PersonalCCFiestaPoint" type="Page Connector" width="283" x="623" y="363">
+<page_connector target="Element@1556240261:1604904638005">PersonalCCFiestaPoint<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@955744919:1602148275710" name="PersonalCCInformation" type="Page Connector" width="293" x="523" y="443">
+<page_connector target="Element@953719785:1602148001839">PersonalCCInformation<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@135742835:1605619019575" name="PersonalCCInformationData" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="342" x="30" y="-1134">
+<exit_states>
+<exit_state name="done" target="Element@99710944:1609211267071"/>
+</exit_states>
+</element>
+<element height="62" id="Element@2010223464:1608640523420" name="PersonalCCmenu" type="Page Entry" width="230" x="-50" y="403">
+<exit_states>
+<exit_state name="next" target="Element@1244792078:1602140474686"/>
+</exit_states>
+</element>
+<element height="62" id="Element@615762846:1609211267070" name="REST_CCPersonalInfo" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="272" x="1011" y="-820">
+<exit_states>
+<exit_state name="done" target="Element@1959285623:1609211267070"/>
+<exit_state name="Java Exception-REST_CifInquiryError" target="Element@2100440492:1610024933269"/>
+</exit_states>
+</element>
+<element height="62" id="Element@371579810:1609211267071" name="REST_GetEmailCC" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="235" x="302" y="-389">
+<exit_states>
+<exit_state name="done" target="Element@942866784:1609211267071"/>
+<exit_state name="Java Exception-Error_RESTGetEmail" target="Element@626774763:1610948960751"/>
+</exit_states>
+</element>
+<element height="62" id="Element@99710944:1609211267071" name="getCIFNumberbyCC" type="Element Group" width="261" x="994" y="-1177"/>
+<element height="62" id="Element@1624970185:1611719394819" name="CCPersonalInfoData_Fail" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="304" x="414" y="-528">
+<exit_states>
+<exit_state name="done" target="Element@371579810:1609211267071"/>
+</exit_states>
+</element>
+<element height="62" id="Element@753812896:1611719469986" name="GetEmailDataCC_Fail" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="267" x="442" y="-15">
+<exit_states>
+<exit_state name="done" target="Element@1244792078:1602140474686"/>
+</exit_states>
+</element>
+</page>

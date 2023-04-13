@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1880528331:1606058787744" name="Corp_SetCurrency" version="6.0.1">
+<element height="46" id="Element@1120294463:1606058694533" name="Corp_CurrencyIDR" type="Decision" width="165" x="119" y="140">
+<exit_states>
+<exit_state name="True" target="Element@239282124:1606058694533"/>
+<exit_state name="False" target="Element@1432280436:1606058694533"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1344518943:1606058694533" name="Corp_CurrencySGD" type="Decision" width="169" x="113" y="299">
+<exit_states>
+<exit_state name="True" target="Element@539261066:1606058694533"/>
+<exit_state name="False" target="Element@936269317:1606058694533"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1432280436:1606058694533" name="Corp_CurrencyUSD" type="Decision" width="169" x="119" y="218">
+<exit_states>
+<exit_state name="True" target="Element@341350645:1606058694533"/>
+<exit_state name="False" target="Element@1344518943:1606058694533"/>
+</exit_states>
+</element>
+<element height="46" id="Element@936269317:1606058694533" name="Corp_setHKD" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="138" x="242" y="380">
+<exit_states>
+<exit_state name="done" target="Element@318871129:1606058812825"/>
+</exit_states>
+</element>
+<element height="46" id="Element@239282124:1606058694533" name="Corp_setIDR" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="132" x="321" y="144">
+<exit_states>
+<exit_state name="done" target="Element@318871129:1606058812825"/>
+</exit_states>
+</element>
+<element height="46" id="Element@539261066:1606058694533" name="Corp_setSGD" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="136" x="322" y="294">
+<exit_states>
+<exit_state name="done" target="Element@318871129:1606058812825"/>
+</exit_states>
+</element>
+<element height="46" id="Element@341350645:1606058694533" name="Corp_setUSD" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="136" x="318" y="216">
+<exit_states>
+<exit_state name="done" target="Element@318871129:1606058812825"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1923473655:1606058787744" name="Group Start" type="Element Group Start" width="110" x="230" y="30">
+<exit_states>
+<exit_state name="Menu_Services_Corp:done" target="Element@1120294463:1606058694533"/>
+</exit_states>
+</element>
+</page>

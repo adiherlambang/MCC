@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1516194128:1604389681021" name="TypeAccount" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="TypeAccount">
+        <exit_state name="BANKING" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <element name="DB_CheckCard" variable="name" />
+                </data>
+                <constant_string value="BANKING" />
+            </string>
+        </exit_state>
+        <exit_state name="CORPORATE" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <element name="DB_CheckCard" variable="name" />
+                </data>
+                <constant_string value="PERUSAHAAN" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1346180668:1602074429270" name="CurrencyData" version="6.0.1">
+<config>
+<settings>
+<setting name="pick">var result = {LocalVar.pickType}.substring(9,10);
+
+if ( result == "T")
+{
+	result = "S";	
+}else if( result == "D" ){
+	result = "T";
+}else if( result == "G" ){
+	result = "D";
+}else if( result == "P" ){
+	result = "L";
+} 
+
+result</setting>
+<setting name="currencyIDR">importPackage(com.audium.server.cvpUtil);
+var index = new Array();
+var data = {Data.Element.REST_DebitCard.response_body};
+var path1,path2,i,result,result2;
+
+for (i=0; i&lt;  {LocalVar.IndexAccount}; i++)
+{
+	path2 = "$signOnInfo.customerDetail.accounts["+i+"].accountType";
+	result2 = JSONPathUtil.eval(data,path2);
+	if( result2 == {LocalVar.pick} )
+	{
+		path = "$signOnInfo.customerDetail.accounts["+i+"].currency";
+		result = JSONPathUtil.eval(data,path);
+		if( result == "IDR"){
+			index.push(result);
+		}
+	}	
+}
+
+index.length</setting>
+<setting name="jmlNmrRekening">importPackage(com.audium.server.cvpUtil);
+var index = new Array();
+var data = {Data.Element.REST_DebitCard.response_body};
+var path1,path2,i,result,result2;
+
+for (i=0; i&lt;  {LocalVar.IndexAccount}; i++)
+{
+	path2 = "$signOnInfo.customerDetail.accounts["+i+"].accountType";
+	result2 = JSONPathUtil.eval(data,path2);
+	if( result2 == {LocalVar.pick} )
+	{
+		path = "$signOnInfo.customerDetail.accounts["+i+"].accountNumber";
+		result = JSONPathUtil.eval(data,path);
+		index.push(result);
+	}	
+}
+
+var total_Index= index.length;
+total_Index</setting>
+<setting name="NmrRekening">importPackage(com.audium.server.cvpUtil);
+var index = new Array();
+var data = {Data.Element.REST_DebitCard.response_body};
+var path1,path2,i,result,result2;
+
+for (i=0; i&lt;  {LocalVar.IndexAccount}; i++)
+{
+	path2 = "$signOnInfo.customerDetail.accounts["+i+"].accountType";
+	result2 = JSONPathUtil.eval(data,path2);
+	if( result2 == {LocalVar.pick} )
+	{
+		path = "$signOnInfo.customerDetail.accounts["+i+"].accountNumber";
+		result = JSONPathUtil.eval(data,path);
+		index.push(result);
+	}	
+}
+
+index</setting>
+<setting name="jmlhCurrency">importPackage(com.audium.server.cvpUtil);
+var index = new Array();
+var data = {Data.Element.REST_DebitCard.response_body};
+var path1,path2,i,result,result2;
+
+for (i=0; i&lt;  {LocalVar.IndexAccount}; i++)
+{
+	path2 = "$signOnInfo.customerDetail.accounts["+i+"].accountType";
+	result2 = JSONPathUtil.eval(data,path2);
+	if( result2 == {LocalVar.pick} )
+	{
+		path = "$signOnInfo.customerDetail.accounts["+i+"].currency";
+		result = JSONPathUtil.eval(data,path);
+		index.push(result);
+	}	
+}
+
+var total = index.length;
+
+total</setting>
+<setting name="NmbrCardDebit">{LocalVar.CardInput}</setting>
+<setting name="PINDB">{Data.Element.CustomerIdentificationPersonalBankingPin.value}</setting>
+<setting name="currencyUSD">importPackage(com.audium.server.cvpUtil);
+var index = new Array();
+var data = {Data.Element.REST_DebitCard.response_body};
+var path1,path2,i,result,result2;
+
+for (i=0; i&lt;  {LocalVar.IndexAccount}; i++)
+{
+	path2 = "$signOnInfo.customerDetail.accounts["+i+"].accountType";
+	result2 = JSONPathUtil.eval(data,path2);
+	if( result2 == {LocalVar.pick} )
+	{
+		path = "$signOnInfo.customerDetail.accounts["+i+"].currency";
+		result = JSONPathUtil.eval(data,path);
+		if( result == "USD"){
+			index.push(result);
+		}
+	}	
+}
+
+index.length</setting>
+<setting name="currencyHKD">importPackage(com.audium.server.cvpUtil);
+var index = new Array();
+var data = {Data.Element.REST_DebitCard.response_body};
+var path1,path2,i,result,result2;
+
+for (i=0; i&lt;  {LocalVar.IndexAccount}; i++)
+{
+	path2 = "$signOnInfo.customerDetail.accounts["+i+"].accountType";
+	result2 = JSONPathUtil.eval(data,path2);
+	if( result2 == {LocalVar.pick} )
+	{
+		path = "$signOnInfo.customerDetail.accounts["+i+"].currency";
+		result = JSONPathUtil.eval(data,path);
+		if( result == "HKD"){
+			index.push(result);
+		}
+	}	
+}
+
+index.length</setting>
+<setting name="currencySGD">importPackage(com.audium.server.cvpUtil);
+var index = new Array();
+var data = {Data.Element.REST_DebitCard.response_body};
+var path1,path2,i,result,result2;
+
+for (i=0; i&lt;  {LocalVar.IndexAccount}; i++)
+{
+	path2 = "$signOnInfo.customerDetail.accounts["+i+"].accountType";
+	result2 = JSONPathUtil.eval(data,path2);
+	if( result2 == {LocalVar.pick} )
+	{
+		path = "$signOnInfo.customerDetail.accounts["+i+"].currency";
+		result = JSONPathUtil.eval(data,path);
+		if( result == "SGD"){
+			index.push(result);
+		}
+	}	
+}
+
+index.length</setting>
+<setting name="typeCurrency">var result;
+
+var idr =  {LocalVar.currencyIDR};
+var usd = {LocalVar.currencyUSD};
+var hkd = {LocalVar.currencyHKD};
+var sgd = {LocalVar.currencySGD};
+
+if( idr&gt;0 &amp; usd&gt;0 &amp; hkd&gt;0 &amp; sgd&gt;0)
+{
+	result = "a";	
+}else if( idr&gt;0 &amp; usd&gt;0 &amp; hkd&gt;0 &amp; sgd&lt;=0)
+{
+	result = "b1";	
+}else if( idr&gt;0 &amp; usd&gt;0 &amp; hkd&lt;=0 &amp; sgd&gt;0)
+{
+	result = "b2";	
+}else if( idr&gt;0 &amp; usd&lt;=0 &amp; hkd&gt;0 &amp; sgd&gt;0)
+{
+	result = "b3";	
+}else if( idr&lt;=0 &amp; usd&gt;0 &amp; hkd&gt;0 &amp; sgd&gt;0)
+{
+	result = "b4";	
+}else if( idr&gt;0 &amp; usd&gt;0 &amp; hkd&lt;=0 &amp; sgd&lt;=0)
+{
+	result = "c1";	
+}else if( idr&gt;0 &amp; usd&lt;=0 &amp; hkd&gt;0 &amp; sgd&lt;=0)
+{
+	result = "c2";	
+}else if( idr&gt;0 &amp; usd&lt;=0 &amp; hkd&lt;=0 &amp; sgd&gt;0)
+{
+	result = "c3";	
+}else if( idr&lt;=0 &amp; usd&gt;0 &amp; hkd&lt;=0 &amp; sgd&gt;0)
+{
+	result = "c4";	
+}else if( idr&lt;=0 &amp; usd&lt;=0 &amp; hkd&gt;0 &amp; sgd&gt;0)
+{
+	result = "c5";	
+}else if( idr&gt;0 &amp; usd&lt;=0 &amp; hkd&lt;=0 &amp; sgd&lt;=0)
+{
+	result = "d1";	
+}else if( idr&lt;=0 &amp; usd&gt;0 &amp; hkd&lt;=0 &amp; sgd&lt;=0)
+{
+	result = "d2";	
+}else if( idr&lt;=0 &amp; usd&lt;=0 &amp; hkd&gt;0 &amp; sgd&lt;=0)
+{
+	result = "d3";	
+}else if( idr&lt;=0 &amp; usd&lt;=0 &amp; hkd&lt;=0 &amp; sgd&gt;0)
+{
+	result = "d4";	
+}
+
+result</setting>
+</settings>
+<element_data>
+<data create_when="After" name="pickTypeAccount" storable="true" type="String">{LocalVar.pick}</data>
+<data create_when="After" name="typeCurrency" storable="true" type="String">{LocalVar.typeCurrency}</data>
+<data create_when="After" name="idr" storable="true" type="String">{LocalVar.currencyIDR}</data>
+<data create_when="After" name="usd" storable="true" type="String">{LocalVar.currencyUSD}</data>
+<data create_when="After" name="hkd" storable="true" type="String">{LocalVar.currencyHKD}</data>
+<data create_when="After" name="sgd" storable="true" type="String">{LocalVar.currencySGD}</data>
+</element_data>
+</config>
+</action_element>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@539261066:1606058694533" name="Corp_setSGD" version="6.0.1">
+<config>
+<settings>
+<setting name="CurrencyCodeDB">"003"</setting>
+<setting name="CurrencySpelling">"SGD"</setting>
+</settings>
+</config>
+</action_element>

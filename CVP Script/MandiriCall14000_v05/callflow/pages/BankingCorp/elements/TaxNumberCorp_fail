@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@2025872828:1610957275443" name="TaxNumberCorp_fail" version="6.0.1">
+<config>
+<settings>
+<setting name="TaxNumberNasabah">var result = "---";
+
+result</setting>
+</settings>
+</config>
+</action_element>

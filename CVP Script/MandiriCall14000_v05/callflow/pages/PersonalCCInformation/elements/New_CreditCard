@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1609724074:1611805150687" name="New_CreditCard" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="New_CreditCard" default_exit_state="False">
+        <exit_state name="NewCard" conjugate="or">
+            <string operator="equal">
+                <local_variable name="currentBillCC" />
+                <constant_string value="000000000000000" />
+            </string>
+            <string operator="equal">
+                <local_variable name="dueDateCC_yymm" />
+                <constant_string value="0000" />
+            </string>
+            <string operator="equal">
+                <local_variable name="expDateCC_yymm" />
+                <constant_string value="0000" />
+            </string>
+            <string operator="equal">
+                <local_variable name="lastPaymentDateCC_yymm" />
+                <constant_string value="0000" />
+            </string>
+            <string operator="equal">
+                <local_variable name="dateOfBillCC_yymm" />
+                <constant_string value="0000" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

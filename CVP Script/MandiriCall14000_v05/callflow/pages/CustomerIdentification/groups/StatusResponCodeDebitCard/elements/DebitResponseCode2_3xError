@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@494677088:1604932464445" name="DebitResponseCode2_3xError" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="DebitResponseCode2_3xError" default_exit_state="False">
+        <exit_state name="3xErrorPin" conjugate="and">
+            <string operator="equal">
+                <local_variable name="DebitCardRC2" />
+                <constant_string value="75" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

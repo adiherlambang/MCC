@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@2089146387:1610130560571" name="NoOptionMatch_check" version="6.0.1">
+<element height="46" id="Element@1326591083:1610130465154" name="CounterCheck_MainMenu" type="Decision" width="189" x="321" y="14">
+<exit_states>
+<exit_state name="True" target="Element@1536710935:1610130529982"/>
+<exit_state name="False" target="Element@1778364208:1610130514223"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1647553325:1610130560571" name="Group Start" type="Element Group Start" width="110" x="67" y="137">
+<exit_states>
+<exit_state name="BankingCreditCard:NoOptionMatch" target="Element@1202340941:1610130332279">
+<bendpoint>
+<dim1 x="155" y="90"/>
+<dim2 x="-157" y="-82"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Validation_Input16card:NotValid" target="Element@1202340941:1610130332279">
+<bendpoint>
+<dim1 x="-47" y="196"/>
+<dim2 x="-359" y="24"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@1202340941:1610130332279" name="NoMatchInputMainMenu_Audio" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="223" x="323" y="305">
+<exit_states>
+<exit_state name="done" target="Element@449071093:1610130444851"/>
+</exit_states>
+</element>
+<element height="46" id="Element@449071093:1610130444851" name="NoMatchInputMainMenu_Counter" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="234" x="311" y="149">
+<exit_states>
+<exit_state name="done" target="Element@1326591083:1610130465154"/>
+</exit_states>
+</element>
+</page>

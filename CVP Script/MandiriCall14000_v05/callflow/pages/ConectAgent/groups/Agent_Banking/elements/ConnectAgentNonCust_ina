@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<subdialog_return id="Element@548467586:1611929531626" name="ConnectAgentNonCust_ina" version="6.0.1">
+<config>
+<settings>
+<setting name="caller_input">1</setting>
+<setting name="FromExtVXML0">BC,4=---,1=---,8={LocalVar.lang_select}_NonCust_Banking</setting>
+<setting name="FromExtVXML1">ina,reg,2=---,6=---</setting>
+<setting name="FromExtVXML2">3=---,5=---,10=---</setting>
+<setting name="FromExtVXML3">7=---</setting>
+</settings>
+</config>
+</subdialog_return>

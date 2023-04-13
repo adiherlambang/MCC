@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@1260074365:1605261998511" name="AudioLast6" version="6.0.1">
+<config>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="Intro" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.03.2/InfoLast5Trans.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Tanggal" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.03.2/Tanggal.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Day" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.lastTransData6DateDD}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="Month" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="mm" output_format="month" type="date">{LocalVar.lastTransData6DateMM}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="month" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="year" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.lastTransData6DateYY}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="Sebesar" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.03.2/Sebesar.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Status" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.03.2/{LocalVar.lastTransData6indicator}.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Amount" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.lastTransData6Amount}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="enhanced" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="Currency" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.03.2/{LocalVar.last5Trans_currencyAudio}.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+</config>
+</voice_element>

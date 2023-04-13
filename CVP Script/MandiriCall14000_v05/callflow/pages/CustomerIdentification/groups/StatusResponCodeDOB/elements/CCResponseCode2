@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@507779878:1604683265267" name="CCResponseCode2" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="CCResponseCode2" default_exit_state="Fail">
+        <exit_state name="Success" conjugate="and">
+            <string operator="equal">
+                <local_variable name="responCode2_CC" />
+                <constant_string value="00" />
+            </string>
+        </exit_state>
+        <exit_state name="Error3xLimit" conjugate="or">
+            <string operator="equal">
+                <local_variable name="responCode2_CC" />
+                <constant_string value="97" />
+            </string>
+            <string operator="equal">
+                <local_variable name="responCode2_CC" />
+                <constant_string value="B9" />
+            </string>
+        </exit_state>
+        <exit_state name="ErrorNumbrCard" conjugate="and">
+            <string operator="equal">
+                <local_variable name="responCode2_CC" />
+                <constant_string value="15" />
+            </string>
+        </exit_state>
+        <exit_state name="ErrorInputDOB" conjugate="and">
+            <string operator="equal">
+                <local_variable name="responCode2_CC" />
+                <constant_string value="65" />
+            </string>
+        </exit_state>
+        <exit_state name="ErrorCommunication" conjugate="and">
+            <string operator="equal">
+                <local_variable name="responCode2_CC" />
+                <constant_string value="46" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1552585134:1610682882343" name="valid_OTPcode" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="valid_OTPcode" default_exit_state="Not Valid">
+        <exit_state name="Valid Code" conjugate="and">
+            <number operator="less">
+                <local_variable name="validation_OTPcode" />
+                <constant_string value="0" />
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

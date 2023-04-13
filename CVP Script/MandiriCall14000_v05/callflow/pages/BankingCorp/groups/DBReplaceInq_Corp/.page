@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1480839267:1609684546505" name="DBReplaceInq_Corp" version="6.0.1">
+<element height="46" id="Element@1011092479:1609684214204" name="DBReplaceInq_Corp_Respon" type="Decision" width="198" x="6" y="258">
+<exit_states>
+<exit_state name="Success" target="Element@980218033:1609684324876"/>
+<exit_state name="Failed" target="Element@45287392:1610957420632"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1120686354:1609683540678" name="DBReplaceInq_Corp_Status" type="Decision" width="191" x="621" y="7">
+<exit_states>
+<exit_state name="Success" target="Element@1864807299:1609683722316"/>
+<exit_state name="Failed" target="Element@45287392:1610957420632">
+<bendpoint>
+<dim1 x="273" y="-18"/>
+<dim2 x="7" y="-100"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1864807299:1609683722316" name="DBReplaceInq_Corp_Value" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="187" x="633" y="200">
+<exit_states>
+<exit_state name="done" target="Element@1587444760:1610955711188"/>
+</exit_states>
+</element>
+<element height="46" id="Element@148407186:1609684546505" name="Group Start" type="Element Group Start" width="110" x="48" y="33">
+<exit_states>
+<exit_state name="REST_DBReplaceInq_Corp:done" target="Element@985607133:1610955656200"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1587444760:1610955711188" name="Log_REST_CorpDBReplaceInq_respon" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="245" x="275" y="138">
+<exit_states>
+<exit_state name="done" target="Element@1011092479:1609684214204"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@1011092479:1609684214204">
+<bendpoint>
+<dim1 x="-310" y="20"/>
+<dim2 x="-18" y="-100"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@985607133:1610955656200" name="Log_REST_CorpDBReplaceInq_stat" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="228" x="308" y="-32">
+<exit_states>
+<exit_state name="done" target="Element@1120686354:1609683540678"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@1120686354:1609683540678">
+<bendpoint>
+<dim1 x="7" y="80"/>
+<dim2 x="-287" y="41"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+</page>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1660685562:1605583098278" name="PersonalInfoResponValue" version="6.0.1">
+<config>
+<settings>
+<setting name="PersonalRC1">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_PersonalInfo.response_body};
+
+var path= "$responseCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="traceNum_PersonalInfo">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_PersonalInfo.response_body};
+
+var path= "$hubHeader.traceNumber";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="terminalId_PersonalInfo">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_PersonalInfo.response_body};
+
+var path= "$hubHeader.terminalId";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+</settings>
+<element_data>
+<data create_when="After" name="REST_Cif-Inquiry_Personal_RC1" storable="true" type="String">{LocalVar.PersonalRC1}</data>
+</element_data>
+</config>
+</action_element>

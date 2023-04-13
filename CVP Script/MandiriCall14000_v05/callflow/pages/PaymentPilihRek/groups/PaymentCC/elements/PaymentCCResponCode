@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@771212909:1605895927947" name="PaymentCCResponCode" version="6.0.1">
+<config>
+<log>
+<data create_when="After" name="TerminalID_PaymentCC">{LocalVar.terminalId_PaymentCC}</data>
+<data create_when="After" name="TraceNum_PaymentCC">{LocalVar.traceNum_PaymentCC}</data>
+<data create_when="After" name="PaymentCCRC1">{LocalVar.PayCCRC1}</data>
+<data create_when="After" name="PaymentCCRC2">{LocalVar.PayCCRC2}</data>
+</log>
+<settings>
+<setting name="PayCCRC1">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_PaymentCC.response_body};
+
+var path= "$payload.responseCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+eval(result)</setting>
+<setting name="PayCCRC2">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_PaymentCC.response_body};
+
+var path= "$payload.creditCardPaymentInfo.responseCode";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="traceNum_PaymentCC">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_PaymentCC.response_body};
+
+var path= "$hubHeader.traceNumber";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="terminalId_PaymentCC">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_PaymentCC.response_body};
+
+var path= "$hubHeader.terminalId";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+</settings>
+</config>
+</action_element>

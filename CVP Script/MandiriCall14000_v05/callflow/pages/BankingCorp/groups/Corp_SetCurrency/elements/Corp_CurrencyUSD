@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1432280436:1606058694533" name="Corp_CurrencyUSD" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="CurrencyUSD" default_exit_state="False">
+        <exit_state name="True" conjugate="and">
+            <string operator="equal">
+                <local_variable name="CurrencyDB" />
+                <constant_string value="USD" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

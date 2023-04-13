@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@453503338:1605169412950" name="2_AccTypeE" version="6.0.1">
+<config>
+<settings>
+<setting name="sound1">"MenuSaldoPinjaman.wav"</setting>
+<setting name="sound2">"MenuSaldoDeposito.wav"</setting>
+</settings>
+</config>
+</action_element>

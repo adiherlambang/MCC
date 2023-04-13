@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@847416962:1610957336017" name="GetEmail_Corp_Fail" version="6.0.1">
+<config>
+<settings>
+<setting name="EmailNasabah">var result = "---";
+
+result</setting>
+</settings>
+</config>
+</action_element>

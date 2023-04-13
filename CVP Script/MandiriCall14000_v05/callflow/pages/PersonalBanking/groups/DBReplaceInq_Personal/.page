@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1094747629:1609925311730" name="DBReplaceInq_Personal" version="6.0.1">
+<element height="46" id="Element@70419321:1609925203937" name="DBReplaceInq_Personal_Respon" type="Decision" width="217" x="136" y="262">
+<exit_states>
+<exit_state name="Success" target="Element@124023208:1609925327778">
+<bendpoint>
+<dim1 x="-342" y="-4"/>
+<dim2 x="-100" y="-92"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Failed" target="Element@1240519057:1610958376938"/>
+</exit_states>
+</element>
+<element height="46" id="Element@550238850:1609924836920" name="DBReplaceInq_Personal_Status" type="Decision" width="210" x="579" y="12">
+<exit_states>
+<exit_state name="Success" target="Element@48913437:1609924946941"/>
+<exit_state name="Failed" target="Element@1240519057:1610958376938">
+<bendpoint>
+<dim1 x="153" y="117"/>
+<dim2 x="211" y="-91"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@48913437:1609924946941" name="DBReplaceInq_Personal_Value" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="217" x="572" y="190">
+<exit_states>
+<exit_state name="done" target="Element@70419321:1609925203937"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1441051345:1609925311730" name="Group Start" type="Element Group Start" width="110" x="41" y="6">
+<exit_states>
+<exit_state name="REST_DBReplaceInq_Personal:done" target="Element@550238850:1609924836920"/>
+</exit_states>
+</element>
+</page>

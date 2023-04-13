@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@443925303:1605165752970" name="pick2Account" version="6.0.1">
+<config>
+<settings>
+<setting name="pickType">{Data.Element.2_AccountBanking.value}</setting>
+</settings>
+</config>
+</action_element>

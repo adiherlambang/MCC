@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@534136136:1611668698492" name="IVRChangesFlag1" version="6.0.1">
+<config>
+<settings>
+<setting name="IVR_oldPin">var digit = {Data.Element.DigitOldIVRPIN.value};
+
+digit</setting>
+</settings>
+</config>
+</action_element>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@911614072:1605892573055" name="CCInfoData" version="6.0.1">
+<config>
+<settings>
+<setting name="JmlPemakaianCC">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_CreditCardPayment.response_body};
+
+var path= "$payload.signOnInfo.details[0].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(0,15)</setting>
+<setting name="JatuhTempoPembayaranCC_DD">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_CreditCardPayment.response_body};
+
+var path= "$payload.signOnInfo.details[3].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(4,6)</setting>
+<setting name="MinPembayaranCC">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_CreditCardPayment.response_body};
+
+var path= "$payload.signOnInfo.details[2].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+result.substring(0,15)</setting>
+<setting name="JatuhTempoPembayaranCC_MMYY">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_CreditCardPayment.response_body};
+
+var path= "$payload.signOnInfo.details[3].data";
+
+var result = JSONPathUtil.eval(data,path);
+
+var mm = result.substring(2,4);
+
+var yy =   result.substring(0,2);
+
+mm+yy
+</setting>
+</settings>
+</config>
+</action_element>

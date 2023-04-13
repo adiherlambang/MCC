@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@478449471:1607676118056" name="CheckAcc" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="CheckAcc" default_exit_state="NotTransfer">
+        <exit_state name="Transfer" conjugate="and">
+            <string operator="equal">
+                <local_variable name="flagMenu" />
+                <constant_string value="transfer" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@620683751:1605179191606" name="TypeD3" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="TypeD3" default_exit_state="TypeD4">
+        <exit_state name="TypeD3" conjugate="or">
+            <string operator="equal">
+                <local_variable name="typeCurrency" />
+                <constant_string value="d3" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

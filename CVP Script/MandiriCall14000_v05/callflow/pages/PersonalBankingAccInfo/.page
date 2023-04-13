@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@37048176:1602046296646" name="PersonalBankingAccInfo" version="6.0.1">
+<element height="62" id="Element@1420926934:1602046898259" name="ConnectAgentBanking" type="Page Connector" width="289" x="1240" y="629">
+<page_connector target="Element@1497709728:1601902705927">ConnectAgentBanking<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@889673442:1602046898259" name="EndCall" type="Page Connector" width="129" x="138" y="348">
+<page_connector target="Element@89933654:1601904832032">EndCall<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1527673363:1602046898259" name="Error_NoInput" type="Page Connector" width="198" x="123" y="496">
+<page_connector target="Element@270910828:1610085311655">Error_NoInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@853102448:1602046898259" name="Error_NoMatchInput" type="Page Connector" width="265" x="194" y="655">
+<page_connector target="Element@1250119072:1610085949630">Error_NoMatchInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@190923523:1602047235684" name="Inquiry" type="Page Connector" width="124" x="1148" y="230">
+<page_connector target="Element@1898384436:1602047218567">Inquiry<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1068802934:1602118967408" name="Lasrt5Transaction" type="Page Connector" width="232" x="1260" y="395">
+<page_connector target="Element@1707618586:1602116517800">Lasrt5Transaction<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1734900797:1602046898259" name="MainMenu" type="Page Connector" width="167" x="367" y="824">
+<page_connector target="Element@1865813345:1601897428297">MainMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@45373075:1602047151792" name="PersonalBanking" type="Page Connector" width="225" x="797" y="759">
+<page_connector target="Element@1566819678:1602039229515">PersonalBanking<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1117826334:1602046296646" name="PersonalBankingAccInfo" type="Page Entry" width="304" x="557" y="49">
+<exit_states>
+<exit_state name="next" target="Element@1283236420:1602046838754"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1302967913:1602047121204" name="PersonalBankingAccInfo" type="Page Connector" width="304" x="70" y="195">
+<page_connector target="Element@1117826334:1602046296646">PersonalBankingAccInfo<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1283236420:1602046838754" name="PersonalBankingAccInfoFlag" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="348" x="545" y="215">
+<exit_states>
+<exit_state name="done" target="Element@542572208:1602046742978"/>
+</exit_states>
+</element>
+<element height="62" id="Element@542572208:1602046742978" name="PersonalBankingAccInfoMenu" src="com.audium.server.voiceElement.menu.MFoundation8OptionMenu" type="Voice Element" width="367" x="536" y="377">
+<exit_states>
+<exit_state name="option1" target="Element@190923523:1602047235684"/>
+<exit_state name="option2" target="Element@190923523:1602047235684"/>
+<exit_state name="option3" target="Element@1068802934:1602118967408"/>
+<exit_state name="option4" target="Element@1302967913:1602047121204"/>
+<exit_state name="option5" target="Element@889673442:1602046898259"/>
+<exit_state name="option6" target="Element@45373075:1602047151792"/>
+<exit_state name="option7" target="Element@1734900797:1602046898259"/>
+<exit_state name="option8" target="Element@1420926934:1602046898259"/>
+<exit_state name="max_nomatch" target="Element@853102448:1602046898259"/>
+<exit_state name="max_noinput" target="Element@1527673363:1602046898259"/>
+</exit_states>
+</element>
+</page>

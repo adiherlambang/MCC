@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1283236420:1602046838754" name="PersonalBankingAccInfoFlag" version="6.0.1">
+<config>
+<settings>
+<setting name="IndexAccSaving">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_DebitCard.response_body};
+
+var path= "$signOnInfo.customerDetail.totalSaving";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="IndexAccGiro">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_DebitCard.response_body};
+
+var path= "$signOnInfo.customerDetail.totalGiro";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="IndexAccLoan">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_DebitCard.response_body};
+
+var path= "$signOnInfo.customerDetail.totalLoan";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="IndexAccDeposit">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_DebitCard.response_body};
+
+var path= "$signOnInfo.customerDetail.totalDeposit";
+
+var result = JSONPathUtil.eval(data,path);
+
+result</setting>
+<setting name="NmbrCardDebit">{LocalVar.CardInput}</setting>
+<setting name="PINDB">{Data.Element.CustomerIdentificationPersonalBankingPin.value}</setting>
+<setting name="flagMenu">var menu="bank";
+
+menu</setting>
+</settings>
+</config>
+</action_element>

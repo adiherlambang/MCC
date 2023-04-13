@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1272869722:1605471328288" name="Trans_pick4Currency" version="6.0.1">
+<config>
+<settings>
+<setting name="pickTypeCurrencyTrans">{Data.Element.Trans_of_4_CurrencyBanking.value}</setting>
+</settings>
+</config>
+</action_element>

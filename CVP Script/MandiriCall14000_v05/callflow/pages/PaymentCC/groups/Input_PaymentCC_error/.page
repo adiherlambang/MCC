@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1253088004:1611566256452" name="Input_PaymentCC_error" version="6.0.1">
+<element height="46" id="Element@445352088:1611566256452" name="Group Start" type="Element Group Start" width="110" x="230" y="30">
+<exit_states>
+<exit_state name="CCPaymentResponCode2:ErrorInputCC" target="Element@232964611:1610707882781"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1331439820:1610707952981" name="Audio_Error3xPaymentCC" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="204" x="534" y="358">
+<exit_states>
+<exit_state name="done" target="Element@343585774:1610708028193"/>
+</exit_states>
+</element>
+<element height="46" id="Element@232964611:1610707882781" name="Audio_errorNumbrCardCCPayment" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="255" x="99" y="154">
+<exit_states>
+<exit_state name="done" target="Element@25296073:1610707952981"/>
+</exit_states>
+</element>
+<element height="46" id="Element@25296073:1610707952981" name="Counter_ErrorPaymentCC" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="203" x="149" y="248">
+<exit_states>
+<exit_state name="done" target="Element@236792240:1610707952981"/>
+</exit_states>
+</element>
+<element height="46" id="Element@236792240:1610707952981" name="Decision_3x_errorPaymentCC" type="Decision" width="222" x="142" y="350">
+<exit_states>
+<exit_state name="True" target="Element@1331439820:1610707952981"/>
+<exit_state name="False" target="Element@680841298:1610708095991"/>
+</exit_states>
+</element>
+</page>

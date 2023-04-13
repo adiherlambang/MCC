@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1817460850:1601893805092" name="Afternoon" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Afternoon" default_exit_state="else">
+        <exit_state name="Afternoon" conjugate="and">
+            <number operator="less_equal">
+                <general_date_time type="current" field="hour_of_day" />
+                <constant_string value="18" />
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

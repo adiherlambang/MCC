@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1858701616:1605770352872" name="PayListData" version="6.0.1">
+<config>
+<settings>
+<setting name="billPayListIndex">importPackage(com.audium.server.cvpUtil);
+
+var data = {Data.Element.REST_PayList.response_body};
+
+var parse = JSON.parse(data);
+
+parse.payload.billPayeeListInfo.billPayees.length</setting>
+<setting name="billerCode">importPackage(com.audium.server.cvpUtil);
+var data = {Data.Element.REST_PayList.response_body};
+var path,result,path_billerCode,result_billerCode;
+
+for (var i=0; i&lt;{LocalVar.billPayListIndex}; i++){
+	path= "$payload.billPayeeListInfo.billPayees["+i+"].billReferenceNumber";
+	result = JSONPathUtil.eval(data,path);
+	if(result.trim() == {LocalVar.PhoneNumber}){
+		path_billerCode = "$payload.billPayeeListInfo.billPayees["+i+"].billerCode";
+		result_billerCode = JSONPathUtil.eval(data,path_billerCode);
+		i={LocalVar.billPayListIndex}+1;
+	}else{
+		result_billerCode = "00";
+	}
+}
+
+result_billerCode</setting>
+<setting name="processingCode">var code;
+
+if( {LocalVar.Operator}=="TELKOM"){
+	code="310003";
+}else if( {LocalVar.Operator}=="TELKOMSEL"){
+	code="310002";
+}else if( {LocalVar.Operator}=="SATELINDO"){
+	code="310001";
+}else if( {LocalVar.Operator}=="GSM-XL"){
+	code="310005";
+}else if( {LocalVar.Operator}=="MOBILE8"){
+	code="310007";
+}else if( {LocalVar.Operator}=="HUTCHISONE"){
+	code="310021";
+}
+
+code</setting>
+</settings>
+<element_data>
+<data create_when="After" name="list" storable="true" type="String">{LocalVar.billPayListIndex}</data>
+<data create_when="After" name="billerCode" storable="true" type="String">{LocalVar.billerCode}</data>
+<data create_when="After" name="ProcCode" storable="true" type="String">{LocalVar.processingCode}</data>
+</element_data>
+</config>
+</action_element>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1415413772:1610957609648" name="CorpInfoData_Fail" version="6.0.1">
+<config>
+<settings>
+<setting name="NamaNasabah">var result = "---";
+
+result</setting>
+<setting name="AlamatNasabah">var result = "---";
+
+result</setting>
+<setting name="CabangPembuka">var result = "---";
+
+result</setting>
+</settings>
+<element_data>
+<data create_when="After" name="alamat" storable="true" type="String">{LocalVar.AlamatNasabah}</data>
+</element_data>
+</config>
+</action_element>

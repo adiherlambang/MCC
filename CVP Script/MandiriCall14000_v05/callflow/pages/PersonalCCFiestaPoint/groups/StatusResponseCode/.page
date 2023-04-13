@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1053818065:1604905064999" name="StatusResponseCode" version="6.0.1">
+<element height="46" id="Element@2078216697:1604905478542" name="CCFiestaRespon1" type="Decision" width="141" x="46" y="149">
+<exit_states>
+<exit_state name="Success" target="Element@1424433061:1604905509926"/>
+<exit_state name="Fail" target="Element@286030867:1604905770863"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1424433061:1604905509926" name="CCFiestaRespon2" type="Decision" width="141" x="60" y="286">
+<exit_states>
+<exit_state name="Success" target="Element@403286903:1606025262627"/>
+<exit_state name="Fail" target="Element@286030867:1604905770863">
+<bendpoint>
+<dim1 x="-202" y="26"/>
+<dim2 x="8" y="-124"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@2080057289:1604905143749" name="CCFiestaValue" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="124" x="493" y="149">
+<exit_states>
+<exit_state name="done" target="Element@1023646144:1608117435975"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1589127750:1604905064999" name="Group Start" type="Element Group Start" width="110" x="52" y="19">
+<exit_states>
+<exit_state name="REST_CCFiestaPoint:done" target="Element@398969879:1608117138626"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1023646144:1608117435975" name="Log_CCFiestaPoint_Respon" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="193" x="231" y="75">
+<exit_states>
+<exit_state name="done" target="Element@2078216697:1604905478542"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@2078216697:1604905478542"/>
+</exit_states>
+</element>
+<element height="46" id="Element@398969879:1608117138626" name="Log_CCFiestaPoint_status" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="185" x="230" y="-75">
+<exit_states>
+<exit_state name="done" target="Element@1159734702:1604905034201"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@1159734702:1604905034201"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1159734702:1604905034201" name="StatusCodeCCFiesta" type="Decision" width="160" x="469" y="21">
+<exit_states>
+<exit_state name="Success" target="Element@2080057289:1604905143749"/>
+<exit_state name="Fail" target="Element@286030867:1604905770863"/>
+</exit_states>
+</element>
+</page>

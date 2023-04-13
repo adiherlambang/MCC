@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@1246497000:1608208830576" name="CorpOptionErrorService_audio" version="6.0.1">
+<config>
+<settings>
+<setting name="noinput_timeout">5s</setting>
+<setting name="max_noinput_count">3</setting>
+<setting name="max_nomatch_count">3</setting>
+<setting name="confidence_level">0.40</setting>
+<setting name="modal">false</setting>
+<setting name="option1_dtmf">0</setting>
+<setting name="option1_voice"/>
+<setting name="option1_value">Call Agent</setting>
+<setting name="option2_dtmf">8</setting>
+<setting name="option2_voice"/>
+<setting name="option2_value">End Call</setting>
+</settings>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/general/InformasiDanBantuan.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/general/Tekan0.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 3" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/general/MengakhiriLayanan.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 4" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/general/Tekan8.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+</config>
+</voice_element>

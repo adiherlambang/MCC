@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1579291756:1605260554558" name="Last4" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Last4" default_exit_state="false">
+        <exit_state name="4" conjugate="and">
+            <number operator="equal">
+                <local_variable name="TotalLastTrans" />
+                <constant_number value="4" />
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

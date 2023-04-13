@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1787124851:1604373533125" name="DB_CheckCard" version="6.0.1">
+<config>
+<settings>
+<setting name="type">single</setting>
+<setting name="jndiName">cvp_mdr</setting>
+<setting name="query">SELECT * 
+FROM 
+bincard
+WHERE Prefix = {LocalVar.PrefixCard}</setting>
+<setting name="enableXmlResultSet">true</setting>
+<setting name="maxRowsInXML">1</setting>
+</settings>
+<element_data>
+<data create_when="After" name="status" storable="true" type="String">{Data.Element.DB_CheckCard.status}</data>
+<data create_when="After" name="type" storable="true" type="String">{Data.Element.DB_CheckCard.type}</data>
+<data create_when="After" name="prefix" storable="true" type="String">{Data.Element.DB_CheckCard.prefix}</data>
+<data create_when="After" name="name" storable="true" type="String">{Data.Element.DB_CheckCard.name}</data>
+</element_data>
+<local_events>
+<local_event>
+<name>Error_DBCheckCard</name>
+<eventlist>com.audium.server.*</eventlist>
+<type>Java Exception</type>
+</local_event>
+</local_events>
+</config>
+</action_element>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@82565400:1601906272695" name="ExchangeRateInfo" version="6.0.1">
+<element height="62" id="Element@1957237642:1601963308274" name="ConnectAgentStaff" type="Page Connector" width="251" x="659" y="95">
+<page_connector target="Element@1100459976:1601902754803">ConnectAgentStaff<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@282112012:1604682816725" name="ConnectAgentStaff" type="Page Connector" width="251" x="224" y="734">
+<page_connector target="Element@1100459976:1601902754803">ConnectAgentStaff<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@866645998:1604681872130" name="CountErrorExchangeRateMenu" type="Decision" width="376" x="-217" y="725">
+<exit_states>
+<exit_state name="True" target="Element@1737689817:1604681969435"/>
+<exit_state name="False" target="Element@976057568:1604658330074"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1694871782:1604663905521" name="Decision_02" type="Decision" width="177" x="20" y="147">
+<exit_states>
+<exit_state name="True" target="Element@1504233407:1604658675723"/>
+<exit_state name="False" target="Element@543724738:1604663963128"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1480900647:1610278830923" name="EndCall" type="Page Connector" width="129" x="706" y="582">
+<page_connector target="Element@89933654:1601904832032">EndCall<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@329206545:1610117906937" name="Error_ExchangeRateMenu" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="321" x="113" y="565">
+<exit_states>
+<exit_state name="done" target="Element@2116353115:1604681806289"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1843103642:1604681760619" name="Error_ExchangeRateMenuNotAvail" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="412" x="-255" y="553">
+<exit_states>
+<exit_state name="done" target="Element@2116353115:1604681806289"/>
+</exit_states>
+</element>
+<element height="62" id="Element@474868924:1610297371235" name="Error_NoInput" type="Page Connector" width="198" x="805" y="210">
+<page_connector target="Element@270910828:1610085311655">Error_NoInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1424614639:1610297371235" name="Error_NoMatchInput" type="Page Connector" width="265" x="490" y="183">
+<page_connector target="Element@1250119072:1610085949630">Error_NoMatchInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1235143774:1608117757372" name="Error_ServiceSOA" type="Page Connector" width="231" x="254" y="75">
+<page_connector target="Element@623071406:1607697419497">Error_ServiceSOA<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@2116353115:1604681806289" name="ExchangeRateFailCount" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="298" x="-56" y="643">
+<exit_states>
+<exit_state name="done" target="Element@866645998:1604681872130"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1721500301:1601906272695" name="ExchangeRateInfo" type="Page Entry" width="240" x="-7" y="32">
+<exit_states>
+<exit_state name="next" target="Element@1694871782:1604663905521"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1425555059:1601963308274" name="ExchangeRateInfo" type="Page Connector" width="257" x="381" y="554">
+<page_connector target="Element@1721500301:1601906272695">ExchangeRateInfo<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@57920274:1610278818811" name="ExchangeRateInfoMenu" src="com.audium.server.voiceElement.menu.MFoundation6OptionMenu" type="Voice Element" width="303" x="476" y="411">
+<exit_states>
+<exit_state name="option1" target="Element@1957237642:1601963308274"/>
+<exit_state name="option2" target="Element@1480900647:1610278830923"/>
+<exit_state name="option3" target="Element@647846829:1601963308274"/>
+<exit_state name="option4" target="Element@1425555059:1601963308274"/>
+<exit_state name="option5" target="Element@1930633891:1601963308274"/>
+<exit_state name="option6" target="Element@1067405151:1601963308274"/>
+<exit_state name="max_nomatch" target="Element@1424614639:1610297371235"/>
+<exit_state name="max_noinput" target="Element@474868924:1610297371235"/>
+</exit_states>
+</element>
+<element height="62" id="Element@647846829:1601963308274" name="ExchangeRateMenu" type="Page Connector" width="261" x="837" y="422">
+<page_connector target="Element@1368066083:1601901904621">ExchangeRateMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@976057568:1604658330074" name="ExchangeRateMenu" type="Page Connector" width="261" x="-304" y="841">
+<page_connector target="Element@1368066083:1601901904621">ExchangeRateMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1737689817:1604681969435" name="ExchangeRateMenuError3x" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="335" x="30" y="811">
+<exit_states>
+<exit_state name="done" target="Element@282112012:1604682816725"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1067405151:1601963308274" name="ExchangeRateMenuOthers" type="Page Connector" width="332" x="834" y="304">
+<page_connector target="Element@2037359303:1601963613893">ExchangeRateMenuOthers<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@2094655295:1608117731335" name="Log_ExchangeRate" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="247" x="278" y="242">
+<exit_states>
+<exit_state name="done" target="Element@1235143774:1608117757372"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@1235143774:1608117757372"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1930633891:1601963308274" name="MainMenu" type="Page Connector" width="257" x="789" y="520">
+<page_connector target="Element@1865813345:1601897428297">MainMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@545662031:1604657560114" name="REST_ExchangeRateInfo" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="302" x="4" y="346">
+<exit_states>
+<exit_state name="done" target="Element@1272022723:1604658564518"/>
+<exit_state name="Java Exception-Error_RESTExchangeRate" target="Element@2094655295:1608117731335"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1504233407:1604658675723" name="Set Value_01" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="185" x="120" y="255">
+<exit_states>
+<exit_state name="done" target="Element@545662031:1604657560114"/>
+</exit_states>
+</element>
+<element height="62" id="Element@543724738:1604663963128" name="Set Value_02" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="185" x="-62" y="253">
+<exit_states>
+<exit_state name="done" target="Element@545662031:1604657560114"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1272022723:1604658564518" name="StatusResponseCodeCheck" type="Element Group" width="336" x="-20" y="458"/>
+</page>

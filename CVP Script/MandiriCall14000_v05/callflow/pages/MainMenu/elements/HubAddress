@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@41316789:1604657646506" name="HubAddress" version="6.0.1">
+<config>
+<settings>
+<setting name="hubAddress">"https://mcchub.corp.bankmandiri.co.id:8443/soa-mandiri/soa"</setting>
+<setting name="AudioPath">var str = "http://"+{Data.Session.Session_ID}+"/mcc/";
+
+var option ={Data.Element.LanguageSelectionOption.value}+" ";
+
+var audio;
+
+if (option=="bahasa "){
+	audio = str+"bahasa";
+}else if (option=="english "){
+	audio = str+"english";
+}else {
+	audio = str+"bahasa";
+}
+
+audio</setting>
+<setting name="Session_Name">var CVPname;
+
+if ({Data.Session.Session_ID}=="10.254.173.5"){
+	CVPname = "RVCUCVP1ABCWP."+{Data.Session.callid};	
+}else if({Data.Session.Session_ID}=="10.204.173.5"){
+	CVPname = "PVCUCVP1ABCWP."+{Data.Session.callid};
+}
+
+CVPname</setting>
+<setting name="lang_select">var option = {Data.Element.LanguageSelectionOption.value}+" ";
+var lang_option;
+
+if (option=="bahasa "){
+	lang_option = "Indonesia";
+}else if (option=="english "){
+	lang_option = "English";
+}else {
+	lang_option = "Indonesia";
+}
+
+lang_option</setting>
+<setting name="cvp_hub">var cvp_hub;
+
+if ({Data.Session.Session_ID}=="10.254.173.5"){
+	cvp_hub = "dc";	
+}else if({Data.Session.Session_ID}=="10.204.173.5"){
+	cvp_hub = "drc";
+}
+
+cvp_hub</setting>
+<setting name="JNDI_CVP">"ivr_reporting"</setting>
+</settings>
+<session_data>
+<data create_when="Before" name="lang">{Data.Element.LanguageSelectionOption.value}</data>
+</session_data>
+</config>
+</action_element>

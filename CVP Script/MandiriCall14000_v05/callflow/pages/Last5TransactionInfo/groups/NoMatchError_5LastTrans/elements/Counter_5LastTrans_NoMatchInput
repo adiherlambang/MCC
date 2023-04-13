@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@966040701:1610312826788" name="Counter_5LastTrans_NoMatchInput" version="6.0.1">
+<config>
+<settings>
+<setting name="initial">0</setting>
+<setting name="type">increment</setting>
+<setting name="step">1</setting>
+</settings>
+</config>
+</action_element>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1552457168:1681285868120" name="Audio_ValueTransSame" version="6.0.1">
+<config>
+<settings>
+<setting name="sourceOrDestAccAudio">importPackage(com.audium.server.cvpUtil);
+var result;
+
+
+
+if (({LocalVar.flagMenuTrans} == "transfer") &amp;&amp; ({Data.Element.TransferLooping.TransferLoopingValue} == 1.0))
+{
+	
+	result = "/P.01.03.01/SilahkanPilihNorekAsal.wav";
+
+} else if (({LocalVar.flagMenuTrans} == "transfer") &amp;&amp; ({Data.Element.TransferLooping.TransferLoopingValue} == 2.0))
+ 
+{
+	
+	result = "/P.01.03.01/SilahkanPilihNorekTujuan.wav"
+;
+} 
+
+
+result</setting>
+</settings>
+</config>
+</action_element>

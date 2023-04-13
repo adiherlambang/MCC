@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@843388048:1681285835102" name="Audio_ValueNotTransfer" version="6.0.1">
+<config>
+<settings>
+<setting name="sourceOrDestAccAudio">importPackage(com.audium.server.cvpUtil);
+
+
+
+var result = "/P.01.03.01/SilahkanPilihNorek.wav";
+
+
+
+result</setting>
+</settings>
+</config>
+</action_element>

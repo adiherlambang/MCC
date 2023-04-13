@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@1849882546:1605261496555" name="AudioLast10" version="6.0.1">
+<config>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="Intro" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.03.2/InfoLast5Trans.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Tanggal" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.03.2/Tanggal.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Day" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.lastTransData6DateDD}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="Month" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="mm" output_format="month" type="date">{LocalVar.lastTransData6DateMM}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="month" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="year" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.lastTransData6DateYY}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="Sebesar" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.03.2/Sebesar.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Status" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.03.2/{LocalVar.lastTransData6indicator}.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Amount" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.lastTransData6Amount}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="enhanced" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="Currency" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.03.2/{LocalVar.last5Trans_currencyAudio}.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Tanggal2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.03.2/Tanggal.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Day2" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.lastTransData7DateDD}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="Month2" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="mm" output_format="month" type="date">{LocalVar.lastTransData7DateMM}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="month" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="Year2" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.lastTransData7DateYY}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="Sebesar2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.03.2/Sebesar.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Status2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.03.2/{LocalVar.lastTransData7indicator}.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Amount2" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.lastTransData7Amount}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="enhanced" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="Currency2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.03.2/{LocalVar.last5Trans_currencyAudio}.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="3Tanggal" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.03.2/Tanggal.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="3Day" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.lastTransData8DateDD}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="3Month" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="mm" output_format="month" type="date">{LocalVar.lastTransData8DateMM}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="month" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="3year" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.lastTransData8DateYY}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="3Sebesar" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.03.2/Sebesar.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="3Status" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.03.2/{LocalVar.lastTransData8indicator}.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="3Amount" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.lastTransData8Amount}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="enhanced" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="3Currency" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.03.2/{LocalVar.last5Trans_currencyAudio}.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="4Tanggal" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.03.2/Tanggal.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="4Day" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.lastTransData9DateDD}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="4Month" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="mm" output_format="month" type="date">{LocalVar.lastTransData9DateMM}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="month" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="4year" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.lastTransData9DateYY}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="4Sebesar" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.03.2/Sebesar.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="4Status" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.03.2/{LocalVar.lastTransData9indicator}.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="4Amount" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.lastTransData9Amount}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="enhanced" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="4Currency" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.03.2/{LocalVar.last5Trans_currencyAudio}.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="5Tanggal" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.03.2/Tanggal.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="5Day" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.lastTransData10DateDD}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="5Month" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="mm" output_format="month" type="date">{LocalVar.lastTransData10DateMM}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="month" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="5year" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.lastTransData10DateYY}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="5Sebesar" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.03.2/Sebesar.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="5Status" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.03.2/{LocalVar.lastTransData10indicator}.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="5Amount" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{LocalVar.lastTransData10Amount}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="enhanced" type="wav">/sys/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="5Currency" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.01.03.2/{LocalVar.last5Trans_currencyAudio}.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+</config>
+</voice_element>

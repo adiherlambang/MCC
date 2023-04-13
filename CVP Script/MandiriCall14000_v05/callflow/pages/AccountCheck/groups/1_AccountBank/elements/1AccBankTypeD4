@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1054638184:1605515537960" name="1AccBankTypeD4" version="6.0.1">
+<config>
+<settings>
+<setting name="sound1">"MenuSaldoDeposito.wav"</setting>
+</settings>
+</config>
+</action_element>

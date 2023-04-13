@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1019825778:1604932807279" name="IVRPINChange" version="6.0.1">
+<element height="62" id="Element@1446590422:1605888773598" name="1" type="Page Entry" width="63" x="779" y="266">
+<exit_states>
+<exit_state name="next" target="Element@1130774881:1605887798535"/>
+</exit_states>
+</element>
+<element height="62" id="Element@87425071:1605888788272" name="1" type="Page Connector" width="64" x="2152" y="4">
+<page_connector target="Element@1446590422:1605888773598">1<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@83949103:1608207568845" name="BankingCorp" type="Page Connector" width="187" x="2661" y="456">
+<page_connector target="Element@1021000466:1604638203394">BankingCorp<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1157020145:1605887646298" name="CheckNewPIN" type="Decision" width="200" x="938" y="75">
+<exit_states>
+<exit_state name="True" target="Element@1499439900:1605889304979"/>
+<exit_state name="False" target="Element@1130774881:1605887798535"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1387902360:1605887549619" name="CheckOldPIN" type="Decision" width="190" x="751" y="165">
+<exit_states>
+<exit_state name="True" target="Element@605635972:1605889218000"/>
+<exit_state name="False" target="Element@1157020145:1605887646298"/>
+</exit_states>
+</element>
+<element height="62" id="Element@2080132608:1605887224754" name="Confirmation_DigitNewIVRPIN" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="371" x="406" y="163">
+<exit_states>
+<exit_state name="done" target="Element@1387902360:1605887549619"/>
+<exit_state name="max_nomatch" target="Element@1045294554:1605887079623"/>
+<exit_state name="max_noinput" target="Element@1045294554:1605887079623">
+<bendpoint>
+<dim1 x="-11" y="131"/>
+<dim2 x="174" y="-29"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@139389963:1605888100504" name="ExitOptionMenu" type="Page Connector" width="224" x="1482" y="414">
+<page_connector target="Element@2112944412:1610627035755">ExitOptionMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1608261428:1605889553324" name="ConnectAgentBanking" type="Page Connector" width="289" x="2117" y="524">
+<page_connector target="Element@1497709728:1601902705927">ConnectAgentBanking<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1733967290:1605890238864" name="Error_NoInput" type="Page Connector" width="198" x="37" y="-203">
+<page_connector target="Element@270910828:1610085311655">Error_NoInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@346719963:1605888034990" name="Count_Error" type="Decision" width="175" x="1135" y="399">
+<exit_states>
+<exit_state name="True" target="Element@1035425168:1605888155075"/>
+<exit_state name="False" target="Element@424409214:1605888098863"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1666313114:1605886732294" name="DigitNewIVRPIN" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="221" x="88" y="166">
+<exit_states>
+<exit_state name="done" target="Element@2080132608:1605887224754"/>
+<exit_state name="max_nomatch" target="Element@1045294554:1605887079623">
+<bendpoint>
+<dim1 x="144" y="72"/>
+<dim2 x="-27" y="-85"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_noinput" target="Element@1045294554:1605887079623">
+<bendpoint>
+<dim1 x="29" y="116"/>
+<dim2 x="-142" y="-41"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@539955552:1605890137509" name="DigitOldIVRPIN" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="211" x="-259" y="-105">
+<exit_states>
+<exit_state name="done" target="Element@534136136:1611668698492"/>
+<exit_state name="max_nomatch" target="Element@1733967290:1605890238864"/>
+<exit_state name="max_noinput" target="Element@1733967290:1605890238864">
+<bendpoint>
+<dim1 x="187" y="12"/>
+<dim2 x="-98" y="89"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@381376465:1605889711520" name="EndCall" type="Page Connector" width="129" x="2458" y="292">
+<page_connector target="Element@89933654:1601904832032">EndCall<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1035425168:1605888155075" name="Error3x_PinChanges" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="259" x="1316" y="309">
+<exit_states>
+<exit_state name="done" target="Element@139389963:1605888100504"/>
+</exit_states>
+</element>
+<element height="62" id="Element@2126961110:1605888902638" name="Error_NoInput" type="Page Connector" width="198" x="2136" y="259">
+<page_connector target="Element@270910828:1610085311655">Error_NoInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@2018504088:1605888906735" name="Error_NoMatchInput" type="Page Connector" width="265" x="2275" y="226">
+<page_connector target="Element@1250119072:1610085949630">Error_NoMatchInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@605635972:1605889218000" name="Error_PINsame" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="203" x="569" y="327">
+<exit_states>
+<exit_state name="done" target="Element@1107941220:1605887844895"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1130774881:1605887798535" name="Error_PinChanges" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="235" x="877" y="236">
+<exit_states>
+<exit_state name="done" target="Element@1107941220:1605887844895"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1107941220:1605887844895" name="Error_PinChangesCount" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="300" x="853" y="403">
+<exit_states>
+<exit_state name="done" target="Element@346719963:1605888034990"/>
+</exit_states>
+</element>
+<element height="62" id="Element@3624232:1608111891170" name="Error_ServiceSOA" type="Page Connector" width="231" x="1151" y="-379">
+<page_connector target="Element@623071406:1607697419497">Error_ServiceSOA<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1453170410:1605890522039" name="ExitOptionMenu" type="Page Connector" width="224" x="-1" y="358">
+<page_connector target="Element@2112944412:1610627035755">ExitOptionMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@760362314:1608207489459" name="FromMenu" type="Decision" width="168" x="2441" y="493">
+<exit_states>
+<exit_state name="Corporate" target="Element@83949103:1608207568845"/>
+<exit_state name="Personal" target="Element@184085404:1605889659886"/>
+</exit_states>
+</element>
+<element height="62" id="Element@324055740:1605888468575" name="IVRChangesRC1" type="Decision" width="219" x="1948" y="-96">
+<exit_states>
+<exit_state name="Success" target="Element@1007678529:1605888493926"/>
+<exit_state name="Fail" target="Element@87425071:1605888788272"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1375789810:1605888613091" name="IVRChangesRC2" type="Decision" width="219" x="1890" y="399">
+<exit_states>
+<exit_state name="Success" target="Element@520559930:1610401841885"/>
+<exit_state name="Fail" target="Element@2081211857:1613026163809"/>
+</exit_states>
+</element>
+<element height="62" id="Element@611611384:1605888568462" name="IVRChangesRC2_3xError" type="Decision" width="303" x="1877" y="296">
+<exit_states>
+<exit_state name="Success" target="Element@1035425168:1605888155075"/>
+<exit_state name="No Error" target="Element@1375789810:1605888613091"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1007678529:1605888493926" name="IVRChangesRC2_Invalid" type="Decision" width="299" x="1864" y="115">
+<exit_states>
+<exit_state name="Success" target="Element@87425071:1605888788272"/>
+<exit_state name="No Error" target="Element@611611384:1605888568462"/>
+</exit_states>
+</element>
+<element height="62" id="Element@274789582:1605888296791" name="IVRChangesResponCode" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="311" x="1378" y="87">
+<exit_states>
+<exit_state name="done" target="Element@2078268211:1608112292441"/>
+</exit_states>
+</element>
+<element height="62" id="Element@424409214:1605888098863" name="IVRForcePinChanges" type="Page Connector" width="268" x="1249" y="513">
+<page_connector target="Element@9952110:1605890126177">IVRForcePinChanges<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@9952110:1605890126177" name="IVRForcePinChanges" type="Page Entry" width="268" x="121" y="-82">
+<exit_states>
+<exit_state name="next" target="Element@844015671:1611668719930"/>
+</exit_states>
+</element>
+<element height="62" id="Element@73167256:1604932807279" name="IVRPINChange" type="Page Entry" width="204" x="-254" y="-217">
+<exit_states>
+<exit_state name="next" target="Element@539955552:1605890137509"/>
+</exit_states>
+</element>
+<element height="62" id="Element@856377636:1605890529841" name="IVRPINChange" type="Page Connector" width="204" x="-294" y="284">
+<page_connector target="Element@73167256:1604932807279">IVRPINChange<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1423943753:1605888221505" name="IVRPinChangesStatus" type="Decision" width="274" x="1421" y="-56">
+<exit_states>
+<exit_state name="True" target="Element@274789582:1605888296791"/>
+<exit_state name="False" target="Element@530760219:1613026136980"/>
+</exit_states>
+</element>
+<element height="62" id="Element@520559930:1610401841885" name="IVRPinChanges_Menu" src="com.audium.server.voiceElement.menu.MFoundation5OptionMenu" type="Voice Element" width="283" x="2197" y="397">
+<exit_states>
+<exit_state name="option1" target="Element@1608261428:1605889553324"/>
+<exit_state name="option2" target="Element@381376465:1605889711520"/>
+<exit_state name="option3" target="Element@760362314:1608207489459"/>
+<exit_state name="option4" target="Element@648690074:1610401911302"/>
+<exit_state name="option5" target="Element@520559930:1610401841885">
+<bendpoint>
+<dim1 x="0" y="48"/>
+<dim2 x="0" y="48"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="108" y="48"/>
+<dim2 x="108" y="48"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="108" y="0"/>
+<dim2 x="108" y="0"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_nomatch" target="Element@2018504088:1605888906735"/>
+<exit_state name="max_noinput" target="Element@2126961110:1605888902638"/>
+</exit_states>
+</element>
+<element height="62" id="Element@2078268211:1608112292441" name="Log_IVRPINChanges_respon" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="346" x="1624" y="2">
+<exit_states>
+<exit_state name="done" target="Element@324055740:1605888468575"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@324055740:1605888468575">
+<bendpoint>
+<dim1 x="86" y="-114"/>
+<dim2 x="-206" y="-16"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@1503641124:1608112185568" name="Log_IVRPINChanges_status" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="335" x="1439" y="-204">
+<exit_states>
+<exit_state name="done" target="Element@1423943753:1605888221505"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@1423943753:1605888221505">
+<bendpoint>
+<dim1 x="137" y="78"/>
+<dim2 x="156" y="-64"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="62" id="Element@1604287613:1608111903114" name="Log_IVRPinChanges" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="259" x="1023" y="-228">
+<exit_states>
+<exit_state name="done" target="Element@3624232:1608111891170"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@3624232:1608111891170"/>
+</exit_states>
+</element>
+<element height="62" id="Element@648690074:1610401911302" name="MainMenu" type="Page Connector" width="167" x="2487" y="374">
+<page_connector target="Element@1865813345:1601897428297">MainMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1045294554:1605887079623" name="NoMatchInput" type="Page Connector" width="205" x="262" y="323">
+<page_connector target="Element@982309222:1601898944005">NoMatchInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1499439900:1605889304979" name="PINChanges_InProgress" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="299" x="969" y="-23">
+<exit_states>
+<exit_state name="done" target="Element@19857962:1605887057350"/>
+</exit_states>
+</element>
+<element height="62" id="Element@184085404:1605889659886" name="PersonalBanking" type="Page Connector" width="225" x="2519" y="615">
+<page_connector target="Element@1566819678:1602039229515">PersonalBanking<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@19857962:1605887057350" name="REST_IVRChangesPIN" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="276" x="1000" y="-108">
+<exit_states>
+<exit_state name="done" target="Element@1503641124:1608112185568"/>
+<exit_state name="Java Exception-Error_RESTIVRPINChanges" target="Element@1604287613:1608111903114"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1352445627:1605890221390" name="ValidOldIVRPin" type="Decision" width="207" x="-138" y="68">
+<exit_states>
+<exit_state name="True" target="Element@1666313114:1605886732294"/>
+<exit_state name="False" target="Element@1282182362:1610965424724"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1282182362:1610965424724" name="ValidationOldIVRPIN" type="Element Group" width="265" x="-165" y="177"/>
+<element height="62" id="Element@534136136:1611668698492" name="IVRChangesFlag1" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="234" x="-153" y="-24">
+<exit_states>
+<exit_state name="done" target="Element@1352445627:1605890221390"/>
+</exit_states>
+</element>
+<element height="62" id="Element@844015671:1611668719930" name="IVRChangesFlag2" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="234" x="114" y="39">
+<exit_states>
+<exit_state name="done" target="Element@1666313114:1605886732294"/>
+</exit_states>
+</element>
+<element height="62" id="Element@530760219:1613026136980" name="Error_ServiceSOA" type="Page Connector" width="231" x="1206" y="-3">
+<page_connector target="Element@623071406:1607697419497">Error_ServiceSOA<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@2081211857:1613026163809" name="Error_ServiceSOA" type="Page Connector" width="231" x="1797" y="505">
+<page_connector target="Element@623071406:1607697419497">Error_ServiceSOA<config/>
+</page_connector>
+</element>
+</page>

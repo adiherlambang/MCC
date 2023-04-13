@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@873224184:1601964448244" name="InterestSaving" version="6.0.1">
+<element height="62" id="Element@199420175:1601964689734" name="ConnectAgentStaff" type="Page Connector" width="251" x="659" y="90">
+<page_connector target="Element@1100459976:1601902754803">ConnectAgentStaff<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1301048914:1610297481018" name="Error_NoInput" type="Page Connector" width="198" x="499" y="45">
+<page_connector target="Element@270910828:1610085311655">Error_NoInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1824345774:1610297492475" name="Error_NoMatchInput" type="Page Connector" width="265" x="626" y="391">
+<page_connector target="Element@1250119072:1610085949630">Error_NoMatchInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@2139991609:1608119461990" name="Error_ServiceSOA" type="Page Connector" width="231" x="279" y="-167">
+<page_connector target="Element@623071406:1607697419497">Error_ServiceSOA<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1145825649:1601964719805" name="InterestRateMenu" type="Page Connector" width="240" x="213" y="421">
+<page_connector target="Element@1732654770:1601963903054">InterestRateMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@505249762:1604916584718" name="InterestRateMenu" type="Page Connector" width="240" x="56" y="350">
+<page_connector target="Element@1732654770:1601963903054">InterestRateMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@833056001:1601964448244" name="InterestSaving" type="Page Entry" width="201" x="-69" y="-43">
+<exit_states>
+<exit_state name="next" target="Element@178437163:1604916059452"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1516672053:1601964675065" name="InterestSaving" type="Page Connector" width="201" x="443" y="466">
+<page_connector target="Element@833056001:1601964448244">InterestSaving<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1287068825:1608119242352" name="Log_SavingRate" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="217" x="211" y="-42">
+<exit_states>
+<exit_state name="done" target="Element@2139991609:1608119461990"/>
+<exit_state name="Java Exception-Error_RESTSavingRate" target="Element@2139991609:1608119461990"/>
+</exit_states>
+</element>
+<element height="62" id="Element@585581996:1601964650956" name="MainMenu" type="Page Connector" width="167" x="283" y="71">
+<page_connector target="Element@1865813345:1601897428297">MainMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@178437163:1604916059452" name="REST_SavingRate" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="230" x="98" y="72">
+<exit_states>
+<exit_state name="done" target="Element@1190608685:1604916090447"/>
+<exit_state name="Java Exception-Error_RESTSavingRate" target="Element@1287068825:1608119242352"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1190608685:1604916090447" name="StatusResponSavingCode" type="Element Group" width="319" x="-61" y="150"/>
+<element height="62" id="Element@1837814796:1624366833047" name="InterestSavingMenu" src="com.audium.server.voiceElement.menu.MFoundation5OptionMenu" type="Voice Element" width="264" x="345" y="250">
+<exit_states>
+<exit_state name="option1" target="Element@199420175:1601964689734"/>
+<exit_state name="option2" target="Element@1145825649:1601964719805"/>
+<exit_state name="option3" target="Element@585581996:1601964650956"/>
+<exit_state name="option4" target="Element@1516672053:1601964675065"/>
+<exit_state name="option5" target="Element@2069178072:1624368487898"/>
+<exit_state name="max_nomatch" target="Element@1824345774:1610297492475"/>
+<exit_state name="max_noinput" target="Element@1301048914:1610297481018"/>
+</exit_states>
+</element>
+<element height="62" id="Element@2069178072:1624368487898" name="EndCall" type="Page Connector" width="129" x="618" y="239">
+<page_connector target="Element@89933654:1601904832032">EndCall<config/>
+</page_connector>
+</element>
+</page>

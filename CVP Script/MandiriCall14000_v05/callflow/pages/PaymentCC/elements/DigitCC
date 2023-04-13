@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@227832879:1602132391334" name="DigitCC" version="6.0.1">
+<config>
+<settings>
+<setting name="inputmode">both</setting>
+<setting name="noinput_timeout">10s</setting>
+<setting name="max_noinput_count">3</setting>
+<setting name="max_nomatch_count">3</setting>
+<setting name="digits_confidence_level">0.40</setting>
+<setting name="min_digit">13</setting>
+<setting name="max_digit">19</setting>
+<setting name="modal">false</setting>
+<setting name="secure_logging">false</setting>
+<setting name="maxnbest">1</setting>
+<setting name="dtmf_overlay">false</setting>
+</settings>
+<vxml_properties>
+<data name="termchar">#</data>
+</vxml_properties>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.03.02.1/CCNumber.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="1" name="nomatch_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/Error_InputNmbrCard.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy of audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.03.02.1/CCNumber.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="2" name="nomatch_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/Error_InputNmbrCard.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy of audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.03.02.1/CCNumber.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="3" name="nomatch_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/Error_InputNmbrCard.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/Error_3x.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="1" name="noinput_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/NoInput.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy of audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.03.02.1/CCNumber.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="2" name="noinput_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/NoInput.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy of audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/P.01.03.02.1/CCNumber.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="3" name="noinput_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/NoInput.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="/error/Error_3x.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+</config>
+</voice_element>

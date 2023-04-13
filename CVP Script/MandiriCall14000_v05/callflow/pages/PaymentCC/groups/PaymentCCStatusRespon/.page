@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@409077244:1605892099517" name="PaymentCCStatusRespon" version="6.0.1">
+<element height="46" id="Element@89372235:1605891801192" name="CCPaymentResponCode" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="180" x="596" y="222">
+<exit_states>
+<exit_state name="done" target="Element@1890494929:1610393877313"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1555075912:1605891977650" name="CCPaymentResponCode1" type="Decision" width="186" x="66" y="220">
+<exit_states>
+<exit_state name="True" target="Element@1862374298:1605891999594"/>
+<exit_state name="False" target="Element@1057484321:1605892120185">
+<bendpoint>
+<dim1 x="-286" y="-11"/>
+<dim2 x="90" y="-82"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1862374298:1605891999594" name="CCPaymentResponCode2" type="Decision" width="186" x="328" y="343">
+<exit_states>
+<exit_state name="False" target="Element@1057484321:1605892120185"/>
+<exit_state name="ErrorInputDOB" target="Element@1787311990:1610708822335"/>
+<exit_state name="ErrorInputCC" target="Element@1255821773:1611566256452"/>
+<exit_state name="Error3xInput" target="Element@1446782010:1610709150234"/>
+<exit_state name="Success" target="Element@911614072:1605892573055"/>
+<exit_state name="ErrorCommunication" target="Element@1125218920:1614229902771">
+<bendpoint>
+<dim1 x="328" y="145"/>
+<dim2 x="-142" y="-81"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@222441496:1605891715168" name="CCPaymentStatusCode" type="Decision" width="173" x="602" y="58">
+<exit_states>
+<exit_state name="True" target="Element@89372235:1605891801192"/>
+<exit_state name="False" target="Element@1057484321:1605892120185">
+<bendpoint>
+<dim1 x="-193" y="98"/>
+<dim2 x="183" y="27"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@954372618:1605892099517" name="Group Start" type="Element Group Start" width="110" x="82" y="62">
+<exit_states>
+<exit_state name="REST_CreditCardPayment:done" target="Element@1236151103:1610393697126"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1890494929:1610393877313" name="log_PaymentCC_Respon" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="221" x="311" y="158">
+<exit_states>
+<exit_state name="done" target="Element@1555075912:1605891977650"/>
+<exit_state name="Java Exception-Error_InsertLogDebitSignOnStatus" target="Element@1555075912:1605891977650">
+<bendpoint>
+<dim1 x="1" y="100"/>
+<dim2 x="263" y="38"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1236151103:1610393697126" name="log_PaymentCC_Status" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="220" x="292" y="-75">
+<exit_states>
+<exit_state name="done" target="Element@222441496:1605891715168"/>
+<exit_state name="Java Exception-Error_InsertLogDebitSignOnStatus" target="Element@222441496:1605891715168">
+<bendpoint>
+<dim1 x="7" y="168"/>
+<dim2 x="-279" y="35"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+</page>

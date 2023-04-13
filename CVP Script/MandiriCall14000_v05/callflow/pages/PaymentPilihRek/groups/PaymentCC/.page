@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@590235566:1608107516866" name="PaymentCC" version="6.0.1">
+<element height="46" id="Element@1817268964:1608107516866" name="Group Start" type="Element Group Start" width="110" x="34" y="81">
+<exit_states>
+<exit_state name="REST_PaymentCC:done" target="Element@1213650212:1609343169516"/>
+</exit_states>
+</element>
+<element height="46" id="Element@798154330:1609343169516" name="Log_RESTPaymentCC_respon" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="204" x="224" y="185">
+<exit_states>
+<exit_state name="done" target="Element@1766594690:1605896142975"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@1766594690:1605896142975">
+<bendpoint>
+<dim1 x="-195" y="80"/>
+<dim2 x="-61" y="-70"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1213650212:1609343169516" name="Log_RESTPaymentCC_status" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="199" x="255" y="28">
+<exit_states>
+<exit_state name="done" target="Element@188090364:1605895944060"/>
+<exit_state name="Java Exception-Error_InsertLog" target="Element@188090364:1605895944060">
+<bendpoint>
+<dim1 x="317" y="-15"/>
+<dim2 x="-11" y="-68"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@771212909:1605895927947" name="PaymentCCResponCode" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="180" x="582" y="182">
+<exit_states>
+<exit_state name="done" target="Element@798154330:1609343169516"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1766594690:1605896142975" name="PaymentCCResponCode1" type="Decision" width="186" x="66" y="308">
+<exit_states>
+<exit_state name="Success" target="Element@820277546:1605896157845"/>
+<exit_state name="Fail" target="Element@918051066:1605896207389"/>
+</exit_states>
+</element>
+<element height="46" id="Element@820277546:1605896157845" name="PaymentCCResponCode2" type="Decision" width="186" x="483" y="306">
+<exit_states>
+<exit_state name="Success" target="Element@805398286:1605895810058"/>
+<exit_state name="Fail" target="Element@2084958242:1610364413144"/>
+<exit_state name="ErrorLimitPayment" target="Element@1132336452:1611566102852"/>
+<exit_state name="GeneralFail" target="Element@460413441:1610868926344"/>
+<exit_state name="RecordNotFound" target="Element@1936349002:1612257028809"/>
+<exit_state name="InvalidFinancialTrans" target="Element@630921936:1614230441799">
+<bendpoint>
+<dim1 x="219" y="84"/>
+<dim2 x="15" y="-79"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@188090364:1605895944060" name="PaymentCCStatusCode" type="Decision" width="173" x="596" y="81">
+<exit_states>
+<exit_state name="Success" target="Element@771212909:1605895927947"/>
+<exit_state name="Fail" target="Element@918051066:1605896207389"/>
+</exit_states>
+</element>
+</page>

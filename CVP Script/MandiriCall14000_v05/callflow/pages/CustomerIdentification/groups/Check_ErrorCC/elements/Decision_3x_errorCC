@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@535081975:1610619342788" name="Decision_3x_errorCC" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Decision_3x_errorCC" default_exit_state="False">
+        <exit_state name="True" conjugate="and">
+            <number operator="greater">
+                <data>
+                    <element name="Counter_ErrorCC" variable="count" />
+                </data>
+                <constant_number value="2" />
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

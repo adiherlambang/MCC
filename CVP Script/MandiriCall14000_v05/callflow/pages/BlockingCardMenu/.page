@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1360127584:1601899073285" name="BlockingCardMenu" version="6.0.1">
+<element height="62" id="Element@1598357982:1601902978523" name="AgentCreditCardBlocking" type="Page Connector" width="318" x="441" y="312">
+<page_connector target="Element@950895339:1607012327181">AgentCreditCardBlocking<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1115335181:1601902997053" name="AgentDebitCardBlocking" type="Page Connector" width="312" x="105" y="297">
+<page_connector target="Element@839126681:1607012775787">AgentDebitCardBlocking<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@598296268:1601899073285" name="BlockingCardMenu" type="Page Entry" width="253" x="300" y="-75">
+<exit_states>
+<exit_state name="next" target="Element@1163754449:1605061221774"/>
+</exit_states>
+</element>
+<element height="62" id="Element@1589003720:1601900451739" name="BlockingCardMenu" src="com.audium.server.voiceElement.menu.MFoundation7OptionMenu" type="Voice Element" width="253" x="309" y="170">
+<exit_states>
+<exit_state name="option1" target="Element@1115335181:1601902997053"/>
+<exit_state name="option2" target="Element@1598357982:1601902978523"/>
+<exit_state name="option3" target="Element@102668285:1601902964256"/>
+<exit_state name="option4" target="Element@908584080:1601901027517"/>
+<exit_state name="option5" target="Element@5801901:1601901067503"/>
+<exit_state name="option6" target="Element@2007108606:1601901114907"/>
+<exit_state name="option7" target="Element@206237225:1601901138072"/>
+<exit_state name="max_nomatch" target="Element@997300863:1610297175927"/>
+<exit_state name="max_noinput" target="Element@1328242012:1610297175927"/>
+</exit_states>
+</element>
+<element height="62" id="Element@206237225:1601901138072" name="BlockingCardMenu" type="Page Connector" width="253" x="728" y="234">
+<page_connector target="Element@598296268:1601899073285">BlockingCardMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@102668285:1601902964256" name="ConnectAgentStaff" type="Page Connector" width="251" x="-85" y="63">
+<page_connector target="Element@1100459976:1601902754803">ConnectAgentStaff<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@2007108606:1601901114907" name="EndCall" type="Page Connector" width="134" x="727" y="175">
+<page_connector target="Element@89933654:1601904832032">EndCall<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1328242012:1610297175927" name="Error_NoInput" type="Page Connector" width="198" x="-30" y="207">
+<page_connector target="Element@270910828:1610085311655">Error_NoInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@997300863:1610297175927" name="Error_NoMatchInput" type="Page Connector" width="265" x="48" y="-31">
+<page_connector target="Element@1250119072:1610085949630">Error_NoMatchInput<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@908584080:1601901027517" name="MainMenu" type="Page Connector" width="167" x="721" y="34">
+<page_connector target="Element@1865813345:1601897428297">MainMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@5801901:1601901067503" name="MainMenu" type="Page Connector" width="167" x="725" y="108">
+<page_connector target="Element@1865813345:1601897428297">MainMenu<config/>
+</page_connector>
+</element>
+<element height="62" id="Element@1163754449:1605061221774" name="NmbrCardValue" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="218" x="336" y="35">
+<exit_states>
+<exit_state name="done" target="Element@1589003720:1601900451739"/>
+</exit_states>
+</element>
+</page>
